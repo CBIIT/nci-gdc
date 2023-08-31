@@ -1,0 +1,13 @@
+services:
+  gdcupgrade:
+    image: gdcdocker
+    environment:
+      olddbhost: $old_gdc_host
+      olddbun: $old_gdc_username
+      olddbpwd: $old_gdc_pw
+      olddbdb: gdc
+      newdbhost: $new_gdc_host
+      newdbun: $new_gdc_username
+      newdbpwd: $new_gdc_pw
+      newdbdb: GDCDRUPAL
+    
