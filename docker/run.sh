@@ -11,7 +11,7 @@ else
     touch installed.txt
     cat /var/www/drupal/settings.php.patch >> /var/www/drupal/web/sites/default/settings.php
     composer update
-    drush en -y content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade
+    drush en -y ckeditor_markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade
     if [ -d "/tmp/files" ]; then
        cp -R /tmp/files /var/www/drupal
        rm -rf /var/www/drupal/files/private
