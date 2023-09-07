@@ -1,0 +1,15 @@
+$databases['migrate']['default'] = array(                                       
+  'database' => getenv('migrate_db_name'),                                                   
+  'username' => getenv('db_user'),                                           
+  'password' => getenv('db_password'),                                         
+  'host' => getenv('db_host'),                                                  
+  'port' => '3306',                                                           
+  'driver' => 'mysql',                                                       
+  'prefix' => '',                                                             
+);  
+
+global $content_directories;
+$content_directories['sync'] = $app_root.'/../content/sync';
+$config_directories['sync'] = $app_root.'/../config/sync';
+$settings['sync']="";
+$config_directories['sync'] = '../config';
