@@ -12,7 +12,9 @@ RUN composer require drush/drush
 RUN git clone https://git.drupalcode.org/issue/content_sync-3330173.git content_sync
 WORKDIR ${site_path}/content_sync
 RUN git checkout 3330173-D10-compatibility-beta
-RUN mkdir ${site_path}/web/modules/contrib
+RUN mkdir -p ${site_path}/web/modules/contrib
+RUN mkdir -p ${site_path}/web/modules/custom
+RUN mkdir -p ${site_path}/web/themes/custom
 RUN mkdir -p ${site_path}/content/sync
 RUN mkdir -p ${site_path}/config/sync
 RUN mkdir ${site_path}/contentimport
