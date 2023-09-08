@@ -26,6 +26,7 @@ else
     drush upwd admin 1234
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
+    drush cim -y --source=$site_path/config/sync --partial
 fi
 crond
 exec httpd -DFOREGROUND
