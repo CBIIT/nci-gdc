@@ -14,7 +14,7 @@ WORKDIR $site_path/content_sync
 RUN git checkout 3330173-D10-compatibility-beta
 RUN mkdir $site_path/web/modules/contrib
 RUN mkdir -p $site_path/content/sync
-RUN mkdir -p /var/drupal/config/sync
+RUN mkdir -p $site_path/config/sync
 RUN mkdir $site_path/contentimport
 WORKDIR $site_path
 RUN mv content_sync $site_path/web/modules/contrib
