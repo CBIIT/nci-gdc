@@ -12,9 +12,6 @@ else
     cat /var/www/drupal/settings.php.patch >> /var/www/drupal/web/sites/default/settings.php
 
     composer require drupal/markdown erusev/parsedown --no-update
-    #drush cdel -y block.block.bartik_system_main
-    #drush cdel -y block.block.bartik_system_powered_by
-    #drush cdel -y block.block.cag_bootstrap_system_main
     #drush y:get:value contentsync/filter.format.markdown.yml uuid
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
@@ -33,11 +30,15 @@ else
     drush upwd admin 1234
     rm -rf /var/www/drupal/content/sync/entities
     rm -rf /var/www/drupal/content/sync/files
+    drush cdel -y block.block.bartik_system_main
+    drush cdel -y block.block.bartik_system_powered_by
+    drush cdel -y block.block.cag_bootstrap_system_main
+    drush cim -y --source=/var/www/drupal/config/sync --partial
+
     drush cse -y
     #drush cex?
     tar cvf /var/www/drupal/contentsync/content.tgz /var/www/drupal/content/sync/*
     ## changing ownership to 3000 which is drupaldocker user ##
-    drush cim -y --source=/var/www/drupal/config/sync --partial
     chown -R 3000:3000 /var/www/drupal/contentsync
     echo "need to add markdown content authoring type, then after upgrade save the format again"
 
