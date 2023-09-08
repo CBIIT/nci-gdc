@@ -17,15 +17,20 @@ else
        mkdir $site_path/web/sites/default/files
        cp -R $site_path/files/files/* $site_path/web/sites/default/files
        rm -rf $site_path/files/private
-       cp -R $site_path/files/files-private $site_path/web/sites/default/files/private
+       mkdir $site_path/web/sites/default/files/private
+       cp -R $site_path/files/files-private/* $site_path/web/sites/default/files/private
     fi
-    chown -R apache:apache $site_path
+    chown -R apache:apache $site_path/web
     drush ucrt admin
     drush urol administrator admin
     drush upwd admin 1234
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
     drush cim -y --source=$site_path/config/sync --partial
+    drush thin gdc_foundation
+    drush thin zurb_foundation
+    drush config-set -y system.theme default gdc_foundation
+    drush cr
 fi
 crond
 exec httpd -DFOREGROUND
