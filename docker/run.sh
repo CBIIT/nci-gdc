@@ -29,7 +29,8 @@ else
     drush cim -y --source=$site_path/config/sync --partial
     drush thin gdc_foundation
     drush thin zurb_foundation
-    drush config-set system.theme default gdc_foundation
+    drush config-set -y system.theme default gdc_foundation
+    drush cr
 fi
 crond
 exec httpd -DFOREGROUND
