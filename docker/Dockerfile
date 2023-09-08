@@ -21,7 +21,7 @@ RUN mkdir -p ${site_path}/contentimport
 WORKDIR ${site_path}
 RUN mv content_sync ${site_path}/web/modules/contrib
 ADD web ${site_path}/web
-COPY ./configuration/* ${site_path}}/config/sync
+COPY ./configuration/* ${site_path}/config/sync
 COPY run.sh /usr/bin
 COPY httpd.conf /etc/apache2
 COPY settings.php.patch ${site_path}
