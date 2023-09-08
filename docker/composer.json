@@ -24,15 +24,14 @@
         "drupal/delete_all": "^3.0",
         "drupal/devel": "^5.1",
         "drupal/imce": "^3.0",
+        "drupal/markdown": "^3.0",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
         "drupal/pathauto": "^1.11",
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/zurb_foundation": "^9.0@beta",
-        "drush/drush": "^12.1",
-        "drupal/markdown": "^3.0",
+        "drush/drush": "^12.2",
         "erusev/parsedown": "^1.7"
-
     },
     "conflict": {
         "drupal/drupal": "*"
