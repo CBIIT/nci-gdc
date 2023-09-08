@@ -7,7 +7,7 @@ $databases['default']['default'] = array(
   'driver' => 'mysql',
   'prefix' => '',
 );
-
+$settings['config_sync_directory'] = $app_root.'/../config/sync';
 $settings['hash_salt'] =  getenv('hash_salt');
 global $content_directories;
 $content_directories['sync'] = $app_root.'/../content/sync';
