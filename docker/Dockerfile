@@ -5,7 +5,7 @@ ENV PATH="${PATH}:$site_path/vendor/drush/drush"
 RUN apk update
 RUN apk add python3 mariadb-client php81 php81-apache2 php81-opcache php81-mysqli php81-pdo_mysql php81-tokenizer \
     php81-dom php81-gd php81-pdo php81-session php81-simplexml php81-xml apache2 composer git
-WORKDIR /var/www
+WORKDIR $apache_root
 RUN composer create-project drupal/recommended-project drupal
 WORKDIR $site_path
 RUN composer require drush/drush
