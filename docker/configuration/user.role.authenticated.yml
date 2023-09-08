@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.basic_html
     - filter.format.markdown
+    - filter.format.php_code
   module:
     - comment
     - contact
@@ -30,3 +31,4 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'use text format markdown'
+  - 'use text format php_code'
