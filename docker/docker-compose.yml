@@ -1,7 +1,0 @@
-version: '2.15'
-services:
-    gdc:
-        container_name: gdc
-        ports:
-            - '8080:80'
-        image: gdc
