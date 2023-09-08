@@ -22,5 +22,7 @@ COPY settings.php.patch /var/www/drupal
 COPY composer.json /var/www/drupal
 COPY migrate.sh /var/www/drupal
 COPY memory.ini /etc/php81/conf.d
-
+COPY user.role.anonymous.yml /var/www/drupal/config/sync
+COPY user.role.authenticated.yml /var/www/drupal/config/sync
+COPY user.role.content_editor.yml /var/www/drupal/config/sync
 ENTRYPOINT run.sh
