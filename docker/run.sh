@@ -23,7 +23,7 @@ else
        rm -rf $site_path/files/private
        cp -R $site_path/files/files-private $site_path/files/private
     fi
-    chown -R apache:apache $site_path
+    chown -R apache:apache $site_path/web
     drush migrate-upgrade --legacy-db-key='migrate'  --legacy-root='$site_path/files'
     drush ucrt admin
     drush urol administrator admin
