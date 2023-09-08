@@ -1,5 +1,5 @@
-cd /var/www/drupal
-FILE=/var/www/drupal/installed.txt
+cd $site_path
+FILE=$site_path/installed.txt
 if [ -f "$FILE" ]; then
     echo "Drupal Site Already Installed"
 else
@@ -9,37 +9,37 @@ else
     mysql -u$db_user -p$db_password -h$db_host -e "create database $db_name;"
     drush site:install -y standard --db-url=mysql://$db_user:$encoded_password@$db_host:$db_port/$db_name --account-name=$account_name --account-pass=$account_pass --site-name=$sitename
     touch installed.txt
-    cat /var/www/drupal/settings.php.patch >> /var/www/drupal/web/sites/default/settings.php
+    cat $site_path/settings.php.patch >> $site_path/web/sites/default/settings.php
 
     composer require drupal/markdown erusev/parsedown --no-update
     #drush y:get:value contentsync/filter.format.markdown.yml uuid
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
     drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
-    drush cim -y --source=/var/www/drupal/config/sync --partial
+    drush cim -y --source=$site_path/config/sync --partial
 
     if [ -d "/tmp/files" ]; then
-       cp -R /tmp/files /var/www/drupal
-       rm -rf /var/www/drupal/files/private
-       cp -R /var/www/drupal/files/files-private /var/www/drupal/files/private
+       cp -R /tmp/files $site_path
+       rm -rf $site_path/files/private
+       cp -R $site_path/files/files-private $site_path/files/private
     fi
-    chown -R apache:apache /var/www/drupal
-    drush migrate-upgrade --legacy-db-key='migrate'  --legacy-root='/var/www/drupal/files'
+    chown -R apache:apache $site_path
+    drush migrate-upgrade --legacy-db-key='migrate'  --legacy-root='$site_path/files'
     drush ucrt admin
     drush urol administrator admin
     drush upwd admin 1234
-    rm -rf /var/www/drupal/content/sync/entities
-    rm -rf /var/www/drupal/content/sync/files
+    rm -rf $site_path/content/sync/entities
+    rm -rf $site_path/content/sync/files
     drush cdel -y block.block.bartik_system_main
     drush cdel -y block.block.bartik_system_powered_by
     drush cdel -y block.block.cag_bootstrap_system_main
-    drush cim -y --source=/var/www/drupal/config/sync --partial
+    drush cim -y --source=$site_path/config/sync --partial
 
     drush cse -y
     #drush cex?
-    tar cvf /var/www/drupal/contentsync/content.tgz /var/www/drupal/content/sync/*
+    tar cvf $site_path/contentsync/content.tgz $site_path/content/sync/*
     ## changing ownership to 3000 which is drupaldocker user ##
-    chown -R 3000:3000 /var/www/drupal/contentsync
+    chown -R 3000:3000 $site_path/contentsync
     echo "need to add markdown content authoring type, then after upgrade save the format again"
 
 fi
