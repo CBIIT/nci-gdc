@@ -37,6 +37,7 @@ else
     #drush cex?
     tar cvf /var/www/drupal/contentsync/content.tgz /var/www/drupal/content/sync/*
     ## changing ownership to 3000 which is drupaldocker user ##
+    drush cim -y --source=/var/www/drupal/config/sync --partial
     chown -R 3000:3000 /var/www/drupal/contentsync
     echo "need to add markdown content authoring type, then after upgrade save the format again"
 
