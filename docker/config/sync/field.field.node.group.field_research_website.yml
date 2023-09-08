@@ -1,0 +1,23 @@
+uuid: b1785a1f-0a18-4c45-af4b-fd29cbb5f3df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_website
+    - node.type.group
+  module:
+    - link
+id: node.group.field_research_website
+field_name: field_research_website
+entity_type: node
+bundle: group
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

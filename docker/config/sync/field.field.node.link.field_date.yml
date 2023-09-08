@@ -1,0 +1,19 @@
+uuid: 0b5a49e8-d93f-48af-8061-b14dd765c7bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.link
+id: node.link.field_date
+field_name: field_date
+entity_type: node
+bundle: link
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

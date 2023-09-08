@@ -1,0 +1,18 @@
+uuid: 313df83e-0a3e-4186-b0f2-e8accf081b1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Contributed Genomic Data for Cancer Research'
+type: crg
+description: 'Contributed Genomic Data for Cancer Research is a data set submitted to the GDC'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

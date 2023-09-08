@@ -1,0 +1,30 @@
+uuid: da0e3890-68d5-4c94-a8f6-98e7a7edda56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ins_ref
+    - node.type.ins_per_aff
+    - node.type.institution
+id: node.ins_per_aff.field_ins_ref
+field_name: field_ins_ref
+entity_type: node
+bundle: ins_per_aff
+label: Institution
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      institution: institution
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

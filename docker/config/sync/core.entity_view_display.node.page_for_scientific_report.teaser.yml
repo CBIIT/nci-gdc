@@ -1,0 +1,36 @@
+uuid: 6bb8519a-efa1-4c64-a66c-d823081c5174
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page_for_scientific_report.body
+    - field.field.node.page_for_scientific_report.comment_node_page_for_scientif
+    - field.field.node.page_for_scientific_report.field_creation_date
+    - field.field.node.page_for_scientific_report.field_mod_date
+    - node.type.page_for_scientific_report
+  module:
+    - text
+    - user
+id: node.page_for_scientific_report.teaser
+targetEntityType: node
+bundle: page_for_scientific_report
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_page_for_scientif: true
+  field_creation_date: true
+  field_mod_date: true

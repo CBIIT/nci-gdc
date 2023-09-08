@@ -1,0 +1,21 @@
+uuid: 22381b5d-e2dd-4f3a-a2dd-ea950d21fdce
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_crg
+label: 'Content - Contributed Genomic Data for Cancer Research'
+type: 'canonical_entities:node'
+pattern: '[node:book:parents:join-path]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      crg: crg
+selection_logic: and
+weight: 0
+relationships: {  }

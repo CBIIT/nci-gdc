@@ -1,0 +1,40 @@
+uuid: bd4f4fee-a637-4ce4-9e72-e0a57bb1a8b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.community_tool.body
+    - field.field.node.community_tool.comment_node_community_tool
+    - field.field.node.community_tool.field_authors
+    - field.field.node.community_tool.field_date
+    - field.field.node.community_tool.field_links
+    - field.field.node.community_tool.field_topic_taxonomy
+    - node.type.community_tool
+  module:
+    - text
+    - user
+id: node.community_tool.teaser
+targetEntityType: node
+bundle: community_tool
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_community_tool: true
+  field_authors: true
+  field_date: true
+  field_links: true
+  field_topic_taxonomy: true

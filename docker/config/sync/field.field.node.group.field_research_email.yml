@@ -1,0 +1,19 @@
+uuid: f9bdb683-28b0-45c6-9827-d361824aaa08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_email
+    - node.type.group
+id: node.group.field_research_email
+field_name: field_research_email
+entity_type: node
+bundle: group
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

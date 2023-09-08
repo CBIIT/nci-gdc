@@ -1,0 +1,18 @@
+uuid: e2804173-7192-43cc-a0f9-270e71a71b67
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Private File'
+type: private_file
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,20 @@
+uuid: 0bc2a4dc-29a9-40bd-882e-57f6abc74566
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sent_french_count
+field_name: field_sent_french_count
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: dab7b981-e3f8-4ce1-9901-d453c762712e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_tag
+    - node.type.page_news
+    - taxonomy.vocabulary.page_tag
+id: node.page_news.field_content_tag
+field_name: field_content_tag
+entity_type: node
+bundle: page_news
+label: 'Page Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      page_tag: page_tag
+    sort:
+      field: _none
+field_type: entity_reference

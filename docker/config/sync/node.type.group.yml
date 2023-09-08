@@ -1,0 +1,11 @@
+uuid: a21802ff-4874-4028-a56a-d11e3016634c
+langcode: en
+status: true
+dependencies: {  }
+name: Group
+type: group
+description: 'A group of people (represented as the Person content type)'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,97 @@
+uuid: b6addc82-b769-47bb-8f4f-7c306860dcc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person_asset.comment_node_person_asset
+    - field.field.node.person_asset.field_asset_person_tax
+    - field.field.node.person_asset.field_asset_ref
+    - field.field.node.person_asset.field_person_ref
+    - node.type.person_asset
+  module:
+    - comment
+    - path
+id: node.person_asset.default
+targetEntityType: node
+bundle: person_asset
+mode: default
+content:
+  comment_node_person_asset:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_asset_ref:
+    type: entity_reference_autocomplete
+    weight: -2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_ref:
+    type: entity_reference_autocomplete
+    weight: -3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_asset_person_tax: true

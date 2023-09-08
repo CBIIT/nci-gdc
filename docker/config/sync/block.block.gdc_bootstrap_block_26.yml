@@ -1,0 +1,30 @@
+uuid: b1ddd55b-a2c7-4099-a59e-041e8858b66a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:93b87137-f482-41c6-a40a-830ec2b1e751'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_26
+theme: olivero
+region: content
+weight: -37
+provider: null
+plugin: 'block_content:93b87137-f482-41c6-a40a-830ec2b1e751'
+settings:
+  id: 'block_content:93b87137-f482-41c6-a40a-830ec2b1e751'
+  label: 'Subscribe to Updates'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/about-gdc/*'

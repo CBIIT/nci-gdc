@@ -1,0 +1,30 @@
+uuid: 856178c9-2f3c-4522-b450-b53cda958543
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group_ref
+    - node.type.group
+    - node.type.group_per_aff
+id: node.group_per_aff.field_group_ref
+field_name: field_group_ref
+entity_type: node
+bundle: group_per_aff
+label: Group
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      group: group
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

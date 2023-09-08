@@ -1,0 +1,30 @@
+uuid: ed42b7aa-1285-48ec-90bf-715c5a17f167
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:851fb1a2-ed04-44c6-ab57-86fb530900fc'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_35
+theme: olivero
+region: content
+weight: -38
+provider: null
+plugin: 'block_content:851fb1a2-ed04-44c6-ab57-86fb530900fc'
+settings:
+  id: 'block_content:851fb1a2-ed04-44c6-ab57-86fb530900fc'
+  label: 'From the GDC FAQ'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/202

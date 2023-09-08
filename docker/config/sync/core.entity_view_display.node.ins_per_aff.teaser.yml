@@ -1,0 +1,40 @@
+uuid: 4e88250a-5812-4177-a7f9-472046f6ce48
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ins_per_aff.body
+    - field.field.node.ins_per_aff.comment_node_ins_per_aff
+    - field.field.node.ins_per_aff.field_dept
+    - field.field.node.ins_per_aff.field_ins_ref
+    - field.field.node.ins_per_aff.field_person_ref
+    - field.field.node.ins_per_aff.field_position
+    - node.type.ins_per_aff
+  module:
+    - text
+    - user
+id: node.ins_per_aff.teaser
+targetEntityType: node
+bundle: ins_per_aff
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_ins_per_aff: true
+  field_dept: true
+  field_ins_ref: true
+  field_person_ref: true
+  field_position: true

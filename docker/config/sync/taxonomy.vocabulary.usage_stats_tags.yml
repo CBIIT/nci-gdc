@@ -1,0 +1,8 @@
+uuid: 0aaf2bbc-9184-48d8-8ae4-8a7db2554290
+langcode: en
+status: true
+dependencies: {  }
+name: 'Usage Stats Tags'
+vid: usage_stats_tags
+description: null
+weight: 0

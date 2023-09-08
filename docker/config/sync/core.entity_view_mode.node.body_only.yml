@@ -1,0 +1,10 @@
+uuid: aefd4277-6da6-42d8-8534-37f936ea2d1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.body_only
+label: body_only
+targetEntityType: node
+cache: true

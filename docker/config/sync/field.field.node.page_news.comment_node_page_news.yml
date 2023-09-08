@@ -1,0 +1,33 @@
+uuid: 3cd98a63-252b-4949-a624-7e2b64740646
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_page_news
+    - node.type.page_news
+  module:
+    - comment
+id: node.page_news.comment_node_page_news
+field_name: comment_node_page_news
+entity_type: node
+bundle: page_news
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment
