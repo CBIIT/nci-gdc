@@ -1,0 +1,31 @@
+uuid: cbb21eb9-8df0-476d-b0a3-b077797004e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_asset_dictionary.default
+    - field.field.node.asset_dictionary.comment_node_asset_dictionary
+    - node.type.asset_dictionary
+  module:
+    - comment
+    - user
+id: node.asset_dictionary.default
+targetEntityType: node
+bundle: asset_dictionary
+mode: default
+content:
+  comment_node_asset_dictionary:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

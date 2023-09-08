@@ -1,0 +1,25 @@
+uuid: 409eb5dd-e88d-4608-a7e4-463ce0a02f07
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.php_code
+  module:
+    - ckeditor5
+format: php_code
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+image_upload: {  }

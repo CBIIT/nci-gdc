@@ -1,0 +1,30 @@
+uuid: b8507385-85b4-4a55-a724-c9b8699761b4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d98ba60c-3965-40cf-9fed-538e761f370d'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_27
+theme: olivero
+region: content
+weight: -36
+provider: null
+plugin: 'block_content:d98ba60c-3965-40cf-9fed-538e761f370d'
+settings:
+  id: 'block_content:d98ba60c-3965-40cf-9fed-538e761f370d'
+  label: 'Media Inquiries'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/about-gdc/*'

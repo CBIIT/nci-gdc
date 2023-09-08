@@ -1,0 +1,30 @@
+uuid: 653bc83f-9605-4934-a5b1-d7ea53f30c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assistant
+    - node.type.group
+    - node.type.person
+id: node.group.field_assistant
+field_name: field_assistant
+entity_type: node
+bundle: group
+label: Assistant
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 29bdb95d-6b95-4ece-bb89-79f828622683
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cdedc3f2-4616-4f8d-9849-fc86604eba06'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_31
+theme: olivero
+region: content
+weight: -30
+provider: null
+plugin: 'block_content:cdedc3f2-4616-4f8d-9849-fc86604eba06'
+settings:
+  id: 'block_content:cdedc3f2-4616-4f8d-9849-fc86604eba06'
+  label: 'GDC Help Desk: For Technical Assistance '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/736

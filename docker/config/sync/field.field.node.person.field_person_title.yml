@@ -1,0 +1,21 @@
+uuid: 4786f36c-3678-4449-85f9-284d394b3f47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_title
+    - node.type.person
+  module:
+    - options
+id: node.person.field_person_title
+field_name: field_person_title
+entity_type: node
+bundle: person
+label: Salutation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: 36d65d2c-686f-48ec-b257-bad84e895f42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_ref
+    - node.type.person
+    - node.type.person_asset
+id: node.person_asset.field_person_ref
+field_name: field_person_ref
+entity_type: node
+bundle: person_asset
+label: Person
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

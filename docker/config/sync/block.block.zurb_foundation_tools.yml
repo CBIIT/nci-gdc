@@ -1,0 +1,27 @@
+uuid: 9147169d-132a-4bdc-9dce-2e22231fc1c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - zurb_foundation
+_core:
+  default_config_hash: 3A7RkBjCuahANmSDs8hmGnNjxbV3_eiulegW88ecRpk
+id: zurb_foundation_tools
+theme: zurb_foundation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

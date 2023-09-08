@@ -1,0 +1,30 @@
+uuid: b884b0dd-71bb-4c7e-9ce3-18f34e61d332
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9948d338-3e52-486d-9058-d5ea464aa23c'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_55
+theme: olivero
+region: content
+weight: -26
+provider: null
+plugin: 'block_content:9948d338-3e52-486d-9058-d5ea464aa23c'
+settings:
+  id: 'block_content:9948d338-3e52-486d-9058-d5ea464aa23c'
+  label: 'Suggest a Tool'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /access-data/gdc-community-tools

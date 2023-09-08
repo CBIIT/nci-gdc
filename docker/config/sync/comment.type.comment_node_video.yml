@@ -1,0 +1,8 @@
+uuid: f04c0bc6-a429-483e-8499-97e894c04c64
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_video
+label: 'Youtube Video comment'
+target_entity_type_id: node
+description: null

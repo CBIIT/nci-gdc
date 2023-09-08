@@ -1,0 +1,11 @@
+uuid: 50134a9e-dd0a-4d9f-9a9a-511c0c4d45ac
+langcode: en
+status: true
+dependencies: {  }
+name: Campaign
+type: campaign
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

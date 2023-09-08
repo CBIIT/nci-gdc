@@ -1,0 +1,33 @@
+uuid: 54b345ab-1499-4faa-9404-82291dc11bd0
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_person_title
+field_name: field_person_title
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: mr
+      label: Mr.
+    -
+      value: ms
+      label: Ms.
+    -
+      value: mrs
+      label: Mrs.
+    -
+      value: dr
+      label: Dr.
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
