@@ -1,0 +1,16 @@
+$databases['default']['default'] = array(
+  'database' => getenv('db_name'),
+  'username' => getenv('db_user'),
+  'password' => getenv('db_password'),
+  'host' => getenv('db_host'),
+  'port' => getenv('db_port'),
+  'driver' => 'mysql',
+  'prefix' => '',
+);
+
+$settings['hash_salt'] =  getenv('hash_salt');
+global $content_directories;
+$content_directories['sync'] = $app_root.'/../content/sync';
+$config_directories['sync'] = $app_root.'/../config/sync';
+$settings['sync']="";
+$config_directories['sync'] = '../config';

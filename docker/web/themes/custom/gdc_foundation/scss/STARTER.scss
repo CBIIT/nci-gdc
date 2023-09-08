@@ -1,0 +1,152 @@
+// =========
+// This application file (THEMENAME.scss) is where all the partials are
+// imported.
+//
+// Do not name this file "STARTER.scss". This file should be named
+// THEMENAME.scss.
+//
+// The first half of the file imports Zurb Foundation elements.
+// The second half is for you to included component files to
+// further customize the theme.
+//
+// Theme styles are categorized using SMACSS standards. Those categories are the
+// following:
+//
+// - Base: CSS reset/normalize plus HTML element styling.
+// - Layout: Macro arrangement of a web page, including any grid systems.
+// - Modules: Dictate minor layout modules or reusable elements.
+// - States: Describe the appearance of a module in various states.
+// - Theme: Specific customizations for your subtheme.
+// For more information about this new Drupal css file standard, please review
+// the following:
+// - https://drupal.org/node/1887922
+// - http://smacss.com/
+// =========
+
+// =========
+// Importing Zurb Foundation
+//
+// https://get.foundation/sites/docs/sass.html#adjusting-css-output
+//
+// Note: The following include statements import sass partials for corresponding
+// Foundation 6 features and components. If you do not need any of the features
+// listed below feel free to comment each line out and re-compile.
+// =========
+
+// Make sure the charset is set appropriately
+@charset 'utf-8';
+
+// --- Settings ---
+// This is your _settings.scss file where you can override foundation variables.
+// https://get.foundation/sites/docs/sass.html#the-settings-file
+@import "settings";
+
+// --- Core ---
+// The following imports Zurb Foundation theme.
+@import "foundation";
+@import "motion-ui";
+
+// --- Components ---
+// If you want all the components, and don't care about
+// toggling any on or off, you can use this setting and comment
+// out the rest of the Foundation components.
+// @include foundation-everything($flex: false, $prototype: false);
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-range-input;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+
+// Prototyping Utilities
+// https://get.foundation/sites/docs/prototyping-utilities.html
+// @include foundation-prototype-classes;
+
+// Motion UI
+// https://get.foundation/sites/docs/motion-ui.html
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+// =========
+// Custom Components
+//
+// This is where to include any and all custom components for this
+// sub-theme. These can build off of, or overwrite Foundation's components.
+// As long as files start with an underscore, all the variables set in the
+// _settings.scss file can be used.
+// =========
+
+// --- Base ---
+// Drupal-specific styles copied from base theme. (Required)
+@import "base/drupal";
+// Import your mixins early so they can be used by other partials. (optional)
+// @import "base/mixins";
+// @import "base/common";
+// @import "base/elements";
+
+// --- Layout ---
+// Each section of the document has it's own partial seperated out to improve
+// developer experience. Additionally, grids can be declared in layouts as well.
+//@import "layout/header";
+//@import "layout/main";
+//@import "layout/aside";
+//@import "layout/footer";
+
+// --- Modules ---
+// @import "modules/block";
+// @import "modules/button";
+
+// --- States ---
+// @import "states/collapse";
+
+// --- Themes ---
+// @import "theme/button-light";
