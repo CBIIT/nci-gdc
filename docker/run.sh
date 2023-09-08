@@ -15,11 +15,8 @@ else
     #drush cdel -y block.block.bartik_system_main
     #drush cdel -y block.block.bartik_system_powered_by
     #drush cdel -y block.block.cag_bootstrap_system_main
-    #filter_uuid_output=$(drush cget filter.format.markdown uuid)
-    #uid_value=$(echo "$line" | grep -o "'filter\.format\.markdown:uuid': [0-9a-fA-F-]*")
-    #filter_uuid=$(echo "$uuid_value" | awk -F ": " '{print $2}')
-    #sed -i '1i uuid: $filter_uuid' /var/www/drupal/config/sync/filter.format.markdown.yml
-    #drush cim -y --source=/var/www/drupal/config/sync --partial
+    #drush y:get:value contentsync/filter.format.markdown.yml uuid
+    drush cim -y --source=/var/www/drupal/config/sync --partial
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
     drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
