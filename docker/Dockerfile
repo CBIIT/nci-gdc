@@ -21,6 +21,6 @@ COPY settings.php.patch /var/www/drupal
 COPY composer.json /var/www/drupal
 COPY migrate.sh /var/www/drupal
 COPY memory.ini /etc/php81/conf.d
-COPY *.yml /var/www/drupal/config/sync
+COPY ./configuration/*.yml /var/www/drupal/config/sync
 
 ENTRYPOINT run.sh
