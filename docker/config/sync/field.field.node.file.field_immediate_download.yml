@@ -1,0 +1,23 @@
+uuid: 44030807-346e-4b8b-8a8a-f418e31681cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_immediate_download
+    - node.type.file
+id: node.file.field_immediate_download
+field_name: field_immediate_download
+entity_type: node
+bundle: file
+label: 'Immediate Download'
+description: 'Immediate File Download'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

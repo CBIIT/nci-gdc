@@ -1,0 +1,8 @@
+uuid: ca0463fb-221d-46bf-9636-2d9842c73861
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_image
+label: 'Image comment'
+target_entity_type_id: node
+description: null

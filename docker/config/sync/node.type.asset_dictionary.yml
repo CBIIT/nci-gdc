@@ -1,0 +1,11 @@
+uuid: 9800c667-2956-49b5-9110-c5a236d4311a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Asset - Dictionary'
+type: asset_dictionary
+description: 'Information classified as a "dictionary" for a person'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

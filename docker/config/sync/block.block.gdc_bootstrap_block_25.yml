@@ -1,0 +1,60 @@
+uuid: 4b22b163-283d-44d2-b0e6-730e84371993
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9307f671-5fb3-4405-9660-baf4c9ae567b'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_25
+theme: olivero
+region: content
+weight: -51
+provider: null
+plugin: 'block_content:9307f671-5fb3-4405-9660-baf4c9ae567b'
+settings:
+  id: 'block_content:9307f671-5fb3-4405-9660-baf4c9ae567b'
+  label: '<none>'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: |-
+      /node/812
+      /node/812/*
+      /node/168
+      /node/168/*
+      /node/199
+      /node/669
+      /node/199/*
+      /node/202
+      /node/202/*
+      /node/183
+      /node/183/*
+      /node/165
+      /node/165/*
+      /node/169
+      /node/169/*
+      /node/175
+      /node/175/*
+      <front>
+      /user
+      /user/*
+      /admin
+      /admin/*
+      /search
+      /search/*
+      /filter
+      /filter/*
+      /sample-page
+      /sample-page/*
+      /node/617/*
+      /node/617

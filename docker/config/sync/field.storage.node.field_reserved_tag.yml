@@ -1,0 +1,20 @@
+uuid: d49139b5-3b28-47f8-b8c0-2f7c4c819a74
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_reserved_tag
+field_name: field_reserved_tag
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

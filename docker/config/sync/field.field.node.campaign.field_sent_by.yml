@@ -1,0 +1,28 @@
+uuid: 3392ca92-1061-4fc9-a27e-08b84f07789e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sent_by
+    - node.type.campaign
+id: node.campaign.field_sent_by
+field_name: field_sent_by
+entity_type: node
+bundle: campaign
+label: 'Sent By'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

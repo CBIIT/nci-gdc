@@ -1,0 +1,30 @@
+uuid: 826980c1-bc76-4646-83a3-82592f6f3698
+langcode: en
+status: true
+dependencies: {  }
+name: square16_crop_resize
+label: square16_crop_resize
+effects:
+  98e97b6c-d3f7-4ac1-b653-638bdb933cae:
+    uuid: 98e97b6c-d3f7-4ac1-b653-638bdb933cae
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      upscale: false
+  c4bda30d-d7ba-47a9-bc6e-f251887b99da:
+    uuid: c4bda30d-d7ba-47a9-bc6e-f251887b99da
+    id: image_crop
+    weight: 2
+    data:
+      width: 50
+      height: 50
+      anchor: center-center
+  dda06d54-d9b3-425b-b26e-3bfb8e577578:
+    uuid: dda06d54-d9b3-425b-b26e-3bfb8e577578
+    id: image_resize
+    weight: 3
+    data:
+      width: 16
+      height: 16

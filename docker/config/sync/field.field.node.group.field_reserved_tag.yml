@@ -1,0 +1,26 @@
+uuid: f8f87eef-47ec-4a44-b06c-78d0b6ca8071
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reserved_tag
+    - node.type.group
+    - taxonomy.vocabulary.system_reserved_tag
+id: node.group.field_reserved_tag
+field_name: field_reserved_tag
+entity_type: node
+bundle: group
+label: 'Reserved Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      system_reserved_tag: system_reserved_tag
+    sort:
+      field: _none
+field_type: entity_reference

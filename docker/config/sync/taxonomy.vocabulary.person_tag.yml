@@ -1,0 +1,8 @@
+uuid: 4b97fdff-74ca-4b94-a3ec-273b01b9f8e7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Tag'
+vid: person_tag
+description: 'Terms for the Person Content Type'
+weight: -6

@@ -1,0 +1,27 @@
+uuid: 1f410716-96df-42c0-86eb-29ccc2a57ecf
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_page_for_scientif
+    - field.field.comment.comment_node_page_for_scientif.comment_body
+  module:
+    - text
+id: comment.comment_node_page_for_scientif.default
+targetEntityType: comment
+bundle: comment_node_page_for_scientif
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

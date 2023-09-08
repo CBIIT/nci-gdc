@@ -1,0 +1,28 @@
+uuid: 52d58bed-ebea-4e92-bc9d-daadcd225f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.person_asset.comment_node_person_asset
+    - field.field.node.person_asset.field_asset_person_tax
+    - field.field.node.person_asset.field_asset_ref
+    - field.field.node.person_asset.field_person_ref
+    - node.type.person_asset
+  module:
+    - user
+id: node.person_asset.teaser
+targetEntityType: node
+bundle: person_asset
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_person_asset: true
+  field_asset_person_tax: true
+  field_asset_ref: true
+  field_person_ref: true

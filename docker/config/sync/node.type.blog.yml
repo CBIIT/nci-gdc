@@ -1,0 +1,18 @@
+uuid: 9b5a15ac-4409-4660-bd7f-ed7e826020bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Blog entry'
+type: blog
+description: 'Use for multi-user blogs. Every user gets a personal blog.'
+help: '1'
+new_revision: false
+preview_mode: 1
+display_submitted: true

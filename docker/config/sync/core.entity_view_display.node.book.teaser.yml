@@ -1,0 +1,38 @@
+uuid: 0fd8be27-e8a4-43be-afa5-400c08063a74
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - field.field.node.book.comment_node_book
+    - field.field.node.book.field_content_tag
+    - field.field.node.book.field_orig_nid
+    - field.field.node.book.field_subject_tag
+    - node.type.book
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: pbRIoJUWtkil5pUsiYQBQr-lYl0lPH6iBq-1BhQP4eg
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  comment_node_book: true
+  field_content_tag: true
+  field_orig_nid: true
+  field_subject_tag: true

@@ -1,0 +1,23 @@
+uuid: c3cf3cf3-6ab2-4358-8170-9db4d785ca82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paper_number
+    - node.type.person
+id: node.person.field_paper_number
+field_name: field_paper_number
+entity_type: node
+bundle: person
+label: 'Paper Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

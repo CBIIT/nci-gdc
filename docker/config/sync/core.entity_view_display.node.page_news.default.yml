@@ -1,0 +1,62 @@
+uuid: 978a1a7b-bb78-41d5-af7c-cc9d5cb1e03c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_page_news.default
+    - field.field.node.page_news.body
+    - field.field.node.page_news.comment_node_page_news
+    - field.field.node.page_news.field_content_tag
+    - field.field.node.page_news.field_date
+    - field.field.node.page_news.field_link
+    - field.field.node.page_news.field_shared_data_specific
+    - field.field.node.page_news.field_subject_tag
+    - node.type.page_news
+  module:
+    - comment
+    - link
+    - text
+    - user
+id: node.page_news.default
+targetEntityType: node
+bundle: page_news
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_page_news:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content_tag: true
+  field_date: true
+  field_shared_data_specific: true
+  field_subject_tag: true
