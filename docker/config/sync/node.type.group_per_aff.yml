@@ -1,0 +1,11 @@
+uuid: 9edd85e0-5efb-42f5-ae8d-726dbafedad4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Group Person Affiliation'
+type: group_per_aff
+description: 'Affiliation between a group and a person'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

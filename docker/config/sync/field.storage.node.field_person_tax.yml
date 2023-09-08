@@ -1,0 +1,20 @@
+uuid: ae170201-cb43-41d6-80a2-8806c99eabbd
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_person_tax
+field_name: field_person_tax
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

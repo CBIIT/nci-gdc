@@ -1,0 +1,23 @@
+uuid: e93c66f9-aca5-42bb-863d-9bacf909188b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.crg
+  module:
+    - link
+id: node.crg.field_link
+field_name: field_link
+entity_type: node
+bundle: crg
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

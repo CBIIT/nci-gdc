@@ -1,0 +1,15 @@
+uuid: f4f631c8-eefc-4311-b53c-250c015bdca9
+langcode: en
+status: true
+dependencies: {  }
+name: grid16-11
+label: grid16-11
+effects:
+  a51a42d9-747b-4aa5-8004-31978bb3fba2:
+    uuid: a51a42d9-747b-4aa5-8004-31978bb3fba2
+    id: image_scale
+    weight: 1
+    data:
+      width: 660
+      height: null
+      upscale: true

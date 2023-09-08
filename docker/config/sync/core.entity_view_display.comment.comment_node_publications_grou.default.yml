@@ -1,0 +1,27 @@
+uuid: be2adae0-7949-4d84-8ae8-c018ab2a8970
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_publications_grou
+    - field.field.comment.comment_node_publications_grou.comment_body
+  module:
+    - text
+id: comment.comment_node_publications_grou.default
+targetEntityType: comment
+bundle: comment_node_publications_grou
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

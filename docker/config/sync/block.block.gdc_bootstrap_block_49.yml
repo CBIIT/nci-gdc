@@ -1,0 +1,32 @@
+uuid: 76a4f308-7c44-4f28-ac8a-31b4c943f420
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:32992324-b0ad-43b9-a4a8-96674b69ee2c'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_49
+theme: olivero
+region: content
+weight: -33
+provider: null
+plugin: 'block_content:32992324-b0ad-43b9-a4a8-96674b69ee2c'
+settings:
+  id: 'block_content:32992324-b0ad-43b9-a4a8-96674b69ee2c'
+  label: 'Get Started'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /node/766
+      /node/838

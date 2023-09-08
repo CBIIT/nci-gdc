@@ -1,0 +1,19 @@
+uuid: 359435b4-d5fc-4caa-88c5-2cb0388b0111
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date
+    - node.type.private_file
+id: node.private_file.field_creation_date
+field_name: field_creation_date
+entity_type: node
+bundle: private_file
+label: 'Created On'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

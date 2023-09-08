@@ -1,0 +1,30 @@
+uuid: 54386e27-350a-4921-86e8-0fb3340deaca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:30d56c9c-ae43-49cd-a536-fec809332c11'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_15
+theme: olivero
+region: content
+weight: -45
+provider: null
+plugin: 'block_content:30d56c9c-ae43-49cd-a536-fec809332c11'
+settings:
+  id: 'block_content:30d56c9c-ae43-49cd-a536-fec809332c11'
+  label: 'Submit Data'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

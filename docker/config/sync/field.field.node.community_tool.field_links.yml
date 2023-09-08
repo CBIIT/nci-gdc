@@ -1,0 +1,23 @@
+uuid: e97fec80-a308-4f29-b0c9-4581d090abc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.community_tool
+  module:
+    - link
+id: node.community_tool.field_links
+field_name: field_links
+entity_type: node
+bundle: community_tool
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

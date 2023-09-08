@@ -1,0 +1,27 @@
+uuid: ff41cd4e-762d-4889-b950-a76ba5db5d83
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_person_asset
+    - field.field.comment.comment_node_person_asset.comment_body
+  module:
+    - text
+id: comment.comment_node_person_asset.default
+targetEntityType: comment
+bundle: comment_node_person_asset
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

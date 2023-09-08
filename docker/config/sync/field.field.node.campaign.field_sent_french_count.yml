@@ -1,0 +1,23 @@
+uuid: a7b611fd-13f9-4984-9727-0629717e432e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sent_french_count
+    - node.type.campaign
+id: node.campaign.field_sent_french_count
+field_name: field_sent_french_count
+entity_type: node
+bundle: campaign
+label: 'Sent French Count'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

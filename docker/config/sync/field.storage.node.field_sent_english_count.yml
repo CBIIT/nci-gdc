@@ -1,0 +1,20 @@
+uuid: 47565eb0-1c0e-407c-af26-70e8132f44b4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sent_english_count
+field_name: field_sent_english_count
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

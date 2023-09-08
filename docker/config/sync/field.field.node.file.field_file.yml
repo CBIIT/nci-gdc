@@ -1,0 +1,27 @@
+uuid: f3db905d-40b0-42fc-bde3-eb37ebc31396
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.file
+  module:
+    - file
+id: node.file.field_file
+field_name: field_file
+entity_type: node
+bundle: file
+label: File
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: public/file
+  file_extensions: 'txt pdf doc zip png ics pptx'
+  max_filesize: ''
+  description_field: true
+field_type: file

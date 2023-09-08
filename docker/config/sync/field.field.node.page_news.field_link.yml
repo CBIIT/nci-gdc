@@ -1,0 +1,23 @@
+uuid: 4903d0b3-14fd-4134-a4dd-914adb1f2f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.page_news
+  module:
+    - link
+id: node.page_news.field_link
+field_name: field_link
+entity_type: node
+bundle: page_news
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,8 @@
+uuid: 9bf8a82c-0dde-47cf-bb20-b8b56ff80cce
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_biography
+label: 'Biography comment'
+target_entity_type_id: node
+description: null

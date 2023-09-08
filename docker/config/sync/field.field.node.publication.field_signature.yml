@@ -1,0 +1,22 @@
+uuid: b025352a-c675-4027-b7f6-67746fda8c2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_signature
+    - node.type.publication
+  module:
+    - text
+id: node.publication.field_signature
+field_name: field_signature
+entity_type: node
+bundle: publication
+label: Signature
+description: 'Signature of the publication including author(s), journal, volume, issue and year, page numbers, and DOI'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

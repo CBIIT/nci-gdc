@@ -1,0 +1,120 @@
+uuid: 225feb07-c365-4d87-bd15-f0c254b5cc14
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_group.default
+    - field.field.node.group.comment_node_group
+    - field.field.node.group.field_assistant
+    - field.field.node.group.field_group_image
+    - field.field.node.group.field_group_name
+    - field.field.node.group.field_group_parent_ref
+    - field.field.node.group.field_group_tax
+    - field.field.node.group.field_machine_name
+    - field.field.node.group.field_research_email
+    - field.field.node.group.field_research_website
+    - field.field.node.group.field_reserved_tag
+    - node.type.group
+  module:
+    - comment
+    - image
+    - link
+    - user
+id: node.group.default
+targetEntityType: node
+bundle: group
+mode: default
+content:
+  comment_node_group:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_assistant:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_group_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_group_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_group_parent_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_group_tax:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_machine_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_research_email:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_research_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_reserved_tag:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

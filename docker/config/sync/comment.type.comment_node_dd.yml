@@ -1,0 +1,8 @@
+uuid: 465fb4a8-b2e8-4775-8fba-8dc28b68eee6
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_dd
+label: 'Donated Genomic Data for Cancer Research comment'
+target_entity_type_id: node
+description: null

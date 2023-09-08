@@ -1,0 +1,20 @@
+uuid: 2db82ec7-26fc-4c4b-9783-d525002b3d3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_webinar
+field_name: comment_node_webinar
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_webinar
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+uuid: 8bc9021c-a8f8-4229-b1aa-83faf5a18f3b
+langcode: en
+status: true
+dependencies: {  }
+name: grid16-6
+label: grid16-6
+effects:
+  51f0b935-5d9b-4a50-a119-6f0fa368c857:
+    uuid: 51f0b935-5d9b-4a50-a119-6f0fa368c857
+    id: image_scale
+    weight: 1
+    data:
+      width: 360
+      height: null
+      upscale: false

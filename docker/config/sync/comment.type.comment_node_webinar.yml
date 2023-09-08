@@ -1,0 +1,8 @@
+uuid: 6bf523fa-0173-4c5c-837a-547e675d735c
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_webinar
+label: 'Webinar comment'
+target_entity_type_id: node
+description: null
