@@ -10,8 +10,19 @@ else
     drush site:install -y standard --db-url=mysql://$db_user:$encoded_password@$db_host:$db_port/$db_name --account-name=$account_name --account-pass=$account_pass --site-name=$sitename
     touch installed.txt
     cat /var/www/drupal/settings.php.patch >> /var/www/drupal/web/sites/default/settings.php
+    
+    composer require drupal/markdown erusev/parsedown --no-update
+    drush cdel -y block.block.bartik_system_main
+    drush cdel -y block.block.bartik_system_powered_by
+    drush cdel -y block.block.cag_bootstrap_system_main
+    filter_uuid_output=$($(drush cget filter.format.markdown uuid)
+    uid_value=$(echo "$line" | grep -o "'filter\.format\.markdown:uuid': [0-9a-fA-F-]*")
+    filter_uuid=$(echo "$uuid_value" | awk -F ": " '{print $2}')
+    sed -i '1i uuid: $filter_uuid' /var/www/drupal/config/sync/filter.format.markdown.yml
+    drush cim -y --source=/var/www/drupal/config/sync --partial
     composer update
-    drush en -y ckeditor_markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade
+    drush en -y ckeditor_markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
+
     if [ -d "/tmp/files" ]; then
        cp -R /tmp/files /var/www/drupal
        rm -rf /var/www/drupal/files/private
@@ -25,6 +36,7 @@ else
     rm -rf /var/www/drupal/content/sync/entities
     rm -rf /var/www/drupal/content/sync/files
     drush cse -y
+    #drush cex?
     tar cvf /var/www/drupal/contentsync/content.tgz /var/www/drupal/content/sync/*
     ## changing ownership to 3000 which is drupaldocker user ##
     chown -R 3000:3000 /var/www/drupal/contentsync

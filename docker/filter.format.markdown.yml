@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - markdown
+name: Markdown
+format: markdown
+weight: -6
+filters:
+  markdown:
+    id: markdown
+    provider: markdown
+    status: true
+    weight: -15
+    settings:
+      id: parsedown
+      enabled: true
+      render_strategy:
+        type: filter_output
+        custom_allowed_html: ''
+        plugins:
+          filter_align: false
+          filter_caption: false
+          parsedown: true
+      override: false
+    filterFormat: markdown

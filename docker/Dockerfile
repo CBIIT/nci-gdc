@@ -14,10 +14,13 @@ RUN mkdir /var/www/drupal/web/modules/contrib
 RUN mkdir -p /var/www/drupal/content/sync
 WORKDIR /var/www/drupal
 RUN mv content_sync /var/www/drupal/web/modules/contrib
+RUN mkdir -p /var/www/drupal/config/sync
+COPY filter.format.markdown.yml /var/www/drupal/config/sync
 COPY run.sh /usr/bin
 COPY httpd.conf /etc/apache2
 COPY settings.php.patch /var/www/drupal
 COPY composer.json /var/www/drupal
 COPY migrate.sh /var/www/drupal
 COPY memory.ini /etc/php81/conf.d
+
 ENTRYPOINT run.sh
