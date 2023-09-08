@@ -1,0 +1,22 @@
+# The URL of your server (e.g. http://localhost:49871 or foobar.lndo.site) for browersync
+BROWSERSYNC: 'https://foobar.lndo.site'
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to built css folder
+  dist: "css"
+  # Path to main scss files and settings for subtheme
+  scss: "scss/*.scss"
+  # Path to subtheme scss files
+  componentScss: "scss/**/*.scss"
+  # Paths to Sass libraries, which can then be loaded with @import
+  foundationScss:
+    - "node_modules/foundation-sites/scss"
+    - "node_modules/motion-ui/src"
+  # Path to custom JS
+  js:
+    "js/*.js"
+  # Paths to Foundation JavaScript for webpack to bundle modules
+  foundationJs:
+    - "node_modules/foundation-sites/dist/js/*.js"
+    - "node_modules/motion-ui/dist/*.js"
