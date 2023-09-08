@@ -1,0 +1,28 @@
+uuid: 6f0ca486-9922-4fb3-abc7-63145e30751a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.markdown
+    - filter.format.php_code
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - filter
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format markdown'
+  - 'use text format php_code'
+  - 'use text format restricted_html'

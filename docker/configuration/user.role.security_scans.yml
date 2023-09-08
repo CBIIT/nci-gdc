@@ -1,0 +1,14 @@
+uuid: 1c01b24e-c1ec-4cd3-a0c6-51834fc02ed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.php_code
+  module:
+    - filter
+id: security_scans
+label: security-scans
+weight: 6
+is_admin: null
+permissions:
+  - 'use text format php_code'
