@@ -27,6 +27,8 @@ else
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
     drush cim -y --source=$site_path/config/sync --partial
+    drush thin gdc_foundation
+    drush thin zurb_foundation
 fi
 crond
 exec httpd -DFOREGROUND
