@@ -14,7 +14,7 @@ else
 
     cat $site_path/settings.php.patch >> $site_path/web/sites/default/settings.php
     composer update
-    drush en -y content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade
+    drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade
     if [ -d "$homedir/files" ]; then
        cp -R $site_path/files/files/* $site_path/web/sites/default/files
        rm -rf $site_path/files/private
