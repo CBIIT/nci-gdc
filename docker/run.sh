@@ -16,10 +16,10 @@ else
     #drush cdel -y block.block.bartik_system_powered_by
     #drush cdel -y block.block.cag_bootstrap_system_main
     #drush y:get:value contentsync/filter.format.markdown.yml uuid
-    drush cim -y --source=/var/www/drupal/config/sync --partial
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
     drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
+    drush cim -y --source=/var/www/drupal/config/sync --partial
 
     if [ -d "/tmp/files" ]; then
        cp -R /tmp/files /var/www/drupal
