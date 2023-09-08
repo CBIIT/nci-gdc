@@ -20,6 +20,7 @@ else
     #filter_uuid=$(echo "$uuid_value" | awk -F ": " '{print $2}')
     #sed -i '1i uuid: $filter_uuid' /var/www/drupal/config/sync/filter.format.markdown.yml
     #drush cim -y --source=/var/www/drupal/config/sync --partial
+    echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
     drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
 
@@ -40,6 +41,7 @@ else
     tar cvf /var/www/drupal/contentsync/content.tgz /var/www/drupal/content/sync/*
     ## changing ownership to 3000 which is drupaldocker user ##
     chown -R 3000:3000 /var/www/drupal/contentsync
+    echo "need to add markdown content authoring type, then after upgrade save the format again"
 
 fi
 exec httpd -DFOREGROUND
