@@ -17,7 +17,8 @@ else
        mkdir $site_path/web/sites/default/files
        cp -R $site_path/files/files/* $site_path/web/sites/default/files
        rm -rf $site_path/files/private
-       cp -R $site_path/files/files-private $site_path/web/sites/default/files/private
+       mkdir $site_path/web/sites/default/files/private
+       cp -R $site_path/files/files-private/* $site_path/web/sites/default/files/private
     fi
     chown -R apache:apache $site_path/web
     drush ucrt admin
