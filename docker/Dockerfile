@@ -18,9 +18,11 @@ RUN mkdir -p $site_path/config/sync
 RUN mkdir $site_path/contentimport
 WORKDIR $site_path
 RUN mv content_sync $site_path/web/modules/contrib
+ADD web $site_path/web
 COPY run.sh /usr/bin
 COPY httpd.conf /etc/apache2
 COPY settings.php.patch $site_path
 COPY composer.json $site_path
 COPY memory.ini /etc/php81/conf.d
+
 ENTRYPOINT run.sh
