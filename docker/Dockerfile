@@ -1,6 +1,6 @@
 FROM alpine:latest
 ENV apache_root=/var/www
-ENV site_path=${apache_root}
+ENV site_path=${apache_root}/drupal
 ENV PATH="${PATH}:${site_path}/vendor/drush/drush"
 RUN apk update
 RUN apk add python3 mariadb-client mariadb-connector-c-dev php81 php81-apache2 php81-opcache php81-mysqli php81-pdo_mysql php81-tokenizer \
@@ -17,7 +17,7 @@ RUN mkdir -p ${site_path}/web/modules/custom
 RUN mkdir -p ${site_path}/web/themes/custom
 RUN mkdir -p ${site_path}/content/sync
 RUN mkdir -p ${site_path}/config/sync
-RUN mkdir ${site_path}/contentimport
+RUN mkdir -p ${site_path}/contentimport
 WORKDIR ${site_path}
 RUN mv content_sync ${site_path}/web/modules/contrib
 ADD web ${site_path}/web
