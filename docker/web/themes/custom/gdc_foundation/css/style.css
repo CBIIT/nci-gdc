@@ -1,0 +1,31 @@
+header >* form#search-block-form > div >input {
+  width: 150px;
+  float:right;
+}
+header >* form#search-block-form > #edit-actions {
+  display:none;
+}
+footer {
+    background-color: #004971;
+    color:white;
+}
+.usa-footer--nci-big .usa-footer__primary-section .usa-footer__primary-content .usa-list--unstyled {
+    margin-bottom: 1.5rem;
+    margin-top: .25rem;
+    padding: .75rem 0 2rem;
+}
+.usa-footer__primary-link {
+ font-weight:bold;
+ line-height:2em;
+}
+ul.usa-list {
+  list-style-type: none;
+  line-height: 2em;
+}
+li.usa-footer__secondary-link {
+	color:white;
+	line-height: 2em;
+}
+li.usa-footer__secondary-link > a {
+	color:white;
+}
