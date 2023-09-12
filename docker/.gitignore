@@ -67,3 +67,4 @@
 /web/themes/contrib
 .editorconfig
 .gitattributes
+.DS_Store
