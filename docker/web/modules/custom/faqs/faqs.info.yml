@@ -1,0 +1,8 @@
+name: 'FAQs Module'
+type: module
+description: 'Custom module for displaying FAQs.'
+core_version_requirement: ^10
+package: Custom
+
+libraries:
+  - faqs/faq-filter
