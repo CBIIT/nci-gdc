@@ -32,8 +32,15 @@
   display: inline-block !important;
 }
 
-.plusminus {
-  cursor:pointer;
+span.plusminus {
+  cursor: pointer;
+  display: inline-block; /* Change display to inline-block */
+  width: 15px;
+  padding-right: 25px;
 }
-
-
+.faq-container {
+  padding-bottom:5px !important;
+}
+.views-field.views-field-body {
+  padding-left:25px;
+}

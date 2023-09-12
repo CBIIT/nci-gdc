@@ -26,11 +26,10 @@
 </div>
 </div>
 
-
 {% for node in nodes %}
 <div class="faq-container" style="display: none;" data-tags="{% for subjecttag_item in node.field_subject_tag %}{{ subjecttag_item.target_id|raw }}{% if not loop.last %},{% endif %}{% endfor %}">
   <div class="views-field views-field-title">
-    <a>{{ node.title.value }}</a>
+    <span class="plusminus">+</span><a>{{ node.title.value }}</a>
   </div>
   <div class="views-field views-field-body" style="display:none">
     {{ node.body.value|raw }}
