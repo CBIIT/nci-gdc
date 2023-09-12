@@ -1,3 +1,4 @@
+source ~/.bashrc
 docker rm -f chrisimage
 docker build -t chrisimage .
 
