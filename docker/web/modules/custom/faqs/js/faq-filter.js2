@@ -1,0 +1,85 @@
+(function ($) {
+  // Wait for the document to be ready.
+  $(document).ready(function () {
+    $('.faq-toggle').on('click', function () {
+        //console.log($(this))
+
+        // Find the closest FAQ item and toggle the visibility of its content.
+        $(this).closest('.faq').find('.faq-content').toggle();
+
+        // Toggle the plus/minus icon class.
+        $(this).toggleClass('expanded');
+
+        // Update the text of the plus/minus icon.
+        if ($(this).hasClass('expanded')) {
+          $(this).text('-'); // Minus icon
+        } else {
+          $(this).text('+'); // Plus icon
+        }
+    }
+
+    );
+    $('.faq-title').on('click', function () {
+        // Find the closest FAQ item and toggle the visibility of its content.
+        var faqItem = $(this).closest('.faq');
+        faqItem.find('.faq-content').toggle();
+
+        // Toggle the plus/minus icon class.
+        faqItem.find('.faq-toggle').toggleClass('expanded');
+
+        // Update the text of the plus/minus button.
+        var buttonText = faqItem.find('.faq-toggle').text();
+        if (buttonText === '+') {
+          faqItem.find('.faq-toggle').text('-'); // Change "+" to "-"
+        } else {
+          faqItem.find('.faq-toggle').text('+'); // Change "-" to "+"
+        }
+      });
+
+    // Function to filter FAQ items based on selected checkboxes.
+    function filterFAQs() {
+      // Get the values (data-term) of the selected checkboxes as integers.
+      var selectedValues = $('input.term-filter:checked').map(function () {
+        return parseInt($(this).data('term'));
+      }).get();
+
+      // Hide all FAQ items.
+      $('.faq').hide();
+
+      // Show FAQ items that match any of the selected values.
+      if (selectedValues.length > 0) {
+        $('.faq').each(function () {
+          var item = $(this);
+          var tempTags = item.data('tags').toString();
+          var tags = tempTags.split(',').map(function (tag) {
+            return parseInt(tag.trim());
+          });
+
+          var match = false;
+
+          // Check if any of the selected values match the FAQ's tags.
+          for (var i = 0; i < tags.length; i++) {
+            if (selectedValues.indexOf(tags[i]) !== -1) {
+              match = true;
+              break;
+            }
+          }
+
+          if (match) {
+            item.show();
+          }
+        });
+      } else {
+        // If no checkboxes are selected, show all FAQ items.
+        $('.faq').show();
+      }
+    }
+
+    // Attach a change event handler to the checkboxes.
+    $('input.term-filter').on('change', filterFAQs);
+
+    // Initial filtering when the page loads (if needed).
+    filterFAQs();
+  });
+})(jQuery);
+

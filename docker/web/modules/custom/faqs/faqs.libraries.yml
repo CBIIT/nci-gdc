@@ -1,0 +1,11 @@
+faq-filter:
+  js:
+    js/faq-filter.js: {}
+    https://code.jquery.com/jquery-3.6.0.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+faqs-styles:
+  css:
+    theme:
+      css/faqs.css: {}
