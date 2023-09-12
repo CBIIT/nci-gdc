@@ -4,6 +4,14 @@
     // Handle FAQ title click to toggle description
     $('.views-field.views-field-title').click(function () {
       var desc = $(this).siblings('.views-field.views-field-body');
+      var plusminus = $(this).find('span.plusminus');
+
+      if (desc.is(":hidden")) {
+        console.log(plusminus);
+        plusminus.text('-'); // Set the text content of plusminus to '-'
+      } else {
+        plusminus.text('+'); // Optionally, set the text content to '+' when the description is not hidden
+      }  
       desc.slideToggle('fast');
     });
 
