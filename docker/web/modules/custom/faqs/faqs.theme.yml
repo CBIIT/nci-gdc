@@ -1,0 +1,5 @@
+faqs_page:
+  template: faqs-page
+  variables:
+    nodes: []
+    somestuff: []
