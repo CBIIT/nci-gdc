@@ -1,0 +1,11 @@
+news-filter:
+  js:
+    js/news-filter.js: {}
+    https://code.jquery.com/jquery-3.6.0.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+news-styles:
+  css:
+    theme:
+      css/news.css: {}
