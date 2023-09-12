@@ -1,17 +1,17 @@
-uuid: 4b4f08a8-7084-4269-8041-4348a0fe851b
+uuid: c30f2226-1be5-4df9-b7d2-83a853012b23
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - zurb_foundation
+    - gdc_foundation
 _core:
-  default_config_hash: hXaAu73YeChkBnJ_uWW_ehlhZVTiu-nIMOAEU2mXsGk
-id: zurb_foundation_branding
-theme: zurb_foundation
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: gdc_foundation_site_branding
+theme: gdc_foundation
 region: header
-weight: -6
+weight: -27
 provider: null
 plugin: system_branding_block
 settings:
@@ -21,5 +21,5 @@ settings:
   provider: system
   use_site_logo: true
   use_site_name: true
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 304affe2-8602-4945-a5b3-d7acc88dea0f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:846cd4d2-7765-467c-abb0-6d87ad67ec96'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_60
+theme: gdc_foundation
+region: content
+weight: 10
+provider: null
+plugin: 'block_content:846cd4d2-7765-467c-abb0-6d87ad67ec96'
+settings:
+  id: 'block_content:846cd4d2-7765-467c-abb0-6d87ad67ec96'
+  label: 'Data Download Statistics'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /about-gdc/gdc-data-usage-statistics

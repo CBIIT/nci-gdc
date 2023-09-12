@@ -1,17 +1,17 @@
-uuid: 79df3adc-e282-4b9d-af8e-9c5f7f39ab49
+uuid: 02214dd4-6cbd-4326-b0dd-939731ce1460
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - zurb_foundation
+    - gdc_foundation
 _core:
-  default_config_hash: F9razTMNH9dD3hmzkpIPTFwJeYqb-XBSgYMGRdB0I68
-id: zurb_foundation_breadcrumbs
-theme: zurb_foundation
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: gdc_foundation_breadcrumbs
+theme: gdc_foundation
 region: header
-weight: -3
+weight: -25
 provider: null
 plugin: system_breadcrumb_block
 settings:

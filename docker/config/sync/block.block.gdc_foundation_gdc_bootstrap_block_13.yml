@@ -1,0 +1,30 @@
+uuid: 256dc2de-074b-4707-9b5e-ebcda57c2cae
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:698c3f3c-aa19-4b83-8c97-b578c1676f03'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_13
+theme: gdc_foundation
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:698c3f3c-aa19-4b83-8c97-b578c1676f03'
+settings:
+  id: 'block_content:698c3f3c-aa19-4b83-8c97-b578c1676f03'
+  label: News
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

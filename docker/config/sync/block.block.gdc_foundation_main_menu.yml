@@ -1,4 +1,4 @@
-uuid: 34627659-4f54-433c-af3b-d78ce05457d4
+uuid: 733eb767-22c5-437b-9fd6-0dfc50750c44
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - zurb_foundation
+    - gdc_foundation
 _core:
-  default_config_hash: 55zEI9IS274xKs1JU_PlTq0vVIEt1qVYBdYR7oqyR6I
-id: zurb_foundation_main_menu
-theme: zurb_foundation
+  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
+id: gdc_foundation_main_menu
+theme: gdc_foundation
 region: header
-weight: -5
+weight: -24
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
-  expand_all_items: false
+  depth: 2
+  expand_all_items: true
 visibility: {  }

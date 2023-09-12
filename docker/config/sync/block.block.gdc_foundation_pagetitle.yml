@@ -1,15 +1,13 @@
-uuid: db345c5d-51fd-4460-9926-cb6fba092881
+uuid: deb94f96-cea1-4e16-9cdc-059b66ecedb2
 langcode: en
 status: true
 dependencies:
   theme:
-    - zurb_foundation
-_core:
-  default_config_hash: tS1kHkuBQNDSVEzKTHhm4u00uNOm0EfJrtrN95qtXTY
-id: zurb_foundation_page_title
-theme: zurb_foundation
+    - gdc_foundation
+id: gdc_foundation_pagetitle
+theme: gdc_foundation
 region: content
-weight: -50
+weight: -27
 provider: null
 plugin: page_title_block
 settings:
