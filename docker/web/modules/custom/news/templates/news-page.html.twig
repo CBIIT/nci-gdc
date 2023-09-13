@@ -21,21 +21,15 @@
     {{ node.field_date.0.value|date("F j, Y") }}
   </div>
   <div class="views-field views-field-title">
-    {{ node.title.value }}
+    <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">{{ node.title.value }}</a>
   </div>
   <div class="views-field views-field-body">
     {{ node.body.0.value|striptags|slice(0, 200) }}
   </div>
   <div class="views-field views-field-field-link">
-    <button>Read More</button>
+    <a class="button-link" href="{{ path('entity.node.canonical', {'node': node.id}) }}">Read More</a>
   </div>
-
-{# <div class="views-field views-field-field-link">
-{% if node.field_link.uri %}
-<a href="{{ path(node.field_link.uri) }}">{{ node.field_link.title }}</a>
-{% endif %}
-</div>
-#}
+<hr />
 </div>
 {% endfor %}
 
