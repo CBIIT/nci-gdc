@@ -24,6 +24,7 @@ else
        cp -R $site_path/files/files-private $site_path/files/private
     fi
     chown -R apache:apache $site_path/web
+    python3 db_fix.py $migrate_db_name $db_user $db_password $db_host $db_port
     drush migrate-upgrade --legacy-db-key='migrate'  --legacy-root='$site_path/files'
     drush ucrt admin
     drush urol administrator admin
