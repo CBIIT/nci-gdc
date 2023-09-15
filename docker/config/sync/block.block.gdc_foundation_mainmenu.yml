@@ -8,13 +8,13 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_mainmenu
 theme: gdc_foundation
-region: content
-weight: 0
+region: header
+weight: -24
 provider: null
 plugin: 'tb_megamenu_menu_block:main'
 settings:
   id: 'tb_megamenu_menu_block:main'
   label: 'Main menu'
-  label_display: visible
+  label_display: '0'
   provider: tb_megamenu
 visibility: {  }

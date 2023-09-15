@@ -2,6 +2,8 @@ uuid: deb94f96-cea1-4e16-9cdc-059b66ecedb2
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - gdc_foundation
 id: gdc_foundation_pagetitle
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

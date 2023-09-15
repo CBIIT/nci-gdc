@@ -16,9 +16,9 @@ block_config: |-
       "delay": 200,
       "breakpoint": 1200,
       "hide-mobile-menu": "",
-      "auto-arrow": "",
+      "auto-arrow": "0",
       "always-show-submenu": "",
-      "number-columns": 67
+      "number-columns": 69
   }
 menu_config: |-
   {
@@ -2900,6 +2900,12 @@ menu_config: |-
                               "type": "menu_item",
                               "tb_item_config": [],
                               "weight": "1"
+                          },
+                          {
+                              "plugin_id": "menu_link_content:3f02769f-564f-40c4-a986-5c331805bf39",
+                              "type": "menu_item",
+                              "tb_item_config": [],
+                              "weight": "2"
                           }
                       ],
                       "col_config": {
@@ -2946,6 +2952,24 @@ menu_config: |-
           }
       },
       "menu_link_content:6ddba22d-1afa-4112-9c80-c97dd4f0422e": {
+          "rows_content": [],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "1"
+          },
+          "item_config": {
+              "class": "",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "",
+              "group": "1",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      },
+      "menu_link_content:3f02769f-564f-40c4-a986-5c331805bf39": {
           "rows_content": [],
           "submenu_config": {
               "width": "",
@@ -3501,13 +3525,33 @@ menu_config: |-
                               "type": "menu_item",
                               "tb_item_config": [],
                               "weight": "0"
-                          },
+                          }
+                      ],
+                      "col_config": {
+                          "width": "4",
+                          "class": "",
+                          "hidewcol": "0",
+                          "showblocktitle": "1"
+                      }
+                  },
+                  {
+                      "col_content": [
                           {
                               "plugin_id": "menu_link_content:f0f0325b-9b7b-45cf-a7eb-71e2b0c6fe0f",
                               "type": "menu_item",
                               "tb_item_config": [],
                               "weight": "1"
-                          },
+                          }
+                      ],
+                      "col_config": {
+                          "width": "4",
+                          "class": "",
+                          "hidewcol": "",
+                          "showblocktitle": "1"
+                      }
+                  },
+                  {
+                      "col_content": [
                           {
                               "plugin_id": "menu_link_content:d8d02e0c-018b-451b-8e46-4305de5c33c8",
                               "type": "menu_item",
@@ -3516,9 +3560,9 @@ menu_config: |-
                           }
                       ],
                       "col_config": {
-                          "width": "12",
+                          "width": "4",
                           "class": "",
-                          "hidewcol": "0",
+                          "hidewcol": "",
                           "showblocktitle": "1"
                       }
                   }

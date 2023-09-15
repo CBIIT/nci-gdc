@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_gdc_bootstrap_block_10
 theme: gdc_foundation
 region: content
-weight: -24
+weight: -25
 provider: null
 plugin: 'block_content:d731022a-0fb6-4f0c-9472-058f543a58cc'
 settings:
