@@ -4,27 +4,16 @@
     {% set column = 1 %}                              
     {% set tcga = 0 %}                                
 {% for subject in subject_tags %}
-          {% if subject.label == 'Access Data' %}
              <div class="col">
                <label>
                  <input id="term-{{ subject.target_id }}" data-term="{{ subject.target_id }}" class="term-filter"  type="checkbox" name="subject_tags[]" value="{{ subject.target_id }}">{{ subject.label }}
                </label>
-          {% elseif subject.label == 'TCGA' %}
-               <label>
-                 <input type="checkbox" name="subject_tags[]" data-term="{{ subject.target_id }}" id="term-{{ subject.target_id }}" class="term-filter" value="{{ subject.target_id }}">{{ subject.label }}
-               </label>
              </div>
-          {% else %}
-             <div class="col">
-               <label>
-                 <input type="checkbox" name="subject_tags[]" data-term="{{ subject.target_id }}" id="term-{{ subject.target_id }}" class="term-filter" value="{{ subject.target_id }}">{{ subject.label }}
-               </label>
-             </div>
-          {% endif %}
 {% endfor %}
 </div>
 </div>
 </div>
+
 {% for node in nodes %}
 
 <div class="news-container"  data-tags="{% for subjecttag_item in node.field_subject_tag %}{{ subjecttag_item.target_id|raw }}{% if not loop.last %},{% endif %}{% endfor %}">
@@ -32,21 +21,15 @@
     {{ node.field_date.0.value|date("F j, Y") }}
   </div>
   <div class="views-field views-field-title">
-    {{ node.title.value }}
+    <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">{{ node.title.value }}</a>
   </div>
   <div class="views-field views-field-body">
     {{ node.body.0.value|striptags|slice(0, 200) }}
   </div>
   <div class="views-field views-field-field-link">
-    <button>Read More</button>
+    <a class="button-link" href="{{ path('entity.node.canonical', {'node': node.id}) }}">Read More</a>
   </div>
-
-{# <div class="views-field views-field-field-link">
-{% if node.field_link.uri %}
-<a href="{{ path(node.field_link.uri) }}">{{ node.field_link.title }}</a>
-{% endif %}
-</div>
-#}
+<hr />
 </div>
 {% endfor %}
 
