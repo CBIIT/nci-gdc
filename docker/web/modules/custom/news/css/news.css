@@ -32,15 +32,30 @@
   display: inline-block !important;
 }
 
-span.plusminus {
-  cursor: pointer;
-  display: inline-block; /* Change display to inline-block */
-  width: 15px;
-  padding-right: 25px;
+.news-container {
+  padding-bottom:15px !important;
 }
-.faq-container {
-  padding-bottom:5px !important;
+.new-container.readMore {
+  color:red;
+}
+.views-field.views-field-title {  
+  color:blue;
+}  
+.button-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff; /* Set your desired button background color */
+  color: #fff; /* Set the text color */
+  text-decoration: none;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #0056b3; /* Change the background color on hover */
+  color:#fff;
 }
 .views-field.views-field-body {
-  padding-left:25px;
 }

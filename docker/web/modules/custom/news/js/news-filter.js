@@ -1,20 +1,7 @@
 (function ($) {
   // Wait for the document to be ready
   $(document).ready(function () {
-    // Handle FAQ title click to toggle description
-    $('.views-field.views-field-title').click(function () {
-      var desc = $(this).siblings('.views-field.views-field-body');
-      var plusminus = $(this).find('span.plusminus');
-
-      if (desc.is(":hidden")) {
-        console.log(plusminus);
-        plusminus.text('-'); // Set the text content of plusminus to '-'
-      } else {
-        plusminus.text('+'); // Optionally, set the text content to '+' when the description is not hidden
-      }  
-      desc.slideToggle('fast');
-    });
-
+ console.log('test');
     // Function to parse URL parameters and check corresponding checkboxes
     function checkCheckboxesFromURLParam(paramName) {
       var urlParams = new URLSearchParams(window.location.search);
@@ -31,20 +18,19 @@
       }
     }
 
-    // Function to filter FAQs based on selected checkboxes
-    function filterFAQs() {
+    // Function to filter News based on selected checkboxes
+    function filterNews() {
       // Get the values (data-term) of the selected checkboxes as integers
       var selectedValues = $('input.term-filter:checked').map(function () {
         return parseInt($(this).data('term'));
       }).get();
-      console.log(selectedValues);
+      console.log(selectedValues)
+      // Hide all News items
+      $('.news-container').hide();
 
-      // Hide all FAQ items
-      $('.faq-container').hide();
-
-      // Show FAQ items that match any of the selected values
+      // Show News items that match any of the selected values
       if (selectedValues.length > 0) {
-        $('.faq-container').each(function () {
+        $('.news-container').each(function () {
           var item = $(this);
           var tempTags = item.data('tags').toString();
           var tags = tempTags.split(',').map(function (tag) {
@@ -62,16 +48,16 @@
           }
         });
       } else {
-        // If no checkboxes are selected, show all FAQ items
-        $('.faq-container').show();
+        // If no checkboxes are selected, show all News items
+        $('.news-container').show();
       }
     }
 
     // Attach a change event handler to the checkboxes
-    $('input.term-filter').on('change', filterFAQs);
+    $('input.term-filter').on('change', filterNews);
 
     // Initial filtering when the page loads (if needed)
-    filterFAQs();
+    filterNews();
 
     // Check checkboxes based on the 'subject_tag' URL parameter
     checkCheckboxesFromURLParam('subject_tag');
