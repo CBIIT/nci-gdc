@@ -1,12 +1,17 @@
 import mysql.connector
 import sys
+db_name = sys.argv[1]
+db_user = sys.argv[2]
+db_password = sys.argv[3]
+db_host = sys.argv[4]
+db_port = sys.argv[5]
 
 database_config = {
-    'user': 'webteamsuper',
-    'password': 'h2F77E#@IYLTi8_?rI_1',
-    'host': 'nciws-d1066-c.nci.nih.gov',
-    'port': 3306,
-    'database': 'gdc7latest',
+    'user': db_user,
+    'password': db_password,
+    'host': db_host,
+    'port': db_port,
+    'database': db_name,
 }
 connection = mysql.connector.connect(**database_config)
 cursor = connection.cursor()
