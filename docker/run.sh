@@ -12,7 +12,7 @@ else
     cp $site_path/web/sites/default/default.settings.php $site_path/web/sites/default/settings.php
     cat $site_path/settings.php.patch >> $site_path/web/sites/default/settings.php
     composer update
-    :drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade tb_megamenu
+    drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade tb_megamenu
     if [ -d "$homedir/files" ]; then
        mkdir $site_path/web/sites/default/files
        cp -R $site_path/files/files/* $site_path/web/sites/default/files
