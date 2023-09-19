@@ -15,7 +15,7 @@ else
     #drush y:get:value contentsync/filter.format.markdown.yml uuid
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
-    drush en -y markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
+    drush en -y entity_embed markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
     drush cim -y --source=$site_path/config/sync --partial
 
     if [ -d "/tmp/files" ]; then
