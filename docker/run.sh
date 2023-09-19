@@ -11,7 +11,7 @@ else
     touch installed.txt
     cat $site_path/settings.php.patch >> $site_path/web/sites/default/settings.php
 
-    composer require drupal/markdown erusev/parsedown --no-update
+    composer require drupal/entity_embed:^1.4 drupal/markdown erusev/parsedown --no-update
     #drush y:get:value contentsync/filter.format.markdown.yml uuid
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
