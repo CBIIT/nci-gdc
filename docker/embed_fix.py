@@ -16,13 +16,16 @@ db_params = {
     'database': db_name,
 }
 
+
+
+
 # Regular expression pattern to match [[nid:number view_mode=string]]
-pattern = r'\[\[nid:(\d+) view_mode=([^\]]+)\]\]'
+pattern = r'\[\[nid:(\d+)(?: view_mode=([^\]]+))?\]\]'
 
 # Function to replace the matched pattern with Drupal entity tags
 def replace_tags(match):
     nid = match.group(1)
-    view_mode = match.group(2)
+    view_mode = match.group(2) or "teaser"  # Default to "teaser" if view_mode is not specified
     
     # Query the node table to get the UUID based on NID
     try:
@@ -52,7 +55,7 @@ try:
     cursor.execute("SELECT entity_id, body_value FROM node__body")
     rows = cursor.fetchall()
 
-    # Iterate through the rows and process the body text
+    # Iterate through the rows and process the body_value
     for row in rows:
         entity_id, body_value = row
         updated_text = re.sub(pattern, replace_tags, body_value)
