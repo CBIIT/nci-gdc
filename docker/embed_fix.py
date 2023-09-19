@@ -20,7 +20,7 @@ db_params = {
 
 
 # Regular expression pattern to match [[nid:number view_mode=string]]
-pattern = r'\[\[nid:(\d+)(?: view_mode=([^\]]+))?\]\]'
+pattern = r'\[\[nid:(\d+)(?:\s+view_mode=([^\]]+))?\s*\]\]'
 
 # Function to replace the matched pattern with Drupal entity tags
 def replace_tags(match):
