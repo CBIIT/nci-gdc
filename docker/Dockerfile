@@ -29,4 +29,5 @@ COPY migrate.sh ${site_path}
 COPY memory.ini /etc/php81/conf.d
 COPY ./configuration/*.yml ${site_path}/config/sync
 COPY db_fix.py ${site_path}
+COPY embed_fix.py ${site_path}
 ENTRYPOINT run.sh

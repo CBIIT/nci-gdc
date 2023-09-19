@@ -29,6 +29,7 @@ else
     drush ucrt admin
     drush urol administrator admin
     drush upwd admin 1234
+    python3 embed_fix.py $db_name $db_user $db_password $db_host $db_port
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
     drush cdel -y block.block.bartik_system_main
