@@ -29,6 +29,7 @@ count=0
 def replace_tags(match,entity_id):
     nid = match.group(1)
     test = match.group(2)
+    print(nid)
     view_mode = match.group(2) or "teaser"  # Default to "teaser" if view_mode is not specified
     #print(test)
     # Query the node table to get the UUID based on NID
@@ -40,10 +41,11 @@ def replace_tags(match,entity_id):
         #print(result)
         if result:
             uuid = result[0]
+
             return f'<drupal-entity data-entity-type="node" data-entity-uuid="{uuid}" data-view-mode="{view_mode}" />'
         else:
             # Handle the case where NID is not found
-            return match.group(0)
+            return ''
     except Exception as e:
         print(f"Error querying the database: {e}")
         return match.group(0)
@@ -70,8 +72,8 @@ try:
             if entity_id==268:
                 print(updated_text)
         # Update the node__body table with the modified text
-        #cursor.execute("UPDATE node__body SET body_value = %s WHERE entity_id = %s", (updated_text, entity_id))
-        #conn.commit()
+        cursor.execute("UPDATE node__body SET body_value = %s WHERE entity_id = %s", (updated_text, entity_id))
+        conn.commit()
 
     print("Replacement completed successfully.")
 
