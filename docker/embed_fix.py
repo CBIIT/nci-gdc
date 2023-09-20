@@ -45,7 +45,21 @@ def replace_tags(match,entity_id):
             return f'<drupal-entity data-entity-type="node" data-entity-uuid="{uuid}" data-view-mode="{view_mode}" />'
         else:
             # Handle the case where NID is not found
-            return match.group(0)
+            cursor.execute("SELECT entity_id FROM node__field_orig_nid WHERE field_orig_nid_value = %s" % nid)
+            result = cursor.fetchone()
+            ## lets look in the original_nid table to find the entity_id ##
+            if result:
+                nid = result[0]
+                cursor = conn.cursor()
+                cursor.execute("SELECT uuid FROM node WHERE nid = %s" % nid)
+                result = cursor.fetchone()
+                if result:
+                    uuid result[0]
+                    return f'<drupal-entity data-entity-type="node" data-entity-uuid="{uuid}" data-view-mode="{view_mode}" />'
+                else:
+            	    return match.group(0)
+            else:
+                return match.group(0)
             ## below return would return '' and therefore remove the nid alltogether'
             return '' 
     except Exception as e:
