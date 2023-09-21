@@ -57,11 +57,11 @@ def replace_tags(match,entity_id):
                     uuid = result[0]
                     return f'<drupal-entity data-entity-type="node" data-entity-uuid="{uuid}" data-view-mode="{view_mode}" />'
                 else:
-            	    return ''
+            	    return match.group(0)
             else:
-                return ''
+                return match.group(0)
             ## below return would return '' and therefore remove the nid alltogether'
-            return '' 
+            return match.group(0)
     except Exception as e:
         print(f"Error querying the database: {e}")
         return match.group(0)
@@ -88,8 +88,8 @@ try:
             if entity_id==268:
                 print(updated_text)
         # Update the node__body table with the modified text
-        #cursor.execute("UPDATE node__body SET body_value = %s WHERE entity_id = %s", (updated_text, entity_id))
-        #conn.commit()
+        cursor.execute("UPDATE node__body SET body_value = %s WHERE entity_id = %s", (updated_text, entity_id))
+        conn.commit()
 
     print("Replacement completed successfully.")
 
