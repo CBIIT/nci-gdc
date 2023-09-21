@@ -57,9 +57,9 @@ def replace_tags(match,entity_id):
                     uuid = result[0]
                     return f'<drupal-entity data-entity-type="node" data-entity-uuid="{uuid}" data-view-mode="{view_mode}" />'
                 else:
-            	    return match.group(0)
+            	    return ''
             else:
-                return match.group(0)
+                return ''
             ## below return would return '' and therefore remove the nid alltogether'
             return '' 
     except Exception as e:
