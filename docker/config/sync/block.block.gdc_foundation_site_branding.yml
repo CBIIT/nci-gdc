@@ -11,7 +11,7 @@ _core:
 id: gdc_foundation_site_branding
 theme: gdc_foundation
 region: header
-weight: -28
+weight: -29
 provider: null
 plugin: system_branding_block
 settings:

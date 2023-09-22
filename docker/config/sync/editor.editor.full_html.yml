@@ -14,6 +14,7 @@ settings:
       - heading
       - bold
       - italic
+      - drupalInsertImage
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -22,4 +23,13 @@ settings:
         - heading4
         - heading5
         - heading6
-image_upload: {  }
+    ckeditor5_imageResize:
+      allow_resize: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: '50'
+  max_dimensions:
+    width: 0
+    height: 0

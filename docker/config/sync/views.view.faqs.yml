@@ -257,7 +257,7 @@ display:
           exposed: true
           expose:
             operator_id: field_subject_tag_target_id_op
-            label: 'Subject Tag (field_subject_tag)'
+            label: 'FILTER BY CATEGORY'
             description: ''
             use_operator: false
             operator: field_subject_tag_target_id_op

@@ -13,7 +13,7 @@ _core:
 id: gdc_foundation_main_menu
 theme: gdc_foundation
 region: header
-weight: -22
+weight: -23
 provider: null
 plugin: 'system_menu_block:main'
 settings:

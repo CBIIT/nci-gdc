@@ -21,7 +21,8 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
-  faqs: 0
+  embed: 0
+  entity_embed: 0
   field: 0
   field_ui: 0
   file: 0
@@ -45,7 +46,6 @@ module:
   migrate_plus: 0
   migrate_upgrade: 0
   mysql: 0
-  news: 0
   node: 0
   options: 0
   page_cache: 0
@@ -65,7 +65,10 @@ module:
   update: 0
   user: 0
   views_accordion_foundation: 0
+  views_aggregator: 0
+  views_aggregator_more_functions: 0
   views_ui: 0
+  extlink: 1
   pathauto: 1
   views: 10
   standard: 1000
