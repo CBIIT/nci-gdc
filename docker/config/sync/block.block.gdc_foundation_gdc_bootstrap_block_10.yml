@@ -1,0 +1,32 @@
+uuid: 674a1828-b123-4a09-995f-44d296edce55
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d731022a-0fb6-4f0c-9472-058f543a58cc'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_10
+theme: gdc_foundation
+region: content
+weight: -27
+provider: null
+plugin: 'block_content:d731022a-0fb6-4f0c-9472-058f543a58cc'
+settings:
+  id: 'block_content:d731022a-0fb6-4f0c-9472-058f543a58cc'
+  label: '<none>'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: |-
+      /user
+      /user/*

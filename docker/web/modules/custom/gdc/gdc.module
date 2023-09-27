@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for gdc module.
+ */
+
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function gdc_views_default_views_alter(&$views) {
+  // Alter only the 'view_name_of_interest' view.
+  dump($view);
+}
+
+
+function gdc_preprocess_views_view_field(array &$variables) {
+  // Add a custom theme suggestion based on the view name and field name.
+  $view = $variables['view'];
+  $field = $variables['field'];
+  $variables['theme_hook_suggestions'][] = 'views_view_field__' . $view->id() . '__' . $field->field;
+}
+
+function gdc_views_data_alter(array &$data) {
+  // Field Plugin for Demo
+  $data['node_field_data']['publication_year_field'] = [
+    'title' => t('Publication Year Field'),
+    'field' => [
+      'help' => t('A field to display publication year'),
+      'id' => 'publication_year_field',
+    ],
+  ];
+
+  $data['node_field_data']['publication_year_filter'] = [
+    'group' => 'Custom',
+    'title' => t('Publication Year Filter'),
+    'filter' => [
+      'title' => t('Publication Year Filter'),
+      'help' => t('Filters Publications on Year'),
+      'field' => 'title', // Specify the correct field name.
+      'id' => 'publication_year_filter',
+    ],
+  ];
+}
+

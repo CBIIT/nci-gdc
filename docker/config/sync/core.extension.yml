@@ -2,8 +2,10 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
+  asset_injector: 0
   automated_cron: 0
   backup_migrate: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -15,17 +17,28 @@ module:
   contact: 0
   content_sync: 0
   contextual: 0
+  custom_view_filters: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
+  embed: 0
+  entity_embed: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  foundation_sites: 0
+  gdc: 0
   help: 0
   history: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
+  libraries: 0
   link: 0
   markdown: 0
   menu_link_content: 0
@@ -47,13 +60,21 @@ module:
   shortcut: 0
   system: 0
   taxonomy: 0
+  tb_megamenu: 0
   text: 0
   token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
+  views_accordion_foundation: 0
+  views_aggregator: 0
+  views_aggregator_more_functions: 0
+  views_conditional: 0
   views_ui: 0
+  views_year_filter: 0
+  weight: 0
+  extlink: 1
   pathauto: 1
   views: 10
   standard: 1000

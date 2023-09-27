@@ -1,0 +1,39 @@
+uuid: 5dd7a980-e67b-4a1f-9629-5a3a4b07b0e7
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.menu-content-editor-links
+  module:
+    - system
+    - user
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_menu_menu_content_editor_links
+theme: gdc_foundation
+region: content
+weight: 11
+provider: null
+plugin: 'system_menu_block:menu-content-editor-links'
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      content_editor: content_editor
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /users*
+      /user*

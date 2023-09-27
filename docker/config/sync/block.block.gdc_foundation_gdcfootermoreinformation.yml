@@ -1,0 +1,25 @@
+uuid: a10ab42f-eb87-4ebd-9821-3211033d6379
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.gdc-footer-more-information
+  module:
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdcfootermoreinformation
+theme: gdc_foundation
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:gdc-footer-more-information'
+settings:
+  id: 'system_menu_block:gdc-footer-more-information'
+  label: 'MORE INFORMATION'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

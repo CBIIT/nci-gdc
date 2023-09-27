@@ -1,0 +1,32 @@
+uuid: 9b033511-5e10-440c-a935-ba99c3a8b2d5
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:1d865695-9d8b-40e1-a7e6-b485375766f8'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_32
+theme: gdc_foundation
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:1d865695-9d8b-40e1-a7e6-b485375766f8'
+settings:
+  id: 'block_content:1d865695-9d8b-40e1-a7e6-b485375766f8'
+  label: 'Searching for Specific Data?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /search
+      /search/*

@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ * - title: The current page title.
+ */
+#}
+{% if breadcrumb %}
+  <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="show-for-sr">{{ 'Breadcrumb'|t }}</h2>
+    <ul class="breadcrumbs" id="breadcrumbs" data-active-menu="{{ breadcrumb[1].text }}">
+      {% for item in breadcrumb %}
+{#	{% if item.text != 'Home' and loop.index0 > 0 %} #}
+          <li>
+            {% if item.url %}
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </li>
+{#	{% endif %} #}
+      {% endfor %}
+      <li class="current"><span class="show-for-sr">Current: </span> {{ title }}</li>
+    </ul>
+  </nav>
+{% endif %}

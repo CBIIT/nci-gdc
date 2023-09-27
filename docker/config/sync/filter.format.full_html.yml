@@ -31,6 +31,6 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em>'
+      allowed_html: ''
       filter_html_help: true
       filter_html_nofollow: false

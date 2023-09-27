@@ -10,8 +10,13 @@
    */
   Drupal.behaviors.exampleBehavior = {
     attach: function (context, settings) {
-      //alert("I'm alive!");
+      $.setActiveTabOnMainMenu();
     }
   };
 
+$.setActiveTabOnMainMenu = function() {
+  console.log("Read Breadcrumb and search titles on main menu");
+  var activeMenu = $("#breadcrumbs").data("active-menu");
+  console.log("active-menu: ".activeMenu);
+}
 })(jQuery, Drupal);

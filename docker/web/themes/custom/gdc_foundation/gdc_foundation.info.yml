@@ -26,8 +26,10 @@ regions:
   sidebar_first: 'Left sidebar'
   sidebar_second: 'Right sidebar'
   footer_first: 'Footer first column'
-  footer_middle: 'Footer middle column'
-  footer_last: 'Footer last column'
+  footer_second: 'Footer second column'
+  footer_third: 'Footer third column'
+  footer_fourth: 'Footer fourth column'
+  footer_bottom: 'Footer bottom (full width)'
   left_off_canvas: 'Left off canvas'
   right_off_canvas: 'Right off canvas'
 regions_hidden:

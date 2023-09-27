@@ -1,0 +1,51 @@
+uuid:
+  -
+    value: d98ba60c-3965-40cf-9fed-538e761f370d
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Links: Media Contacts'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<h3 class=\"heading-contact\">NCI Press Offices</h3>\r\n\r\n<ul class=\"more more-distinct\">\r\n\t<li class=\"more-phone\"><strong>(301) 496-6641</strong> (phone)</li>\r\n\t<li class=\"more-fax\"><strong>(301) 451-7440</strong> (fax)</li>\r\n\t<li class=\"more-email\"><a href=\"mailto:ncipressofficers@mail.nih.gov\">ncipressofficers@mail.nih.gov</a></li>\r\n</ul>\r\n"
+    format: full_html
+    processed: |-
+      <h3 class="heading-contact">NCI Press Offices</h3>
+      <ul class="more more-distinct"><li class="more-phone"><strong>(301) 496-6641</strong> (phone)</li>
+      <li class="more-fax"><strong>(301) 451-7440</strong> (fax)</li>
+      <li class="more-email"><a href="mailto:ncipressofficers@mail.nih.gov">ncipressofficers@mail.nih.gov</a></li>
+      </ul>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

@@ -2,14 +2,21 @@ global:
   version: VERSION
   css:
     base:
+      css/tbmenu-override.css: {}
       css/gdc_foundation.css: {}
       css/style.css: {}
   js:
-    js/gdc_foundation.js: { }
-    js/foundation.min.js: {minified: true}
+    js/gdc_foundation.js: {}
     js/foundation_init.js: {}
-    js/motion-ui.min.js: {minified: true}
   dependencies:
     - core/drupal
     - core/jquery
     - core/once
+
+publications:
+  version: VERSION
+  js:
+    js/publications.js: { }
+  css:
+    base:
+      css/publications.css: {}

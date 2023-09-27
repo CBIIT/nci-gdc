@@ -1,0 +1,25 @@
+uuid: be990e90-6576-4988-a6fb-24faf7863354
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3dbf7b60-4f34-445e-b90a-933dbc0624a2'
+  module:
+    - block_content
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdcfooterbottom
+theme: gdc_foundation
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:3dbf7b60-4f34-445e-b90a-933dbc0624a2'
+settings:
+  id: 'block_content:3dbf7b60-4f34-445e-b90a-933dbc0624a2'
+  label: 'GDC Footer Bottom'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

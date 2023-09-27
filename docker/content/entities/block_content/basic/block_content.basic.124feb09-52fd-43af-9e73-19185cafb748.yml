@@ -1,0 +1,53 @@
+uuid:
+  -
+    value: 124feb09-52fd-43af-9e73-19185cafb748
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Links: Questions about Cancer'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<p>The following are some helpful resources for general information about cancer:</p>\r\n\r\n<ul class=\"more\">\r\n\t<li class=\"more-site\"><a href=\"http://www.cancer.gov\">www.cancer.gov</a></li>\r\n\t<li class=\"more-chat\"><a href=\"https://livehelp.cancer.gov/app/chat/chat_launch\">LiveHelp Online Chat</a></li>\r\n\t<li class=\"more-phone\"><strong>1-800-4-CANCER</strong></li>\r\n</ul>\r\n\r\n<p>Helpful Cancer Genomics resource:</p>\r\n\r\n<ul class=\"more\">\r\n\t<li class=\"more-chat\"><a href=\"http://cancergenome.nih.gov/cancergenomics/whatisgenomics/whatis\" target=\"_blank\">What is Cancer Genomics</a></li>\r\n</ul>\r\n"
+    format: full_html
+    processed: |-
+      <p>The following are some helpful resources for general information about cancer:</p>
+      <ul class="more"><li class="more-site"><a href="http://www.cancer.gov">www.cancer.gov</a></li>
+      <li class="more-chat"><a href="https://livehelp.cancer.gov/app/chat/chat_launch">LiveHelp Online Chat</a></li>
+      <li class="more-phone"><strong>1-800-4-CANCER</strong></li>
+      </ul><p>Helpful Cancer Genomics resource:</p>
+      <ul class="more"><li class="more-chat"><a href="http://cancergenome.nih.gov/cancergenomics/whatisgenomics/whatis" target="_blank">What is Cancer Genomics</a></li>
+      </ul>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

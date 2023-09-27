@@ -1,0 +1,12 @@
+name: 'gdc'
+type: module
+description: 'GDC Module that contains custom functions and overrides for the gdc website'
+package: Custom
+core_version_requirement: ^10
+module:   
+  # ...
+  weight: 100
+dependencies:
+  - drupal:views
+base theme: false
+

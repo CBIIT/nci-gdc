@@ -1,0 +1,54 @@
+uuid:
+  -
+    value: 71644d9f-58a3-4c55-a427-a238316c095e
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'News & Multimedia Library: General'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<p>The latest news about the Genomic Data Commons (GDC):</p>\r\n<ul class=\"more\">\r\n\t<li><?php echo l('GDC in the News', 'node/164', array(\r\n\t\t'query' => array(\r\n\t\t\t'categories' => json_encode(array('General GDC'))\r\n\t\t)\r\n\t)); ?></a></li>\r\n</ul>"
+    format: php_code
+    processed: |-
+      <p>The latest news about the Genomic Data Commons (GDC):</p>
+      <ul class="more">
+      	<li><?php echo l('GDC in the News', 'node/164', array(
+      		'query' => array(
+      			'categories' => json_encode(array('General GDC'))
+      		)
+      	)); ?></a></li>
+      </ul>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

@@ -1,0 +1,32 @@
+uuid: 1d3be4aa-747d-4819-a76c-5585f2a9c90c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.menu-secondary-menu
+  module:
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_menu_menu_secondary_menu
+theme: gdc_foundation
+region: content
+weight: 15
+provider: null
+plugin: 'system_menu_block:menu-secondary-menu'
+settings:
+  id: broken
+  label: '<none>'
+  label_display: '0'
+  provider: core
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: |-
+      /user
+      /user/login
+      /user/password

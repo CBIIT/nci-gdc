@@ -1,0 +1,140 @@
+uuid:
+  -
+    value: 35d20652-ce28-4b75-999e-28ed77cd4abb
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Development Alert Banner'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<?php \r\n$inlineJS = '(function ($) {\r\n    $(document).ready(\r\n        function() {\r\n            $.getJSON(\"https://api.gdc.cancer.gov/v0/notifications\", function(b) {\r\n                var validData;\r\n                if (b && b.data && b.data.length > 0) {\r\n                    validData = b.data.filter(item => item.components.includes(\"WEBSITE\"));\r\n                }\r\n                console.log(\"validData\", validData);\r\n                var hostName = window.location.hostname;\r\n                var isProduction = hostName.indexOf(\"gdc.cancer.gov\") >= 0;\r\n                var isStaging = hostName.indexOf(\"gdc-stg.datacommons.io\") >= 0;\r\n                var isDevelopment = hostName.indexOf(\"gdc-dev.datacommons.io\") >= 0;\r\n\r\n                if(validData && validData.length > 0) {\r\n                    var className = \"banner-maintenance-\"+validData[0].level.toLowerCase();\r\n                    $(\".banner-maintenance\").addClass(className);\r\n\r\n                    var message = validData[0].message + createHostMessage(hostName);\r\n                    $(\".banner-maintenance-message\").append(message);\r\n                } else {\r\n                    if (isProduction || isStaging || isDevelopment) {\r\n                        className = setCssClass(hostName);\r\n                        $(\".banner-maintenance\").addClass(className);\r\n                    }\r\n\r\n                    var message = createHostMessage(hostName);\r\n                    $(\".banner-maintenance-message\").append(message);\r\n                }\r\n            })\r\n            .fail(function() {\r\n                var hostName = window.location.hostname;\r\n                \r\n\r\n                if (isProduction || isStaging || isDevelopment) {\r\n                    className = setCssClass(hostName);\r\n                    $(\".banner-maintenance\").addClass(className);\r\n                }\r\n\r\n                var message = createHostMessage(hostName);\r\n                $(\".banner-maintenance-message\").append(message);\r\n            });\r\n\r\n            function createHostMessage(hostName) {\r\n                var isProduction = hostName.indexOf(\"gdc.cancer.gov\") >= 0;\r\n                var isStaging = hostName.indexOf(\"gdc-stg.datacommons.io\") >= 0;\r\n                var isDevelopment = hostName.indexOf(\"gdc-dev.datacommons.io\") >= 0;\r\n    \r\n                if (isProduction){\r\n                    return \"The site is production.\"\r\n                }\r\n                else if (isStaging) {\r\n                    return \"The site is staging.\"\r\n                }\r\n                else if (isDevelopment) {\r\n                    return \"The site is development.\"\r\n                }\r\n                else {\r\n                    return \"The site host cannot be determined (\"+hostName+\").\"\r\n                }\r\n            }\r\n            function setCssClass(hostName) {\r\n                var isProduction = hostName.indexOf(\"gdc.cancer.gov\") >= 0;\r\n                var isStaging = hostName.indexOf(\"gdc-stg.datacommons.io\") >= 0;\r\n                var isDevelopment = hostName.indexOf(\"gdc-dev.datacommons.io\") >= 0;\r\n    \r\n                if (isProduction){\r\n                    return \"banner-production\"\r\n                }\r\n                else if (isStaging) {\r\n                    return \"banner-maintenance-info\"\r\n                }\r\n                else if (isDevelopment) {\r\n                    return \"banner-development\"\r\n                }\r\n                else {\r\n                    return \"banner-maintenance-error\"\r\n                }\r\n            }\r\n        }\r\n    );\r\n})(jQuery);';\r\ndrupal_add_js($inlineJS, 'inline');\r\n?>\r\n    <div class=\"row banner-maintenance\">\r\n        <div class=\"banner-maintenance-container\">\r\n        \t<div class=\"banner-maintenance-inner\">\r\n\t            <img src=\"/sites/all/themes/gdc_bootstrap/images/maintenance-icon.png\" alt=\"banner-maintenance-logo\" class=\"banner-maintenance-icon\"/>\r\n\t            <p id=\"maintenanceMessageAdmin\" class=\"banner-maintenance-message\"></p>\r\n\t        </div>\r\n        </div>\r\n    </div>\r\n\r\n"
+    format: php_code
+    processed: |+
+      <?php 
+      $inlineJS = '(function ($) {
+          $(document).ready(
+              function() {
+                  $.getJSON("https://api.gdc.cancer.gov/v0/notifications", function(b) {
+                      var validData;
+                      if (b && b.data && b.data.length > 0) {
+                          validData = b.data.filter(item => item.components.includes("WEBSITE"));
+                      }
+                      console.log("validData", validData);
+                      var hostName = window.location.hostname;
+                      var isProduction = hostName.indexOf("gdc.cancer.gov") >= 0;
+                      var isStaging = hostName.indexOf("gdc-stg.datacommons.io") >= 0;
+                      var isDevelopment = hostName.indexOf("gdc-dev.datacommons.io") >= 0;
+
+                      if(validData && validData.length > 0) {
+                          var className = "banner-maintenance-"+validData[0].level.toLowerCase();
+                          $(".banner-maintenance").addClass(className);
+
+                          var message = validData[0].message + createHostMessage(hostName);
+                          $(".banner-maintenance-message").append(message);
+                      } else {
+                          if (isProduction || isStaging || isDevelopment) {
+                              className = setCssClass(hostName);
+                              $(".banner-maintenance").addClass(className);
+                          }
+
+                          var message = createHostMessage(hostName);
+                          $(".banner-maintenance-message").append(message);
+                      }
+                  })
+                  .fail(function() {
+                      var hostName = window.location.hostname;
+                      
+
+                      if (isProduction || isStaging || isDevelopment) {
+                          className = setCssClass(hostName);
+                          $(".banner-maintenance").addClass(className);
+                      }
+
+                      var message = createHostMessage(hostName);
+                      $(".banner-maintenance-message").append(message);
+                  });
+
+                  function createHostMessage(hostName) {
+                      var isProduction = hostName.indexOf("gdc.cancer.gov") >= 0;
+                      var isStaging = hostName.indexOf("gdc-stg.datacommons.io") >= 0;
+                      var isDevelopment = hostName.indexOf("gdc-dev.datacommons.io") >= 0;
+          
+                      if (isProduction){
+                          return "The site is production."
+                      }
+                      else if (isStaging) {
+                          return "The site is staging."
+                      }
+                      else if (isDevelopment) {
+                          return "The site is development."
+                      }
+                      else {
+                          return "The site host cannot be determined ("+hostName+")."
+                      }
+                  }
+                  function setCssClass(hostName) {
+                      var isProduction = hostName.indexOf("gdc.cancer.gov") >= 0;
+                      var isStaging = hostName.indexOf("gdc-stg.datacommons.io") >= 0;
+                      var isDevelopment = hostName.indexOf("gdc-dev.datacommons.io") >= 0;
+          
+                      if (isProduction){
+                          return "banner-production"
+                      }
+                      else if (isStaging) {
+                          return "banner-maintenance-info"
+                      }
+                      else if (isDevelopment) {
+                          return "banner-development"
+                      }
+                      else {
+                          return "banner-maintenance-error"
+                      }
+                  }
+              }
+          );
+      })(jQuery);';
+      drupal_add_js($inlineJS, 'inline');
+      ?>
+          <div class="row banner-maintenance">
+              <div class="banner-maintenance-container">
+              	<div class="banner-maintenance-inner">
+      	            <img src="/sites/all/themes/gdc_bootstrap/images/maintenance-icon.png" alt="banner-maintenance-logo" class="banner-maintenance-icon"/>
+      	            <p id="maintenanceMessageAdmin" class="banner-maintenance-message"></p>
+      	        </div>
+              </div>
+          </div>
+
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

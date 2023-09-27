@@ -1,3 +1,139 @@
+
+/* Override */
+body {
+	font-family: Montserrat, "Noto Sans", sans-serif;
+ background-color: white;
+ background: white;
+}
+/* Breadcrumbs */
+.breadcrumbs li {
+  text-transform:none;
+}
+.breadcrumbs li:not(:last-child)::after {
+  content: ">";
+}
+.breadcrumbs li  {
+  font-size: 14px;
+}
+.breadcrumbs li a {
+  color: purple;
+}
+/* Publication Overrides */
+.label-publication-tag {
+    border-radius: .4rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+/* Footer Overrides */
+footer div.grid-container.full {
+  max-width: 1405px;
+}
+#block-gdc-foundation-gdc-footer-info h3 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin:0;
+}
+#block-gdc-foundation-gdc-footer-info h4 {
+  font-weight: 700;
+  font-size: .875rem;
+}
+#block-gdc-foundation-gdc-footer-info ul, footer nav ul {
+  margin-left: 0;
+}
+#block-gdc-foundation-gdc-footer-info li, footer nav li {
+  list-style-type: none;
+  font-size: .875rem;
+  margin-left: 0;
+  padding: 0;
+  color: white;
+}
+footer nav ul li {
+  float:left;
+  width:300px;
+  font-weight: bold;
+}
+footer nav ul.menu li a {
+  padding: 0px;
+  margin-top: 8px;
+}
+#block-gdc-foundation-gdc-footer-info a {
+  color: white;
+  text-decoration: underline;
+}
+footer {
+  padding:40px;
+}
+footer nav h2 {
+  font-size: 18px;
+}
+
+#block-gdc-foundation-gdcfooterbottom li {
+  display: inline-block;
+}
+#block-gdc-foundation-gdcfooterbottom div div {
+  text-align: center;
+}
+#block-gdc-foundation-gdcfooterbottom li a {
+  color: white;
+  font-weight: bold;
+}
+#block-gdc-foundation-gdcfooterbottom     ul li::after {
+      content: " | ";
+      margin: 0 2px;
+      font-weight: lighter;
+    }
+#block-gdc-foundation-gdcfooterbottom     ul li:last-child:after {
+      content: '';
+      margin: 0 10px;
+    }
+
+hr.footer-break {
+  max-width: 100%;
+}
+/* TB Menu Override */
+.tbm-link-container > a {
+  color: white;
+  font-weight: bold;
+}
+.tbm-link.level-1 {
+  color: grey; /* Text Color */
+  font-weight: bold;
+}
+.tbm-subnav>.tbm-item>.tbm-link-container>.tbm-link {
+  color: white;
+}
+.tbm-subnav>.tbm-item>.tbm-link-container>.tbm-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+li.tbm-item.level-1.tbm-item--has-dropdown.open>div>a {
+  border: 2 2 0 2px blue;
+  background-color; #004971; /* NCI blue */
+}
+.tbm-link.level-1:hover {                                                                                 
+  color: white;
+  background-color: #004971; /* NCI blue */ 
+                                                                                
+}
+.tbm-submenu {
+  background-color: #004971; /* NCI blue */
+
+}
+a.tbm-link.level-2.tbm-group-title a.tbm-link.level-2 {
+  color: white;
+}
+/* Footer */
+h2#block-gdc-foundation-footer-menu.block-title {
+ font-size:20px;
+ margin-top: 5px;
+}
+.menu a {
+  color: white;
+}
+
+
 header >* form#search-block-form > div >input {
   width: 150px;
   float:right;
@@ -29,3 +165,52 @@ li.usa-footer__secondary-link {
 li.usa-footer__secondary-link > a {
 	color:white;
 }
+
+/* global overrides for certain elements on site */
+
+.accordion-title {
+    position: relative;
+    display: block;
+    padding: 1.25rem 1rem;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+    font-size: 100%;
+    line-height: 1;
+    color: #1779ba
+}
+
+.bef-checkboxes.bef-nested li {
+	text-decoration:none;
+	list-style:none;
+}
+
+.news.datetags_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news.left-item {
+  flex: 1; /* Take up available space */
+  text-align: left;
+}
+
+.news.right-item {
+  text-align: right;
+}
+
+#edit-submit-publication-group {           
+  display:none;                    
+}                                  
+                                                       
+#edit-submit-faqs {                
+  display:none;                          
+}                                  
+                                                 
+#edit-submit-news {                
+  display:none;  
+}                                  
+                  
+#edit-reset {                      
+margin:10px 0px 20px 0px !important
+}                       
+

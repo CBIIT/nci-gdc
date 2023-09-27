@@ -1,0 +1,21 @@
+uuid: 06db3d47-fc29-44a5-839f-7831ca252690
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - gdc_foundation
+id: gdc_foundation_searchform
+theme: gdc_foundation
+region: header
+weight: -29
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

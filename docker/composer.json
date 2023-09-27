@@ -20,12 +20,14 @@
         "drupal/asset_injector": "^2.19",
         "drupal/backup_migrate": "^5.0",
         "drupal/better_exposed_filters": "^6.0",
-        "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-project-message": "^10.1",
-        "drupal/core-recommended": "^10.1",
+        "drupal/core-composer-scaffold": "10.1.4",
+        "drupal/core-project-message": "10.1.4",
+        "drupal/core-recommended": "10.1.4",
+        "drupal/custom_view_filters": "^2.0",
         "drupal/delete_all": "^3.0",
         "drupal/devel": "^5.1",
         "drupal/entity_embed": "^1.4",
+        "drupal/extlink": "^1.7",
         "drupal/imce": "^3.0",
         "drupal/libraries": "^4.0",
         "drupal/markdown": "^3.0",
@@ -34,9 +36,14 @@
         "drupal/pathauto": "^1.11",
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/views_accordion_foundation": "^2.0",
+        "drupal/views_aggregator": "^2.0",
+        "drupal/views_conditional": "^1.5",
+        "drupal/views_year_filter": "^2.1",
+        "drupal/weight": "^3.4",
         "drupal/zurb_foundation": "^9.0@beta",
         "drush/drush": "^12.2",
-        "erusev/parsedown": "^1.7"
+        "erusev/parsedown": "^1.7",
+        "kint-php/kint": "^5.0"
     },
     "conflict": {
         "drupal/drupal": "*"

@@ -1,0 +1,33 @@
+.accordion.publication {  
+        border:1px solid #bbb !important;
+        padding:10px;      
+}                                                                 
+                           
+.publicationSignature p{    
+        padding:0px;
+        margin:0px;         
+}                
+                        
+.publicationApartOf {           
+        margin-bottom:20px !important;
+}                              
+                                          
+.publicationGroupTitle {      
+        color:#BB0D3D;     
+}                                  
+                               
+.publicationRow {                
+  padding-top:10px;                       
+  padding-bottom:10px;                               
+}                    
+                  
+.publicationGroupCategory {                                
+  display:none;              
+}                         
+.publicationCategoryTag {                                
+        border:1px solid #bbb;                         
+        width: max-content;
+        padding:4px;                       
+        color:#000;
+        font-size:75% !important;
+}  

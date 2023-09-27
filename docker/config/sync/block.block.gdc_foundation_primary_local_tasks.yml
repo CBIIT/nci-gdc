@@ -1,0 +1,22 @@
+uuid: 75a4f0ae-7f69-480e-8972-8bb384376ead
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gdc_foundation
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: gdc_foundation_primary_local_tasks
+theme: gdc_foundation
+region: content
+weight: -30
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
