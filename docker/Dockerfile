@@ -21,6 +21,7 @@ RUN pip3 install mysql-connector
 WORKDIR ${site_path}
 RUN mv content_sync ${site_path}/web/modules/contrib
 RUN mkdir -p ${site_path}/config/sync
+RUN mkdir -p ${site_path}/field_fixes
 COPY run.sh /usr/bin
 COPY httpd.conf /etc/apache2
 COPY settings.php.patch ${site_path}
@@ -31,4 +32,5 @@ COPY ./configuration/*.yml ${site_path}/config/sync
 COPY db_fix.py ${site_path}
 COPY embed_fix.py ${site_path}
 COPY webinar_fix.py ${site_path}
+COPY config/sync/* ${site_path}/field_fixes
 ENTRYPOINT run.sh
