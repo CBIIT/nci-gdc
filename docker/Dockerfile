@@ -31,5 +31,4 @@ COPY ./configuration/*.yml ${site_path}/config/sync
 COPY db_fix.py ${site_path}
 COPY embed_fix.py ${site_path}
 COPY webinar_fix.py ${site_path}
-
 ENTRYPOINT run.sh
