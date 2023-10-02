@@ -31,6 +31,10 @@ else
     drush upwd admin 1234
     drush cex -y
     drush cim -y
+    rm -rf config/sync/*
+    drush cex -y
+    mv $site_path/field_fixes/* $site_path/config/sync
+    drush cim -y
     python3 embed_fix.py $db_name $db_user $db_password $db_host $db_port
     python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
 
