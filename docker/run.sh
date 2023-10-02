@@ -15,7 +15,7 @@ else
     #drush y:get:value contentsync/filter.format.markdown.yml uuid
     echo "need to add markdown content authoring type, then after upgrade save the format again"
     composer update
-    drush en -y entity_embed markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
+    drush en -y datetime_range entity_embed markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
     drush cim -y --source=$site_path/config/sync --partial
 
     if [ -d "/tmp/files" ]; then
@@ -29,7 +29,11 @@ else
     drush ucrt admin
     drush urol administrator admin
     drush upwd admin 1234
+    drush cex -y
+    drush cim -y
     python3 embed_fix.py $db_name $db_user $db_password $db_host $db_port
+    #python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
+
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
     drush cdel -y block.block.bartik_system_main
