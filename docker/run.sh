@@ -44,6 +44,7 @@ else
     drush cim -y --source=$site_path/config/sync --partial
     python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
     python3 youtube_title_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 crg_fix.py $db_name $db_user $db_password $db_host $db_port
 
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
