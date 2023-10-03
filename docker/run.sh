@@ -41,6 +41,7 @@ else
     drush cdel -y block.block.bartik_system_powered_by
     drush cdel -y block.block.cag_bootstrap_system_main
     drush cim -y --source=$site_path/config/sync --partial
+    rm $site_path/config/sync/block.block.bartik*
     python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
 
     rm -rf $site_path/content/sync/entities
