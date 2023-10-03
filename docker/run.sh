@@ -24,14 +24,14 @@ else
        cp -R $site_path/files/files-private $site_path/files/private
     fi
     chown -R apache:apache $site_path/web
-    python3 db_fix.py $migrate_db_name $db_user $db_password $db_host $db_port
+    python3 fixes/db_fix.py $migrate_db_name $db_user $db_password $db_host $db_port
     drush migrate-upgrade --legacy-db-key='migrate'  --legacy-root='$site_path/files'
     drush ucrt admin
     drush urol administrator admin
     drush upwd admin 1234
     rm $site_path/config/sync/*
     drush cex -y
-    python3 embed_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/embed_fix.py $db_name $db_user $db_password $db_host $db_port
 
 
     drush cdel -y block.block.bartik_system_main
@@ -42,10 +42,11 @@ else
     cp $site_path/field_fixes/* $site_path/config/sync
 
     drush cim -y --source=$site_path/config/sync --partial
-    python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
-    python3 youtube_title_fix.py $db_name $db_user $db_password $db_host $db_port
-    python3 crg_fix.py $db_name $db_user $db_password $db_host $db_port
-    python3 dd_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/webinar_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/youtube_title_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/crg_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/dd_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/institution_fix.py $db_name $db_user $db_password $db_host $db_port
 
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
