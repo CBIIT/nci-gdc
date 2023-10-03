@@ -29,19 +29,19 @@ else
     drush ucrt admin
     drush urol administrator admin
     drush upwd admin 1234
+    rm $site_path/config/sync/*
     drush cex -y
-    drush cim -y
-    rm -rf config/sync/*
-    drush cex -y
-    mv $site_path/field_fixes/* $site_path/config/sync
     python3 embed_fix.py $db_name $db_user $db_password $db_host $db_port
 
 
     drush cdel -y block.block.bartik_system_main
     drush cdel -y block.block.bartik_system_powered_by
     drush cdel -y block.block.cag_bootstrap_system_main
-    drush cim -y --source=$site_path/config/sync --partial
     rm $site_path/config/sync/block.block.bartik*
+    rm $site_path/config/sync/block.block.cag*
+    cp $site_path/field_fixes/* $site_path/config/sync
+
+    drush cim -y --source=$site_path/config/sync --partial
     python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
 
     rm -rf $site_path/content/sync/entities
@@ -56,3 +56,4 @@ else
 
 fi
 exec httpd -DFOREGROUND
+
