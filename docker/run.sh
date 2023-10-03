@@ -43,6 +43,7 @@ else
 
     drush cim -y --source=$site_path/config/sync --partial
     python3 webinar_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 youtube_title_fix.py $db_name $db_user $db_password $db_host $db_port
 
     rm -rf $site_path/content/sync/entities
     rm -rf $site_path/content/sync/files
@@ -53,7 +54,7 @@ else
     ## changing ownership to 3000 which is drupaldocker user ##
     chown -R 3000:3000 $site_path/contentsync
     echo "need to add markdown content authoring type, then after upgrade save the format again"
-
+    drush cr
 fi
 exec httpd -DFOREGROUND
 
