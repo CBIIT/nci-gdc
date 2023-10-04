@@ -35,17 +35,17 @@ bio_sql = "SELECT * FROM field_data_field_bio where bundle = 'dd'"
 cursor7.execute(headline_sql)
 headline_rows = cursor7.fetchall()
 for row in headline_rows:
-   sql="""INSERT INTO node__field_headline (bundle, deleted, entity_id, revision_id, langcode, delta, field_headline_value, field_headline_format) VALUES ('%s', %s, %s, %s, '%s', %s, '%s', 'full_html')""" % (row[1],row[2],row[3], row[4],row[5], row[6],row[7])
-   #print(sql)
-   cursor10.execute(sql)
+   sql = """INSERT INTO node__field_headline (bundle, deleted, entity_id, revision_id, langcode, delta, field_headline_value, field_headline_format) VALUES (%s, %s, %s, %s, %s, %s, %s, 'full_html')"""
+   data = (row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+   cursor10.execute(sql,data)
    connection10.commit()
 
 cursor7.execute(bio_sql)
 bio_rows = cursor7.fetchall()
 for row in bio_rows:
-   sql="""INSERT INTO node__field_bio (bundle, deleted, entity_id, revision_id, langcode, delta, field_bio_value, field_bio_format) VALUES ('%s', %s, %s, %s, '%s', %s, '%s', 'full_html')""" % (row[1],row[2],row[3], row[4],row[5], row[6],row[7])                                                                                                                                                                                                                                                                                                                               
-   #print(sql, row[3])
-   cursor10.execute(sql) 
+   sql = """INSERT INTO node__field_bio (bundle, deleted, entity_id, revision_id, langcode, delta, field_bio_value, field_bio_format) VALUES (%s, %s, %s, %s, %s, %s, %s, 'full_html')"""
+   data = (row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+   cursor10.execute(sql, data) 
    connection10.commit() 
 
 cursor7.close()
