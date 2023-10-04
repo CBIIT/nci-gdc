@@ -29,6 +29,6 @@ COPY composer.json ${site_path}
 COPY migrate.sh ${site_path}
 COPY memory.ini /etc/php81/conf.d
 COPY ./configuration/*.yml ${site_path}/config/sync
-COPY fixes ${site_path}
+COPY fixes ${site_path}/fixes
 COPY config/sync/* ${site_path}/field_fixes
 ENTRYPOINT run.sh
