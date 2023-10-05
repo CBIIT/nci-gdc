@@ -29,13 +29,13 @@ else
     cat settings.php.patch >> web/sites/default/settings.php
 
     # Require Drupal modules using Composer
-    composer require drupal/entity_embed:^1.4 drupal/markdown erusev/parsedown --no-update
+    composer require drupal/paragraphs:^1.16 drupal/entity_embed:^1.4 drupal/markdown erusev/parsedown --no-update
 
     # Update Composer dependencies
     composer update
 
     # Enable Drupal modules using Drush
-    drush en -y datetime_range entity_embed markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
+    drush en -y paragraphs datetime_range entity_embed markdown content_sync book pathauto migrate migrate_drupal migrate_drupal_ui backup_migrate migrate_plus migrate_upgrade markdown
 
     # Import configuration
     drush cim -y --source=$site_path/config/sync --partial
