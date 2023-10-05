@@ -1,0 +1,43 @@
+uuid: fb236126-d419-4512-945a-4ac7961ac416
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attachment_nid
+    - node.type.article
+    - node.type.book
+    - node.type.file
+    - node.type.image
+    - node.type.link
+    - node.type.page
+    - node.type.page_for_scientific_report
+    - node.type.person
+    - paragraphs.paragraphs_type.attachment
+id: paragraph.attachment.field_attachment_nid
+field_name: field_attachment_nid
+entity_type: paragraph
+bundle: attachment
+label: 'Attachment Ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      book: book
+      file: file
+      image: image
+      page: page
+      page_for_scientific_report: page_for_scientific_report
+      person: person
+      link: link
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

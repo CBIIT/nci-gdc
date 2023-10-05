@@ -1,0 +1,29 @@
+uuid: 783d9f0c-f258-4afc-ae35-897786b21d76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment_lref_
+    - node.type.page_for_scientific_report
+  module:
+    - entity_reference_revisions
+id: node.page_for_scientific_report.field_attachment_lref_
+field_name: field_attachment_lref_
+entity_type: node
+bundle: page_for_scientific_report
+label: 'Attachment (lref)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      attachment:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions
