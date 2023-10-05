@@ -84,6 +84,7 @@ else
     python3 fixes/crg_fix.py $db_name $db_user $db_password $db_host $db_port
     python3 fixes/dd_fix.py $db_name $db_user $db_password $db_host $db_port
     python3 fixes/institution_fix.py $db_name $db_user $db_password $db_host $db_port
+    python3 fixes/community_tool_fix.py $db_name $db_user $db_password $db_host $db_port
 
     # Remove unnecessary directories
     rm -rf $site_path/content/sync/entities
