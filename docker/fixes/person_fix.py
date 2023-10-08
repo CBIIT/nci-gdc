@@ -47,8 +47,8 @@ for row in headline_rows:
     paragraphs_item_sql = "INSERT INTO paragraphs_item (id, revision_id, type, uuid, langcode) VALUES (%s, %s,'biography', %s, 'en')"
     data = (row[3], row[3], str(uuid.uuid4()))
     cursor10.execute(paragraphs_item_sql, data)
-    paragraphs_item_revision_sql = "INSERT INTO paragraphs_item_revision (id, revision_id, langcode, status, created, parent_id, parent_type, parent_field_name, behavior_settings, default_langcode, revision_translation_affected) VALUES (%s, %s,'en',1,%s, %s,'node','field_group_bio','a:0:{}',1,1)
-    data = (row[3], row[3], current_timestamp,row[3])
+    paragraphs_item_revision_sql = "INSERT INTO paragraphs_item_revision (id, revision_id, langcode,revision_default) VALUES (%s, %s,'en',1)"
+    data = (row[3], row[3])
     cursor10.execute(paragraphs_item_revision_sql, data)
     connection10.commit()
 
