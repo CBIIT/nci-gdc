@@ -1,5 +1,7 @@
 import mysql.connector
 import sys
+import uuid
+import time
 
 db_name = sys.argv[1]
 db_user = sys.argv[2]
@@ -39,6 +41,23 @@ bio_corp_sql = "SELECT * FROM field_data_field_bio_corp WHERE bundle = 'person'"
 cursor7.execute(headline_sql)
 headline_rows = cursor7.fetchall()
 for row in headline_rows:
+    ## insert record into paragraphs_item and paragraphs_item_field_data first, just using entity_id as the id for paragraphs ##
+    paragraphs_item_sql = "INSERT INTO paragraphs_item (id, revision_id, type, uuid, langcode) VALUES (%s, %s,'biography', %s, 'en')"
+    data = (row[3], row[3], str(uuid.uuid4()))
+    cursor10.execute(paragraphs_item_sql, data)
+    connection10.commit()
+    
+    paragraphs_item_field_data_sql = "INSERT INTO paragraphs_item_field_data (id, revision_id, type, langcode, status, created, parent_id, parent_type, parent_field_name, behavior_settings, default_langcode, revision_translation_affected) VALUES (%s, %s, 'biography', 'en', 1, %s, %s, 'node', 'field_group_bio', 'a:0:{}', 1, 1)"
+    current_timestamp = int(time.time())
+    data = (row[3], row[3], current_timestamp, row[3])
+    cursor10.execute(paragraphs_item_field_data_sql, data)
+    connection10.commit()
+
+    node__field_group_bio_sql = "INSERT into node__field_group_bio (bundle, deleted, entity_id, revision_id, langcode, delta, field_group_bio_target_id, field_group_bio_target_revision_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+    data = (row[1], row[2], row[3], row[4], row[5], row[6], row[3], row[3]) 
+    cursor10.execute(node__field_group_bio_sql, data)                                                                                                                                                                          
+    connection10.commit()    
+
     sql = """INSERT INTO paragraph__field_headline (bundle, deleted, entity_id, revision_id, langcode, delta, field_headline_value, field_headline_format) VALUES (%s, %s, %s, %s, %s, %s, %s, 'full_html')"""
     data = (row[1], row[2], row[3], row[4], row[5], row[6], row[7])  # Create a tuple with data values
     cursor10.execute(sql, data)  # Use execute with placeholders and provide data separately
@@ -51,7 +70,7 @@ for row in bio_rows:
     data = (row[1], row[2], row[3], row[4], row[5], row[6], row[7])  # Create a tuple with data values
     cursor10.execute(sql, data)  # Use execute with placeholders and provide data separately
     connection10.commit()
-
+   
 cursor7.execute(bio_corp_sql)
 bio_rows = cursor7.fetchall()
 for row in bio_rows:
@@ -59,7 +78,7 @@ for row in bio_rows:
     data = (row[1], row[2], row[3], row[4], row[5], row[6], row[7])  # Create a tuple with data values
     cursor10.execute(sql, data)  # Use execute with placeholders and provide data separately
     connection10.commit()
-
+    
 cursor7.close()
 cursor10.close()
 connection7.close()
