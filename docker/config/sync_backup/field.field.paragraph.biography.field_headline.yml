@@ -1,0 +1,28 @@
+uuid: 8fee31fe-3eed-404b-93f0-0a3765da86b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - filter.format.basic_html
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.biography
+  module:
+    - text
+id: paragraph.biography.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: biography
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+    - basic_html
+    - full_html
+field_type: text_long
