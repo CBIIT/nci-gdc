@@ -1,0 +1,28 @@
+uuid: f153ab0d-0b5e-4390-ab23-9d9b3f7f5a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio_corp
+    - filter.format.basic_html
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - node.type.person
+  module:
+    - text
+id: node.person.field_bio_corp
+field_name: field_bio_corp
+entity_type: node
+bundle: person
+label: 'Corporate Biography'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+    - full_html
+    - basic_html
+field_type: text_long
