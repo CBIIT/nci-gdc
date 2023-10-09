@@ -57,6 +57,7 @@ for row in headline_rows:
     cursor10.execute(paragraphs_item_field_data_sql, data)
     paragraphs_item_revision_field_data_sql = "INSERT into paragraphs_item_revision_field_data (id, revision_id, langcode, status, created, parent_id, parent_type, parent_field_name, behavior_settings, default_langcode, revision_translation_affected) VALUES (%s, %s, 'en',1,%s,%s,'node','field_group_bio','a:0:{}',1,1)"
     data = (row[3], row[3], current_timestamp, row[3])
+    cursor10.execute(paragraphs_item_revision_field_data_sql, data)
     connection10.commit()
 
     node__field_group_bio_sql = "INSERT into node__field_group_bio (bundle, deleted, entity_id, revision_id, langcode, delta, field_group_bio_target_id, field_group_bio_target_revision_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
