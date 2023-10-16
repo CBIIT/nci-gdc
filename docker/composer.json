@@ -39,6 +39,7 @@
         "drupal/modal_page": "^5.0",
         "drupal/paragraphs": "^1.16",
         "drupal/pathauto": "^1.11",
+        "drupal/recaptcha": "^3.2",
         "drupal/routes_list": "^6.2",
         "drupal/security_review": "^2.0",
         "drupal/tb_megamenu": "^3.0@alpha",

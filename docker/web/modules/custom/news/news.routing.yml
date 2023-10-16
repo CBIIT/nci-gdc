@@ -1,7 +1,0 @@
-news.view:
-  path: '/news-and-announcements2'
-  defaults:
-    _title: 'News and Announcements'
-    _controller: '\Drupal\news\Controller\NewsController::newsPage'
-  requirements:
-    _permission: 'access content'

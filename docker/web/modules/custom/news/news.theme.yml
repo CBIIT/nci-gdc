@@ -1,5 +1,0 @@
-news_page:
-  template: news-page
-  variables:
-    nodes: []
-    somestuff: []
