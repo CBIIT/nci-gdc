@@ -9,7 +9,7 @@ dependencies:
 id: gdc_foundation_searchform
 theme: gdc_foundation
 region: header
-weight: -29
+weight: -30
 provider: null
 plugin: search_form_block
 settings:

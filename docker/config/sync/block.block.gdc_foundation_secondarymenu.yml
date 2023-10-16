@@ -1,6 +1,6 @@
 uuid: e50dc673-eb80-4ec5-99f1-cbedd40230f0
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.menu-secondary-menu
@@ -10,7 +10,7 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_secondarymenu
 theme: gdc_foundation
-region: header
+region: footer_bottom
 weight: -30
 provider: null
 plugin: 'system_menu_block:menu-secondary-menu'

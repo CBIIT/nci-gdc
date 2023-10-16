@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.markdown
     - filter.format.php_code
+    - filter.format.webform_default
   module:
     - comment
     - contact
@@ -32,3 +33,4 @@ permissions:
   - 'use text format basic_html'
   - 'use text format markdown'
   - 'use text format php_code'
+  - 'use text format webform_default'

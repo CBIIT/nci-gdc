@@ -1,0 +1,7 @@
+gdc_chart.chart:
+  path: '/chart'
+  defaults:
+    _title: 'Chart'
+    _controller: '\Drupal\gdc_chart\Controller\GdcChartController'
+  requirements:
+    _permission: 'access content'

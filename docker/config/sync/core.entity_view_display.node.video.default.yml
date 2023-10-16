@@ -13,7 +13,13 @@ dependencies:
     - node.type.video
   module:
     - comment
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.video.default
 targetEntityType: node
 bundle: video

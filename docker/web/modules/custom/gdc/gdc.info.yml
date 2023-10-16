@@ -9,4 +9,3 @@ module:
 dependencies:
   - drupal:views
 base theme: false
-

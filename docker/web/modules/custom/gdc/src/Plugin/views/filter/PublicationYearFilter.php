@@ -32,9 +32,6 @@ class PublicationYearFilter extends InOperator
             "operator" => "=",
         ];
         $this->ensureMyTable();
-
-        // Create a custom condition using addWhereExpression with placeholders.
-        // Add the IN clause with placeholders.
         $table_alias = "node__field_date";
         $join = Views::pluginManager("join")->createInstance(
             "standard",
@@ -58,6 +55,9 @@ class PublicationYearFilter extends InOperator
         );
     }
 
+    /**
+     * Get the value options for the dropdown.
+     */
     public function getValueOptions()
     {
         // Get the value of the 'field_date' filter from the request.
@@ -77,15 +77,15 @@ class PublicationYearFilter extends InOperator
         return $this->valueOptions;
     }
 
-    public function buildExposeForm(&$form, FormStateInterface $form_state) {                                                                            
-        parent::buildExposeForm($form, $form_state);                         
-        $form['expose']['identifier'] = [                                        
-            '#type' => 'textfield',                                                            
-            '#default_value' => 'field_date',            
-            '#title' => $this->t('Filter identifier'),                             
-            '#size' => 40,                                                         
+    public function buildExposeForm(&$form, FormStateInterface $form_state) {
+        parent::buildExposeForm($form, $form_state);
+        $form['expose']['identifier'] = [
+            '#type' => 'textfield',
+            '#default_value' => 'field_date',
+            '#title' => $this->t('Filter identifier'),
+            '#size' => 40,
             '#description' => $this->t('This will appear in the URL after the ? to identify this filter. Cannot be blank. Only letters, digits and the dot ("."), hyphen ("-"), underscore ("_"), and tilde ("~") characters are allowed.'),
-        ];                                                                                                                                                                                                                                
-    }  
+        ];
+    }
 }
 

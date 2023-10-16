@@ -4,23 +4,22 @@
  * @file
  * Add your custom theme override functions here.
  */
-
-/**                                       
- * Implements preprocess_views_view_unformatted().                    
- */ 
-function gdc_foundation_preprocess_views_view_unformatted(&$variables) {
-}
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Database\Query\AlterableInterface;
 
 /**
  * Implements hook_preprocess_block().
  */
 function gdc_foundation_preprocess_block(&$variables) {
-}
+  // Get the machine name of the view (e.g., 'publications_group' or 'faqs').
+  //$view_name = $variables['view_name']; // This variable should be set in your block or template.
 
-/**
- * Implements template_preprocess_field().
- */
-function gdc_foundation_preprocess_field(&$variables, $hook) {
+  // Get the URL of the view based on the machine name.
+  //$view_url = \Drupal::service('path.alias_manager')->getAliasByPath($view_name);
+
+  // Add the view URL as a variable to the block template.
+  //$variables['view_url'] = $view_url;
 }
 
 /**
@@ -53,10 +52,57 @@ function gdc_foundation_preprocess_page(&$variables) {
 function gdc_foundation_preprocess_views_view(&$variables) {       
     $view = $variables['view'];
     $id = $variables['id'];
-
     /* Do publication group things here */
     if ($id=='publication_group') {
       $variables['#attached']['library'][] = 'gdc_foundation/publications';
       $variables['totalRowCount']=count($view->result);
     }
-}  
+
+    if ($id=='news') {
+      $variables['#attached']['library'][] = 'gdc_foundation/news';
+    }
+
+    if ($id=='faqs') {
+      $variables['#attached']['library'][] = 'gdc_foundation/faqs';
+    }
+
+    if ($id=='community_tools') {                                                                         
+      $variables['#attached']['library'][] = 'gdc_foundation/community_tools';                              
+      $variables['totalRowCount']=count($view->result);                    
+
+    }  
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for select templates.
+ */
+function gdc_foundation_theme_suggestions_select_alter(array &$suggestions, array $variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'view.publication_group.page_1') {
+    $view_id = \Drupal::routeMatch()->getParameter('view_id');
+    $suggestions[] = 'select__' . $view_id;
+  }
+}
+
+/**
+ * Implements hook_query_alter() for query.
+ */
+function hook_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  dump($view);
+}
+
+
+/**
+ * Implements hook_preprocess_page.
+ * Sets title of page to 'Video: ' + title
+ */
+function gdc_foundation_preprocess_page_title(&$variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      // Load the label of the bundle
+      if ($node->bundle() == 'video') {
+      // Set the page title
+      $variables['title'] = 'Video: ' . $node->getTitle();
+      }
+    }
+  }
+

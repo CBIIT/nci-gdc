@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.webinar.field_abstract
     - field.field.node.webinar.field_attachment_nid
     - field.field.node.webinar.field_date2
+    - field.field.node.webinar.field_end_date
     - field.field.node.webinar.field_image
     - field.field.node.webinar.field_included_topics
     - field.field.node.webinar.field_intended_audience
@@ -59,6 +60,25 @@ content:
       format_type: long
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_end_date:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 101
     region: content
   field_image:
     type: image

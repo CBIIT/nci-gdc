@@ -1,0 +1,26 @@
+.news.datetags_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news.left-item {
+    flex: 1; /* Take up available space */
+    text-align: left;
+}
+
+.news.right-item {
+    text-align: right;
+}
+
+  /* SumoSelect Caption Styling */
+  .SumoSelect .CaptionCont.SelectBox.form-select {
+    width: 50% !important;
+  }
+
+  /* SumoSelect Styling */
+  .SumoSelect {
+    padding-bottom:10px;
+    padding-right: 10px;
+    width: 50% !important;
+  }
+

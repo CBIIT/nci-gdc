@@ -1,46 +1,182 @@
 <?php
-
-/**
+  
+/**  
  * @file
  * Primary module hooks for gdc module.
- */
+ */  
+  
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Database\Query\AlterableInterface;  
+use Symfony\Component\HttpFoundation\RedirectResponse; 
 
+/**  
+ * Implements entity_prepare_view. 
+ *
+ * Redirects web links to the value of field field_link.  
+ */  
+function gdc_entity_prepare_view($entity_type_id, array $entities, array $displays, $view_mode) { 
+  foreach ($entities as $entity) {  
+    if ($entity->getEntityTypeId() == 'node') { 
+      $bundle = $entity->bundle();  
+      if ($bundle == 'link') {  
+        $field_link_value = $entity->get('field_link')->getValue();
+        if (!empty($field_link_value)) {
+          $url = $field_link_value[0]['uri'];
+          $title = $field_link_value[0]['title'];
+          $response = new RedirectResponse($url);
+          $response->send();
+        } 
+      }  
+    }
+  }
+}
+  
+/**  
+ * Implements form_alter.
+ *
+ * Change size and order of dropdowns.
+ */  
+function gdc_form_alter(&$form, $form_state, $form_id) {  
+  /** Get the page id **/  
+  $id = $form['#id']; 
+  $id = str_replace(["-page-1", 'views-exposed-form-'], '', $id);
+  if ($id === 'publication-group' or $id == 'community-tools') { 
+    /* Adjust the size of elements with '#multiple' property */  
+    foreach ($form as $index => &$element) { 
+      if (is_array($element) && isset($element['#multiple'])) {  
+        $element['#size'] = 4;  
+      } 
+    }
+  }  
+} 
+  
+/**  
+ * Implements hook_preprocess_views_view_field().
+ */  
+function gdc_preprocess_views_view_field(array &$variables) { 
+  // Add a custom theme suggestion based on the view name and field name.  
+  $view = $variables['view'];
+  $field = $variables['field']; 
+  $variables['theme_hook_suggestions'][] = 'views_view_field__' . $view->id() . '__' . $field->field; 
+} 
 
-/**
- * Implements hook_views_default_views_alter().
+/**  
+ * Implements hook_views_data_alter().
+ */  
+function gdc_views_data_alter(array &$data) {
+
+  /** Custom Publication Year Field **/
+  $data['node_field_data']['publication_year_field'] = [  
+    'title' => t('Publication Year Field'),  
+    'field' => [  
+      'help' => t('A field to display publication year'), 
+      'id' => 'publication_year_field',
+      ],  
+  ]; 
+  /** Custom Publication Year Filter **/
+  $data['node_field_data']['publication_year_filter'] = [ 
+    'group' => 'Custom', 
+    'title' => t('Publication Year Filter'), 
+    'filter' => [ 
+      'title' => t('Publication Year Filter'),  
+      'help' => t('Filters Publications on Year'),  
+      'field' => 'title', 
+      'id' => 'publication_year_filter',  
+    ],  
+  ]; 
+  
+  /** Custom Publication Program Tag Field **/
+  $data['node_field_data']['publication_program_tag'] = [ 
+    'title' => t('Publication Program Tag'), 
+    'field' => [  
+      'help' => t('A field to display publication program tags'),
+      'id' => 'publication_program_tag',  
+    ],  
+  ]; 
+
+  /** Custom Publication Program Tag Filter **/
+  $data['node_field_data']['publication_program_filter'] = [  
+    'group' => 'Custom', 
+    'title' => t('Publication Program Filter'), 
+    'filter' => [ 
+      'title' => t('Publication Program Filter'),
+      'help' => t('Filters Publications on Program'),  
+      'field' => 'title', 
+      'id' => 'publication_program_filter',  
+    ],  
+  ]; 
+
+  /** Custom Publication Group Field **/
+  $data['node_field_data']['publication_group_tag'] = [  
+    'title' => t('Publication Project Tag'), 
+    'field' => [  
+      'help' => t('A field to display publication project tags'),
+      'id' => 'publication_group_tag',
+    ],  
+  ]; 
+
+  /** Custom Publication Group Filter **/
+  $data['node_field_data']['publication_group_filter'] = [
+    'group' => 'Custom', 
+    'title' => t('Publication Project Filter'), 
+    'filter' => [ 
+      'title' => t('Publication Project Filter'),
+      'help' => t('Filters Publications on Project'),
+      'field' => 'title',
+      'id' => 'publication_project_filter',  
+    ],  
+  ];   
+  
+  /** Custom Community Tool Topic Filter **/
+  $data['node_field_data']['community_tool_topic_tag'] = [
+    'title' => t('Community Tool Topic Tag'),
+    'field' => [  
+      'help' => t('A field to display community tool topic tags'),  
+      'id' => 'community_tool_topic_tag', 
+    ],  
+  ]; 
+  
+  /** Custom Community Tool Topic Filter **/
+  $data['node_field_data']['community_tool_topic_filter'] = [ 
+    'group' => 'Custom', 
+    'title' => t('Community Tool Topic Filter'),
+    'filter' => [ 
+      'title' => t('Community Tool Topic Filter'),  
+      'help' => t('Filters Comunity Tools  on Topic Tag'),
+      'field' => 'title',
+      'id' => 'community_tool_topic_filter', 
+    ],  
+  ]; 
+  
+  /** Custom Community Tool Year Field **/
+  $data['node_field_data']['community_tool_year_field'] = [
+    'title' => t('Community Tool Year Field'),  
+    'field' => [  
+      'help' => t('A field to display community tool year'),  
+      'id' => 'community_tool_year_field',
+    ],  
+  ]; 
+
+  /** Custom Community Tool Year Filter **/
+  $data['node_field_data']['community_tool_year_filter'] = [  
+    'group' => 'Custom', 
+    'title' => t('Community Tool Year Filter'), 
+    'filter' => [ 
+      'title' => t('Community Tool Year Filter'),
+      'help' => t('Filters Community Tools on year'),  
+      'field' => 'title', 
+      'id' => 'community_tool_year_filter',  
+    ],  
+  ]; 
+} 
+
+/**  
+ * Implements hook_views_default_views_alter(). 
  */
 function gdc_views_default_views_alter(&$views) {
-  // Alter only the 'view_name_of_interest' view.
-  dump($view);
-}
+} 
 
 
-function gdc_preprocess_views_view_field(array &$variables) {
-  // Add a custom theme suggestion based on the view name and field name.
-  $view = $variables['view'];
-  $field = $variables['field'];
-  $variables['theme_hook_suggestions'][] = 'views_view_field__' . $view->id() . '__' . $field->field;
-}
-
-function gdc_views_data_alter(array &$data) {
-  // Field Plugin for Demo
-  $data['node_field_data']['publication_year_field'] = [
-    'title' => t('Publication Year Field'),
-    'field' => [
-      'help' => t('A field to display publication year'),
-      'id' => 'publication_year_field',
-    ],
-  ];
-
-  $data['node_field_data']['publication_year_filter'] = [
-    'group' => 'Custom',
-    'title' => t('Publication Year Filter'),
-    'filter' => [
-      'title' => t('Publication Year Filter'),
-      'help' => t('Filters Publications on Year'),
-      'field' => 'title', // Specify the correct field name.
-      'id' => 'publication_year_filter',
-    ],
-  ];
-}
+  
 

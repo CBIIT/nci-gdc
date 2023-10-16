@@ -5,13 +5,27 @@ global:
       css/tbmenu-override.css: {}
       css/gdc_foundation.css: {}
       css/style.css: {}
+      css/sumoselect.min.css: {}
   js:
     js/gdc_foundation.js: {}
     js/foundation_init.js: {}
+    js/jquery.sumoselect.min.js: {}
   dependencies:
     - core/drupal
     - core/jquery
     - core/once
+
+gdc_font:
+  version: VERSION
+  css:
+    base:
+      css/gdc_font.css: {}
+
+testfont:
+  version: VERSION
+  css:
+    base:
+      css/test.css: {}
 
 publications:
   version: VERSION
@@ -20,3 +34,27 @@ publications:
   css:
     base:
       css/publications.css: {}
+news:
+  version: VERSION
+  js:
+    js/news.js: { }
+  css:
+    base:
+      css/news.css: {}
+
+faqs:
+  version: VERSION
+  js:
+    js/faqs.js: { }
+  css:
+    base:
+      css/faqs.css: {}
+
+community_tools:
+  version: VERSION
+  js:
+    js/community_tools.js: { }
+  css:
+    base:
+      css/community_tools.css: {}
+

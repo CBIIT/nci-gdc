@@ -12,7 +12,6 @@ dependencies:
     - field.storage.node.field_summary_pages
     - node.type.publication
     - node.type.publications_group
-    - taxonomy.vocabulary.publication_tag
   module:
     - better_exposed_filters
     - gdc
@@ -760,7 +759,7 @@ display:
           text_input_required_format: filtered_html
           bef:
             general:
-              autosubmit: true
+              autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
               autosubmit_hide: false
@@ -776,38 +775,38 @@ display:
                 combine_rewrite: "Date Desc|Newest First\r\nDate Asc|Oldest First"
                 reset: false
                 reset_label: ''
-                collapsible: true
+                collapsible: false
                 collapsible_label: 'Sort options'
                 is_secondary: false
             filter:
+              keys:
+                plugin_id: default
+                advanced:
+                  placeholder_text: 'Search Keywords'
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              publication_program_filter:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              publication_group_filter:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
               publication_year_filter:
                 plugin_id: default
                 advanced:
                   sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_pub_cat_tags_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_pub_group_tags_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              keys:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -854,7 +853,12 @@ display:
             label: Date
             field_identifier: field_date_value
           exposed: true
-      arguments: {  }
+      arguments:
+        field_pub_cat_tags_target_id:
+          id: field_pub_cat_tags_target_id
+          table: node__field_pub_cat_tags
+          field: field_pub_cat_tags_target_id
+          plugin_id: numeric
       filters:
         status:
           id: status
@@ -867,6 +871,61 @@ display:
           group: 1
           expose:
             operator: ''
+        field_summary_pages_target_id:
+          id: field_summary_pages_target_id
+          table: node__field_summary_pages
+          field: field_summary_pages_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_summary_pages_target_id_op
+            label: 'Summary Pages (field_summary_pages)'
+            description: ''
+            use_operator: true
+            operator: field_summary_pages_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_summary_pages_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              security_scans: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: true
+          group_info:
+            label: 'Show Summary Pages'
+            description: ''
+            identifier: field_summary_pages_target_id
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Show Summary Pages'
+                operator: 'not empty'
+                value:
+                  min: ''
+                  max: ''
+                  value: ''
         type:
           id: type
           table: node_field_data
@@ -953,6 +1012,136 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        keys:
+          id: keys
+          table: node_search_index
+          field: keys
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_keywords
+          operator: optional
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: keys_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: keys_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: keys
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              security_scans: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        publication_program_filter:
+          id: publication_program_filter
+          table: node_field_data
+          field: publication_program_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: publication_program_filter
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: publication_program_filter_op
+            label: Program
+            description: ''
+            use_operator: false
+            operator: publication_program_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_pub_cat_tags_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              security_scans: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        publication_group_filter:
+          id: publication_group_filter
+          table: node_field_data
+          field: publication_group_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: publication_project_filter
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: publication_group_filter_op
+            label: Project
+            description: ''
+            use_operator: false
+            operator: publication_group_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_pub_group_tags_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              security_scans: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         publication_year_filter:
           id: publication_year_filter
           table: node_field_data
@@ -968,7 +1157,7 @@ display:
           exposed: true
           expose:
             operator_id: publication_year_filter_op
-            label: 'Publication Year Filter'
+            label: Year
             description: ''
             use_operator: false
             operator: publication_year_filter_op
@@ -997,201 +1186,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_pub_cat_tags_target_id:
-          id: field_pub_cat_tags_target_id
-          table: node__field_pub_cat_tags
-          field: field_pub_cat_tags_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_pub_cat_tags_target_id_op
-            label: Program
-            description: ''
-            use_operator: false
-            operator: field_pub_cat_tags_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_pub_cat_tags_target_id
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              security_scans: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: publication_tag
-          type: select
-          hierarchy: true
-          limit: true
-          error_message: true
-        field_pub_group_tags_target_id:
-          id: field_pub_group_tags_target_id
-          table: node__field_pub_group_tags
-          field: field_pub_group_tags_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_pub_group_tags_target_id_op
-            label: Project
-            description: ''
-            use_operator: false
-            operator: field_pub_group_tags_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_pub_group_tags_target_id
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              security_scans: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: publication_tag
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        keys:
-          id: keys
-          table: node_search_index
-          field: keys
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_keywords
-          operator: optional
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: keys_op
-            label: 'Search Keywords'
-            description: ''
-            use_operator: false
-            operator: keys_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: keys
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              security_scans: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_summary_pages_target_id:
-          id: field_summary_pages_target_id
-          table: node__field_summary_pages
-          field: field_summary_pages_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          operator: 'not empty'
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_summary_pages_target_id_op
-            label: 'Summary Pages (field_summary_pages)'
-            description: ''
-            use_operator: true
-            operator: field_summary_pages_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_summary_pages_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              security_scans: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: true
-          group_info:
-            label: 'Show Summary Pages'
-            description: ''
-            identifier: field_summary_pages_target_id
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: 'Show Summary Pages'
-                operator: 'not empty'
-                value:
-                  min: ''
-                  max: ''
-                  value: ''
       filter_groups:
         operator: AND
         groups:
@@ -1231,6 +1225,15 @@ display:
           admin_label: 'field_summary_pages: Content'
           plugin_id: standard
           required: false
+        field_topic_taxonomy:
+          id: field_topic_taxonomy
+          table: node__field_topic_taxonomy
+          field: field_topic_taxonomy
+          relationship: field_summary_pages
+          group_type: group
+          admin_label: 'field_topic_taxonomy: Taxonomy term'
+          plugin_id: standard
+          required: false
       header:
         area:
           id: area
@@ -1255,7 +1258,6 @@ display:
         - url
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1283,7 +1285,6 @@ display:
         - url
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

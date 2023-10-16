@@ -25,19 +25,24 @@ module:
   editor: 0
   embed: 0
   entity_embed: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
   foundation_sites: 0
   gdc: 0
+  gdc_chart: 0
   help: 0
   history: 0
   image: 0
+  imce: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
+  layout_builder: 0
+  layout_discovery: 0
   libraries: 0
   link: 0
   markdown: 0
@@ -48,6 +53,7 @@ module:
   migrate_drupal_ui: 0
   migrate_plus: 0
   migrate_upgrade: 0
+  modal_page: 0
   mysql: 0
   node: 0
   options: 0
@@ -65,6 +71,8 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
+  twig_ui: 0
   update: 0
   user: 0
   views_accordion_foundation: 0
@@ -73,10 +81,13 @@ module:
   views_conditional: 0
   views_ui: 0
   views_year_filter: 0
+  webform: 0
+  webform_ui: 0
   weight: 0
   extlink: 1
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   olivero: 0

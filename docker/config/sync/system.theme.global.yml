@@ -11,6 +11,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://gdc_logo_0.png'
+  path: 'public://GDC_LOGO.svg'
   url: ''
   use_default: false

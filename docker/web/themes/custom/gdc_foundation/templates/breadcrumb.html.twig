@@ -13,16 +13,17 @@
     <h2 id="system-breadcrumb" class="show-for-sr">{{ 'Breadcrumb'|t }}</h2>
     <ul class="breadcrumbs" id="breadcrumbs" data-active-menu="{{ breadcrumb[1].text }}">
       {% for item in breadcrumb %}
-{#	{% if item.text != 'Home' and loop.index0 > 0 %} #}
-          <li>
+	{% if item.text != 'Home' and loop.index0 > 0 %} 
+          <li> {{ loop.index0 }}
             {% if item.url %}
               <a href="{{ item.url }}">{{ item.text }}</a>
             {% else %}
               {{ item.text }}
             {% endif %}
           </li>
-{#	{% endif %} #}
+	{% endif %}
       {% endfor %}
+      <li><span>Active Menu: {{ breadcrumb[1].text }}</span></li>
       <li class="current"><span class="show-for-sr">Current: </span> {{ title }}</li>
     </ul>
   </nav>

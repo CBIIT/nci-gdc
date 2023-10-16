@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_ins_per_aff.default
     - field.field.node.ins_per_aff.body
     - field.field.node.ins_per_aff.comment_node_ins_per_aff
     - field.field.node.ins_per_aff.field_dept
@@ -12,65 +11,24 @@ dependencies:
     - field.field.node.ins_per_aff.field_position
     - node.type.ins_per_aff
   module:
-    - comment
-    - text
     - user
 id: node.ins_per_aff.default
 targetEntityType: node
 bundle: ins_per_aff
 mode: default
 content:
-  body:
-    type: text_default
+  field_position:
+    type: string
     label: hidden
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
-  comment_node_ins_per_aff:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_dept:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_ins_ref:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_person_ref:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_position:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  body: true
+  comment_node_ins_per_aff: true
+  field_dept: true
+  field_ins_ref: true
+  field_person_ref: true
+  links: true

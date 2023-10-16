@@ -1,0 +1,59 @@
+uuid:
+  -
+    value: e99d2f94-fe77-4c97-881e-435e15efa7c3
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Glossary of Terms for GDC Data Usage Statistics'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<ul>\r\n    <li>\r\n    <p><strong>Data Downloaded</strong>:  Number of terabytes of data downloaded from the GDC during the period shown in the report.</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Hits</strong>:  Any files requested from the server (including files that are \"Pages\").</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Unique Visitors</strong>:  A person or computer (host) that has made at least 1 hit on 1 page of a website during the period shown in the report. If this user makes several visits during this period, it is counted only once. Visitors are tracked by IP address. If multiple users are accessing the site from the same IP (eg: home or office network), they will be counted as a single unique visitor.</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Number of Visits</strong>:  Number of visits made by all visitors. For example, if a unique IP address accesses a page, and then requests three other pages within an hour. All of the \"pages\" are included in the visit. Multiple pages per visit and multiple visits per unique visitors are expected, assuming that some of the unique IP addresses are logged with more than an hour between requests.</p>\r\n    </li>\r\n</ul>"
+    format: full_html
+    processed: |-
+      <ul><li>
+      <p><strong>Data Downloaded</strong>:  Number of terabytes of data downloaded from the GDC during the period shown in the report.</p>
+      </li>
+      <li>
+      <p><strong>Hits</strong>:  Any files requested from the server (including files that are "Pages").</p>
+      </li>
+      <li>
+      <p><strong>Unique Visitors</strong>:  A person or computer (host) that has made at least 1 hit on 1 page of a website during the period shown in the report. If this user makes several visits during this period, it is counted only once. Visitors are tracked by IP address. If multiple users are accessing the site from the same IP (eg: home or office network), they will be counted as a single unique visitor.</p>
+      </li>
+      <li>
+      <p><strong>Number of Visits</strong>:  Number of visits made by all visitors. For example, if a unique IP address accesses a page, and then requests three other pages within an hour. All of the "pages" are included in the visit. Multiple pages per visit and multiple visits per unique visitors are expected, assuming that some of the unique IP addresses are logged with more than an hour between requests.</p>
+      </li>
+      </ul>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

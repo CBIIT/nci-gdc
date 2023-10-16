@@ -1,0 +1,53 @@
+uuid:
+  -
+    value: 0b92ee49-18df-46db-bfb3-205685abcc21
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'FAQ: Developers'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<?php\r\n$view = views_get_view('faq');\r\nprint $view->preview('block_2', array('all', 46));\r\n?>\r\n<ul class=\"more\">\r\n  <li><a href='/about-gdc/gdc-faqs?categories=[\"For Developers\"]'>See all GDC API FAQs</a></li>\r\n</ul>"
+    format: php_code
+    processed: |-
+      <?php
+      $view = views_get_view('faq');
+      print $view->preview('block_2', array('all', 46));
+      ?>
+      <ul class="more">
+        <li><a href='/about-gdc/gdc-faqs?categories=["For Developers"]'>See all GDC API FAQs</a></li>
+      </ul>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

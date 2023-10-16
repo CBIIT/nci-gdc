@@ -1,0 +1,5 @@
+services:
+  gdc.twig_extension:
+    class: Drupal\gdc\GdcTwigExtension
+    tags:
+      - { name: twig.extension }

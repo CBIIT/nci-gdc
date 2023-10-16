@@ -6,13 +6,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main-menu
-    parent: 'main-menu:0:'
+    available_menus: {  }
+    parent: ''
 name: 'Blog entry'
 type: blog
 description: 'Use for multi-user blogs. Every user gets a personal blog.'
 help: '1'
 new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

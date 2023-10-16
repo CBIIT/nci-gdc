@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_person.default
     - field.field.node.person.comment_node_person
     - field.field.node.person.field_assistant
     - field.field.node.person.field_author_signature
+    - field.field.node.person.field_bio
+    - field.field.node.person.field_bio_corp
     - field.field.node.person.field_crowd_id
     - field.field.node.person.field_degree
+    - field.field.node.person.field_headline
     - field.field.node.person.field_name_first
     - field.field.node.person.field_name_last
     - field.field.node.person.field_paper_number
@@ -22,151 +24,48 @@ dependencies:
     - field.field.node.person.field_uid
     - node.type.person
   module:
-    - comment
     - image
-    - link
-    - options
+    - text
     - user
 id: node.person.default
 targetEntityType: node
 bundle: person
 mode: default
 content:
-  comment_node_person:
-    type: comment_default
+  field_bio:
+    type: text_default
     label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_assistant:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_author_signature:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 9
-    region: content
-  field_crowd_id:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 29
-    region: content
-  field_degree:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  field_name_first:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_name_last:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_paper_number:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ' '
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_person_tax:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 26
-    region: content
-  field_person_title:
-    type: list_default
-    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_photo:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 5
+    weight: 0
     region: content
-  field_primary_email:
-    type: email_mailto
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 28
-    region: content
-  field_research_email:
-    type: email_mailto
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 14
-    region: content
-  field_research_website:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 18
-    region: content
-  field_suffix:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_uid:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 27
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  comment_node_person: true
+  field_assistant: true
+  field_author_signature: true
+  field_bio_corp: true
+  field_crowd_id: true
+  field_degree: true
+  field_headline: true
+  field_name_first: true
+  field_name_last: true
+  field_paper_number: true
+  field_person_tax: true
+  field_person_title: true
+  field_primary_email: true
+  field_research_email: true
+  field_research_website: true
+  field_suffix: true
+  field_uid: true
+  links: true

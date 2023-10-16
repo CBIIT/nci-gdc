@@ -1,0 +1,86 @@
+uuid:
+  -
+    value: 0e2e4e67-0d26-4744-917f-137676883fae
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Join GDC User Mailing List'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<style>\r\n\r\ninput.mailing-list-input{\r\n\twidth:60%; \r\n\tfloat:right; \r\n\tmargin-right:15%;\r\n}\r\n\r\ndiv.mailing-list-field{\r\n   overflow: hidden;\r\n \twhite-space: nowrap;\r\n \tmargin-top: 15px;\r\n}\r\n\r\n.webform-submit, .form-submit, .button-primary{\r\n    font-size: 100%;\r\n    padding: 8px 50px;\r\n    border: 0px;\r\n    display: inline-block;\r\n    width: auto;\r\n    color: #fff;\r\n    background: #0b7983;\r\n    background-color: #0b7983;\r\n    font-size: 1em;\r\n    border-radius: 3px;\r\n    box-sizing: border-box;\r\n    border-collapse: collapse;\r\n}\r\n.webform-submit:hover, .form-submit:hover, .button-primary:hover{\r\n    background: #277599;\r\n}\r\n</style>\r\n\r\n<p>This list is used by the NCI Genomic Data Commons (GDC) to announce new product releases, newly available data sets, and scheduled system downtime.</p>\r\n<p>To Join: Click on the \"Support\" tab and select \"Join the GDC User Listserv\"</p> \r\n    \r\n<?php\r\n$block = module_invoke('webform', 'block_view','client-block-622'); \r\nprint render($block);\r\n?>"
+    format: php_code
+    processed: |-
+      <style>
+
+      input.mailing-list-input{
+      	width:60%; 
+      	float:right; 
+      	margin-right:15%;
+      }
+
+      div.mailing-list-field{
+         overflow: hidden;
+       	white-space: nowrap;
+       	margin-top: 15px;
+      }
+
+      .webform-submit, .form-submit, .button-primary{
+          font-size: 100%;
+          padding: 8px 50px;
+          border: 0px;
+          display: inline-block;
+          width: auto;
+          color: #fff;
+          background: #0b7983;
+          background-color: #0b7983;
+          font-size: 1em;
+          border-radius: 3px;
+          box-sizing: border-box;
+          border-collapse: collapse;
+      }
+      .webform-submit:hover, .form-submit:hover, .button-primary:hover{
+          background: #277599;
+      }
+      </style>
+
+      <p>This list is used by the NCI Genomic Data Commons (GDC) to announce new product releases, newly available data sets, and scheduled system downtime.</p>
+      <p>To Join: Click on the "Support" tab and select "Join the GDC User Listserv"</p> 
+          
+      <?php
+      $block = module_invoke('webform', 'block_view','client-block-622'); 
+      print render($block);
+      ?>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

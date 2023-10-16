@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment_node_crg.default
     - field.field.node.crg.comment_node_crg
+    - field.field.node.crg.field_bio
+    - field.field.node.crg.field_headline
     - field.field.node.crg.field_image
     - field.field.node.crg.field_link
     - image.style.grid16-4
@@ -12,6 +14,7 @@ dependencies:
   module:
     - comment
     - image
+    - text
     - user
 id: node.crg.default
 targetEntityType: node
@@ -26,6 +29,20 @@ content:
       pager_id: 0
     third_party_settings: {  }
     weight: 20
+    region: content
+  field_bio:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_headline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
     region: content
   field_image:
     type: image

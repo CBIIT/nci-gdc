@@ -1,11 +1,18 @@
 uuid: 5729dd35-f090-4293-98a3-be55031e9e64
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: 'Person Asset'
 type: person_asset
 description: 'Association between a Person and an Asset'
 help: ''
 new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

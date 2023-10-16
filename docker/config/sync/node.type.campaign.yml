@@ -1,11 +1,18 @@
 uuid: 50134a9e-dd0a-4d9f-9a9a-511c0c4d45ac
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: Campaign
 type: campaign
 description: ''
 help: ''
 new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

@@ -1,0 +1,25 @@
+{% if css_style is defined %}
+<style type="text/css">
+  .tbm.animate .tbm-item > .tbm-submenu, .tbm.animate.slide .tbm-item > .tbm-submenu > div {
+  {{ css_style }}
+  }
+</style>
+{% endif %}
+<nav {{ attributes }}>
+  {% if section == 'frontend' %}
+    <button class="tbm-button" type="button">
+      <span class="tbm-button-container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <div class="tbm-collapse {{ block_config['always-show-submenu'] ? ' always-show' : '' }}">
+  {% endif %}
+  {{ content }}
+  {% if section == 'frontend' %}
+    </div>
+  {% endif %}
+</nav>
+

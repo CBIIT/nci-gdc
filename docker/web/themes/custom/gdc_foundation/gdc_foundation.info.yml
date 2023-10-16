@@ -12,7 +12,8 @@ base theme: zurb_foundation
 # need to add custom CSS or JS
 libraries:
  - gdc_foundation/global
-
+ - gdc_foundation/gdc_font
+ - gdc_foundation/testfont
 # Regions are output in the page.html.twig
 
 regions:

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page_for_scientific_report.body
     - field.field.node.page_for_scientific_report.comment_node_page_for_scientif
+    - field.field.node.page_for_scientific_report.field_attachment_lref
     - field.field.node.page_for_scientific_report.field_creation_date
     - field.field.node.page_for_scientific_report.field_mod_date
     - node.type.page_for_scientific_report
@@ -32,5 +33,6 @@ content:
     region: content
 hidden:
   comment_node_page_for_scientif: true
+  field_attachment_lref: true
   field_creation_date: true
   field_mod_date: true
