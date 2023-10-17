@@ -1,3 +1,16 @@
+
+.block-field-blocknodepagetitle span{
+display:none !important;
+}
 .chartContainer {
-  height: 240px !important;
+	border-right:1px solid #C6C3C5;
+	padding-right:20px;
+  width: 280px !important;
+  padding-bottom:30px !important;
+}
+
+
+#chart{
+	margin-bottom:30px !important;
+	margin-top:30px !important;
 }

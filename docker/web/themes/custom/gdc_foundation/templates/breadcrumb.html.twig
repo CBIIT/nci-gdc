@@ -14,7 +14,7 @@
     <ul class="breadcrumbs" id="breadcrumbs" data-active-menu="{{ breadcrumb[1].text }}">
       {% for item in breadcrumb %}
 	{% if item.text != 'Home' and loop.index0 > 0 %} 
-          <li> {{ loop.index0 }}
+          <li>
             {% if item.url %}
               <a href="{{ item.url }}">{{ item.text }}</a>
             {% else %}
@@ -23,8 +23,10 @@
           </li>
 	{% endif %}
       {% endfor %}
+<!--
       <li><span>Active Menu: {{ breadcrumb[1].text }}</span></li>
-      <li class="current"><span class="show-for-sr">Current: </span> {{ title }}</li>
+-->
+      <li class="current"><span class="show-for-sr"></span> {{ title }}</li>
     </ul>
   </nav>
 {% endif %}

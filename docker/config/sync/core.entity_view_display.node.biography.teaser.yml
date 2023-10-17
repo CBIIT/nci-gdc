@@ -12,13 +12,7 @@ dependencies:
     - field.field.node.biography.field_subject_tag
     - node.type.biography
   module:
-    - layout_builder
-    - layout_discovery
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.biography.teaser
 targetEntityType: node
 bundle: biography
