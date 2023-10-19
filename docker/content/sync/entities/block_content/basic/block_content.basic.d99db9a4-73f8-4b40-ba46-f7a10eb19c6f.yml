@@ -23,7 +23,7 @@ info:
     value: 'Homepage: Analyze Data'
 changed:
   -
-    value: '2023-09-08T18:30:19+00:00'
+    value: '2023-10-18T16:16:01+00:00'
     format: 'Y-m-d\TH:i:sP'
 reusable:
   -
@@ -36,14 +36,13 @@ revision_translation_affected:
     value: true
 body:
   -
-    value: "<img src=\"/files/public/image/GDC-Analyze-Data-icon.png\" alt=\"Analyze Data\" />\r\n<p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p>\r\n<ul class=\"more\">\r\n<li><a href=\"/analyze-data\">More about Analyzing Data</a></li>\r\n</ul>"
+    value: '<img src="https://gdc.cancer.gov/files/public/image/GDC-Analyze-Data-icon.png" alt="Analyze Data"><p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p><ul class="more"><li><a href="/analyze-data">More about Analyzing Data</a></li></ul>'
     format: full_html
     processed: |-
-      <p><img src="/files/public/image/GDC-Analyze-Data-icon.png" alt="Analyze Data" /></p>
-      <p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p>
+      <p><img src="https://gdc.cancer.gov/files/public/image/GDC-Analyze-Data-icon.png" alt="Analyze Data" /></p><p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p>
       <ul class="more"><li><a href="/analyze-data">More about Analyzing Data</a></li>
       </ul>
-    summary: null
+    summary: ''
     summary_processed: ''
 _content_sync:
   entity_type: block_content

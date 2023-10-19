@@ -23,7 +23,7 @@ info:
     value: 'Homepage: Access Data'
 changed:
   -
-    value: '2023-09-08T18:30:19+00:00'
+    value: '2023-10-19T20:41:05+00:00'
     format: 'Y-m-d\TH:i:sP'
 reusable:
   -
@@ -36,14 +36,13 @@ revision_translation_affected:
     value: true
 body:
   -
-    value: "<img src=\"/files/icon_gdc-access.png\" alt=\"Access Data on GDC\" />\r\n<p>The <strong>GDC Data Portal</strong> provides a platform for efficiently querying and downloading high quality and complete data. The GDC also provides a <strong>GDC Data Transfer Tool</strong> and a <strong>GDC API</strong> for programmatic access.</p>\r\n<ul class=\"more\">\r\n  <li><a href=\"/node/199\">More about Accessing Data</a></li>\r\n</ul>"
+    value: '<img src="https://gdc.cancer.gov/files/icon_gdc-access.png" alt="Access Data on GDC"><p>The <strong>GDC Data Portal</strong> provides a platform for efficiently querying and downloading high quality and complete data. The GDC also provides a <strong>GDC Data Transfer Tool</strong> and a <strong>GDC API</strong> for programmatic access.</p><ul class="more"><li><a href="/node/199">More about Accessing Data</a></li></ul>'
     format: full_html
     processed: |-
-      <p><img src="/files/icon_gdc-access.png" alt="Access Data on GDC" /></p>
-      <p>The <strong>GDC Data Portal</strong> provides a platform for efficiently querying and downloading high quality and complete data. The GDC also provides a <strong>GDC Data Transfer Tool</strong> and a <strong>GDC API</strong> for programmatic access.</p>
+      <p><img src="https://gdc.cancer.gov/files/icon_gdc-access.png" alt="Access Data on GDC" /></p><p>The <strong>GDC Data Portal</strong> provides a platform for efficiently querying and downloading high quality and complete data. The GDC also provides a <strong>GDC Data Transfer Tool</strong> and a <strong>GDC API</strong> for programmatic access.</p>
       <ul class="more"><li><a href="/node/199">More about Accessing Data</a></li>
       </ul>
-    summary: null
+    summary: ''
     summary_processed: ''
 _content_sync:
   entity_type: block_content

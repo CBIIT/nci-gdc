@@ -5,18 +5,40 @@ dependencies:
   config:
     - field.field.node.ins_per_aff.body
     - field.field.node.ins_per_aff.comment_node_ins_per_aff
+    - field.field.node.ins_per_aff.field_date_range
     - field.field.node.ins_per_aff.field_dept
+    - field.field.node.ins_per_aff.field_former
     - field.field.node.ins_per_aff.field_ins_ref
     - field.field.node.ins_per_aff.field_person_ref
     - field.field.node.ins_per_aff.field_position
     - node.type.ins_per_aff
   module:
+    - entity_reference_revisions
     - user
 id: node.ins_per_aff.default
 targetEntityType: node
 bundle: ins_per_aff
 mode: default
 content:
+  field_date_range:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_former:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_position:
     type: string
     label: hidden

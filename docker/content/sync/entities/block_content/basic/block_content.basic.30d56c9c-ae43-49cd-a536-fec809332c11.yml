@@ -23,7 +23,7 @@ info:
     value: 'Homepage: Submit Data'
 changed:
   -
-    value: '2023-09-08T18:30:19+00:00'
+    value: '2023-10-19T20:46:44+00:00'
     format: 'Y-m-d\TH:i:sP'
 reusable:
   -
@@ -36,14 +36,13 @@ revision_translation_affected:
     value: true
 body:
   -
-    value: "<img src=\"/files/icon_gdc-submit.png\" alt=\"Submit data on GDC\" />\r\n<p>The GDC provides tools to guide data submission including the <strong>GDC Data Submission Portal</strong>, a web-based tool for submitting clinical, biospecimen and small volumes of molecular data as well as the <strong> GDC Data Transfer Tool</strong>, a client-based tool for submitting large, high volume molecular data. A secure <strong>GDC API</strong> is also available for batch data submissions.</p>\r\n<ul class=\"more\">\r\n  <li><a href=\"/node/202\">More about Submitting Data</a></li>\r\n</ul>"
+    value: '<img src="https://gdc.cancer.gov/files/icon_gdc-submit.png" alt="Submit data on GDC"><p>The GDC provides tools to guide data submission including the <strong>GDC Data Submission Portal</strong>, a web-based tool for submitting clinical, biospecimen and small volumes of molecular data as well as the <strong>GDC Data Transfer Tool</strong>, a client-based tool for submitting large, high volume molecular data. A secure <strong>GDC API</strong> is also available for batch data submissions.</p><ul class="more"><li><a href="/node/202">More about Submitting Data</a></li></ul>'
     format: full_html
     processed: |-
-      <p><img src="/files/icon_gdc-submit.png" alt="Submit data on GDC" /></p>
-      <p>The GDC provides tools to guide data submission including the <strong>GDC Data Submission Portal</strong>, a web-based tool for submitting clinical, biospecimen and small volumes of molecular data as well as the <strong> GDC Data Transfer Tool</strong>, a client-based tool for submitting large, high volume molecular data. A secure <strong>GDC API</strong> is also available for batch data submissions.</p>
+      <p><img src="https://gdc.cancer.gov/files/icon_gdc-submit.png" alt="Submit data on GDC" /></p><p>The GDC provides tools to guide data submission including the <strong>GDC Data Submission Portal</strong>, a web-based tool for submitting clinical, biospecimen and small volumes of molecular data as well as the <strong>GDC Data Transfer Tool</strong>, a client-based tool for submitting large, high volume molecular data. A secure <strong>GDC API</strong> is also available for batch data submissions.</p>
       <ul class="more"><li><a href="/node/202">More about Submitting Data</a></li>
       </ul>
-    summary: null
+    summary: ''
     summary_processed: ''
 _content_sync:
   entity_type: block_content

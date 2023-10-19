@@ -1,0 +1,37 @@
+uuid: e6f11e91-74cd-4648-bce1-14a850ae8522
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_range
+    - node.type.ins_per_aff
+    - paragraphs.paragraphs_type.date_range
+  module:
+    - entity_reference_revisions
+id: node.ins_per_aff.field_date_range
+field_name: field_date_range
+entity_type: node
+bundle: ins_per_aff
+label: 'Date Range'
+description: 'Enter a start and end year if no longer with organization'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      date_range: date_range
+    negate: 0
+    target_bundles_drag_drop:
+      attachment:
+        weight: 5
+        enabled: false
+      biography:
+        weight: 6
+        enabled: false
+      date_range:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

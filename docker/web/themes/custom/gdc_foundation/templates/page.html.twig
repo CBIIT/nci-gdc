@@ -100,17 +100,12 @@
               {{ page.sidebar_first }}
             </div>
           {% endif %}
-          {% if page.sidebar_second %}
-            <div id="sidebar-second" class="{{ sidebar_sec_grid }} sidebar" role="complementary">
-              {{ page.sidebar_second }}
-            </div>
-          {% endif %}
 
         </main>
       </div>
       {% if page.footer_first or page.footer_second or page.footer_third or page.footer.fourth or page.footer_bottom %}
         <footer id="footer">
-	<div class="grid-container full">
+	<div class="grid-container">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer.fourth %}
             <div class="grid-x grid-margin-x medium-margin-collapse">
               {% if page.footer_first %}

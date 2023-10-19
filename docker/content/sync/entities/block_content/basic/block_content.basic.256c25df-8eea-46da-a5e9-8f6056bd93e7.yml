@@ -1,0 +1,71 @@
+uuid:
+  -
+    value: 256c25df-8eea-46da-a5e9-8f6056bd93e7
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-10-18T13:38:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Homepage sidebar'
+changed:
+  -
+    value: '2023-10-18T14:08:52+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: '<table><tbody><tr><td><h4>Analyze Data</h4></td><td><img src="https://gdc.cancer.gov/files/public/image/GDC-Analyze-Data-icon.png" alt="" width="75" height="150"></td></tr><tr><td colspan="2"><p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p><ul><li><a href="https://gdc.cancer.gov/analyze-data">More about Analyzing Data</a></li></ul></td></tr></tbody></table><table><tbody><tr><td><h4>Access Data</h4></td><td><img src="https://gdc.cancer.gov/files/icon_gdc-access.png" alt="" width="75" height="150"></td></tr><tr><td colspan="2"><p>The <strong>GDC Data Portal</strong> provides a platform for efficiently querying and downloading high quality and complete data. The GDC also provides a <strong>GDC Data Transfer Tool</strong> and a <strong>GDC API</strong> for programmatic access.</p><ul><li><a href="https://gdc.cancer.gov/access-data">More about Accessing Data</a></li></ul></td></tr></tbody></table><table><tbody><tr><td><h4>Analyze Data</h4></td><td><img src="https://gdc.cancer.gov/files/public/image/GDC-Analyze-Data-icon.png" alt="" width="150" height="150"></td></tr><tr><td colspan="2"><p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p><ul><li><a href="https://gdc.cancer.gov/analyze-data">More about Analyzing Data</a></li></ul></td></tr></tbody></table>'
+    format: full_html
+    processed: |-
+      <table><tbody><tr><td>
+      <h4>Analyze Data</h4>
+      </td>
+      <td><img src="https://gdc.cancer.gov/files/public/image/GDC-Analyze-Data-icon.png" alt="" width="75" height="150" /></td>
+      </tr><tr><td colspan="2">
+      <p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p>
+      <ul><li><a href="https://gdc.cancer.gov/analyze-data">More about Analyzing Data</a></li>
+      </ul></td>
+      </tr></tbody></table><table><tbody><tr><td>
+      <h4>Access Data</h4>
+      </td>
+      <td><img src="https://gdc.cancer.gov/files/icon_gdc-access.png" alt="" width="75" height="150" /></td>
+      </tr><tr><td colspan="2">
+      <p>The <strong>GDC Data Portal</strong> provides a platform for efficiently querying and downloading high quality and complete data. The GDC also provides a <strong>GDC Data Transfer Tool</strong> and a <strong>GDC API</strong> for programmatic access.</p>
+      <ul><li><a href="https://gdc.cancer.gov/access-data">More about Accessing Data</a></li>
+      </ul></td>
+      </tr></tbody></table><table><tbody><tr><td>
+      <h4>Analyze Data</h4>
+      </td>
+      <td><img src="https://gdc.cancer.gov/files/public/image/GDC-Analyze-Data-icon.png" alt="" width="150" height="150" /></td>
+      </tr><tr><td colspan="2">
+      <p>The <strong>GDC Data Analysis, Visualization, and Exploration (DAVE) Tools</strong> allow users to interact intuitively with the GDC data and promote the development of a true cancer genomics knowledge base.</p>
+      <ul><li><a href="https://gdc.cancer.gov/analyze-data">More about Analyzing Data</a></li>
+      </ul></td>
+      </tr></tbody></table>
+    summary: ''
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

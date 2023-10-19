@@ -25,7 +25,6 @@ regions:
   highlighted: Highlighted
   content: Content
   sidebar_first: 'Left sidebar'
-  sidebar_second: 'Right sidebar'
   footer_first: 'Footer first column'
   footer_second: 'Footer second column'
   footer_third: 'Footer third column'

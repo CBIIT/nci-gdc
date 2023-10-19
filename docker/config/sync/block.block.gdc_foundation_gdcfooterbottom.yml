@@ -11,7 +11,7 @@ dependencies:
 id: gdc_foundation_gdcfooterbottom
 theme: gdc_foundation
 region: footer_bottom
-weight: -31
+weight: -33
 provider: null
 plugin: 'block_content:3dbf7b60-4f34-445e-b90a-933dbc0624a2'
 settings:

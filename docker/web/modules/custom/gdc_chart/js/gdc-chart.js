@@ -21,6 +21,7 @@
     Chart.Tooltip.positioners.customPosition = function (elements, position) {
       let currentChartHeight = chart.height;
       let currentChartWidth = chart.width;
+      console.log(currentChartHeight,currentChartWidth);
       let x = position["x"];
       let y = position["y"];
       let halfHeight = currentChartHeight / y;

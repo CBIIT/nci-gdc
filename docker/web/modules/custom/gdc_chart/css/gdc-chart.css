@@ -1,16 +1,39 @@
-
-.block-field-blocknodepagetitle span{
-display:none !important;
+.block-field-blocknodepagetitle span {
+  display:none !important;
 }
+
 .chartContainer {
-	border-right:1px solid #C6C3C5;
-	padding-right:20px;
-  width: 280px !important;
+  border-right:1px solid #C6C3C5;
+  padding-right:20px;
   padding-bottom:30px !important;
 }
+.chartContainer h5 {
+color:#6B6262;
+}
+#chart { 
+  margin-bottom:30px !important;
+  margin-top:30px !important;
+
+	//width:254px !important;
+	//height:254px !important;
+}
+
+.chartContainer button {
+	background-color:#0E7983;
+	color:#fff;
+	font-weight:bold;
+	padding:15px;
+	width:100%;
+}
+#table-container th {
+	text-align:left !important;
+}
+
+#table-container tr {
+	border:1px solid #DBDBDB;
+}
 
 
-#chart{
-	margin-bottom:30px !important;
-	margin-top:30px !important;
+#table-container caption {
+	text-align:left;
 }

@@ -1,0 +1,10 @@
+uuid: 23ffc69b-7599-4533-baa5-922d504f60ff
+langcode: en
+status: true
+dependencies: {  }
+id: date_range
+label: 'Date Range'
+icon_uuid: null
+icon_default: null
+description: 'Date Range entered as two 4 digit years'
+behavior_plugins: {  }

@@ -46,6 +46,7 @@ footer ul.menu {
 }
 #block-gdc-header-menu-63 nav ul li:nth-child(3) a  {
   color: white;
+  margin-bottom: 3px;
 }
 #block-gdc-foundation-site-branding .grid-container {
  padding-top: 15px;
@@ -53,14 +54,45 @@ footer ul.menu {
 #block-gdc-header-menu-63 nav  ul li:nth-child(4) a:before {
   font-family: 'GDCFont' !important;
   content: "\e94c ";
+  padding-right: 8px;
 }
 #block-gdc-header-menu-63 nav  ul li:nth-child(4) a.has-tip {
   border-bottom: 0px;
+  font-weight: normal;
+  cursor: pointer;
+  border-bottom: 0px;
 }
 /* Tooltip Overrides */
-.tooltip{
+/* Tooltip GDC Apps icons */
+.icon-gdc-portal-ap:before {
+    font-family: 'GDCFont';
+    content: "\e92f";
+    margin-left: -1.0205078125em;
+    color: rgb(255,255,255);
+}
+div.tooltip table {
+  width: 250px;
+}
+div.tooltip img {
+  width: 100px;
+}
+div.tooltip table th, div.tooltip table td {
+  padding: 20px;
+  background-color: white;
+}
+span.icon {
+    display: block;
+    height: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding: 3px 0;
+    vertical-align: text-top;
+    float: none;
+}
+/*
+.tooltip {
   background:white;
-  color:grey
+  color:grey;
 }
 
 .tooltip>.nub{border-color:transparent transparent #FFF transparent}
@@ -70,7 +102,49 @@ footer ul.menu {
 .tooltip.tip-top>.nub{border-color:#FFF transparent transparent transparent}
 .tooltip.tip-left>.nub{border-color:transparent transparent transparent #FFF}
 .tooltip.tip-right>.nub{border-color:transparent #FFF transparent transparent}
+*/
 
+/* Block Overrides */
+
+.block.block-block-content h2.block-title {
+  border-bottom: 1px solid #c5c3c4;
+  font-size: 1.5rem;
+  color:#6b6262;
+  margin-top: 1em;
+  padding-top: 1.5em;
+  font-size: 1.5rem;
+  margin-bottom: 0.8em;
+}
+.block.block-block-content img {
+  display: block;
+  width: 35%;
+  min-width: 5.2em;
+  height: auto;
+  float: right;
+  margin-top: -4.5em;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  vertical-align: middle;
+  background-color: white;
+}
+.body.field.field--block-content-body p,
+.body.field.field--block-content-body ul,
+.body.field.field--block-content-body ol {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.body.field.field--block-content-body ul {
+  margin-left: 0;
+  padding: 0;
+}
+#main .body.field.field--block-content-body li {
+  margin-left: 0px;
+  list-style: none;
+  background: url('https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/images/bullet-more-fa.png') left 0.0813em no-repeat;
+  margin: 0 0 0.1625em;
+  padding: 0 0 0 22px;
+}
 /* Publication Overrides */
 .label-publication-tag {
     border-radius: .4rem;
@@ -78,7 +152,7 @@ footer ul.menu {
     color: black;
     border: 1px solid black;
 }
-
+.icon-gdc-portal-ap
 /* Footer Overrides */
 footer div.grid-container.full {
     max-width: 1405px;
@@ -252,7 +326,10 @@ li.usa-footer__secondary-link > a {
     color: white;
 }
 
-/* global overrides for certain elements on site */
+/* globalaoverrides for certain elements on site */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'franklin_gothic_fsbook','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
 
 .accordion-title {
     position: relative;

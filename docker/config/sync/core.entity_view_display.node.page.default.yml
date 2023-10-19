@@ -7,11 +7,67 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.comment_node_page
     - field.field.node.page.field_orig_nid
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - comment
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          dff3070b-20d2-471c-b7f5-b0aa73e31f15:
+            uuid: dff3070b-20d2-471c-b7f5-b0aa73e31f15
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c5c8c056-37bd-4ba8-b938-7a3ccc0ad043:
+            uuid: c5c8c056-37bd-4ba8-b938-7a3ccc0ad043
+            region: content
+            configuration:
+              id: 'field_block:node:page:comment_node_page'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: comment_default
+                label: hidden
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          47f2b95f-3382-4f80-a66f-8b5a3dc36d57:
+            uuid: 47f2b95f-3382-4f80-a66f-8b5a3dc36d57
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -36,7 +92,10 @@ content:
     weight: 20
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 101
     region: content
 hidden:
   field_orig_nid: true
+  layout_builder__layout: true
