@@ -1,6 +1,6 @@
-uuid: 248530fe-1aad-4619-ae04-e08f4e4d59c0
+uuid: ea77a3a8-8f5c-4c5f-ac91-e4c70306fcac
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:e837c8bf-1640-4ace-9ab8-4d115c6daf80'
@@ -9,10 +9,10 @@ dependencies:
     - system
   theme:
     - gdc_foundation
-id: gdc_foundation_gdc_bootstrap_block_17
+id: gdc_foundation_homepagegdcandcancergenomics
 theme: gdc_foundation
-region: content
-weight: -24
+region: sidebar_first
+weight: 0
 provider: null
 plugin: 'block_content:e837c8bf-1640-4ace-9ab8-4d115c6daf80'
 settings:

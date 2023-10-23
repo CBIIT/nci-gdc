@@ -29,6 +29,7 @@
         "drupal/devel": "^5.1",
         "drupal/entity_embed": "^1.4",
         "drupal/extlink": "^1.7",
+        "drupal/fontawesome": "^2.26",
         "drupal/foundation_sites": "^2.0",
         "drupal/imce": "^3.0",
         "drupal/jquery_ui": "^1.6",

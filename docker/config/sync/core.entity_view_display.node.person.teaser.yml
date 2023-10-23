@@ -10,7 +10,9 @@ dependencies:
     - field.field.node.person.field_bio
     - field.field.node.person.field_bio_corp
     - field.field.node.person.field_crowd_id
+    - field.field.node.person.field_date_range
     - field.field.node.person.field_degree
+    - field.field.node.person.field_former
     - field.field.node.person.field_headline
     - field.field.node.person.field_name_first
     - field.field.node.person.field_name_last
@@ -43,7 +45,9 @@ hidden:
   field_bio: true
   field_bio_corp: true
   field_crowd_id: true
+  field_date_range: true
   field_degree: true
+  field_former: true
   field_headline: true
   field_name_first: true
   field_name_last: true

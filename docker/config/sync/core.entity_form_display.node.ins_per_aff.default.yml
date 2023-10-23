@@ -5,16 +5,13 @@ dependencies:
   config:
     - field.field.node.ins_per_aff.body
     - field.field.node.ins_per_aff.comment_node_ins_per_aff
-    - field.field.node.ins_per_aff.field_date_range
     - field.field.node.ins_per_aff.field_dept
-    - field.field.node.ins_per_aff.field_former
     - field.field.node.ins_per_aff.field_ins_ref
     - field.field.node.ins_per_aff.field_person_ref
     - field.field.node.ins_per_aff.field_position
     - node.type.ins_per_aff
   module:
     - comment
-    - paragraphs
     - path
     - text
 id: node.ins_per_aff.default
@@ -44,24 +41,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date_range:
-    type: paragraphs
-    weight: 6
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
   field_dept:
     type: string_textfield
     weight: 4
@@ -69,13 +48,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_former:
-    type: boolean_checkbox
-    weight: 5
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_ins_ref:
     type: options_select

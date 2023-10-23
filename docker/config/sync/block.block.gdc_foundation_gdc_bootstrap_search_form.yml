@@ -13,7 +13,7 @@ _core:
 id: gdc_foundation_gdc_bootstrap_search_form
 theme: gdc_foundation
 region: content
-weight: 10
+weight: 7
 provider: null
 plugin: search_form_block
 settings:

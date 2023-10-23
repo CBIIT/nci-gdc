@@ -9,7 +9,7 @@ _core:
 id: gdc_foundation_primary_local_tasks
 theme: gdc_foundation
 region: content
-weight: -30
+weight: -33
 provider: null
 plugin: local_tasks_block
 settings:

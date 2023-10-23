@@ -2,7 +2,7 @@ global:
   version: VERSION
   css:
     base:
-      css/tbmenu-override.css: {}
+      css/tbmenu_override.css: {}
       css/gdc_foundation.css: {}
       css/style.css: {}
       css/sumoselect.min.css: {}

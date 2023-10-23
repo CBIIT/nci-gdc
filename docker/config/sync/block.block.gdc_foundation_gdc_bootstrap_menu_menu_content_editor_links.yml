@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_gdc_bootstrap_menu_menu_content_editor_links
 theme: gdc_foundation
 region: content
-weight: 11
+weight: 8
 provider: null
 plugin: 'system_menu_block:menu-content-editor-links'
 settings:

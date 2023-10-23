@@ -58,7 +58,7 @@
     
     for (var key in categories) {
       var value = categories[key];
-      data.push({'id':key, cases:25, filles: 34});
+      data.push({'id':key, cases:Math.floor(Math.random()*200), files: Math.floor(Math.random()*100)});
       colors.push(value);
     }
     const chart = new Chart(ctx, {

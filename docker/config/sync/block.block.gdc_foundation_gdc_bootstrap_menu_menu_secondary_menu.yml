@@ -11,7 +11,7 @@ dependencies:
 id: gdc_foundation_gdc_bootstrap_menu_menu_secondary_menu
 theme: gdc_foundation
 region: content
-weight: 15
+weight: 12
 provider: null
 plugin: 'system_menu_block:menu-secondary-menu'
 settings:

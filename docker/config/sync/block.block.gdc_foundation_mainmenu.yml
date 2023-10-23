@@ -9,7 +9,7 @@ dependencies:
 id: gdc_foundation_mainmenu
 theme: gdc_foundation
 region: header
-weight: -28
+weight: -32
 provider: null
 plugin: 'tb_megamenu_menu_block:main'
 settings:

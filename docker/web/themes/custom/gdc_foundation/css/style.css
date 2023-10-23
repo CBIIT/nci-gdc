@@ -236,47 +236,6 @@ hr.footer-break {
     max-width: 100%;
 }
 
-/* TB Menu Override */
-.tbm-link-container > a {
-    color: white;
-    font-weight: bold;
-}
-
-.tbm-link.level-1 {
-    color: #565c65; /* Text Color */
-    font-weight: bold;
-}
-
-.tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link {
-    color: white;
-}
-
-.tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link:hover {
-    text-decoration: underline;
-    color: white;
-}
-.tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link.level-2:hover {
-    text-decoration: none;
-} 
-
-li.tbm-item.level-1.tbm-item--has-dropdown.open {
-  outline: .25rem solid #2491ff;
-  outline-offset: 0;
-}
-
-.tbm-link.level-1:hover {
-    color: white;
-    background-color: #004971; /* NCI blue */
-}
-
-.tbm-submenu {
-    background-color: #004971; /* NCI blue */
-}
-
-a.tbm-link.level-2.tbm-group-title a.tbm-link.level-2 {
-    color: white;
-}
-
 /* Footer */
 h2#block-gdc-foundation-footer-menu.block-title {
     font-size: 20px;
@@ -325,12 +284,21 @@ li.usa-footer__secondary-link {
 li.usa-footer__secondary-link > a {
     color: white;
 }
-
 /* globalaoverrides for certain elements on site */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'franklin_gothic_fsbook','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
-
+body {
+    background-color: #fff;
+    color: #1b1b1b;
+    overflow-x: hidden
+}
+h1, h2 {
+  font-size: 1.75em;
+}
+.button {
+  border-radius: 3px;
+}
 .accordion-title {
     position: relative;
     display: block;

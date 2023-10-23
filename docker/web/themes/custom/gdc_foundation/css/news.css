@@ -12,15 +12,74 @@
     text-align: right;
 }
 
-  /* SumoSelect Caption Styling */
-  .SumoSelect .CaptionCont.SelectBox.form-select {
+/* SumoSelect Caption Styling */
+.SumoSelect .CaptionCont.SelectBox.form-select {
     width: 50% !important;
-  }
+}
 
-  /* SumoSelect Styling */
-  .SumoSelect {
+/* SumoSelect Styling */
+.SumoSelect {
     padding-bottom:10px;
     padding-right: 10px;
     width: 50% !important;
-  }
-
+}
+/* On front page */
+.views-element-container.contextual-region.block.block-views.block-views-blocknews-block-1 header {
+  float: right;
+}
+.views-element-container.contextual-region.block.block-views.block-views-blocknews-block-1 h2 {
+  margin-top: 0;
+  padding-bottom: 1px;
+  margin-bottom: 0;
+}
+.views-element-container.contextual-region.block.block-views.block-views-blocknews-block-1 h2 {
+  border-bottom: 1px solid #c5c3c4;
+}
+.views-element-container.contextual-region.block.block-views.block-views-blocknews-block-1 header ul {
+  position: absolute;
+  margin-top: -55px;
+  right: 0px;
+}
+.views-element-container.contextual-region.block.block-views.block-views-blocknews-block-1 div.views-row {
+  margin-top: 25px;
+}
+ul.more.all-content {
+  list-style-type: none;
+}
+ul.more.all-content li {
+  float: left;
+}
+ul.more.all-content i.fa {
+  color: grey;
+}
+.views-element-container.contextual-region.block.block-views.block-views-blocknews-block-1 ul.more.all-content li:first-child {
+  border-right: 1px solid #c5c3c4;
+  margin-right: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+.news.datetags_container time {
+  text-transform: uppercase;
+}
+.views-element-container hr {
+  margin: 0.5rem auto;
+}
+.views-element-container .views-field.views-field-nothing-1 {
+  height: 25px;
+}
+/* View News Overrides */
+.news-label {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: white;
+  color: #24618d;
+  border: 1px solid grey;
+}
+.news-label a:focus, .news-label a:hover {
+color: #24618d;
+text-decoration: underline;
+}
+.news.datetags_container ul > li {
+display: inline-block;
+margin-left: 10px;
+}

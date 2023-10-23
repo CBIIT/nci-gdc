@@ -10,7 +10,7 @@ _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: gdc_foundation_breadcrumbs
 theme: gdc_foundation
-region: content
+region: header
 weight: -31
 provider: null
 plugin: system_breadcrumb_block
@@ -23,4 +23,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/form/data-submission-request-form\r\n/form/data-submission-request-form/confirmation"
+    pages: "/form/data-submission-request-form\r\n/form/data-submission-request-form/confirmation\r\n<front>"

@@ -11,7 +11,7 @@ _core:
 id: gdc_foundation_search_form_wide
 theme: gdc_foundation
 region: header
-weight: -27
+weight: -29
 provider: null
 plugin: search_form_block
 settings:
