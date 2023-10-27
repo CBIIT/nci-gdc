@@ -1,0 +1,46 @@
+uuid:
+  -
+    value: 846cd4d2-7765-467c-abb0-6d87ad67ec96
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Data Download Statistics'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: '<ul class="more"><li><a href="<?php echo url(''node/1186''. $node->nid) ?>">View a detailed breakdown of the GDC data downloaded across different areas of interest.</a></li></ul>'
+    format: php_code
+    processed: '<ul class="more"><li><a href="<?php echo url(''node/1186''. $node->nid) ?>">View a detailed breakdown of the GDC data downloaded across different areas of interest.</a></li></ul>'
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

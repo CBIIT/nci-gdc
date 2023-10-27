@@ -1,7 +1,0 @@
-faqs.view:
-  path: '/about-gdc/gdc-faqs2'
-  defaults:
-    _title: 'GDC Faqs'
-    _controller: '\Drupal\faqs\Controller\FaqsController::faqPage'
-  requirements:
-    _permission: 'access content'

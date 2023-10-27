@@ -9,9 +9,8 @@ dependencies:
       - book
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main-menu
-    parent: 'main-menu:0:'
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: 2gWGA-X4ERc4McStS7cMEG3ZBpDEqfNRDPTjB1v674Y
 name: 'Book page'

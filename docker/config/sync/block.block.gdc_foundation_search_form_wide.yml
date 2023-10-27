@@ -1,0 +1,23 @@
+uuid: a38bd950-fa75-4156-9f39-79552ff0d124
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - gdc_foundation
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: gdc_foundation_search_form_wide
+theme: gdc_foundation
+region: header
+weight: -29
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

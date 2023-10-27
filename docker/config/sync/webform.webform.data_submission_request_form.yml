@@ -1,0 +1,597 @@
+uuid: 739df0c4-0c68-4236-82b5-c6b47da6abbf
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 167
+template: false
+archive: false
+id: data_submission_request_form
+title: 'Data Submission Request Form'
+description: '<p>Data submission request form to submit study information</p>'
+categories: {  }
+elements: |-
+  header:
+    '#type': processed_text
+    '#text': '<p>Please fill out the following GDC Data Submission Request Form to describe your study in detail. For additional information, please see the <a href="https://gdc.cancer.gov/submit-data/data-submission-processes-and-tools">Data Submission Request Process </a>and associated <a href="https://gdc.cancer.gov/data-submission-conditions">Data Submission Conditions</a>.</p><p><em><strong>Disclaimer:</strong></em></p><ul><li><em><strong>Please do not provide any Protected Health Information (PHI) that contains identifiable IDs in this form.</strong></em></li><li><em><strong>The GDC Team will respond within 2 weeks.</strong></em></li></ul>'
+    '#format': filtered_html
+  study_contacts:
+    '#type': fieldset
+    '#title': 'Study Contacts'
+    principal_investigator_name:
+      '#type': textfield
+      '#title': 'Principal Investigator Name'
+      '#required': true
+    principal_investigator_position:
+      '#type': textfield
+      '#title': 'Principal Investigator Position'
+      '#required': true
+    principal_investigator_institution:
+      '#type': textfield
+      '#title': 'Principal Investigator Institution'
+      '#required': true
+    principal_investigator_address:
+      '#type': textfield
+      '#title': 'Principal Investigator Address'
+      '#required': true
+    principal_investigator_e_mail:
+      '#type': email
+      '#title': 'Principal Investigator E-mail'
+      '#required': true
+    era_commons_account:
+      '#type': radios
+      '#title': 'Do you have an <a href="https://commons.era.nih.gov/">eRA Commons Account</a>?'
+      '#options': yes_no
+      '#required': true
+    bioinformatician_support:
+      '#type': radios
+      '#title': 'Is there a bioinformatician who will support your data submission?'
+      '#options': yes_no
+      '#required': true
+  study_description:
+    '#type': fieldset
+    '#title': 'Study Description'
+    study_title:
+      '#type': textfield
+      '#title': 'Study Title'
+      '#required': true
+    study_description_text:
+      '#type': textarea
+      '#title': 'Study Description (questions the study will address and expected findings)'
+      '#required': true
+    types_of_cancer_studied:
+      '#type': webform_select_other
+      '#title': 'What are the types of cancer being studied?'
+      '#multiple': true
+      '#description': '<p>Hold down the control (ctrl) or command button to select multiple options.</p>'
+      '#options':
+        cancer_type_1: 'Adrenal Gland, Adrenocortical Carcinoma'
+        cancer_type_2: 'Adrenal Gland, Pheochromocytoma'
+        cancer_type_3: 'Bile Duct, Cholangiocarcinoma'
+        cancer_type_4: 'Bladder, Urothelial (transitional cell) Carcinoma'
+        cancer_type_5: 'Blood/Bone Marrow, Acute Lymphocytic Leukemia (ALL)'
+        cancer_type_6: 'Blood/Bone Marrow, Acute Myeloid Leukemia (AML)'
+        cancer_type_6a: 'Bone, Sarcoma'
+        cancer_type_7: 'Brain/CNS, Astrocytoma'
+        cancer_type_8: 'Brain/CNS, Brain Stem Glioma'
+        cancer_type_9: 'Brain/CNS, Glioblastoma'
+        cancer_type_10: 'Brain/CNS, Medulloblastoma'
+        cancer_type_11: 'Brain/CNS, Mixed Glioma'
+        cancer_type_12: 'Brain/CNS, Oligodendroglioma'
+        cancer_type_13: 'Breast, Invasive Ductal Carcinoma'
+        cancer_type_14: 'Breast, Invasive Lobular Carcinoma'
+        cancer_type_15: 'Cervix, Adenocarcinoma'
+        cancer_type_16: 'Cervix, Squamous Cell Carcinoma'
+        cancer_type_17: 'Colon/Rectum, Adenocarcinoma Carcinoma'
+        cancer_type_18: 'Endometrium, Adenocarcinoma Carcinoma'
+        cancer_type_19: 'Esophagus, Adenocarcinoma Carcinoma'
+        cancer_type_20: 'Eye, Melanoma'
+        cancer_type_21: 'Head & Neck, Squamous Cell Carcinoma'
+        cancer_type_22: 'Hodgkin’s Lymphoma'
+        cancer_type_23: 'Kidney, Rabdoid Tumor'
+        cancer_type_24: 'Kidney, Renal Cell Chromophobe Carcinoma'
+        cancer_type_25: 'Kidney, Renal Cell Papillary Carcinoma'
+        cancer_type_26: 'Kidney, Renal Clear Cell Carcinoma'
+        cancer_type_27: 'Kidney, Wilms Tumor'
+        cancer_type_28: 'Liver, Hepatocellular Carcinoma'
+        cancer_type_29: 'Lung/Bronchus, Adenocarcinoma Carcinoma'
+        cancer_type_30: 'Lung/Bronchus, Large Cell Carcinoma'
+        cancer_type_31: 'Lung/Bronchus, Small Cell Lung Carcinoma'
+        cancer_type_32: 'Lung/Bronchus, Squamous Cell Carcinoma'
+        cancer_type_33: Neuroblastoma
+        cancer_type_34: 'Non-Hodgkin’s Lymphoma'
+        cancer_type_35: Osteosarcoma
+        cancer_type_36: 'Ovary, Serous Cystadenocarcinoma'
+        cancer_type_37: 'Pancreas, Adenocarcinoma Carcinoma'
+        cancer_type_38: Paraganglioma
+        cancer_type_39: 'Pleura, Mesothelioma'
+        cancer_type_40: 'Prostate, Adenocarcinoma Carcinoma'
+        cancer_type_41: 'Skin, Basal Cell Carcinoma'
+        cancer_type_42: 'Skin, Cutaneous Melanoma'
+        cancer_type_43: 'Skin, Squamous Cell Carcinoma'
+        cancer_type_44: 'Soft Tissue, Sarcoma'
+        cancer_type_45: 'Stomach, Adenocarcinoma Carcinoma'
+        cancer_type_46: 'Testis, Germ Cell Tumor'
+        cancer_type_47: 'Thymus, Thymoma'
+        cancer_type_48: 'Thyroid, Non-Papillary Carcinoma'
+        cancer_type_49: 'Thyroid, Papillary Carcinoma'
+        cancer_type_50: 'Uterus, Carcinosarcoma'
+        cancer_type_51: 'Malignant Neoplasm (Not otherwise specified)'
+      '#other__title': 'Other (specify)'
+      '#required': true
+    grant_number:
+      '#type': textfield
+      '#title': 'NIH Grant Number (if applicable)'
+    supporting_nih_institute:
+      '#type': select
+      '#title': 'Supporting NIH Institute or Center (if applicable)'
+      '#options':
+        IC_1a: 'CC - NIH Clinical Center'
+        IC_1b: 'CIT - Center for Information Technology'
+        IC_1c: 'CSR - Center for Scientific Review'
+        IC_1: 'FIC - Fogarty International Center'
+        IC_2: 'NCATS - National Center for Advancing Translational Sciences'
+        IC_3: 'NCCIH - National Center for Complementary and Integrative Health (formerly NCCAM)'
+        IC_4: 'NCI - National Cancer Institute'
+        IC_5: 'NEI - National Eye Institute'
+        IC_6: 'NHGRI - National Human Genome Research Institute'
+        IC_7: 'NHLBI - National Heart, Lung, and Blood Institute'
+        IC_8: 'NIA - National Institute on Aging'
+        IC_9: 'NIAAA - National Institute on Alcohol Abuse and Alcoholism'
+        IC_10: 'NIAID - National Institute of Allergy and Infectious Diseases'
+        IC_11: 'NIAMS - National Institute of Arthritis and Musculoskeletal and Skin Diseases'
+        IC_12: 'NIBIB - National Institute of Biomedical Imaging and Bioengineering'
+        IC_13: 'NICHD - Eunice Kennedy Shriver National Institute of Child Health and Human Development'
+        IC_14: 'NIDA - National Institute on Drug Abuse'
+        IC_15: 'NIDCD - National Institute on Deafness and Other Communication Disorders'
+        IC_16: 'NIDCR - National Institute of Dental and Craniofacial Research'
+        IC_17: 'NIDDK - National Institute of Diabetes and Digestive and Kidney Diseases'
+        IC_18: 'NIEHS - National Institute of Environmental Health Sciences'
+        IC_19: 'NIGMS - National Institute of General Medical Sciences'
+        IC_20: 'NIMH - National Institute of Mental Health'
+        IC_21: 'NIMHD - National Institute on Minority Health and Health Disparities'
+        IC_22: 'NINDS - National Institute on Neurological Disorders and Stroke'
+        IC_22a: 'NINR - National Institute of Nursing Research'
+        IC_23: 'NLM - National Library of Medicine'
+    is_the_study_required:
+      '#type': radios
+      '#title': 'Is the study required to submit data based on the <a href="https://osp.od.nih.gov/scientific-sharing/policies/">NIH Genomic Data Sharing Policy</a>? '
+      '#options': yes_no
+      '#required': true
+    is_the_study_registered_at_dbgap:
+      '#type': radios
+      '#title': 'Is the study registered at dbGaP?'
+      '#options': yes_no
+      '#required': true
+    dbgap_phs_number:
+      '#type': textfield
+      '#title': 'What is the dbGaP phs number? (if registered in dbGaP)'
+      '#placeholder': 'PHS Number'
+    how_many_cases_submitted:
+      '#type': textfield
+      '#title': 'How many cases will be submitted?'
+      '#required': true
+  study_data:
+    '#type': fieldset
+    '#title': 'Study Data'
+    demographic_age_gender_diagnosis_and_diagnosis:
+      '#type': radios
+      '#title': 'Do you have the demographic (age, gender, diagnosis) and diagnosis data?'
+      '#description': '<p>The GDC requires a core set of clinical data elements for capturing demographic and diagnosis information as defined in the <a href="https://docs.gdc.cancer.gov/Data_Dictionary/viewer/">GDC Data Dictionary</a>.</p>'
+      '#options': yes_no
+      '#required': true
+    do_you_have_treatment_data:
+      '#type': radios
+      '#title': 'Do you have treatment data?'
+      '#description': '<p>Treatment data refers to information on the action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathological process.</p>'
+      '#options': yes_no
+      '#required': true
+    relapse_recurrence_data:
+      '#type': radios
+      '#title': 'Do you have relapse/recurrence data?'
+      '#description': '<p>Relapse/recurrence data refers to information associated with the return of a disease after a period of remission.</p>'
+      '#options': yes_no
+      '#required': true
+    outcome_data:
+      '#type': radios
+      '#title': 'Do you have outcome data?'
+      '#description': '<div style="background-color:#1f1f1f;color:#cccccc;font-family:Menlo, Monaco, &apos;Courier New&apos;, monospace;font-size:12px;font-weight:normal;line-height:18px;white-space:pre;"><div><span style="color:#cccccc;">Outcome data refers to information on a specific result or effect that can be measured. Examples of outcomes include decreased pain, reduced tumor size, and improvement of disease.</span></div></div>'
+      '#options': yes_no
+      '#required': true
+    experimental_strategy:
+      '#type': fieldset
+      '#title': 'Experimental strategy'
+      experimental_strategies_used:
+        '#type': select
+        '#title': 'What experimental strategies were used in molecular characterization?'
+        '#description': '<p>Molecular characterization experimental strategies refer to the assay performed (e.g.DNA-Seq, RNA-Seq) to characterize the molecular properties of the data. Select what experimental strategies were used in molecular characterizations from the pull-down list of experimental strategies supported by the GDC.</p>'
+        '#options':
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+        '#required': true
+      experimental_strategy_fieldset:
+        '#type': container
+        '#title': 'Experimental strategy'
+        '#states':
+          visible:
+            ':input[name="experimental_strategies_used"]':
+              value:
+                greater_equal: '1'
+        experimental_strategy_1:
+          '#type': webform_select_other
+          '#title': 'Experimental strategy'
+          '#options':
+            platform1: 'Genotyping Array'
+            platform5: 'miRNA Sequencing'
+            platform9: 'Total RNA Sequence'
+            platform11: 'Whole Exome Sequence'
+            platform12: 'Whole Genome Sequence'
+          '#empty_option': '-- Select A Strategy --'
+          '#states':
+            visible:
+              ':input[name="experimental_strategies_used"]':
+                value:
+                  greater_equal: '1'
+          '#wrapper_type': container
+        experimental_strategy_2:
+          '#type': webform_select_other
+          '#title': 'Experimental strategy'
+          '#options':
+            platform1: 'Genotyping Array'
+            platform5: 'miRNA Sequencing'
+            platform9: 'Total RNA Sequence'
+            platform11: 'Whole Exome Sequence'
+            platform12: 'Whole Genome Sequence'
+          '#empty_option': '-- Select A Strategy --'
+          '#states':
+            visible:
+              ':input[name="experimental_strategies_used"]':
+                value:
+                  greater_equal: '2'
+          '#wrapper_type': container
+        experimental_strategy_3:
+          '#type': webform_select_other
+          '#title': 'Experimental strategy'
+          '#options':
+            platform1: 'Genotyping Array'
+            platform5: 'miRNA Sequencing'
+            platform9: 'Total RNA Sequence'
+            platform11: 'Whole Exome Sequence'
+            platform12: 'Whole Genome Sequence'
+          '#empty_option': '-- Select A Strategy --'
+          '#states':
+            visible:
+              ':input[name="experimental_strategies_used"]':
+                value:
+                  greater_equal: '3'
+          '#wrapper_type': container
+        experimental_strategy_4:
+          '#type': webform_select_other
+          '#title': 'Experimental strategy'
+          '#options':
+            platform1: 'Genotyping Array'
+            platform5: 'miRNA Sequencing'
+            platform9: 'Total RNA Sequence'
+            platform11: 'Whole Exome Sequence'
+            platform12: 'Whole Genome Sequence'
+          '#empty_option': '-- Select A Strategy --'
+          '#states':
+            visible:
+              ':input[name="experimental_strategies_used"]':
+                value:
+                  greater_equal: '4'
+          '#wrapper_type': container
+        experimental_strategy_5:
+          '#type': webform_select_other
+          '#title': 'Experimental strategy'
+          '#options':
+            platform1: 'Genotyping Array'
+            platform5: 'miRNA Sequencing'
+            platform9: 'Total RNA Sequence'
+            platform11: 'Whole Exome Sequence'
+            platform12: 'Whole Genome Sequence'
+          '#empty_option': '-- Select A Strategy --'
+          '#states':
+            visible:
+              ':input[name="experimental_strategies_used"]':
+                value:
+                  greater_equal: '5'
+          '#wrapper_type': container
+        experimental_strategy_6:
+          '#type': webform_select_other
+          '#title': 'Experimental strategy'
+          '#options':
+            platform1: 'Genotyping Array'
+            platform5: 'miRNA Sequencing'
+            platform9: 'Total RNA Sequence'
+            platform11: 'Whole Exome Sequence'
+            platform12: 'Whole Genome Sequence'
+          '#empty_option': '-- Select A Strategy --'
+          '#states':
+            visible:
+              ':input[name="experimental_strategies_used"]':
+                value:
+                  greater_equal: '6'
+          '#wrapper_type': container
+    biospecimen_data:
+      '#type': radios
+      '#title': 'Do you have biospecimen data?'
+      '#description': '<p>Biospecimen data refers to information associated with the biological sample, portion, analyte, or aliquot. A set of biospecimen data elements commonly used across studies and required by the NCI DC are defined in the <a href="https://docs.gdc.cancer.gov/Data_Dictionary/viewer/#?view=table-entity-list&amp;anchor=biospecimen">GDC Data Dictionary</a>.</p>'
+      '#options': yes_no
+      '#required': true
+    experiment_metadata:
+      '#type': radios
+      '#title': 'Do you have experiment metadata?'
+      '#description': '<p>Experimental metadata includes sequencing platform, library selection method, exome capture kit description, and other experiment details. Examples of fields and values for this kind of data can be found in the <a href="http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/sra/doc/SRA_1-5/SRA.experiment.xsd?view=markup">Sequence Read Archive Experiment Schema</a>.</p>'
+      '#options': yes_no
+      '#required': true
+    data_analysis_protocol:
+      '#type': radios
+      '#title': 'Do you have information on the data analysis protocol?'
+      '#description': '<div style="background-color:#1f1f1f;color:#cccccc;font-family:Menlo, Monaco, &apos;Courier New&apos;, monospace;font-size:12px;font-weight:normal;line-height:18px;white-space:pre;"><div><span style="color:#cccccc;">Information on the data analysis protocol includes information on the workflows used to analyze the data. This may include analysis information found in the </span><a href="http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/sra/doc/SRA_1-5/SRA.analysis.xsd?view=log"><span style="color:#cccccc;">Sequence Read Archive Analysis Schema</span></a><span style="color:#cccccc;">.</span></div></div>'
+      '#options': yes_no
+      '#required': true
+    how_many_files:
+      '#type': textfield
+      '#title': 'How many files will be submitted?'
+      '#required': true
+    estimated_size_for_the_total_files:
+      '#type': textfield
+      '#title': 'What is the estimated size for the total files (GB)?'
+      '#required': true
+  additional_comments:
+    '#type': fieldset
+    '#title': 'Additional Comments'
+    additional_comments_text:
+      '#type': textarea
+      '#title': 'Additional Comments'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+css: ''
+javascript: "var link = \"#terms\";\r\nvar $termsLink =$(\"a[href='\" + link + \"']\");\r\n$termsLink.click();"
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: true
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: einolfs@nih.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: seinolf@gmail.com
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  action:
+    id: action
+    handler_id: action
+    label: Action
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      notes: ''
+      sticky: null
+      locked: null
+      data: ''
+      message: ''
+      message_type: status
+      debug: false
+variants: {  }

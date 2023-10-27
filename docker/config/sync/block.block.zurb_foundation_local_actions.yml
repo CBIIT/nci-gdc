@@ -1,4 +1,4 @@
-uuid: 577f5811-d7d2-4c40-9668-791b14564484
+uuid: bebbaf14-a04e-4320-aea4-3439e78248c0
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: zurb_foundation_local_actions
 theme: zurb_foundation
 region: content
-weight: -20
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

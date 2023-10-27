@@ -11,15 +11,119 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - undo
+      - redo
+      - '|'
       - heading
+      - style
       - bold
       - italic
+      - underline
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - link
+      - drupalInsertImage
+      - '|'
+      - sourceEditing
+      - insertTable
+      - indent
+      - outdent
+      - removeFormat
+      - imce_image
+      - imce_link
+      - alignment
+      - horizontalLine
+      - superscript
+      - blockQuote
+      - strikethrough
+      - subscript
+      - codeBlock
+      - code
+      - specialCharacters
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
     ckeditor5_heading:
       enabled_headings:
+        - heading1
         - heading2
         - heading3
         - heading4
         - heading5
         - heading6
-image_upload: {  }
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Block Title'
+          element: '<h5 class="blockTitle">'
+        -
+          label: 'Block Title2'
+          element: '<h5 class="blockTitle">'
+        -
+          label: 'Block Title3'
+          element: '<h5 class="blockTitle">'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: '50'
+  max_dimensions:
+    width: 0
+    height: 0

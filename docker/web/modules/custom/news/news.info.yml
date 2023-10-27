@@ -1,8 +1,0 @@
-name: 'News Module'
-type: module
-description: 'Custom module for displaying News.'
-core_version_requirement: ^10
-package: Custom
-
-libraries:
-  - news/news-filter

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_biography.default
     - field.field.node.biography.comment_node_biography
     - field.field.node.biography.field_biography_tag
     - field.field.node.biography.field_content_tag
@@ -12,65 +11,33 @@ dependencies:
     - field.field.node.biography.field_subject_tag
     - node.type.biography
   module:
-    - comment
     - user
 id: node.biography.default
 targetEntityType: node
 bundle: biography
 mode: default
 content:
-  comment_node_biography:
-    type: comment_default
+  field_ins_per_aff:
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_biography_tag:
-    type: entity_reference_label
-    label: above
-    settings:
       link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_content_tag:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_ins_per_aff:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
     third_party_settings: {  }
     weight: 0
     region: content
   field_person_ref:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
+      view_mode: default
       link: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_subject_tag:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
     third_party_settings: {  }
     weight: 1
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  comment_node_biography: true
+  field_biography_tag: true
+  field_content_tag: true
+  field_subject_tag: true
+  links: true

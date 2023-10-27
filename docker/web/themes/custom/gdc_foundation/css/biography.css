@@ -1,0 +1,78 @@
+h3 {
+    color:#BB0D3D;
+    font-size:130%;
+    padding-top:20px;
+}
+
+a.tabledrag-handle .handle {
+    min-height: 154px;
+    min-width: 154px;
+
+}
+.bioGrid .position {
+    color:#6B6262;
+}
+
+.bioGrid .image img{
+    border:1px solid #ccc;
+    width:125px;
+    height:125px;
+    padding:4px;
+}
+.bioGrid {
+  display:grid;
+    grid-template-areas:
+      "title image"
+      "position image"
+      "headline image"
+      "button image"
+      "hr hr";
+    grid-template-columns: 75% 25%;
+}
+
+.bioGrid div:nth-child(1) {
+  grid-area: title;
+}
+
+.bioGrid div:nth-child(2) {
+  grid-area: position;
+  padding:0px !important;
+  margin:0px !important;
+}
+
+
+.bioGrid div:nth-child(3) {
+  grid-area: headline;
+}
+
+
+.bioGrid div:nth-child(3) p{
+  grid-area: position;
+  padding:0px !important;
+  margin:0px !important;
+}
+
+.bioGrid div:nth-child(4) {
+  grid-area: button;
+}
+
+.bioGrid div:nth-child(5) {
+  grid-area: image;
+}
+
+.bioGrid div:nth-child(6) {
+    grid-area: hr;
+
+}
+
+.bioGridFormer.institution{
+    padding-bottom:0px;
+    font-weight:bold;
+}
+
+.bioGridFormer ul{
+    margin:0px 0px 5px 30px;
+}
+
+
+

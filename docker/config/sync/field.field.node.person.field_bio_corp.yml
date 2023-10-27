@@ -1,0 +1,30 @@
+uuid: 30cede33-faab-445f-9daa-998fb45e658a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio_corp
+    - filter.format.basic_html
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - node.type.person
+  module:
+    - text
+id: node.person.field_bio_corp
+field_name: field_bio_corp
+entity_type: node
+bundle: person
+label: 'Corporate Biography'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+    - plain_text
+    - basic_html
+    - full_html
+field_type: text_long

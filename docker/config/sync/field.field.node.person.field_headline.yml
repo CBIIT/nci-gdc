@@ -1,0 +1,30 @@
+uuid: ebd4f7fe-21af-4231-981f-4200a51ca545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_headline
+    - filter.format.basic_html
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - node.type.person
+  module:
+    - text
+id: node.person.field_headline
+field_name: field_headline
+entity_type: node
+bundle: person
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+    - plain_text
+    - basic_html
+    - full_html
+field_type: text_long

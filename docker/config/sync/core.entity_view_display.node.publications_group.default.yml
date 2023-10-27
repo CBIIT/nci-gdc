@@ -23,7 +23,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   comment_node_publications_grou:
     type: comment_default
@@ -32,27 +32,20 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 20
-    region: content
-  field_page_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_pub_cat_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
-hidden: {  }
+hidden:
+  field_page_title: true

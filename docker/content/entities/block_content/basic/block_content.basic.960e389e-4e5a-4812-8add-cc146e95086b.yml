@@ -1,0 +1,52 @@
+uuid:
+  -
+    value: 960e389e-4e5a-4812-8add-cc146e95086b
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Get Started: Data Portal'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<div class=\"read-more-button doc\">\r\n  <p><a href=\"http://docs.gdc.cancer.gov/Data_Portal/Users_Guide/Getting_Started/\" title=\"GDC Data Portal User's Guide\"><span class=\"doc-icon\">&nbsp;</span><span class=\"doc-name\">GDC Data Portal User's Guide&nbsp;»</span></a></p>\r\n</div>\r\n<div class=\"read-more-button\">\r\n  <p><a href=\"https://portal.gdc.cancer.gov/\">Launch Data Portal</a></p>\r\n</div>\r\n"
+    format: full_html
+    processed: |
+      <div class="read-more-button doc">
+      <p><a href="http://docs.gdc.cancer.gov/Data_Portal/Users_Guide/Getting_Started/" title="GDC Data Portal User's Guide"><span class="doc-icon"> </span><span class="doc-name">GDC Data Portal User's Guide »</span></a></p>
+      </div>
+      <div class="read-more-button">
+      <p><a href="https://portal.gdc.cancer.gov/">Launch Data Portal</a></p>
+      </div>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

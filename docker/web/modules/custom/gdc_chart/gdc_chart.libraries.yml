@@ -1,0 +1,9 @@
+chartjs:
+  css:
+    layout:
+      css/gdc-chart.css: {}
+  js:
+    js/chart.umd.min.js: {}
+    js/gdc-chart.js: {}
+  dependencies:
+    - core/drupal

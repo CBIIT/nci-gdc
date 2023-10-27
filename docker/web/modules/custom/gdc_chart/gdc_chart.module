@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for gdc_chart module.
+ */
+
+/**
+ * Implements hook_theme.
+ */
+function gdc_chart_theme($existing, $type, $theme, $path) {
+  return [
+    'chart_block' => [
+      'variables' => [
+        'data' => [],
+      ],
+    ],
+    'gdc_chart' => [
+      'variables' => ['version' => NULL],
+    ],
+  ];
+}

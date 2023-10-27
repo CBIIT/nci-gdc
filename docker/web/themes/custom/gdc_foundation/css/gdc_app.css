@@ -1,0 +1,28 @@
+.icon-gdc-portal-ap:before {
+    font-family: 'GDCFont';
+    content: "\e92f";
+    margin-left: -1.0205078125em;
+    color: rgb(255,255,255);
+}
+div.tooltip table {
+  width: 250px;
+}
+div.tooltip img {
+  width: 100px;
+} 
+div.tooltip table th, div.tooltip table td {
+  padding: 20px;
+  background-color: white; 
+} 
+span.icon {
+    display: block;
+    height: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding: 3px 0;
+    vertical-align: text-top;
+    float: none;
+} 
+div.gdc-app.bottom.align-center table {
+  width: 200px;
+}

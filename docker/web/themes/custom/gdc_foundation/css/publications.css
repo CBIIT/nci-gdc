@@ -1,0 +1,132 @@
+/* Accordion Styling */
+.accordion.publication {
+    border: 1px solid #bbb !important;
+    padding: 10px;
+  }
+
+  /* Form Styling */
+  form#views-exposed-form-publication-group-page-1 {
+    margin-bottom: 20px;
+    display: none;
+    grid-template-areas:
+      "title title title"
+      "keywords keywords keywords"
+      "programfilter projectfilter yearfilter"
+      "summary sort recordcount"
+      "buttons buttons buttons";
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(1) {
+    grid-area: title;
+  }
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(2) {
+    grid-area: summary;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(3) {
+    grid-area: keywords;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(4) {
+    grid-area: programfilter;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(5) {
+    grid-area: projectfilter;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(6) {
+    grid-area: yearfilter;
+    margin-right: -10px;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(7) {
+    grid-area: sort;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(8) {
+    grid-area: buttons;
+    padding-top: 0px;
+  }
+
+  form#views-exposed-form-publication-group-page-1 > *:nth-child(9) {
+    grid-area: recordcount;
+  }
+
+
+  /* Publication Apart Styling */
+  .publicationApartOf {
+    margin-bottom: 20px !important;
+  }
+
+  /* Publication Category Styling */
+  .publicationCategoryTag {
+    width: fit-content;
+    border: 1px solid #bbb !important;
+    margin-bottom: 4px;
+  }
+
+  .publicationCategoryTag a {
+    font-size: 75%;
+    padding: 4px;
+  }
+
+  /* Publication Group Category Styling */
+  .publicationGroupCategory {
+    display: none;
+  }
+
+  /* Publication Group Title Styling */
+  .publicationGroupTitle {
+    color: #BB0D3D;
+  }
+
+  .publicationRecordCount {
+    font-weight:bold;
+    padding-bottom:10px;
+  }
+
+  /* hiding this for now */
+  #publicationRecordCount {
+    font-weight:Bold;
+    display:none;
+  }
+
+  /* Publication Row Styling */
+  .publicationRow {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Publication Signature Styling */
+  .publicationSignature p {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  /* Publication View Summary Styling */
+  .publicationViewSummary {
+    margin-bottom: 15px;
+  }
+
+  /* SelectBox Styling */
+  .CaptionCont.SelectBox.form-select {
+    width: 220px !important;
+    display: inline-block !important;
+  }
+
+  /* SumoSelect Caption Styling */
+  .SumoSelect .CaptionCont.SelectBox.form-select {
+    width: 100% !important;
+  }
+
+  /* SumoSelect Styling */
+  .SumoSelect {
+    padding-right: 10px;
+    width: 100% !important;
+  }
+
+.field--node-field-page-title {
+font-size:150% !important;
+}

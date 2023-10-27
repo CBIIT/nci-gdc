@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment_node_dd.default
     - field.field.node.dd.comment_node_dd
+    - field.field.node.dd.field_bio
+    - field.field.node.dd.field_headline
     - field.field.node.dd.field_image
     - field.field.node.dd.field_link
     - image.style.contributed_data_image
@@ -12,6 +14,7 @@ dependencies:
   module:
     - comment
     - image
+    - text
     - user
 id: node.dd.default
 targetEntityType: node
@@ -25,7 +28,14 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 20
+    weight: 2
+    region: content
+  field_bio:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_image:
     type: image
@@ -36,12 +46,13 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden:
+  field_headline: true
   field_link: true

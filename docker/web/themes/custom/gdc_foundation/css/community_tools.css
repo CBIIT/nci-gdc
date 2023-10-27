@@ -1,0 +1,86 @@
+#views-exposed-form-community-tools-page-1 {
+    margin-bottom: 20px;
+    display: none;
+    grid-template-areas:
+      "header header"
+      "keywords keywords"
+      "topic year"
+      "sort recordcount"
+      "buttons buttons";
+    grid-template-columns: 50% 50%;
+}
+
+#views-exposed-form-community-tools-page-1  > *:nth-child(1) {
+    grid-area: header;
+  }
+
+#views-exposed-form-community-tools-page-1  > *:nth-child(2) {
+    grid-area: year;
+  }
+#views-exposed-form-community-tools-page-1  > *:nth-child(3) {
+    grid-area: topic;
+  }
+#views-exposed-form-community-tools-page-1  > *:nth-child(4) {
+    grid-area: keywords;
+  }
+#views-exposed-form-community-tools-page-1  > *:nth-child(5) {
+    grid-area: sort;
+  }
+#views-exposed-form-community-tools-page-1  > *:nth-child(6) {
+    grid-area: buttons;
+  }
+#views-exposed-form-community-tools-page-1  > *:nth-child(7) {
+    grid-area: recordcount;;
+  }
+.communityToolRecordCount {
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#communityToolRecordCount {
+    display:none;
+  }
+
+  /* Community Tool Topic Styling */                                 
+  .communityToolCategoryTag {                                          
+    width: fit-content;                                              
+    margin-bottom: 4px;                                              
+  }                                   
+                                      
+  .communityToolCategoryTag a {             
+    font-size: 80% !important;     
+    border:1px solid red;
+    border: 1px solid #bbb !important;           
+    margin-right:5px;    
+    padding: 5px !important; 
+  }  
+
+
+.communityToolLinks ul{
+  list-style:none;
+  padding:0px;
+  margin:0px;
+}
+
+
+.communityToolLinks ul li:before{
+  content: '🔗';
+  left: 0;
+  color:#000;
+  padding-right:3px;
+}
+
+.communityToolContainer {
+
+}
+
+.communityToolContainer h3 {
+   padding-top:10px !important; 
+    color: #BB0D3D;
+    font-size:125%;
+} 
+
+.communityToolContainer div.views-row {
+ padding-bottom:10px !important; 
+ border-bottom:1px solid #C6C2C4;
+}

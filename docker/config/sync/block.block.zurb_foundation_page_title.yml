@@ -1,4 +1,4 @@
-uuid: 4bed5f40-afd1-4841-81a8-26ca9621910e
+uuid: db345c5d-51fd-4460-9926-cb6fba092881
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: zurb_foundation_page_title
 theme: zurb_foundation
 region: content
-weight: -50
+weight: -7
 provider: null
 plugin: page_title_block
 settings:

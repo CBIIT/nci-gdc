@@ -1,0 +1,56 @@
+uuid:
+  -
+    value: 698c3f3c-aa19-4b83-8c97-b578c1676f03
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Homepage: View: In the News'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<ul class=\"more all-content\">\r\n   <li class=\"more-none\"><a title=\"News\" href=\"/news-and-announcements\">See all</a></li>\r\n   <li class=\"more-rss\"><a title=\"Subscribe to RSS Feed for In the News\" href=\"/news/all/rss.xml\">Subscribe</a></li>\r\n</ul>\r\n<?php\r\n//$view = views_get_view('news');\r\n//print $view->preview('block_7',array('35,36'));\r\n$view = views_get_view('news');\r\nprint $view->preview('block_1');\r\n?>"
+    format: php_code
+    processed: |-
+      <ul class="more all-content">
+         <li class="more-none"><a title="News" href="/news-and-announcements">See all</a></li>
+         <li class="more-rss"><a title="Subscribe to RSS Feed for In the News" href="/news/all/rss.xml">Subscribe</a></li>
+      </ul>
+      <?php
+      //$view = views_get_view('news');
+      //print $view->preview('block_7',array('35,36'));
+      $view = views_get_view('news');
+      print $view->preview('block_1');
+      ?>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

@@ -12,7 +12,8 @@ base theme: zurb_foundation
 # need to add custom CSS or JS
 libraries:
  - gdc_foundation/global
-
+ - gdc_foundation/gdc_font
+ - gdc_foundation/testfont
 # Regions are output in the page.html.twig
 
 regions:
@@ -24,10 +25,11 @@ regions:
   highlighted: Highlighted
   content: Content
   sidebar_first: 'Left sidebar'
-  sidebar_second: 'Right sidebar'
   footer_first: 'Footer first column'
-  footer_middle: 'Footer middle column'
-  footer_last: 'Footer last column'
+  footer_second: 'Footer second column'
+  footer_third: 'Footer third column'
+  footer_fourth: 'Footer fourth column'
+  footer_bottom: 'Footer bottom (full width)'
   left_off_canvas: 'Left off canvas'
   right_off_canvas: 'Right off canvas'
 regions_hidden:

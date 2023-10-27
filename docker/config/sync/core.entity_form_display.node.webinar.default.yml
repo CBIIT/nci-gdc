@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.webinar.field_abstract
     - field.field.node.webinar.field_attachment_nid
     - field.field.node.webinar.field_date2
+    - field.field.node.webinar.field_end_date
     - field.field.node.webinar.field_image
     - field.field.node.webinar.field_included_topics
     - field.field.node.webinar.field_intended_audience
@@ -18,7 +19,6 @@ dependencies:
     - node.type.webinar
   module:
     - comment
-    - datetime
     - image
     - path
     - text
@@ -29,19 +29,19 @@ mode: default
 content:
   comment_node_webinar:
     type: comment_default
-    weight: 20
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_abstract:
     type: string_textarea
-    weight: 8
+    weight: 9
     region: content
     settings:
       rows: 5
@@ -49,7 +49,7 @@ content:
     third_party_settings: {  }
   field_attachment_nid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -58,14 +58,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_date2:
-    type: datetime_default
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_end_date:
+    type: datetime_timestamp
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
     type: image_image
-    weight: 11
+    weight: 13
     region: content
     settings:
       progress_indicator: throbber
@@ -73,7 +79,7 @@ content:
     third_party_settings: {  }
   field_included_topics:
     type: text_textarea
-    weight: 9
+    weight: 10
     region: content
     settings:
       rows: 5
@@ -81,7 +87,7 @@ content:
     third_party_settings: {  }
   field_intended_audience:
     type: string_textarea
-    weight: 7
+    weight: 8
     region: content
     settings:
       rows: 5
@@ -107,7 +113,7 @@ content:
     third_party_settings: {  }
   field_webex_information:
     type: text_textarea
-    weight: 10
+    weight: 12
     region: content
     settings:
       rows: 5
@@ -115,7 +121,7 @@ content:
     third_party_settings: {  }
   field_youtube_video:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -125,34 +131,34 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 18
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60

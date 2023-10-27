@@ -1,0 +1,5 @@
+name: 'gdc_chart'
+type: module
+description: 'Creates pie chart to display one homepage'
+package: Custom
+core_version_requirement: ^10

@@ -1,0 +1,30 @@
+uuid: 4aeed60e-033d-4ce1-a64b-03196603b01f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:1c281561-49ad-465e-9671-b202dd71def3'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_14
+theme: gdc_foundation
+region: content
+weight: -29
+provider: null
+plugin: 'block_content:1c281561-49ad-465e-9671-b202dd71def3'
+settings:
+  id: 'block_content:1c281561-49ad-465e-9671-b202dd71def3'
+  label: 'Access Data'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

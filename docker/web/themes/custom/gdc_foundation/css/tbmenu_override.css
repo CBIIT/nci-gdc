@@ -1,0 +1,197 @@
+.tbm {
+    background-color: white; /*added*/
+    margin-top: 15px;
+}
+
+.tbm-item.level-1 {
+    border-right: 0px;
+}
+
+
+.tbm-link.level-1 {
+    color: #565c65;
+    padding: .6rem .9rem;
+    white-space:nowrap;
+}
+
+.tbm-link.level-1:hover,.tbm-link.level-1:focus {
+    background-color: #004971;
+  /*  Too much movement.
+    border-top: 4px solid #007bbd;
+    border-right: 4px solid #007bbd;
+    border-left: 4px solid #007bbd;
+  */
+}
+
+.tbm-submenu-toggle {
+    background-color: #f5f5f5;
+    color: #222
+}
+
+.tbm-submenu-toggle:hover,.tbm-submenu-toggle:focus {
+    background-color: #004971;
+}
+
+.tbm-caption {
+    color: #444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem
+}
+
+.tbm-submenu {
+    background-color: #004971;
+    border-radius: 0;
+    border-top-width: 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    padding: 1rem
+}
+
+.tbm-submenu .tbm-submenu {
+    border-top-width: 1px
+}
+
+.tbm-item--has-flyout .tbm-submenu-toggle:hover,.tbm-item--has-flyout .tbm-submenu-toggle:focus {
+    background-color: transparent
+}
+
+.tbm-item--has-flyout .tbm-submenu-toggle:hover:before,.tbm-item--has-flyout .tbm-submenu-toggle:focus:before {
+    border-left-color: #1197f0
+}
+
+.tbm-subnav>.tbm-item:first-child>.tbm-link-container>.tbm-link {
+    border-top: 0
+}
+
+.tbm-subnav>.tbm-item>.tbm-link-container>.tbm-link {
+    color: white;
+    display: block;
+    padding: 0.5rem 0
+}
+
+.tbm-subnav>.tbm-item>.tbm-link-container>.tbm-link:hover,.tbm-subnav>.tbm-item>.tbm-link-container>.tbm-link:focus {
+    color: white;
+}
+
+.tbm-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0,0,0,0.2)
+}
+
+.tbm-group-container {
+    border-top: 1px solid rgba(0,0,0,0.2)
+}
+
+.tbm-group-title {
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.tbm.tbm--mobile {
+    background-color: transparent
+}
+
+.tbm.tbm--mobile .tbm-item {
+    border-top: 1px solid rgba(0,0,0,0.2)
+}
+
+.tbm.tbm--mobile .tbm-item.level-1.open>.tbm-toggle {
+    background-color: #000;
+    color: #fff
+}
+
+/* Added */
+li.tbm-item.level-1.tbm-item--has-dropdown.open {
+  background-color: #004971;
+}
+li.tbm-item.level-1.tbm-item--has-dropdown.open a {
+  color: white;
+}
+.tbm-item.level-1 .tbm-link-container {
+  max-width: fit-content;
+}
+.tbm-link.level-2.tbm-group-title {
+  font-weight:600;
+  font-size: 20px;
+}
+.tbm-link.level-3 {
+  font-weight:400;
+}
+
+/* TB Menu Override */
+.tbm.tbm-main .tbm-link-container > a {
+    color: white;
+    font-weight: bold;
+}
+
+.tbm.tbm-main .tbm-link.level-1 {
+    color: #565c65; /* Text Color */
+    font-weight: bold;
+}
+
+.tbm.tbm-main .tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link {
+    color: white;
+}
+
+.tbm.tbm-main .tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+.tbm.tbm-main .tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link.level-2:hover {
+    text-decoration: none;
+}
+/*
+.tbm.tbm-main li.tbm-item.level-1.tbm-item--has-dropdown.open {
+  outline: .25rem solid #2491ff;
+  outline-offset: 0;
+}
+*/
+
+.tbm.tbm-main .tbm-link.level-1:hover {
+    color: white;
+    background-color: #004971; /* NCI blue */
+}
+
+.tbm.tbm-main .tbm-submenu {
+    background-color: #004971; /* NCI blue */
+}
+
+.tbm.tbm-main a.tbm-link.level-2.tbm-group-title a.tbm-link.level-2 {
+    color: white;
+}
+/* END from style.css */
+.views-element-container hr {
+ margin: 0.5rem auto;
+}
+.tbm-link.level-1.tbm-toggle:after {
+  font-family: FontAwesome;
+  content: "\f107"; /* FontAwesome Unicode */
+  margin-left: 5px;
+  color: #565c65;
+  font-size: 10px;
+}
+.tbm-link.level-1.tbm-toggle:hover:after {
+  font-family: FontAwesome;
+  content: "\f106"; /* FontAwesome Unicode */
+  margin-left: 5px;
+  color: white;
+  font-size: 10px;
+}
+a.tbm-link.level-1.tbm-toggle.active-trail {
+  border-bottom: 3px solid #007bbd;
+}
+a.tbm-link.level-1.tbm-toggle.active-trail:after {
+  font-family: FontAwesome;
+  content: "\f107"; /* FontAwesome Unicode */  
+}
+
+a.tbm-link.level-1.tbm-toggle.active-trail:hover:after {
+  font-family: FontAwesome;
+  content: "\f106"; /* FontAwesome Unicode */
+  margin-left: 5px;
+  color: white;
+}
+

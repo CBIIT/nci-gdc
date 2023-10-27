@@ -1,0 +1,105 @@
+uuid:
+  -
+    value: a8b0a07d-ad97-4fec-9698-216043db7798
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Links: Related News'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<?php \r\n$limit = 2;\r\n$current_node = menu_get_object();\r\nif ($current_node->type=='page_news') {\r\n    $current_category = $current_node->field_subject_tag['und'][0]['tid'];\r\n    $current_content_tag = $current_node->field_content_tag['und'][0]['tid'];\r\n}\r\nif ($current_category) {\r\n    $results = views_get_view_result(\"news\", \"block_6\", $current_category);\r\n    $items1 = $items2 = array();\r\n    foreach ($results as $val) {\r\n        if ($val->nid == $current_node->nid) {\r\n            continue;\r\n        }\r\n        $item['cat'] = $current_category;\r\n        $item['date'] = date(\"F j, Y\", $val->field_data_field_date_field_date_value);\r\n        $item['title'] = l($val->node_title, \"node/\" . $val->nid);\r\n        \r\n        if ($val->taxonomy_term_data_node_tid == $current_content_tag) {\r\n            $items1[] = $item;\r\n        }\r\n        else {\r\n            $items2[] = $item;\r\n        }\r\n\r\n        if (count($items1) >= $limit) {\r\n            break;\r\n        }\r\n    }\r\n    $items = array_merge($items1, $items2);\r\n    if (count($items) > $limit) {\r\n        $items = array_slice($items, 0, $limit);\r\n    }\r\n}\r\n?>\r\n<?php if (count($items) > 0): ?>\r\n\r\n\r\n<div class=\"view-news\">\r\n  <div class=\"view-content\">\r\n\r\n    <?php foreach($items as $index => $item): ?>\r\n    <div class=\"views-row views-row-1 views-row-odd <?php if($index==0) print \"views-row-first\"; ?>\">\r\n      <div data-categories=\"<?php print $item['cat']?>\" class=\"view-item node teaser\">\r\n        <ul class=\"meta news-date\">\r\n          <li><?php print $item['date']?></li>\r\n        </ul>\r\n        <ul class=\"more\">\r\n          <li class=\"title\"><?php print $item['title']?></li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n    <?php endforeach; ?>\r\n\r\n  </div>\r\n</div>\r\n\r\n\r\n<?php endif; ?>"
+    format: php_code
+    processed: |-
+      <?php 
+      $limit = 2;
+      $current_node = menu_get_object();
+      if ($current_node->type=='page_news') {
+          $current_category = $current_node->field_subject_tag['und'][0]['tid'];
+          $current_content_tag = $current_node->field_content_tag['und'][0]['tid'];
+      }
+      if ($current_category) {
+          $results = views_get_view_result("news", "block_6", $current_category);
+          $items1 = $items2 = array();
+          foreach ($results as $val) {
+              if ($val->nid == $current_node->nid) {
+                  continue;
+              }
+              $item['cat'] = $current_category;
+              $item['date'] = date("F j, Y", $val->field_data_field_date_field_date_value);
+              $item['title'] = l($val->node_title, "node/" . $val->nid);
+              
+              if ($val->taxonomy_term_data_node_tid == $current_content_tag) {
+                  $items1[] = $item;
+              }
+              else {
+                  $items2[] = $item;
+              }
+
+              if (count($items1) >= $limit) {
+                  break;
+              }
+          }
+          $items = array_merge($items1, $items2);
+          if (count($items) > $limit) {
+              $items = array_slice($items, 0, $limit);
+          }
+      }
+      ?>
+      <?php if (count($items) > 0): ?>
+
+
+      <div class="view-news">
+        <div class="view-content">
+
+          <?php foreach($items as $index => $item): ?>
+          <div class="views-row views-row-1 views-row-odd <?php if($index==0) print "views-row-first"; ?>">
+            <div data-categories="<?php print $item['cat']?>" class="view-item node teaser">
+              <ul class="meta news-date">
+                <li><?php print $item['date']?></li>
+              </ul>
+              <ul class="more">
+                <li class="title"><?php print $item['title']?></li>
+              </ul>
+            </div>
+          </div>
+          <?php endforeach; ?>
+
+        </div>
+      </div>
+
+
+      <?php endif; ?>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

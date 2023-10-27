@@ -1,0 +1,19 @@
+uuid: 00cf42ce-c616-4a48-9976-6cc9468cd45c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_bio_corp
+field_name: field_bio_corp
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

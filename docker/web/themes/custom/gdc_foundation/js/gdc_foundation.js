@@ -8,10 +8,18 @@
   /**
    * Use this behavior as a template for custom Javascript.
    */
-  Drupal.behaviors.exampleBehavior = {
+  Drupal.behaviors.gdc_foundationBehavior = {
     attach: function (context, settings) {
-      //alert("I'm alive!");
-    }
-  };
+    	once('gdc_foundationBehavior', 'html').forEach(function (element) {
+      	$.setActiveTabOnMainMenu(element);
+    	})      
+     }
+  }
 
+$.setActiveTabOnMainMenu = function(e) {
+  console.log("Read Breadcrumb and search titles on main menu");
+  var activeMenu = $("#breadcrumbs").data("active-menu");
+  console.dir(activeMenu);
+  console.log("active-menu: ".activeMenu);
+}
 })(jQuery, Drupal);

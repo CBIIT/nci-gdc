@@ -1,0 +1,91 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-5">
+      {% if site_logo %}                                                       
+         <a href="{{ path('<front>') }}" rel="home">                            
+           <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />                   
+         </a>                                                                   
+      {% endif %}
+    </div>
+    <div class="cell small-1"></div>
+    <div class="cell small-6">
+      {# drupal_entity('block_content', 63) #}
+<div id="block-gdc-header-menu-63">
+    <nav>
+        <ul>
+            <li>
+                <a href="http://cancer.gov/aboutnci/organization/ccg/">CCG Web Site&nbsp;</a>
+            </li>
+            <li>
+                <a href="/contact-us">Contact Us</a>
+            </li>
+            <li>
+                <a class="button" href="https://portal.gdc.cancer.gov"><span>Launch Data Portal</span></a>
+            </li>
+            <li>
+<a data-allow-html="true"  data-tooltip-width="15" data-tooltip-class="gdc-app" type="button" data-tooltip data-allow-html="true" data-disable-hover="true" tabindex="1" transfer="" submission="" data-position="bottom" data-alignment="center" title="<table>
+  <tbody>
+    <tr>
+      <td>
+	<a href='https://uat-portal.gdc.cancer.gov/v2'>
+          <span><img width='100' src='https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/images/gdc-apps-data-portal-blue.svg'></span>
+          <p>Data Portal</p>
+      	</a>
+      </td>
+      <td><a href='https://gdc.cancer.gov/'><span><img width='100' src='https://uat-portal.gdc.cancer.gov/v2/user-flow/icons/gdc-app-website-blue.svg'></span><p>Website</p></a></td>
+    </tr>
+    <tr>
+      <td><span class='icon icon-gdc-portal-api'><a href='https://gdc.cancer.gov/developers/gdc-application-programming-interface-api'>API</a></span></td>
+      <td><a href='https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Getting_Started/'>Data Transfer Tool</a></td>
+    </tr>
+    <tr>
+      <td><a href='https://docs.gdc.cancer.gov/'>Documentation</a></td>
+      <td><a href='https://portal.gdc.cancer.gov/submission'>Data Submission Portal</a></td>
+    </tr>
+    <tr>
+      <td><a href='https://gdc.cancer.gov/about-data/publications'>Publications</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>">GDC Apps</a>
+
+
+	    </li>
+        </ul>
+<!--
+<div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+</div>
+-->
+    </nav>
+</div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+  {% if site_name %}
+    <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+  {% endif %}
+  {{ site_slogan }}
+{% endblock %}

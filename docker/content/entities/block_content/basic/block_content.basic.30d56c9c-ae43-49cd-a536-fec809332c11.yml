@@ -1,0 +1,49 @@
+uuid:
+  -
+    value: 30d56c9c-ae43-49cd-a536-fec809332c11
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Homepage: Submit Data'
+changed:
+  -
+    value: '2023-10-19T20:46:44+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: '<img src="https://gdc.cancer.gov/files/icon_gdc-submit.png" alt="Submit data on GDC"><p>The GDC provides tools to guide data submission including the <strong>GDC Data Submission Portal</strong>, a web-based tool for submitting clinical, biospecimen and small volumes of molecular data as well as the <strong>GDC Data Transfer Tool</strong>, a client-based tool for submitting large, high volume molecular data. A secure <strong>GDC API</strong> is also available for batch data submissions.</p><ul class="more"><li><a href="/node/202">More about Submitting Data</a></li></ul>'
+    format: full_html
+    processed: |-
+      <p><img src="https://gdc.cancer.gov/files/icon_gdc-submit.png" alt="Submit data on GDC" /></p><p>The GDC provides tools to guide data submission including the <strong>GDC Data Submission Portal</strong>, a web-based tool for submitting clinical, biospecimen and small volumes of molecular data as well as the <strong>GDC Data Transfer Tool</strong>, a client-based tool for submitting large, high volume molecular data. A secure <strong>GDC API</strong> is also available for batch data submissions.</p>
+      <ul class="more"><li><a href="/node/202">More about Submitting Data</a></li>
+      </ul>
+    summary: ''
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

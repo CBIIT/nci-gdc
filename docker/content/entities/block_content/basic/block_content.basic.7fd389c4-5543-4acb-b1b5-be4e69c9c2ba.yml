@@ -1,0 +1,49 @@
+uuid:
+  -
+    value: 7fd389c4-5543-4acb-b1b5-be4e69c9c2ba
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Button: GitHub'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<div class=\"read-more-button\">\r\n  <p><a href=\"https://github.com/NCIP/gdc-docs/blob/develop/README.md\"><img alt=\"Icon: GitHub\" src=\"/files/icon-github.png\"> GDC GitHub</a></p>\r\n</div>"
+    format: full_html
+    processed: |
+      <div class="read-more-button">
+      <p><a href="https://github.com/NCIP/gdc-docs/blob/develop/README.md"><img alt="Icon: GitHub" src="/files/icon-github.png" /> GDC GitHub</a></p>
+      </div>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

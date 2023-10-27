@@ -10,6 +10,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - message_banner
     - search
     - system
 _core:
@@ -26,3 +27,4 @@ permissions:
   - 'use text format markdown'
   - 'use text format php_code'
   - 'use text format restricted_html'
+  - 'view message banner'

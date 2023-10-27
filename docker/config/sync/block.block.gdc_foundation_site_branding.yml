@@ -1,0 +1,25 @@
+uuid: c30f2226-1be5-4df9-b7d2-83a853012b23
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gdc_foundation
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: gdc_foundation_site_branding
+theme: gdc_foundation
+region: header
+weight: -33
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

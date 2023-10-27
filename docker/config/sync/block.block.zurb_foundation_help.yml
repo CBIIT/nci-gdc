@@ -1,4 +1,4 @@
-uuid: 2ed7c6c5-64d7-4b41-a759-a0a43f873606
+uuid: ae77f880-1343-44a9-9caa-a7d01a8d945f
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: zurb_foundation_help
 theme: zurb_foundation
 region: content
-weight: -30
+weight: -4
 provider: null
 plugin: help_block
 settings:

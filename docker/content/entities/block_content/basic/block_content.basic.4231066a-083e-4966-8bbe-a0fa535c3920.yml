@@ -1,0 +1,88 @@
+uuid:
+  -
+    value: 4231066a-083e-4966-8bbe-a0fa535c3920
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: basic
+    target_type: block_content_type
+    target_uuid: d48b34de-fdb6-4a73-9544-d906d8b4ac58
+revision_created:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Login Block'
+changed:
+  -
+    value: '2023-09-08T18:30:19+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+body:
+  -
+    value: "<?php \r\nglobal $user; \r\n$machine_name = 'cud';\r\n$human_name = 'Central User Directory';\r\n?>\r\n\r\n<div id=\"nav-login\" class=\"clearfix\">\r\n<ul>\r\n\r\n<?php if ($user->uid) : ?>\r\n<li class=\"first\">You are logged in as \r\n<?php \r\n$link =  l('<span class=\"username\">'. $user->name .'</span>',  'user/' . $user->uid, array('html'=>true, 'attributes' => array('target' => '_top')));\r\n\r\n    $items1[] = array(\"content\" => \"Summary\", \"href\" => url(\"user/\".$user->uid), \"attrs\" => array('target'=>'_top'));\r\n    if (in_array(\"content editor\", $user->roles)) {\r\n        $items2[] = array(\"content\" => \"File Browser\", \"href\" => url(\"user/\".$user->uid.\"/imce\"), \"attrs\" => array('target'=>'_top'));\r\n    }\r\n    $items2[] = array(\"content\" => \"Account Settings\", \"href\" => url(\"user/\".$user->uid.\"/edit\"), \"attrs\" => array('target'=>'_top'));\r\n    $items3[] = array(\"content\" => \"Log Out\", \"href\" => url(\"logout\"), \"attrs\" => array('target'=>'_top'));\r\n    $sections = array(array(\"items\" => $items1), array(\"items\" => $items2), array(\"items\" => $items3));\r\n\r\n    print $link;\r\n    print oicr_wfui(\"button\", 0, array(\r\n        'icon_name' => 'cog',\r\n        'dropdown' => array(\r\n            \"sections\" => $sections,\r\n        ),\r\n    ));\r\n\r\n\r\n\r\n\r\n\r\n\r\n?>\r\n</li>\r\n<?php else : ?>\r\n<li class=\"first last\"><a href=\"/user/login\"><span style=\"font-weight:normal;\">Log In</span></a></li>\r\n<?php endif; ?>\r\n</ul>\r\n</div>"
+    format: php_code
+    processed: |-
+      <?php 
+      global $user; 
+      $machine_name = 'cud';
+      $human_name = 'Central User Directory';
+      ?>
+
+      <div id="nav-login" class="clearfix">
+      <ul>
+
+      <?php if ($user->uid) : ?>
+      <li class="first">You are logged in as 
+      <?php 
+      $link =  l('<span class="username">'. $user->name .'</span>',  'user/' . $user->uid, array('html'=>true, 'attributes' => array('target' => '_top')));
+
+          $items1[] = array("content" => "Summary", "href" => url("user/".$user->uid), "attrs" => array('target'=>'_top'));
+          if (in_array("content editor", $user->roles)) {
+              $items2[] = array("content" => "File Browser", "href" => url("user/".$user->uid."/imce"), "attrs" => array('target'=>'_top'));
+          }
+          $items2[] = array("content" => "Account Settings", "href" => url("user/".$user->uid."/edit"), "attrs" => array('target'=>'_top'));
+          $items3[] = array("content" => "Log Out", "href" => url("logout"), "attrs" => array('target'=>'_top'));
+          $sections = array(array("items" => $items1), array("items" => $items2), array("items" => $items3));
+
+          print $link;
+          print oicr_wfui("button", 0, array(
+              'icon_name' => 'cog',
+              'dropdown' => array(
+                  "sections" => $sections,
+              ),
+          ));
+
+
+
+
+
+
+      ?>
+      </li>
+      <?php else : ?>
+      <li class="first last"><a href="/user/login"><span style="font-weight:normal;">Log In</span></a></li>
+      <?php endif; ?>
+      </ul>
+      </div>
+    summary: null
+    summary_processed: ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.webinar.field_abstract
     - field.field.node.webinar.field_attachment_nid
     - field.field.node.webinar.field_date2
+    - field.field.node.webinar.field_end_date
     - field.field.node.webinar.field_image
     - field.field.node.webinar.field_included_topics
     - field.field.node.webinar.field_intended_audience
@@ -33,6 +34,7 @@ hidden:
   field_abstract: true
   field_attachment_nid: true
   field_date2: true
+  field_end_date: true
   field_image: true
   field_included_topics: true
   field_intended_audience: true

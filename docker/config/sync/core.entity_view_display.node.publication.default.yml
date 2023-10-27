@@ -17,7 +17,6 @@ dependencies:
     - node.type.publication
   module:
     - comment
-    - datetime
     - link
     - text
     - user
@@ -31,7 +30,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
   comment_node_publication:
     type: comment_default
@@ -40,16 +39,17 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 20
+    weight: 8
     region: content
   field_date:
-    type: datetime_default
+    type: timestamp_ago
     label: above
     settings:
-      timezone_override: ''
-      format_type: long
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   field_link:
     type: link
@@ -61,7 +61,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 4
     region: content
   field_link2:
     type: link
@@ -73,7 +73,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 5
     region: content
   field_links:
     type: link
@@ -85,42 +85,35 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 11
+    weight: 7
     region: content
   field_pub_cat_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 12
+    weight: 0
     region: content
   field_pub_group_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 9
+    weight: 1
     region: content
   field_signature:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 10
-    region: content
-  field_summary_pages:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 13
+    weight: 6
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 9
     region: content
-hidden: {  }
+hidden:
+  field_summary_pages: true
