@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Foundation Helper variables:
+ * - classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable classes.
+ * - block_zebra: Outputs 'odd' and 'even' dependent on each block region.
+ * - zebra: Same output as block_zebra but independent of any block region.
+ * - block_id: Counter dependent on each block region.
+ * - id: Same output as block_id but independent of any block region.
+ * - is_front: Flags true when presented in the front page.
+ * - logged_in: Flags true when the current user is a logged-in member.
+ * - is_admin: Flags true when the current user is an administrator.
+ * - block_html_id: A valid HTML ID and guaranteed unique.
+ * - content_attributes: Raw HTML attributes for block content.
+ * - title_attributes: Raw HTML attributes for the block title tag.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <div class="h4" {{ title_attributes }}>{{ label }}</div>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if content_attributes|length %}
+  <div {{ content_attributes }}>
+    {% endif %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+    {% if content_attributes|length %}
+  </div>
+  {% endif %}
+
+</div>

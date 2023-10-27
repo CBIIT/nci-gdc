@@ -4,6 +4,7 @@ global:
     base:
       css/tbmenu_override.css: {}
       css/gdc_foundation.css: {}
+      css/gdc_app.css: {}
       css/style.css: {}
       css/sumoselect.min.css: {}
   js:
@@ -57,4 +58,10 @@ community_tools:
   css:
     base:
       css/community_tools.css: {}
+
+biography:
+  version: VERSION
+  css:
+    base:
+      css/biography.css: {}
 

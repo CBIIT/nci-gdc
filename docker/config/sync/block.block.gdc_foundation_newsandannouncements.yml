@@ -1,0 +1,30 @@
+uuid: e6a22899-49bd-4449-ad1a-c746a3d40cda
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d100273f-1d71-465b-b774-d1925c882e3e'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_newsandannouncements
+theme: gdc_foundation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:d100273f-1d71-465b-b774-d1925c882e3e'
+settings:
+  id: 'block_content:d100273f-1d71-465b-b774-d1925c882e3e'
+  label: 'News and Announcements'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news-and-announcements

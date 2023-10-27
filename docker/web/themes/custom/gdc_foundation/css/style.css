@@ -5,11 +5,44 @@ body {
     background: white;
 }
 
+
+@media print,screen and (min-width: 40em) {
+    .h1,h1 {
+        font-size:2.5rem
+    }
+
+    .h2,h2 {
+        font-size: 2.0rem
+    }
+
+    .h3,h3 {
+        font-size: 1.8375rem
+    }
+
+    .h4,h4 {
+        font-size: 1.4625rem
+    }
+
+    .h5,h5 {
+        font-size: 1.215rem
+    }
+
+    .h6,h6 {
+        font-size: 1rem
+    }
+}
+
+/* Header Logo */
+header a img[alt="Home"] {
+  max-height: 50px;
+}
 /* Breadcrumbs */
+.breadcrumbs {
+    margin-top: 1rem;
+}
 .breadcrumbs li {
     text-transform: none;
 }
-
 .breadcrumbs li:not(:last-child)::after {
     content: ">";
 }
@@ -21,6 +54,7 @@ body {
 .breadcrumbs li a {
     color: purple;
 }
+
 /* Branding Header Overrides */
 /* block--system-branding-block.html.twig */
 /* Hide the block-gdc-foundation-secondarymenu in footer*/
@@ -61,9 +95,12 @@ footer ul.menu {
   font-weight: normal;
   cursor: pointer;
   border-bottom: 0px;
+  background-color: white;
 }
 /* Tooltip Overrides */
 /* Tooltip GDC Apps icons */
+
+/*
 .icon-gdc-portal-ap:before {
     font-family: 'GDCFont';
     content: "\e92f";
@@ -89,6 +126,10 @@ span.icon {
     vertical-align: text-top;
     float: none;
 }
+div.gdc-app.bottom.align-center table {
+  width: 200px;
+}
+*/
 /*
 .tooltip {
   background:white;
@@ -105,27 +146,33 @@ span.icon {
 */
 
 /* Block Overrides */
+#main .block.block-block-content {
+   padding:20px;
+   border: 1px solid grey;
+   margin: 15px 0 25px;
+   min-width:275px;
+   margin-bottom: 20px;
+}
 
-.block.block-block-content h2.block-title {
+#main .block.block-block-content .h4 {
+  display: inline-block;
   border-bottom: 1px solid #c5c3c4;
   font-size: 1.5rem;
   color:#6b6262;
-  margin-top: 1em;
-  padding-top: 1.5em;
   font-size: 1.5rem;
-  margin-bottom: 0.8em;
 }
-.block.block-block-content img {
-  display: block;
-  width: 35%;
-  min-width: 5.2em;
-  height: auto;
+#main .block.block-block-content img {
+  position: relative;
+  display: inline-block;
+  height: 50px;
   float: right;
-  margin-top: -4.5em;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  margin-top: -55px;
   vertical-align: middle;
-  background-color: white;
+}
+
+/* Front Page blocks with image */
+#block-gdc-foundation-homepageanalyzedata.block.block-block-content {
+  /*padding: 25px 10px; */
 }
 .body.field.field--block-content-body p,
 .body.field.field--block-content-body ul,
@@ -293,9 +340,6 @@ body {
     color: #1b1b1b;
     overflow-x: hidden
 }
-h1, h2 {
-  font-size: 1.75em;
-}
 .button {
   border-radius: 3px;
 }
@@ -337,4 +381,11 @@ h1, h2 {
 
 .ombmodal {
 	font-size:75%;
+}
+
+h5.blockTitle {
+color:red;
+}
+
+.biography img [
 }

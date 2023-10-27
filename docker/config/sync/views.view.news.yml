@@ -734,7 +734,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<ul class=\"more all-content\" style=\"list-style-type:none;\">\r\n   <li class=\"more-none\"><i class=\"fa fa-newspaper-o fa-fw\" aria-hidden=\"true\"></i><a title=\"News\" href=\"/news-and-announcements\">See all</a></li>\r\n   <li class=\"more-rss\"><i class=\"fa fa-rss fa-fw\" aria-hidden=\"true\"></i><a title=\"Subscribe to RSS Feed for In the News\" href=\"/news/all/rss.xml\">Subscribe</a></li>\r\n</ul>\r\n<div id=\"header-clear\"></div>"
+          content: "<ul class=\"more all-content\" style=\"list-style-type:none;\">\r\n   <li class=\"more-none\"><i class=\"fa fa-newspaper-o fa-fw\" aria-hidden=\"true\"></i><a title=\"News\" href=\"/news-and-announcements\">See all</a></li>\r\n   <li class=\"more-rss\"><i class=\"fa fa-rss fa-fw\" aria-hidden=\"true\"></i><a target=\"_blank\" title=\"Subscribe to RSS Feed for In the News\" href=\"/news/all/rss.xml\">Subscribe</a></li>\r\n</ul>\r\n<div id=\"header-clear\"></div>"
           tokenize: false
       display_extenders: {  }
     cache_metadata:

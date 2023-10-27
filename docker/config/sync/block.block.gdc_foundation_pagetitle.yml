@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
     - system
   theme:
     - gdc_foundation
@@ -22,37 +21,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: '<front>'
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      article: article
-      asset_dictionary: asset_dictionary
-      biography: biography
-      blog: blog
-      book: book
-      campaign: campaign
-      community_tool: community_tool
-      crg: crg
-      dd: dd
-      faq: faq
-      file: file
-      group: group
-      group_per_aff: group_per_aff
-      image: image
-      institution: institution
-      ins_per_aff: ins_per_aff
-      link: link
-      page: page
-      page_for_scientific_report: page_for_scientific_report
-      page_news: page_news
-      person: person
-      person_asset: person_asset
-      private_file: private_file
-      publication: publication
-      video: video
-      webform: webform
-      webinar: webinar
+    pages: /hello

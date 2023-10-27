@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ */
+#}
+{% set field_former=fields['field_former'].content|render|striptags|trim %}
+{% if not field_former=='1' %}
+<div class="bioGrid">
+    <div class="title">
+        <b>{{ fields['nothing'].content|raw }}</b>
+    </div>
+    <div class="position">{{ fields['field_position'].content }}</div>
+    <div class="headline">{{ fields['field_headline'].content }}</div>
+    <div>
+        {{ fields['nothing_1'].content|raw }}
+    </div>
+    <div class="image">
+       {{ fields['field_photo'].content }}
+    </div>
+    <div><hr /></div>
+</div>
+{% elseif field_former=='1' %}
+<div class="bioGridFormer">
+    <ul>
+        <li>
+            <b>{{ fields['title'].content }}</b>
+            ({{ fields['field_start_year'].content|render|striptags|trim }} - {{ fields['field_end_year'].content|render|striptags|trim }})
+            - {{ fields['field_headline'].content|render|striptags|trim }}
+        </li>
+    </ul>
+</div>
+{% endif %}
+

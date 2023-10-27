@@ -2,6 +2,9 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
+  admin_toolbar_search: 0
+  admin_toolbar_tools: 0
   asset_injector: 0
   automated_cron: 0
   backup_migrate: 0
@@ -17,10 +20,12 @@ module:
   contact: 0
   content_sync: 0
   contextual: 0
+  ctools: 0
   custom_view_filters: 0
   datetime: 0
   dblog: 0
   devel: 0
+  draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
   embed: 0
@@ -49,6 +54,7 @@ module:
   markdown: 0
   menu_link_content: 0
   menu_ui: 0
+  message_banner: 0
   migrate: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
@@ -62,6 +68,9 @@ module:
   path: 0
   path_alias: 0
   phpass: 0
+  purge: 0
+  purge_queues: 0
+  purge_ui: 0
   search: 0
   security_review: 0
   serialization: 0

@@ -168,15 +168,30 @@ li.tbm-item.level-1.tbm-item--has-dropdown.open a {
 }
 .tbm-link.level-1.tbm-toggle:after {
   font-family: FontAwesome;
-  content: "\f106"; /* FontAwesome Unicode */
+  content: "\f107"; /* FontAwesome Unicode */
   margin-left: 5px;
-  color: #007bbd;
+  color: #565c65;
   font-size: 10px;
 }
 .tbm-link.level-1.tbm-toggle:hover:after {
   font-family: FontAwesome;
-  content: "\f107"; /* FontAwesome Unicode */
+  content: "\f106"; /* FontAwesome Unicode */
   margin-left: 5px;
   color: white;
   font-size: 10px;
+}
+a.tbm-link.level-1.tbm-toggle.active-trail {
+  border-bottom: 3px solid #007bbd;
+}
+a.tbm-link.level-1.tbm-toggle.active-trail:after {
+  font-family: FontAwesome;
+  content: "\f107"; /* FontAwesome Unicode */  
+}
+
+a.tbm-link.level-1.tbm-toggle.active-trail:hover:after {
+  font-family: FontAwesome;
+  content: "\f106"; /* FontAwesome Unicode */
+  margin-left: 5px;
+  color: white;
+}
 

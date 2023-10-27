@@ -70,7 +70,10 @@ function gdc_foundation_preprocess_views_view(&$variables) {
       $variables['#attached']['library'][] = 'gdc_foundation/community_tools';                              
       $variables['totalRowCount']=count($view->result);                    
 
-    }  
+    } 
+    if ($id=='biography') {
+      $variables['#attached']['library'][] = 'gdc_foundation/biography';
+    } 
 }
 
 
@@ -112,6 +115,27 @@ function gdc_foundation_preprocess_page_title(&$variables) {
 function gdc_foundation_views_pre_render(ViewExecutable $view) {
   if (isset($view) && ($view->storage->id() == 'news')) {
     $view->element['#attached']['library'][] = 'custom/front_page';
+  }
+  if (isset($view) && ($view->storage->id() == 'biography')) {
+    $index=0;
+    $rows = $view->result;
+    foreach ($rows as $row) {
+        $entity = $row->_entity;
+        $relationship_entities = $row->_relationship_entities;
+        $person_entity = $relationship_entities['field_person_ref'];
+        $ins_status = $entity->get('status')->value;
+        $person_status = $person_entity->get('status')->value;
+        // remove any entries that are unpublished and former is unchecked //
+        if (isset($ins_status) && isset($person_status) && ($ins_status=='0' || $person_status=='0')) {
+            $former=$person_entity->get('field_former')->value;
+            $title=$person_entity->get('title')->value;
+            $date_range = $person_entity->get('field_date_range')->value;
+            if (!$former) {
+                unset($view->result[$index]);
+            }
+        }
+        $index+=1;
+    }
   }
 }
 

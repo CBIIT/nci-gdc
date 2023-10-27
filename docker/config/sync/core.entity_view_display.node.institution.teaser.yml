@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.institution.field_institution_logo
     - field.field.node.institution.field_institution_name
     - field.field.node.institution.field_name_short
+    - field.field.node.institution.field_order
     - field.field.node.institution.field_research_email
     - field.field.node.institution.field_research_website
     - node.type.institution
@@ -30,5 +31,6 @@ hidden:
   field_institution_logo: true
   field_institution_name: true
   field_name_short: true
+  field_order: true
   field_research_email: true
   field_research_website: true

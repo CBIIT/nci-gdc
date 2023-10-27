@@ -9,7 +9,7 @@ _core:
 id: zurb_foundation_page_title
 theme: zurb_foundation
 region: content
-weight: -50
+weight: -7
 provider: null
 plugin: page_title_block
 settings:

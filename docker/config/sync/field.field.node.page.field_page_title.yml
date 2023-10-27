@@ -1,0 +1,19 @@
+uuid: ade13f5e-251e-40e5-b7e2-2b8b8708d701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_title
+    - node.type.page
+id: node.page.field_page_title
+field_name: field_page_title
+entity_type: node
+bundle: page
+label: 'Page Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

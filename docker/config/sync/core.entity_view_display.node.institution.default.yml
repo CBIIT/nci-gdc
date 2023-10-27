@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.institution.field_institution_logo
     - field.field.node.institution.field_institution_name
     - field.field.node.institution.field_name_short
+    - field.field.node.institution.field_order
     - field.field.node.institution.field_research_email
     - field.field.node.institution.field_research_website
     - node.type.institution
@@ -65,6 +66,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_order:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
     region: content
   field_research_email:
     type: email_mailto

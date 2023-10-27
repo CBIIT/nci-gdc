@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Biography
 type: biography
-description: ''
+description: 'Displays biography for a person'
 help: ''
 new_revision: false
 preview_mode: 1

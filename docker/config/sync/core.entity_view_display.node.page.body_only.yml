@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.comment_node_page
     - field.field.node.page.field_orig_nid
+    - field.field.node.page.field_page_title
     - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
@@ -32,4 +33,5 @@ content:
 hidden:
   comment_node_page: true
   field_orig_nid: true
+  field_page_title: true
   layout_builder__layout: true

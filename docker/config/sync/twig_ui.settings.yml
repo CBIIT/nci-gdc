@@ -2,5 +2,6 @@ _core:
   default_config_hash: rhR6Ga68pYKnw_pcvjPb635MN33oKV3aqo9ftUvn8ao
 allowed_themes: all
 allowed_theme_list: {  }
-default_selected_themes: {  }
+default_selected_themes:
+  - gdc_foundation
 codemirror_config: ''

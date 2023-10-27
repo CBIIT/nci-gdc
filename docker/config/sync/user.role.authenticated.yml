@@ -13,6 +13,7 @@ dependencies:
     - file
     - filter
     - fontawesome
+    - message_banner
     - search
     - shortcut
     - system
@@ -36,3 +37,4 @@ permissions:
   - 'use text format markdown'
   - 'use text format php_code'
   - 'use text format webform_default'
+  - 'view message banner'

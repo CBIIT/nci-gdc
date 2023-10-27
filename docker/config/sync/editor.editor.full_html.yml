@@ -15,6 +15,7 @@ settings:
       - redo
       - '|'
       - heading
+      - style
       - bold
       - italic
       - underline
@@ -107,6 +108,17 @@ settings:
       startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Block Title'
+          element: '<h5 class="blockTitle">'
+        -
+          label: 'Block Title2'
+          element: '<h5 class="blockTitle">'
+        -
+          label: 'Block Title3'
+          element: '<h5 class="blockTitle">'
 image_upload:
   status: true
   scheme: public

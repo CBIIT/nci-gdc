@@ -9,7 +9,7 @@ _core:
 id: zurb_foundation_local_tasks
 theme: zurb_foundation
 region: content
-weight: -40
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:
