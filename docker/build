@@ -1,0 +1,4 @@
+#!/bin/bash
+docker rm -f test
+docker build -t drupal:latest . 
+docker run --network db --name test -p 8081:80 -e hash_salt=none -e db_name='gdc' -e db_user='root' -e db_password='my-secret-pw' -e db_host='gdc_db' -e db_port=3306 drupal:latest
