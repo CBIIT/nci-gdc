@@ -7,7 +7,6 @@ else
     cp $code_path/composer.lock ./ 
     cp -r $code_path/web ./
     composer install
-    composer require erusev/parsedown
     cp web/sites/default/default.settings.php web/sites/default/settings.php
     cat $code_path/settings.php.patch >> web/sites/default/settings.php
     mv content_sync web/modules/contrib
