@@ -1,10 +1,25 @@
 /* Override */
 body {
     font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
-    background-color: white;
-    background: white;
+    background-color: #f5f5f5;
+    color: #1b1b1b;
+    overflow-x: hidden
+} 
+header {
+  background-color: white;
 }
-
+#main div.cell:nth-child(3) {
+    box-shadow: 5px 5px 8px 3px lightgrey;
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0px 25px;
+}
+header nav[role="navigation"] {
+  padding: 1px;
+}
+#sidebar-first.cell {
+  background-color: #f5f5f5;
+}
 
 @media print,screen and (min-width: 40em) {
     .h1,h1 {
@@ -147,8 +162,10 @@ div.gdc-app.bottom.align-center table {
 
 /* Block Overrides */
 #main .block.block-block-content {
+   background-color: white;
    padding:20px;
    border: 1px solid grey;
+   border-radius: 8px;
    margin: 15px 0 25px;
    min-width:275px;
    margin-bottom: 20px;
@@ -335,11 +352,6 @@ li.usa-footer__secondary-link > a {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'franklin_gothic_fsbook','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
-body {
-    background-color: #fff;
-    color: #1b1b1b;
-    overflow-x: hidden
-}
 .button {
   border-radius: 3px;
 }
@@ -387,5 +399,11 @@ h5.blockTitle {
 color:red;
 }
 
-.biography img [
-}
+     
+.biography img {
+        box-shadow: 0px 0px 4px 1px #ccc;
+        border:1px solid #ccc !important;
+        float:right;
+        padding:4px !important;
+        margin-left:10px;
+}  

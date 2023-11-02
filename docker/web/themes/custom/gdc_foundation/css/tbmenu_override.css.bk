@@ -16,7 +16,6 @@
 
 .tbm-link.level-1:hover,.tbm-link.level-1:focus {
     background-color: #004971;
-    color: white;
   /*  Too much movement.
     border-top: 4px solid #007bbd;
     border-right: 4px solid #007bbd;
@@ -108,7 +107,7 @@
 li.tbm-item.level-1.tbm-item--has-dropdown.open {
   background-color: #004971;
 }
-li.tbm-item.level-1.tbm-item--has-dropdown.open a {
+li.tbm-item.level-1.tbm-item--has-dropdown.open span a {
   color: white;
 }
 .tbm-item.level-1 .tbm-link-container {
@@ -123,7 +122,7 @@ li.tbm-item.level-1.tbm-item--has-dropdown.open a {
 }
 
 /* TB Menu Override */
-.tbm.tbm-main .tbm-link-container > a {
+.tbm.tbm-main .tbm-link-container span a {
     color: white;
     font-weight: bold;
 }
@@ -181,30 +180,20 @@ li.tbm-item.level-1.tbm-item--has-dropdown.open a {
   color: white;
   font-size: 10px;
 }
+
+a.tbm-link.level-1.tbm-toggle.active-trail {
+  border-bottom: 3px solid #007bbd;
+}
 a.tbm-link.level-1.tbm-toggle.active-trail:after {
   font-family: FontAwesome;
   content: "\f107"; /* FontAwesome Unicode */  
 }
 
-a.tbm-link.level-1.tbm-toggle.active-trail:hover:after {
+a.tbm-link.level-1.tbm-toggle.active-trail:hover:after,
+a.tbm-link.level-1.tbm-toggle.active-trail.open:after {
   font-family: FontAwesome;
   content: "\f106"; /* FontAwesome Unicode */
   margin-left: 5px;
   color: white;
 }
-div.tbm-link-container {
-  display:inline-block;
-}
-ul.level-0 li.level-1.active-trail > div.tbm-link-container::after {
-    background-color: #007bbd;
-    border-radius: 0;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: .25rem;
-    left: 0.8rem;
-    position: relative;
-    width: 80%;
-}
-
 

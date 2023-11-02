@@ -12,6 +12,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - draggableviews
     - file
     - filter
     - node
@@ -30,6 +31,7 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access draggableviews'
   - 'access files overview'
   - 'access toolbar'
   - 'access tour'

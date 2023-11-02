@@ -15,8 +15,6 @@ a.tabledrag-handle .handle {
 
 .bioGrid .image img{
     border:1px solid #ccc;
-    width:125px;
-    height:125px;
     padding:4px;
 }
 .bioGrid {
@@ -73,6 +71,5 @@ a.tabledrag-handle .handle {
 .bioGridFormer ul{
     margin:0px 0px 5px 30px;
 }
-
 
 

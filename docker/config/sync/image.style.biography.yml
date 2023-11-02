@@ -1,0 +1,15 @@
+uuid: a0304dea-f8a5-4496-bc69-45acce19e146
+langcode: en
+status: true
+dependencies: {  }
+name: biography
+label: biography
+effects:
+  b1df9724-8368-4835-9bd4-d1e4f33967fa:
+    uuid: b1df9724-8368-4835-9bd4-d1e4f33967fa
+    id: image_scale
+    weight: 1
+    data:
+      width: 225
+      height: null
+      upscale: true

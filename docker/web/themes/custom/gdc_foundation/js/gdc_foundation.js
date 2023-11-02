@@ -12,6 +12,7 @@
     attach: function (context, settings) {
     	once('gdc_foundationBehavior', 'html').forEach(function (element) {
       	$.setActiveTabOnMainMenu(element);
+	$.addGDCAppListener();
     	})      
      }
   }
@@ -22,4 +23,23 @@ $.setActiveTabOnMainMenu = function(e) {
   console.dir(activeMenu);
   console.log("active-menu: ".activeMenu);
 }
+
+$.addGDCAppListener = function() {
+  console.log("Adding GDC App listener");
+  $(document).ready(function () {
+  $(".pullout").click(function () {
+    $(".panel.callout").toggle();
+    $(".panel.callout").css('display','grid');
+    event.stopPropagation();
+  });
+  $("html").click(function () {
+    $(".panel.callout").hide();
+  });
+  $(".panel").click(function () {
+    event.stopPropagation();
+  });
+  });
+}
+
+
 })(jQuery, Drupal);

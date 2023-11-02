@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.comment_node_page
     - field.field.node.page.field_orig_nid
-    - field.field.node.page.field_page_title
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - comment
@@ -67,22 +67,6 @@ third_party_settings:
                 entity: layout_builder.entity
             weight: 2
             additional: {  }
-          60508925-70d5-49d6-9258-7729d2e68d3e:
-            uuid: 60508925-70d5-49d6-9258-7729d2e68d3e
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_page_title'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -106,14 +90,6 @@ content:
       pager_id: 0
     third_party_settings: {  }
     weight: 20
-    region: content
-  field_page_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }
