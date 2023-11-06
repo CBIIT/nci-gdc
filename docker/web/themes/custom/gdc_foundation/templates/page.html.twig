@@ -45,7 +45,6 @@
  * @see html.html.twig
  */
 #}
-{# dump(page) #}
 <div class="off-canvas-wrapper">
   <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
     <aside id="left-off-canvas-menu" class="off-canvas left-off-canvas-menu position-left" role="complementary" data-off-canvas>
@@ -82,7 +81,7 @@
       {% endif %}
 
       <div class="grid-container">
-        <main id="main" class="grid-x grid-margin-x" role="main">
+	<main id="main" class="grid-x grid-margin-x" role="main">
           <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
           {% if page.highlighted %}
@@ -94,38 +93,37 @@
           {% if breadcrumb %} {{ breadcrumb }} {% endif %}
 
           <div class="{{ main_grid }}">
-            {{ page.content }}
+              {{ page.content }}
           </div>
           {% if page.sidebar_first %}
             <div id="sidebar-first" class="{{ sidebar_first_grid }} sidebar" role="complementary">
               {{ page.sidebar_first }}
             </div>
           {% endif %}
-
         </main>
       </div>
       {% if page.footer_first or page.footer_second or page.footer_third or page.footer.fourth or page.footer_bottom %}
         <footer id="footer">
 	<div class="grid-container">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer.fourth %}
-            <div class="grid-x grid-margin-x medium-margin-collapse">
+            <div class="grid-x grid-margin-x grid-padding-x grid-margin-y grid-padding-y">
               {% if page.footer_first %}
-                <div id="footer-first" class="cell large-3">
+                <div id="footer-first" class="cell medium-6 large-3">
                   {{ page.footer_first }}
                 </div>
               {% endif %}
               {% if page.footer_second %}
-                <div id="footer-second" class="cell large-3">
+                <div id="footer-second" class="cell medium-6 large-3">
                   {{ page.footer_second }}
                 </div>
               {% endif %}
               {% if page.footer_third %}
-                <div id="footer-third" class="cell large-3">
+                <div id="footer-third" class="cell medium-6 large-3">
                   {{ page.footer_third }}
                 </div>
               {% endif %}
               {% if page.footer_fourth %}                                                        
-                <div id="footer-fourth" class="cell large-3">                                    
+                <div id="footer-fourth" class="cell medium-6 large-3">                                    
                   {{ page.footer_fourth }}                                                       
                 </div>                                                                                                               
               {% endif %} 
@@ -133,8 +131,8 @@
           {% endif %}
 	  {% if page.footer_bottom %}
             <hr class="footer-break">
-            <div class="grid-x grid-margin-x">
-              <div id="footer-bottom" class="cell large-12">
+            <div class="grid-x grid-margin-x grid-padding-x grid-margin-y grid-paddying-y">
+              <div id="footer-bottom" class="cell">
                 {{ page.footer_bottom }}
               </div>
             </div>

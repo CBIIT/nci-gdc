@@ -75,7 +75,6 @@ header a img[alt="Home"] {
 /* block--system-branding-block.html.twig */
 /* Hide the block-gdc-foundation-secondarymenu in footer*/
 
-
 #block-gdc-header-menu nav ul a{
   padding: .3rem .3rem;
   display: inline-block;
@@ -104,13 +103,6 @@ a#gdc-apps:before {
   content: "\e94c ";
   padding-right: 8px;
 }
-#gdc-apps-table-container {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
-    border-radius: 5px;
-    margin-top: 15px;
-    width: 350px;
-}
-
 #block-gdc-header-menu nav  ul li:nth-child(4) a.has-tip {
   border-bottom: 0px;
   font-weight: normal;
@@ -118,11 +110,12 @@ a#gdc-apps:before {
   border-bottom: 0px;
   background-color: white;
 }
-#gdc-apps-table-container table {
-  border-collapse: unset;
-  margin-bottom: 0;
+.icon-gdc-portal-app:before {
+    content: "\e92f";
+    margin-left: -1.0205078125em;
+    color: rgb(255,255,255);
 }
-#gdc-apps-table-container table tbody td, #gdc-apps-table-container table tbody th {
+#gdc-apps-table-container table tbody td, tbody th {
     padding: .1rem;
     margin: 5px;
     text-align: center;
@@ -141,8 +134,27 @@ a#gdc-apps:before {
 #gdc-apps-table-container img {
   height: 36px;
 }
+#gdc-apps-table-container table {
+    border-collapse: collapse;
+    border: none;
+    background-color: transparent;
+    margin: 0rem 0rem;
+}
 #gdc-apps-table-container.dropdown-pane {
   padding: 0.25rem;
+}
+[class*=icon-gdc], [class^=icon-gdc] {
+   font-family: 'GDCFont' !important;
+   content: "\e94c ";
+   padding-right: 8px;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 /* Tooltip Overrides */
 /* Tooltip GDC Apps icons */

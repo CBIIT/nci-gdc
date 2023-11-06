@@ -44,6 +44,53 @@ function gdc_foundation_preprocess_node(&$variables) {
  * Add convenience variables and template suggestions.
  */
 function gdc_foundation_preprocess_page(&$variables) {
+  // Convenience variables.
+  if (isset($variables['page']['sidebar_first'])) {
+    $left = $variables['page']['sidebar_first'];
+  }
+  if (isset($variables['page']['sidebar_second'])) {
+    $right = $variables['page']['sidebar_second'];
+  }
+
+  // Dynamic sidebars.
+  if (!empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'cell medium-6 medium-order-2';
+    $variables['sidebar_first_grid'] = 'cell medium-3 medium-order-1';
+    $variables['sidebar_sec_grid'] = 'cell medium-3 medium-order-3';
+  }
+  elseif (empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'cell small-12 medium-9 auto';
+    $variables['sidebar_first_grid'] = '';
+    $variables['sidebar_sec_grid'] = 'cell medium-3 hide-for-small-only shrink';
+  }
+  elseif (!empty($left) && empty($right)) {
+    $variables['main_grid'] = 'cell medium-8 medium-order-2 small-12 auto';
+    $variables['sidebar_first_grid'] = 'cell  medium-4 medium-order-1 hide-for-small-only shrink';
+    $variables['sidebar_sec_grid'] = '';
+  }
+  else {
+    $variables['main_grid'] = 'cell';
+    $variables['sidebar_first_grid'] = '';
+    $variables['sidebar_sec_grid'] = '';
+  }
+
+  // Add classes to highlighted region.
+  if (!empty($variables['page']['highlighted'])) {
+    $variables['page']['highlighted']['#attributes']['class'][] = 'region-highlighted';
+    $variables['page']['highlighted']['#attributes']['class'][] = 'panel';
+  }
+
+  // Check to see if the Meta Header should be in the Grid.
+  $variables['meta_header_grid'] = theme_get_setting('zurb_foundation_meta_header_grid');
+
+  // Copyright block settings.
+  // boolean if any of the region should render.
+  $variables['block_copyright_show'] = theme_get_setting('zurb_foundation_block_copyright_show');
+
+  $variables['block_copyright'] = [
+    '#markup' => theme_get_setting('zurb_foundation_block_copyright_text'),
+  ];
+  $variables['block_copyright_custom_text'] = theme_get_setting('zurb_foundation_block_copyright_custom_text');
 }
 
 /**
