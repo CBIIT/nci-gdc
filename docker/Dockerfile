@@ -1,6 +1,6 @@
-FROM drupal:latest
+FROM drupal:10.1.5-php8.1-apache-bullseye
 RUN apt-get update -y
-RUN apt-get install -y vim git mariadb-client
+RUN apt-get install -y vim git mariadb-client sendmail
 ENV code_path=/tmp/github
 COPY run.sh /usr/bin
 COPY . /tmp/github
