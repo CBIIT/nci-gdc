@@ -346,7 +346,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: faqs
+      path: about-gdc/gdc-faqs
     cache_metadata:
       max-age: -1
       contexts:

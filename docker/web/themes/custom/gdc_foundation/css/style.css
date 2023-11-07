@@ -144,52 +144,6 @@ a#gdc-apps:before {
 #gdc-apps-table-container.dropdown-pane {
   padding: 0.25rem;
 }
-/* Tooltip Overrides */
-/* Tooltip GDC Apps icons */
-/*
-.icon-gdc-portal-ap:before {
-    font-family: 'GDCFont';
-    content: "\e92f";
-    margin-left: -1.0205078125em;
-    color: rgb(255,255,255);
-}
-div.tooltip table {
-  width: 250px;
-}
-div.tooltip img {
-  width: 100px;
-}
-div.tooltip table th, div.tooltip table td {
-  padding: 20px;
-  background-color: white;
-}
-span.icon {
-    display: block;
-    height: inherit;
-    margin: 0;
-    overflow: hidden;
-    padding: 3px 0;
-    vertical-align: text-top;
-    float: none;
-}
-div.gdc-app.bottom.align-center table {
-  width: 200px;
-}
-*/
-/*
-.tooltip {
-  background:white;
-  color:grey;
-}
-
-.tooltip>.nub{border-color:transparent transparent #FFF transparent}
-.tooltip.opened{border-bottom:dotted 1px #FFF !important;color:#FFF !important}
-.tap-to-close{color:#FFF}
-.tooltip>.nub{border-color:transparent transparent #FFF transparent}
-.tooltip.tip-top>.nub{border-color:#FFF transparent transparent transparent}
-.tooltip.tip-left>.nub{border-color:transparent transparent transparent #FFF}
-.tooltip.tip-right>.nub{border-color:transparent #FFF transparent transparent}
-*/
 
 /* Block Overrides */
 #main .block.block-block-content {
@@ -334,15 +288,29 @@ h2#block-gdc-foundation-footer-menu.block-title {
 footer .menu .button, footer .menu a {
     color: white;
 }
-
+header .search-block-form  {
+ width: 150px;
+  float:left;
+  display:none;
+}
+#edit-actions {
+  float:right;
+}
+/*
 header > * form#search-block-form > div > input {
     width: 150px;
     float: right;
-}
 
+}
+*/
+header .search-block-form:nth-child(4) {
+  display:none;
+}
+/*
 header > * form#search-block-form > #edit-actions {
     display: none;
 }
+*/
 
 footer {
     background-color: #004971;
