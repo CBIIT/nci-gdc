@@ -17,7 +17,7 @@
 
 <div class="grid-container">
   <div class="grid-x grid-margin-x">
-    <div class="cell auto">
+    <div class="cell auto algin-self-middle">
       {% if site_logo %}                                                       
          <a href="{{ path('<front>') }}" rel="home">                            
            <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />                   
@@ -104,7 +104,7 @@
         </ul>
     </nav>
 </div>
-<div>Search Bar: {{ drupal_entity("block", "gdc_foundation_searchform") }}
+<div>{{ drupal_entity("block", "gdc_foundation_searchform") }}
     </div>
 
 
@@ -117,4 +117,5 @@
     <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
   {% endif %}
   {{ site_slogan }}
+<div style="clear:both;"></div>
 {% endblock %}

@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: d9897230-3e40-469b-af92-2332c564e2a1
 name: 'NCI Genomic Data Commons'
-mail: support@nci-gdc.datacommons.io
+mail: einolfs@nih.gov
 slogan: ''
 page:
   403: ''

@@ -50,6 +50,7 @@ module:
   layout_discovery: 0
   libraries: 0
   link: 0
+  mailsystem: 0
   markdown: 0
   menu_link_content: 0
   menu_ui: 0
@@ -74,6 +75,7 @@ module:
   security_review: 0
   serialization: 0
   shortcut: 0
+  symfony_mailer: 0
   system: 0
   taxonomy: 0
   tb_megamenu: 0

@@ -11,7 +11,7 @@ dependencies:
 id: gdc_foundation_headerblock
 theme: gdc_foundation
 region: header
-weight: -27
+weight: -28
 provider: null
 plugin: 'block_content:f8cdc2df-3a0e-4cf5-a405-607c9bc6ae22'
 settings:
