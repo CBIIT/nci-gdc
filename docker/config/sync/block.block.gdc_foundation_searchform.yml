@@ -8,8 +8,8 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_searchform
 theme: gdc_foundation
-region: right_off_canvas
-weight: -34
+region: header
+weight: -32
 provider: null
 plugin: search_form_block
 settings:
