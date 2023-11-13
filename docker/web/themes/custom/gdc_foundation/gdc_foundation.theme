@@ -64,8 +64,8 @@ function gdc_foundation_preprocess_page(&$variables) {
     $variables['sidebar_sec_grid'] = 'cell medium-3 hide-for-small-only auto';
   }
   elseif (!empty($left) && empty($right)) {
-    $variables['main_grid'] = 'cell small-12 medium-8 medium-order-2';
-    $variables['sidebar_first_grid'] = 'cell medium-4 medium-order-1 hide-for-small-only';
+    $variables['main_grid'] = 'cell small-12 medium-9 medium-order-2';
+    $variables['sidebar_first_grid'] = 'cell medium-3 medium-order-1 hide-for-small-only';
     $variables['sidebar_sec_grid'] = '';
   }
   else {

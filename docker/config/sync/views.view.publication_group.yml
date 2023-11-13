@@ -1276,7 +1276,7 @@ display:
     display_options:
       exposed_block: false
       display_extenders: {  }
-      path: publications
+      path: about-data/publications
     cache_metadata:
       max-age: -1
       contexts:
