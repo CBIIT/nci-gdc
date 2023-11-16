@@ -47,6 +47,7 @@
         "drupal/purge_queues": "^2.0",
         "drupal/recaptcha": "^3.2",
         "drupal/routes_list": "^6.2",
+        "drupal/s3fs": "^3.3",
         "drupal/security_review": "^2.0",
         "drupal/sitemap": "^2.0@beta",
         "drupal/symfony_mailer": "^1.4",
