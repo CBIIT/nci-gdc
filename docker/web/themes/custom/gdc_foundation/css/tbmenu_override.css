@@ -82,8 +82,9 @@
 }
 
 .tbm-group-title {
-    font-weight: bold;
-    text-transform: uppercase
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: none;
 }
 
 .tbm.tbm--mobile {
@@ -129,9 +130,19 @@ li.tbm-item.level-1.tbm-item--has-dropdown.open a {
 }
 
 .tbm.tbm-main .tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link {
-    color: white;
+     color: white;
+     font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,serif;
+    font-size: 1.01rem;
+    font-weight: 400;
+}
+.tbm.tbm-main .tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link.level-2.tbm-group-title {
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
+li.tbm-item.level-3 .tbm-link-container {
+  line-height: 0.9;
+}
 .tbm.tbm-main .tbm-subnav > .tbm-item > .tbm-link-container > .tbm-link:hover {
     text-decoration: underline;
     color: white;
