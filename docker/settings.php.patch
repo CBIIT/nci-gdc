@@ -1,3 +1,8 @@
+$settings['s3fs.access_key'] = getenv('s3_access_key');
+$settings['s3fs.secret_key'] = getenv('s3_secret_key');
+$settings['s3fs.upload_as_private'] = TRUE;
+$settings['s3fs.use_s3_for_public'] = TRUE;
+
 $databases['default']['default'] = array(
   'database' => getenv('db_name'),
   'username' => getenv('db_user'),
