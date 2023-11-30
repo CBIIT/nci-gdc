@@ -153,7 +153,8 @@ a#gdc-apps:before {
 }
 
 /* Block Overrides */
-#main .block.block-block-content {
+#main .block.block-block-content,
+#sidebar-first nav {
    background-color: white;
    padding:20px;
    border: 1px solid grey;
@@ -161,7 +162,8 @@ a#gdc-apps:before {
    margin-bottom: 20px;
 }
 
-#main .block.block-block-content .h4 {
+#main .block.block-block-content .h4,
+#sidebar-first nav h2 {
   display: inline-block;
   border-bottom: 1px solid #c5c3c4;
   font-size: 1.5rem;
@@ -199,6 +201,17 @@ a#gdc-apps:before {
   margin: 0 0 0.1625em;
   padding: 0 0 0 22px;
 }
+/* Search page overrides */
+#main ol li::marker {
+  content: '' !important;
+}
+#main ol li h3 {
+  font-size: 1.1em;
+  margin-bottom: 0px;
+}
+#main .search-form {
+  display:none;
+}
 /* Publication Overrides */
 .label-publication-tag {
     border-radius: .4rem;
@@ -206,6 +219,19 @@ a#gdc-apps:before {
     color: black;
     border: 1px solid black;
 }
+/* /about-data menu */
+/*
+#sidebar-first #block-gdc-foundation-aboutthedata h2.block-title:after {
+    display: inline-block;
+    background-image: url("http://nciws-d1066-c:8090/files/icon_gdc.png");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    content:"";
+}
+
+*/
 .icon-gdc-portal-ap
 /* Footer Overrides */
 footer div.grid-container.full {
@@ -434,4 +460,4 @@ color:red;
         float:right;
         padding:4px !important;
         margin-left:10px;
-}  
+}

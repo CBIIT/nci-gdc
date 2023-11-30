@@ -203,5 +203,12 @@ ul.level-0 li.level-1.active-trail > div.tbm-link-container::after {
     position: relative;
     width: 80%;
 }
-
-
+/* Hide 1st Menu 2nd & 3rd Column Group Title */
+ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(1) .tbm-row .tbm-column.span3:nth-child(2) a.tbm-link.level-2.tbm-group-title,
+ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(1) .tbm-row .tbm-column.span3:nth-child(3) a.tbm-link.level-2.tbm-group-title {
+  visibility: hidden;
+}
+/* Hide 8th Menu 2nd Column Group Title */
+ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(8) .tbm-row .tbm-column:nth-child(2) a.tbm-link.level-2.tbm-group-title {
+  visibility: hidden;
+}
