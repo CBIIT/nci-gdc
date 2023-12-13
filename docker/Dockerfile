@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.18
 ENV apache_root=/var/www
 ENV site_path=${apache_root}/drupal
 ENV PATH="${PATH}:${site_path}/vendor/drush/drush"
