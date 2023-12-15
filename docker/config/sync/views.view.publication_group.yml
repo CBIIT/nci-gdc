@@ -1245,8 +1245,8 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: 'The GDC provides access to information and supplementary files from publications associated with NCI supported programs. See <a href="/about-data/publications#pubpagereq">Requesting a Publication Page</a> for additional information.'
-            format: filtered_html
+            value: '<a id="publications"></a>The GDC provides access to information and supplementary files from publications associated with NCI supported programs. See <a href="/about-data/publications#pubpagereq">Requesting a Publication Page</a> for additional information.'
+            format: full_html
           tokenize: false
       footer: {  }
       display_extenders: {  }

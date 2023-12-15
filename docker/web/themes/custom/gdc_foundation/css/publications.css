@@ -130,3 +130,9 @@
 .field--node-field-page-title {
 font-size:150% !important;
 }
+/* Customer request modifications */
+select#edit-field-pub-cat-tags-target-id,
+select#edit-field-pub-group-tags-target-id,
+select#edit-field-date{
+  padding:0px;
+}
