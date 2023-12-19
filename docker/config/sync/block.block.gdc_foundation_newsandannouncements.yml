@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_newsandannouncements
 theme: gdc_foundation
 region: sidebar_first
-weight: 0
+weight: -29
 provider: null
 plugin: 'block_content:d100273f-1d71-465b-b774-d1925c882e3e'
 settings:

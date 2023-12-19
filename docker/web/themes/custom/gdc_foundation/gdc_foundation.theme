@@ -9,6 +9,12 @@ use Drupal\views\ViewExecutable;
 use Drupal\Core\Database\Query\AlterableInterface;
 
 /**
+ * Implements hook_menu_local_tasks_alter()
+ */
+function gdc_foundation_menu_local_tasks_alter(&$data, $route_name, \Drupal\Core\Cache\RefinableCacheableDependencyInterface &$cacheability) {
+  dpm($data);  
+}
+/**
  * Implements hook_preprocess_block().
  */
 function gdc_foundation_preprocess_block(&$variables) {
@@ -122,7 +128,6 @@ function gdc_foundation_preprocess_views_view(&$variables) {
       $variables['#attached']['library'][] = 'gdc_foundation/biography';
     } 
 }
-
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for select templates.

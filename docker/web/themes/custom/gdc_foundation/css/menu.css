@@ -1,0 +1,47 @@
+/* menu.css for vertical Drupal menus */
+#sidebar-first nav li a {
+  font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  line-height: 1.3;
+  color: #565c65
+}
+li.menu__item a {
+  padding: 5px;
+}
+li.menu__item--has-children:not(.menu__item--active-trail) a:after {
+   font-family: FontAwesome;
+   content: "\f054"; /* FontAwesome Unicode */
+   color: black;
+  float: right;
+}
+li.menu__item--has-children:not(.menu__item--active-trail) ul {
+  display:none;
+}
+#sidebar-first nav li a.is-active {
+  font-weight:bold;
+  color: #01679d;
+}
+#sidebar-first nav li.menu__item a:hover {
+  background-color: #f0f0f0;
+  color: #01679d;
+  text-decoration: none;
+}
+li.menu__item.menu__item--level-2 > a {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/*Title */
+#sidebar-first nav h2.block-title {
+    display: inline-block;
+    border-bottom: 0px;
+    color: #01679d;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+#sidebar-first nav li {
+  margin-bottom: 0;
+  max-width: unset;
+  border-top: 1px solid #dfe1e2;
+  font-size: .95rem;
+  width: 100%;
+}

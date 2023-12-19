@@ -3,6 +3,7 @@ global:
   css:
     base:
       css/tbmenu_override.css: {}
+      css/menu.css: {}
       css/gdc_foundation.css: {}
       css/gdc_app.css: {}
       css/style.css: {}
