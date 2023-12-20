@@ -15,6 +15,7 @@ dependencies:
     - draggableviews
     - file
     - filter
+    - help
     - node
     - path
     - system
@@ -33,6 +34,7 @@ permissions:
   - 'access contextual links'
   - 'access draggableviews'
   - 'access files overview'
+  - 'access help pages'
   - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
