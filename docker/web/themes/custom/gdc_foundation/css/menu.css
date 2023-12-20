@@ -27,7 +27,9 @@ li.menu__item--has-children:not(.menu__item--active-trail) ul {
 }
 li.menu__item.menu__item--level-2 > a {
   margin-left: 10px;
-  display: inline-block;
+}
+li.menu__item.menu__item--level-3 > a {
+  margin-left:20px;
 }
 
 /*Title */
