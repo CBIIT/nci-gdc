@@ -1245,10 +1245,23 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<a id="publications"></a>The GDC provides access to information and supplementary files from publications associated with NCI supported programs. See <a href="/about-data/publications#pubpagereq">Requesting a Publication Page</a> for additional information.'
+            value: '<a id="publications"></a>The GDC provides access to information and supplementary files from publications associated with NCI supported programs. See <a href="#pubpagereq">Requesting a Publication Page</a> for additional information.'
             format: full_html
           tokenize: false
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<p id=\"pubpagereq\">\r\n<h3>Requesting a Publication Page</h3>\r\n<p>The GDC provides publication pages with access to information and supplementary files from publications associated with NCI supported programs. Publication pages are provided for:</p>\r\n<p>\r\n   <ul>\r\n      <li>NCI supported programs that have submitted data into the GDC</li>\r\n      <li>Publications that involve primary analysis associated with the initial data submission</li>\r\n   </ul>\r\n</p>\r\n<p>To request a publication page that meets the above criteria, please contact the <a href=\"mailto:support@nci-gdc.datacommons.io\">GDC Help Desk</a>.</p>\r\n</p>"
+            format: full_html
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1

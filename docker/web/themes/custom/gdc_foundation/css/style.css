@@ -9,6 +9,12 @@ header {
   background-color: white;
   margin-bottom: 20px;
 }
+main h3 {
+  color:#bb0e3d;
+}
+a.ext[href*=".gov"] svg {
+  display: none;
+}
 #main div.cell:nth-child(3) {
     box-shadow: 5px 5px 8px 3px lightgrey;
     background-color: white;
@@ -33,11 +39,11 @@ header nav[role="navigation"] {
     }
 
     .h3,h3 {
-        font-size: 1.8375rem
+        font-size: 1.5rem
     }
 
     .h4,h4 {
-        font-size: 1.4625rem
+        font-size: 1.35rem
     }
 
     .h5,h5 {
@@ -371,7 +377,7 @@ header form#search-block-form input.button, form#block-gdc-foundation-searchform
   display: none;
 }
 
-footer {
+footer#footer {
     background-color: #004971;
     color: white;
     margin-top: 25px;

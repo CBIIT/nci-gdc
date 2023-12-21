@@ -1,0 +1,8 @@
+uuid: 923733b7-c55a-4ed9-a98b-9367080dbe4d
+langcode: en
+status: true
+dependencies: {  }
+id: anaylze-data
+label: 'Anaylze Data'
+description: ''
+locked: false

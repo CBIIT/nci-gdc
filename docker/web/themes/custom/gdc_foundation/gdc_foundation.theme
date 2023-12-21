@@ -166,7 +166,7 @@ function gdc_foundation_preprocess_page_title(&$variables) {
 */
 function gdc_foundation_views_pre_render(ViewExecutable $view) {
   if (isset($view) && ($view->storage->id() == 'news')) {
-    $view->element['#attached']['library'][] = 'custom/front_page';
+    //$view->element['#attached']['library'][] = 'custom/front_page';
   }
   if (isset($view) && ($view->storage->id() == 'biography')) {
     $index=0;

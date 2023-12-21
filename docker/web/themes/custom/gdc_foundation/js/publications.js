@@ -68,7 +68,15 @@
     addRecordCountToForm();
     // Handle click event on select elements
     $('select').click(handleSelectClick);
-
+    
+    // check if url has key keys //
+    keyValue=location.search.indexOf('keys');
+    if (keyValue>-1) {
+      targetElement=$('#scrollTop');
+      $('html, body').animate({
+          scrollTop: targetElement.offset().top
+        }, 1000);
+      };
     // Modify publication group elements
     modifyPublicationGroups();
   });

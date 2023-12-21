@@ -24,6 +24,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  devel_entity_updates: 0
   draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
@@ -72,6 +73,7 @@ module:
   purge: 0
   purge_queues: 0
   purge_ui: 0
+  redirect: 0
   search: 0
   security_review: 0
   serialization: 0

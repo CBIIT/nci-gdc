@@ -46,9 +46,10 @@
       {{ header }}
     </header>
   {% endif %}
-
   <div class="publicationContainer">
     {{ exposed }}
+    <div id="scrollTop"></div>
+
     <div class="publicationRecordCount">{{ totalRowCount }} Publications</div>
     {{ attachment_before }}
     {% if rows -%}

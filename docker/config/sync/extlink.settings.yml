@@ -24,5 +24,4 @@ extlink_font_awesome_classes:
   links: 'fa fa-external-link'
   mailto: 'fa fa-envelope-o'
 extlink_icon_placement: append
-whitelisted_domains:
-  - cancer.gov
+whitelisted_domains: {  }
