@@ -47,3 +47,9 @@ li.menu__item.menu__item--level-3 > a {
   font-size: .95rem;
   width: 100%;
 }
+/* Twitter on News menu */
+#block-gdc-foundation-newsandannouncements a[href="https://twitter.com/NCIGDC_Updates"]:before {
+  font-family: FontAwesome;
+  content: "\e61b"; /* FontAwesome Unicode */
+  font-size: 14px;
+}

@@ -1,0 +1,7 @@
+uuid: 19987494-fdc6-4ced-93ef-86fbccc2138c
+langcode: en
+status: false
+dependencies: {  }
+formId: node_asset_dictionary_form
+captchaType: default
+label: node_asset_dictionary_form
