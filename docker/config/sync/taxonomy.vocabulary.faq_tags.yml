@@ -1,8 +1,0 @@
-uuid: 1afdec9a-1e35-425b-b10d-cf6353d3514c
-langcode: en
-status: true
-dependencies: {  }
-name: 'FAQ Tags'
-vid: faq_tags
-description: 'Terms for the Frequently Asked Questions'
-weight: -7

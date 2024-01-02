@@ -1,8 +1,0 @@
-uuid: b2bfcf48-5c6f-42d6-b3e4-15f64f1eb56f
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_publications_grou
-label: 'Publications Group comment'
-target_entity_type_id: node
-description: null

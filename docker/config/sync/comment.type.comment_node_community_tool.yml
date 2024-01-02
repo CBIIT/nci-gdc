@@ -1,8 +1,0 @@
-uuid: b07e121f-af60-48d0-8235-f824d505e4a1
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_community_tool
-label: 'Community Tool comment'
-target_entity_type_id: node
-description: null

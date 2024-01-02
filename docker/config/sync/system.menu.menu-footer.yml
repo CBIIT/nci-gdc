@@ -1,8 +1,0 @@
-uuid: 200a7290-f5fc-4b7c-8015-e1de50a3e3b7
-langcode: en
-status: true
-dependencies: {  }
-id: menu-footer
-label: Footer
-description: 'This is for migration to Drupal 9 only! recreation of the PHP footer for migration and use in the new D9 site'
-locked: false

@@ -1,8 +1,0 @@
-uuid: 7800c271-8410-4504-b3ec-d0a4e2930069
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_page_news
-label: 'Page for News comment'
-target_entity_type_id: node
-description: null

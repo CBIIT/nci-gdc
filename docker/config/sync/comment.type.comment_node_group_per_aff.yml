@@ -1,8 +1,0 @@
-uuid: 2290748e-33a8-474d-867b-807f06ab8108
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_group_per_aff
-label: 'Group Person Affiliation comment'
-target_entity_type_id: node
-description: null

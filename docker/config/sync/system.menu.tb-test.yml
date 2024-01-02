@@ -1,8 +1,0 @@
-uuid: d5a55c1e-5a27-4660-aa46-44921308cffb
-langcode: en
-status: true
-dependencies: {  }
-id: tb-test
-label: 'tb test'
-description: ''
-locked: false

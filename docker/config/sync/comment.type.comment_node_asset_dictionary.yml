@@ -1,8 +1,0 @@
-uuid: 2c873c6e-0b61-472d-ae8d-8a453493d101
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_asset_dictionary
-label: 'Asset - Dictionary comment'
-target_entity_type_id: node
-description: null

@@ -1,7 +1,0 @@
-uuid: 060d2c3a-6a1a-4b94-8efb-11cb323f8ad4
-langcode: en
-status: false
-dependencies: {  }
-formId: node_page_for_scientific_report_form
-captchaType: default
-label: node_page_for_scientific_report_form

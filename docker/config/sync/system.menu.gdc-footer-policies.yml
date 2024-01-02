@@ -1,8 +1,0 @@
-uuid: b2194316-4df6-4d42-99a5-6d3e17bd6ceb
-langcode: en
-status: true
-dependencies: {  }
-id: gdc-footer-policies
-label: 'GDC Footer Policies'
-description: 'GDC Footer Menu'
-locked: false

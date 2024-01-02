@@ -1,8 +1,0 @@
-uuid: d6b2e4c5-9848-4416-ac28-8fe86d785583
-langcode: en
-status: true
-dependencies: {  }
-name: 'Group Tag'
-vid: group_tag
-description: ''
-weight: -5

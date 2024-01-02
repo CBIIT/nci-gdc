@@ -1,8 +1,0 @@
-uuid: 940cd28d-253a-454c-8d5c-c04880f081e3
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_faq
-label: 'FAQ comment'
-target_entity_type_id: node
-description: null

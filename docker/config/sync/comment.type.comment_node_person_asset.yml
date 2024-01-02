@@ -1,8 +1,0 @@
-uuid: 836415f9-e1e3-4855-bea9-93b4355f6b44
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_person_asset
-label: 'Person Asset comment'
-target_entity_type_id: node
-description: null

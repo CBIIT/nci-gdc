@@ -1,8 +1,0 @@
-uuid: acdafe6c-548c-44e3-8ec8-879506ba8542
-langcode: en
-status: true
-dependencies: {  }
-name: 'Biography Tags'
-vid: biography_tags
-description: ''
-weight: -3

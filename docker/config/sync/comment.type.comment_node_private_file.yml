@@ -1,8 +1,0 @@
-uuid: 705d83f3-e56b-45e9-9721-21664407b50f
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_private_file
-label: 'Private File comment'
-target_entity_type_id: node
-description: null

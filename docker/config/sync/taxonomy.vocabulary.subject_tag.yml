@@ -1,8 +1,0 @@
-uuid: 534ff8ef-1ff6-419b-8896-c74d8fcdd3bd
-langcode: en
-status: true
-dependencies: {  }
-name: 'Subject Tag'
-vid: subject_tag
-description: 'Terms for main subjects on the website'
-weight: -9

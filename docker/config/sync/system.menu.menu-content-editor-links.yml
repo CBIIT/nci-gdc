@@ -1,8 +1,0 @@
-uuid: 96ff6504-488a-4073-99a9-e30fae7f4b95
-langcode: en
-status: true
-dependencies: {  }
-id: menu-content-editor-links
-label: 'Content Editor Links'
-description: 'Links for Content Editor Users'
-locked: false

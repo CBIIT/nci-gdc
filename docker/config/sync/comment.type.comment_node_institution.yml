@@ -1,8 +1,0 @@
-uuid: c0e7974b-c458-409f-92f3-1c07f028afd7
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_institution
-label: 'Institution comment'
-target_entity_type_id: node
-description: null

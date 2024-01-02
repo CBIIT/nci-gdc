@@ -1,8 +1,0 @@
-uuid: c0545442-4d37-4937-9ecc-4bf68164142c
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_campaign
-label: 'Campaign comment'
-target_entity_type_id: node
-description: null

@@ -1,8 +1,0 @@
-uuid: 0a25ec26-23f8-4968-9be1-052b4c6dc9ce
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_link
-label: 'Web Link comment'
-target_entity_type_id: node
-description: null

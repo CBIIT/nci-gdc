@@ -1,8 +1,0 @@
-uuid: 77c6e44e-5c81-493f-ba68-ceb0ff834362
-langcode: en
-status: true
-dependencies: {  }
-id: gdc-footer-applications
-label: 'GDC Footer Applications'
-description: 'Menu for Footer'
-locked: false

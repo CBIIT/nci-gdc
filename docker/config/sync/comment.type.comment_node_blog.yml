@@ -1,8 +1,0 @@
-uuid: 43fa7c36-e262-4c85-8768-45133cd70910
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_blog
-label: 'Blog entry comment'
-target_entity_type_id: node
-description: null
