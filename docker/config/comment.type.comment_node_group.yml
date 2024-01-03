@@ -1,0 +1,8 @@
+uuid: 479b4c67-1d74-4e64-886a-0c8726254563
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_group
+label: 'Group comment'
+target_entity_type_id: node
+description: null

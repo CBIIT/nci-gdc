@@ -1,0 +1,21 @@
+uuid: e428fc8f-7394-4d6c-8e8f-787f86f0b39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name_short
+    - node.type.institution
+id: node.institution.field_name_short
+field_name: field_name_short
+entity_type: node
+bundle: institution
+label: 'Name - Short Form'
+description: '1'
+required: true
+translatable: false
+default_value:
+  -
+    value: John
+default_value_callback: ''
+settings: {  }
+field_type: string

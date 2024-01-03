@@ -1,0 +1,8 @@
+uuid: d2c1158b-d003-48e3-8d63-bbdd9fa0e1b9
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_person
+label: 'Person comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,30 @@
+uuid: f5bf0aa9-ca1b-4d07-ab9b-da7ac12e279e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_ref
+    - node.type.biography
+    - node.type.person
+id: node.biography.field_person_ref
+field_name: field_person_ref
+entity_type: node
+bundle: biography
+label: Person
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

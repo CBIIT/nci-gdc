@@ -1,0 +1,21 @@
+uuid: b3091d54-f204-4fdb-a6b9-7c96707186ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_former
+    - node.type.person
+id: node.person.field_former
+field_name: field_former
+entity_type: node
+bundle: person
+label: Former
+description: 'Determines if a person is no longer with organization but still displayed on biography page'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

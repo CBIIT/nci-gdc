@@ -1,0 +1,8 @@
+uuid: 3ad86217-c7ef-4db5-adc0-c7f486e7e405
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Asset Tag'
+vid: person_asset_tag
+description: ''
+weight: -1

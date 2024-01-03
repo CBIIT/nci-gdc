@@ -1,0 +1,30 @@
+uuid: ea77a3a8-8f5c-4c5f-ac91-e4c70306fcac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e837c8bf-1640-4ace-9ab8-4d115c6daf80'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_homepagegdcandcancergenomics
+theme: gdc_foundation
+region: sidebar_first
+weight: -31
+provider: null
+plugin: 'block_content:e837c8bf-1640-4ace-9ab8-4d115c6daf80'
+settings:
+  id: 'block_content:e837c8bf-1640-4ace-9ab8-4d115c6daf80'
+  label: 'GDC and Cancer Genomics'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

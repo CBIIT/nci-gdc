@@ -1,0 +1,36 @@
+uuid: 31ddb699-480c-4045-b440-a2b29672d054
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.institution.comment_node_institution
+    - field.field.node.institution.field_assistant
+    - field.field.node.institution.field_institution_logo
+    - field.field.node.institution.field_institution_name
+    - field.field.node.institution.field_name_short
+    - field.field.node.institution.field_order
+    - field.field.node.institution.field_research_email
+    - field.field.node.institution.field_research_website
+    - node.type.institution
+  module:
+    - user
+id: node.institution.teaser
+targetEntityType: node
+bundle: institution
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_institution: true
+  field_assistant: true
+  field_institution_logo: true
+  field_institution_name: true
+  field_name_short: true
+  field_order: true
+  field_research_email: true
+  field_research_website: true

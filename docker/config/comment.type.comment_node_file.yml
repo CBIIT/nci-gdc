@@ -1,0 +1,8 @@
+uuid: f629fc7b-21eb-40cd-a5ec-62dd709d9dc9
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_file
+label: 'File comment'
+target_entity_type_id: node
+description: null

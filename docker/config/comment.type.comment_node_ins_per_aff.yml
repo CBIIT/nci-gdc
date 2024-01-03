@@ -1,0 +1,8 @@
+uuid: d897059d-0d37-4183-89a1-2c8c655643d3
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_ins_per_aff
+label: 'Institution Person Affiliation comment'
+target_entity_type_id: node
+description: null

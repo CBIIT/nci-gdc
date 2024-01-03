@@ -1,0 +1,19 @@
+uuid: d9159208-e345-4ab7-9206-aa6ea6491d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dept
+    - node.type.ins_per_aff
+id: node.ins_per_aff.field_dept
+field_name: field_dept
+entity_type: node
+bundle: ins_per_aff
+label: Department
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

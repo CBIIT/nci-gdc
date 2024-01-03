@@ -1,0 +1,17 @@
+uuid: 7288bf2e-3d29-4d4f-86e5-c572430066fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page for News'
+type: page_news
+description: 'Page for News'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

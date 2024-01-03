@@ -1,0 +1,21 @@
+uuid: 720d8544-d029-47e0-bb24-31079fe196b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree
+    - node.type.person
+  module:
+    - options
+id: node.person.field_degree
+field_name: field_degree
+entity_type: node
+bundle: person
+label: Degrees
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

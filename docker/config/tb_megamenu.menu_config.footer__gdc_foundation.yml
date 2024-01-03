@@ -1,0 +1,13 @@
+uuid: 36925c31-678b-43a6-a37c-f5308927e303
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gdc_foundation
+  menu:
+    - footer
+id: footer__gdc_foundation
+menu: footer
+theme: gdc_foundation
+block_config: '[]'
+menu_config: '[]'

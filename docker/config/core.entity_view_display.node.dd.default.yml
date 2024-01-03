@@ -1,0 +1,58 @@
+uuid: 622e690e-e636-40d4-bc19-e0fba9dabdc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_dd.default
+    - field.field.node.dd.comment_node_dd
+    - field.field.node.dd.field_bio
+    - field.field.node.dd.field_headline
+    - field.field.node.dd.field_image
+    - field.field.node.dd.field_link
+    - image.style.contributed_data_image
+    - node.type.dd
+  module:
+    - comment
+    - image
+    - text
+    - user
+id: node.dd.default
+targetEntityType: node
+bundle: dd
+mode: default
+content:
+  comment_node_dd:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_bio:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: contributed_data_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_headline: true
+  field_link: true

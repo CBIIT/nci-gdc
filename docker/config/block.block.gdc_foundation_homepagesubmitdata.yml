@@ -1,0 +1,30 @@
+uuid: 3aade408-6fcb-4699-a24c-c1524cb7c05f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:30d56c9c-ae43-49cd-a536-fec809332c11'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_homepagesubmitdata
+theme: gdc_foundation
+region: sidebar_first
+weight: -33
+provider: null
+plugin: 'block_content:30d56c9c-ae43-49cd-a536-fec809332c11'
+settings:
+  id: 'block_content:30d56c9c-ae43-49cd-a536-fec809332c11'
+  label: 'Submit Data'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

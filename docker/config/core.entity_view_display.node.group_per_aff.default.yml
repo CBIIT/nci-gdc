@@ -1,0 +1,67 @@
+uuid: ceec1aef-5537-4968-8d03-ad01142e71f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_group_per_aff.default
+    - field.field.node.group_per_aff.comment_node_group_per_aff
+    - field.field.node.group_per_aff.field_group_ref
+    - field.field.node.group_per_aff.field_person_ref
+    - field.field.node.group_per_aff.field_reserved_tag
+    - field.field.node.group_per_aff.field_role
+    - node.type.group_per_aff
+  module:
+    - comment
+    - user
+id: node.group_per_aff.default
+targetEntityType: node
+bundle: group_per_aff
+mode: default
+content:
+  comment_node_group_per_aff:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_group_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_person_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_reserved_tag:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_role:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

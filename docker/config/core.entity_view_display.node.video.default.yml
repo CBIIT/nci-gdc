@@ -1,0 +1,76 @@
+uuid: de4eec82-1ca4-49c6-976f-76c0c1da0200
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_video.default
+    - field.field.node.video.comment_node_video
+    - field.field.node.video.field_content_tag
+    - field.field.node.video.field_subject_tag
+    - field.field.node.video.field_video_id
+    - field.field.node.video.field_video_length
+    - field.field.node.video.field_video_title
+    - node.type.video
+  module:
+    - comment
+    - user
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  comment_node_video:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_content_tag:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subject_tag:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_video_length:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_video_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

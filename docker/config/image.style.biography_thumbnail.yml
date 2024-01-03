@@ -1,0 +1,15 @@
+uuid: a7cf61c0-8f02-4239-b578-a9181c3dfc21
+langcode: en
+status: true
+dependencies: {  }
+name: biography_thumbnail
+label: biography-thumbnail
+effects:
+  29ad4144-0f40-43cc-9f8a-99cf1a66604b:
+    uuid: 29ad4144-0f40-43cc-9f8a-99cf1a66604b
+    id: image_scale
+    weight: 1
+    data:
+      width: 137
+      height: null
+      upscale: true

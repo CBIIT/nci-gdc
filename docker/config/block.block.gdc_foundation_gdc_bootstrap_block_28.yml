@@ -1,0 +1,33 @@
+uuid: 014ea8f0-d7d1-4e28-b575-a4248f2a8ff4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:124feb09-52fd-43af-9e73-19185cafb748'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_28
+theme: gdc_foundation
+region: content
+weight: -16
+provider: null
+plugin: 'block_content:124feb09-52fd-43af-9e73-19185cafb748'
+settings:
+  id: 'block_content:124feb09-52fd-43af-9e73-19185cafb748'
+  label: 'Questions about Cancer?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /about-gdc/*
+      /node/158
+      /node/776

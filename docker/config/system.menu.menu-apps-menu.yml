@@ -1,0 +1,8 @@
+uuid: eef3fdc2-6645-4b2d-bf98-a9cb69601f49
+langcode: en
+status: true
+dependencies: {  }
+id: menu-apps-menu
+label: 'Apps Menu'
+description: ''
+locked: false

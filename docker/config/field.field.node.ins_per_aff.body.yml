@@ -1,0 +1,24 @@
+uuid: b545ef89-d416-4b49-ae20-cbb320c867de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ins_per_aff
+  module:
+    - text
+id: node.ins_per_aff.body
+field_name: body
+entity_type: node
+bundle: ins_per_aff
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

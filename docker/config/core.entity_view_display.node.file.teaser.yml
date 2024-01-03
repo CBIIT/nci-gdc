@@ -1,0 +1,32 @@
+uuid: 83b91bbd-6957-49ec-822b-b6115d4a21be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.file.comment_node_file
+    - field.field.node.file.field_content_tag
+    - field.field.node.file.field_creation_date
+    - field.field.node.file.field_file
+    - field.field.node.file.field_immediate_download
+    - field.field.node.file.field_mod_date
+    - field.field.node.file.field_photo
+    - field.field.node.file.field_subject_tag
+    - node.type.file
+  module:
+    - user
+id: node.file.teaser
+targetEntityType: node
+bundle: file
+mode: teaser
+content: {  }
+hidden:
+  comment_node_file: true
+  field_content_tag: true
+  field_creation_date: true
+  field_file: true
+  field_immediate_download: true
+  field_mod_date: true
+  field_photo: true
+  field_subject_tag: true
+  links: true

@@ -1,0 +1,64 @@
+uuid: c2d53bcb-b08d-40aa-80c3-988a9981b435
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_crg.default
+    - field.field.node.crg.comment_node_crg
+    - field.field.node.crg.field_bio
+    - field.field.node.crg.field_headline
+    - field.field.node.crg.field_image
+    - field.field.node.crg.field_link
+    - image.style.grid16-4
+    - node.type.crg
+  module:
+    - comment
+    - image
+    - text
+    - user
+id: node.crg.default
+targetEntityType: node
+bundle: crg
+mode: default
+content:
+  comment_node_crg:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_bio:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_headline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: grid16-4
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_link: true

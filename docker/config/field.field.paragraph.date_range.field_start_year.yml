@@ -1,0 +1,23 @@
+uuid: cee09ee5-9b3a-4671-aec9-0d08f8f44ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_start_year
+    - paragraphs.paragraphs_type.date_range
+id: paragraph.date_range.field_start_year
+field_name: field_start_year
+entity_type: paragraph
+bundle: date_range
+label: 'Start Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
