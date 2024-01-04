@@ -1,0 +1,30 @@
+uuid: cd6dfea3-975a-4a3d-918e-5c4ff13c189b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fa9171ee-f401-481e-9955-edebee7dcbab'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_56
+theme: olivero
+region: content
+weight: -27
+provider: null
+plugin: 'block_content:fa9171ee-f401-481e-9955-edebee7dcbab'
+settings:
+  id: 'block_content:fa9171ee-f401-481e-9955-edebee7dcbab'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /access-data/gdc-community-tools

@@ -1,0 +1,26 @@
+uuid: 90f7027e-592c-41a3-b5a1-7f6401f7a68c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pub_cat_tags
+    - node.type.publication
+    - taxonomy.vocabulary.publication_tag
+id: node.publication.field_pub_cat_tags
+field_name: field_pub_cat_tags
+entity_type: node
+bundle: publication
+label: 'Program Taxonomy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publication_tag: publication_tag
+    sort:
+      field: _none
+field_type: entity_reference

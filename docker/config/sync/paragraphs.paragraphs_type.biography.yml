@@ -1,0 +1,10 @@
+uuid: c771aced-fae2-48a0-903b-9a183ab433c7
+langcode: en
+status: true
+dependencies: {  }
+id: biography
+label: Biography
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

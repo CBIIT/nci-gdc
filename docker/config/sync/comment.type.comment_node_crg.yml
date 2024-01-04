@@ -1,0 +1,8 @@
+uuid: 4865dd0f-0779-4bba-895b-06c5327af200
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_crg
+label: 'Contributed Genomic Data for Cancer Research comment'
+target_entity_type_id: node
+description: null

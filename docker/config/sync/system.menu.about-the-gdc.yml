@@ -1,0 +1,8 @@
+uuid: 84b28e92-a24f-4f2d-9e6a-41013516c1a7
+langcode: en
+status: true
+dependencies: {  }
+id: about-the-gdc
+label: 'About the GDC'
+description: ''
+locked: false

@@ -1,0 +1,30 @@
+uuid: 76ff30a2-2643-4e42-a3fe-d9335a740cf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_ref
+    - node.type.group_per_aff
+    - node.type.person
+id: node.group_per_aff.field_person_ref
+field_name: field_person_ref
+entity_type: node
+bundle: group_per_aff
+label: Person
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

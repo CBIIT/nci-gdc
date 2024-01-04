@@ -1,0 +1,26 @@
+uuid: 02214dd4-6cbd-4326-b0dd-939731ce1460
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gdc_foundation
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: gdc_foundation_breadcrumbs
+theme: gdc_foundation
+region: header
+weight: -31
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/form/data-submission-request-form\r\n/form/data-submission-request-form/confirmation\r\n<front>"

@@ -1,0 +1,18 @@
+uuid: e2159ecd-41c7-4b73-93fa-919459d9e897
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: ''
+  pass: ''
+  host: mailfwd.nih.gov
+  port: 25
+  query:
+    verify_peer: false
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null

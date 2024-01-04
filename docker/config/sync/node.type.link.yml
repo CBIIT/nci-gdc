@@ -1,0 +1,18 @@
+uuid: aeb85be8-6033-4124-ac38-88d8be7b30f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Web Link'
+type: link
+description: 'Generic content type for links (URLs)'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

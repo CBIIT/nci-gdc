@@ -1,0 +1,34 @@
+uuid: e817cab0-aabc-492e-91e8-ab90ac638d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ins_per_aff.body
+    - field.field.node.ins_per_aff.comment_node_ins_per_aff
+    - field.field.node.ins_per_aff.field_dept
+    - field.field.node.ins_per_aff.field_ins_ref
+    - field.field.node.ins_per_aff.field_person_ref
+    - field.field.node.ins_per_aff.field_position
+    - node.type.ins_per_aff
+  module:
+    - user
+id: node.ins_per_aff.default
+targetEntityType: node
+bundle: ins_per_aff
+mode: default
+content:
+  field_position:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  comment_node_ins_per_aff: true
+  field_dept: true
+  field_ins_ref: true
+  field_person_ref: true
+  links: true

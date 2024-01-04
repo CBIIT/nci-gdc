@@ -1,0 +1,30 @@
+uuid: 47f1e1cd-ba62-48ae-9cad-8d404437e82f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dd.comment_node_dd
+    - field.field.node.dd.field_bio
+    - field.field.node.dd.field_headline
+    - field.field.node.dd.field_image
+    - field.field.node.dd.field_link
+    - node.type.dd
+  module:
+    - user
+id: node.dd.teaser
+targetEntityType: node
+bundle: dd
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_dd: true
+  field_bio: true
+  field_headline: true
+  field_image: true
+  field_link: true

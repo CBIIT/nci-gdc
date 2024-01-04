@@ -1,0 +1,40 @@
+uuid: a7d96fcf-c357-4aff-9749-5df1db57804f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.campaign.comment_node_campaign
+    - field.field.node.campaign.field_campaign_status
+    - field.field.node.campaign.field_google_doc_id_english
+    - field.field.node.campaign.field_google_doc_id_french
+    - field.field.node.campaign.field_group_ref
+    - field.field.node.campaign.field_removed_case_ids
+    - field.field.node.campaign.field_sent_by
+    - field.field.node.campaign.field_sent_english_count
+    - field.field.node.campaign.field_sent_french_count
+    - field.field.node.campaign.field_sent_on
+    - node.type.campaign
+  module:
+    - user
+id: node.campaign.teaser
+targetEntityType: node
+bundle: campaign
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_campaign: true
+  field_campaign_status: true
+  field_google_doc_id_english: true
+  field_google_doc_id_french: true
+  field_group_ref: true
+  field_removed_case_ids: true
+  field_sent_by: true
+  field_sent_english_count: true
+  field_sent_french_count: true
+  field_sent_on: true

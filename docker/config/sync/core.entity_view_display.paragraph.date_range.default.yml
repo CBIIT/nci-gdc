@@ -1,0 +1,32 @@
+uuid: 18247b4f-3e79-46bd-9230-2f55461bb4d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.date_range.field_end_year
+    - field.field.paragraph.date_range.field_start_year
+    - paragraphs.paragraphs_type.date_range
+id: paragraph.date_range.default
+targetEntityType: paragraph
+bundle: date_range
+mode: default
+content:
+  field_end_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_start_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,32 @@
+uuid: 3bacc25b-0ac4-41ee-a554-e42de07c6b2b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:61990f47-89a3-45e4-89ba-6b8b06aac18d'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: gdc_bootstrap_block_46
+theme: olivero
+region: content
+weight: -28
+provider: null
+plugin: 'block_content:61990f47-89a3-45e4-89ba-6b8b06aac18d'
+settings:
+  id: 'block_content:61990f47-89a3-45e4-89ba-6b8b06aac18d'
+  label: 'See our Data Model'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /about-data
+      /about-data/*

@@ -1,0 +1,22 @@
+uuid: b467170d-8d2f-40f7-b035-ce8a12029e53
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gdc_foundation
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: gdc_foundation_gdc_bootstrap_system_main
+theme: gdc_foundation
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

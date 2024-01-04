@@ -1,0 +1,30 @@
+uuid: 7b4898d2-2798-4ac7-8f02-b21dfbac28d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asset_ref
+    - node.type.asset_dictionary
+    - node.type.person_asset
+id: node.person_asset.field_asset_ref
+field_name: field_asset_ref
+entity_type: node
+bundle: person_asset
+label: Asset
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      asset_dictionary: asset_dictionary
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      test_field_behavior:
+        status: 0
+field_type: entity_reference

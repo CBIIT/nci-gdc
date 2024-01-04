@@ -1,0 +1,39 @@
+uuid: 161b6835-6670-43dc-9d90-db00161b5117
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:35d20652-ce28-4b75-999e-28ed77cd4abb'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - gdc_foundation
+id: gdc_foundation_gdc_bootstrap_block_47
+theme: gdc_foundation
+region: content
+weight: 5
+provider: null
+plugin: 'block_content:35d20652-ce28-4b75-999e-28ed77cd4abb'
+settings:
+  id: 'block_content:35d20652-ce28-4b75-999e-28ed77cd4abb'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      content_editor: content_editor
+  request_path:
+    id: request_path
+    negate: true
+    pages: /1

@@ -1,0 +1,36 @@
+uuid: 7d42c46c-e9e8-4e46-a2b8-609bc88f8429
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.submit-data
+  module:
+    - menu_block
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_submitdata
+theme: gdc_foundation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:submit-data'
+settings:
+  id: 'menu_block:submit-data'
+  label: 'Submit Data'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'submit-data:'
+  suggestion: submit_data
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/submit-data\r\n/submit-data/*"

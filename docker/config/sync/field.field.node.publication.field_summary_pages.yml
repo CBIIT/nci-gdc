@@ -1,0 +1,30 @@
+uuid: 2b6c8353-dab6-47db-9e58-49dec1ce8286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_pages
+    - node.type.publication
+    - node.type.publications_group
+id: node.publication.field_summary_pages
+field_name: field_summary_pages
+entity_type: node
+bundle: publication
+label: 'Summary Pages'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      publications_group: publications_group
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

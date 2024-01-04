@@ -1,0 +1,8 @@
+uuid: 7253a557-9337-4204-92b6-83e5cc7fc530
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_page_for_scientif
+label: 'Page for Scientific Report comment'
+target_entity_type_id: node
+description: null
