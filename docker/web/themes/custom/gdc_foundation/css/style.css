@@ -365,7 +365,7 @@ header form#search-block-form input:first-child() {
   height: 40px;
 }
 header form#search-block-form input.button, form#block-gdc-foundation-searchform--2 input.button{
-  background-color: #1779ba;
+  background-color: #007bbd;
   color: white;
   font-weight: bold;
   border-bottom-left-radius: 0px;
@@ -414,6 +414,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .button {
   border-radius: 3px;
+  background-color:#007bbd;
+}
+
+.button:hover {
+  background-color:#004971
 }
 .accordion-title {
     position: relative;
@@ -423,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0;
     font-size: 100%;
     line-height: 1;
-    color: #1779ba;
+    color: #007bbd;
 }
 
 .bef-checkboxes.bef-nested li {
