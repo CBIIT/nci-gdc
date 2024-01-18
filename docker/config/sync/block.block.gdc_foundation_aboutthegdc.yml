@@ -33,4 +33,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/about-gdc\r\n/about-gdc/*\r\n/content/gdc-data-model-0\r\n/content/variant-calling-gdc\r\n/content/selecting-common-cross-study-clinical-data-elements\r\n/content/gdc-overview\r\n/content/gdc-data-usage-statistics\r\n/content/gdc-collaborations-0\r\n/content/scientific-reports\r\n/content/gdc-data-model-components-0\r\n"
+    pages: "/about-gdc\r\n/about-gdc/*\r\n/gdc-resources\r\n/content/gdc-data-model-0\r\n/content/variant-calling-gdc\r\n/content/selecting-common-cross-study-clinical-data-elements\r\n/content/gdc-overview\r\n/content/gdc-data-usage-statistics\r\n/content/gdc-collaborations-0\r\n/content/scientific-reports\r\n/content/gdc-data-model-components-0\r\n"
