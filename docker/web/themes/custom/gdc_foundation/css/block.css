@@ -1,0 +1,73 @@
+/* block.css */
+/* Block Overrides */
+#main #sidebar-first .block.block-block-content,
+#main #sidebar-first nav {
+   background-color: white;
+   padding:0px; /* Reset padding.  Set it later based on type */
+   border: 1px solid grey;
+   border-radius: 8px;
+   margin-bottom: 20px;
+}
+#main #sidebar-first .block.block-block-content div {
+  padding: 10px;
+}
+#main .block.block-block-content .h4,
+#sidebar-first nav h2 {
+  display: inline-block;
+  border-bottom: 1px solid #c5c3c4;
+  font-size: 1.5rem;
+  color:#6b6262;
+  font-size: 1.5rem;
+}
+#main .block.block-block-content img {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  float: right;
+  margin-top: -55px;
+  vertical-align: middle;
+}
+/* Front Page blocks with image */
+#block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content {
+  margin-bottom:0px; 
+}
+.body.field.field--block-content-body p,
+.body.field.field--block-content-body ul,
+.body.field.field--block-content-body ol {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.body.field.field--block-content-body ul {
+  margin-left: 0;
+  padding: 0;
+}
+#main #sidebar-first .body.field.field--block-content-body li {
+  margin-left: 0px;
+  list-style: none;
+  background: url('https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/images/bullet-more-fa.png') left 0.0813em no-repeat;
+  margin: 0 0 0.1625em;
+  padding: 0 0 0 22px;
+}
+
+/* This is one block.  We want to do this to all blocks in the sidebar */
+#block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content {
+    margin: 0px;
+    padding: 0px;
+}
+#block-gdc-foundation-homepagegdcandcancergenomics div {
+  padding:10px;
+  background-color: white;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+#main #block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content .h4 {
+  color: white;
+  width:100%;
+  background-color:#004971;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+
+}

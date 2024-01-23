@@ -1,6 +1,6 @@
 uuid: 0dc700b0-5c1c-444b-bb09-f1c2fc03df30
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:d98ba60c-3965-40cf-9fed-538e761f370d'
@@ -11,8 +11,8 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_gdc_bootstrap_block_27
 theme: gdc_foundation
-region: content
-weight: -13
+region: sidebar_first
+weight: -24
 provider: null
 plugin: 'block_content:d98ba60c-3965-40cf-9fed-538e761f370d'
 settings:
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '/about-gdc/*'
+    pages: "/about-gdc\r\n/about-gdc/*"

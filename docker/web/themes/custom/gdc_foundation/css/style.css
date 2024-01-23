@@ -158,55 +158,6 @@ a#gdc-apps:before {
   float: right;
 }
 
-/* Block Overrides */
-#main .block.block-block-content,
-#sidebar-first nav {
-   background-color: white;
-   padding:20px;
-   border: 1px solid grey;
-   border-radius: 8px;
-   margin-bottom: 20px;
-}
-
-#main .block.block-block-content .h4,
-#sidebar-first nav h2 {
-  display: inline-block;
-  border-bottom: 1px solid #c5c3c4;
-  font-size: 1.5rem;
-  color:#6b6262;
-  font-size: 1.5rem;
-}
-#main .block.block-block-content img {
-  position: relative;
-  display: inline-block;
-  height: 50px;
-  float: right;
-  margin-top: -55px;
-  vertical-align: middle;
-}
-
-/* Front Page blocks with image */
-#block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content {
-  margin-bottom:0px; 
-}
-.body.field.field--block-content-body p,
-.body.field.field--block-content-body ul,
-.body.field.field--block-content-body ol {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-.body.field.field--block-content-body ul {
-  margin-left: 0;
-  padding: 0;
-}
-#main .body.field.field--block-content-body li {
-  margin-left: 0px;
-  list-style: none;
-  background: url('https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/images/bullet-more-fa.png') left 0.0813em no-repeat;
-  margin: 0 0 0.1625em;
-  padding: 0 0 0 22px;
-}
 /* Search page overrides */
 #main ol li::marker {
   content: '' !important;
@@ -457,11 +408,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .ombmodal {
-	font-size:75%;
+  font-size:75%;
 }
 
 h5.blockTitle {
-color:red;
+  color:red;
 }
 
      
@@ -471,16 +422,6 @@ color:red;
         float:right;
         padding:4px !important;
         margin-left:10px;
-}
-#block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content {
-    margin: 0px;
-    padding: 0px;
-}
-#block-gdc-foundation-homepagegdcandcancergenomics div {
-  padding:10px;
-  background-color: white;
-  border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
 }
 #main #block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content .h4 {
   color: white;

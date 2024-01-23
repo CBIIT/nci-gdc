@@ -1,0 +1,36 @@
+uuid: 906f321f-0c8e-44b1-84df-ea51f88cd596
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.support
+  module:
+    - menu_block
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_support
+theme: gdc_foundation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:support'
+settings:
+  id: 'menu_block:support'
+  label: Support
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'support:'
+  suggestion: support
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/support/*\r\n/support"

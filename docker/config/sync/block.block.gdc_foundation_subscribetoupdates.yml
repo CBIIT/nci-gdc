@@ -1,0 +1,30 @@
+uuid: aa176613-8096-4442-9a51-409575a8c800
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:46a4c40a-ca22-425b-83c1-8ac759c1e25f'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_subscribetoupdates
+theme: gdc_foundation
+region: sidebar_first
+weight: -25
+provider: null
+plugin: 'block_content:46a4c40a-ca22-425b-83c1-8ac759c1e25f'
+settings:
+  id: 'block_content:46a4c40a-ca22-425b-83c1-8ac759c1e25f'
+  label: 'Subscribe to Updates'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/about-gdc\r\n/about-gdc/*"
