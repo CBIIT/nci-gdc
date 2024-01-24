@@ -31,17 +31,19 @@
 #}
 
 <div class="col1">             
-    <div>{{ fields['title'].content }}</div>
+    <div><h5 class="redTitle">{{ fields['title'].content }}</h5></div>
     <div>{{ fields['field_date2'].content }}</div>
     <div>{{ fields['field_date2_1'].content }}</div>
     <div>{{ fields['field_location'].content }}</div> 
 </div>
 <div class="col2">
-   <iframe title="Video: {{ fields['title_1'].content }}" src="{{ fields['field_video_id'].content|render|striptags|trim }}" frameborder="0" allowfullscreen=""></iframe>
-   video title:{{ fields['title_1'].content }}
-   230,125
-{{ fields['field_video_id'].content|render|striptags|trim }}
+   <iframe title="Video: {{ fields['title_1'].content }}" width="225px"  src="{{ fields['field_video_id'].content|render|striptags|trim }}" frameborder="0" allowfullscreen=""></iframe>
 </div>   
 <div>
+    <br />
     {{ fields['field_abstract'].content }}
-</div> 
+</div>
+<div>
+    {{ fields['view_node'].content }}
+</div>
+<br /> 

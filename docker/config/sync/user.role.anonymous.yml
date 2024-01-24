@@ -23,6 +23,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'post comments'
   - 'search content'
   - 'use text format markdown'
   - 'use text format php_code'

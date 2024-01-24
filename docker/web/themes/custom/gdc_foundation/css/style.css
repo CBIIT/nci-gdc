@@ -433,3 +433,25 @@ h5.blockTitle {
   border-bottom-right-radius: 0rem;
 
 }
+
+.col1, .col2 {
+	display:inline-block;
+	vertical-align:top;
+}
+
+.col1 {
+	width:450px;
+}
+
+.col2 {
+	width:230px;
+	float:right;
+}
+
+.redTitle{
+	color:#BB0D3D !important;
+}
+
+h5.redTitle {
+  padding-top:10px !important;
+}
