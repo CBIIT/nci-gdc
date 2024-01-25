@@ -13,7 +13,7 @@ else
     chown -R www-data:www-data web
     echo "changing ownership of web to www-data"
     drush cr
-    cat web/sites/default/settings.php
+fi
+cat web/sites/default/settings.php
 echo "starting apache"
-
 apache2-foreground
