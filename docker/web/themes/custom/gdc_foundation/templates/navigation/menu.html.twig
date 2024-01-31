@@ -36,7 +36,6 @@
     <ul {{ attributes.addClass('menu', primary_nav_level) }}>
       {% set attributes = attributes.removeClass(primary_nav_level) %}
       {% for item in items %}
-
         {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
           {% set menu_item_type = 'nolink' %}
         {% elseif item.url.isRouted and item.url.routeName == '<button>' %}

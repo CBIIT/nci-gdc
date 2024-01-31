@@ -74,7 +74,6 @@ module:
   path_alias: 0
   phpass: 0
   recaptcha: 0
-  s3fs: 0
   search: 0
   security_review: 0
   serialization: 0
