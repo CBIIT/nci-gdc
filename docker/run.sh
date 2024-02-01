@@ -52,7 +52,7 @@ else
 
     # Run Python database fix script
     python3 fixes/db_fix.py $migrate_db_name $db_user $db_password $db_host $db_port
-
+    drush en redirect
     # Run Drupal migrate-upgrade
     drush migrate-upgrade --legacy-db-key='migrate' --legacy-root='$site_path/files'
 
@@ -92,6 +92,7 @@ else
     rm -rf $site_path/content/sync/files
 
     # Export configuration again
+
     drush cse -y
 
     # Create a tarball of content
