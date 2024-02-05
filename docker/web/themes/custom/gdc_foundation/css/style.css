@@ -457,6 +457,8 @@ h5.redTitle {
 }
 
 .youtube_headline {
-  background-color:red;
+  background-color:#E5E3E4;
+  font-style:italic !important;
+  padding:15px;
 }
 
