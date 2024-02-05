@@ -1,0 +1,24 @@
+uuid: 15b59d9d-cc8c-40b3-a6d4-6f9cbb99635b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_headline
+    - filter.format.filtered_html
+    - node.type.video
+  module:
+    - text
+id: node.video.field_headline
+field_name: field_headline
+entity_type: node
+bundle: video
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+field_type: text_long

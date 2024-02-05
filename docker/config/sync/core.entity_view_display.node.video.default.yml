@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment_node_video.default
     - field.field.node.video.comment_node_video
     - field.field.node.video.field_content_tag
+    - field.field.node.video.field_headline
     - field.field.node.video.field_subject_tag
     - field.field.node.video.field_video_id
     - field.field.node.video.field_video_length
@@ -13,6 +14,7 @@ dependencies:
     - node.type.video
   module:
     - comment
+    - text
     - user
 id: node.video.default
 targetEntityType: node
@@ -35,6 +37,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_headline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
     region: content
   field_subject_tag:
     type: entity_reference_label
