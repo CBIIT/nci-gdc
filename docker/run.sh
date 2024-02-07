@@ -5,6 +5,7 @@ if [ -f "$FILE" ]; then
 else
     touch installed.txt
     cp $code_path/docker/composer.lock ./ 
+    cp $code_path/docker/composer.json ./
     cp -r $code_path/docker/web ./
     composer config --no-plugins allow-plugins.cweagans/composer-patches true
     composer install
