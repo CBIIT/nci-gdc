@@ -5,3 +5,4 @@ admin_theme: false
 roles_profiles:
   administrator:
     public: admin
+    s3: admin
