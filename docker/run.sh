@@ -18,4 +18,5 @@ cat web/sites/default/settings.php
 echo $s3_access_key
 echo $s3_secret_key
 echo "starting apache"
+drush cr
 apache2-foreground
