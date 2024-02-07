@@ -6,6 +6,7 @@ else
     touch installed.txt
     cp $code_path/docker/composer.lock ./ 
     cp -r $code_path/docker/web ./
+    composer config --no-plugins allow-plugins.cweagans/composer-patches true
     composer install
     cp web/sites/default/default.settings.php web/sites/default/settings.php
     cat $code_path/docker/settings.php.patch >> web/sites/default/settings.php
