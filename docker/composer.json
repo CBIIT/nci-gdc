@@ -40,7 +40,7 @@
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "^2.0@alpha",
         "drupal/mailsystem": "^4.4",
-        "drupal/markdown": "^3.0",
+        "drupal/markdown": "^3.0.1",
         "drupal/menu_block": "^1.10",
         "drupal/message_banner": "^2.0",
         "drupal/migrate_plus": "^6.0",
@@ -88,11 +88,12 @@
         "sort-packages": true
     },
     "extra": {
-        "patches": {                
-                "drupal/markdown": { 
-                "Issue 2024-01-04": "https://git.drupalcode.org/project/markdown/-/merge_requests/29.diff"
-                }                     
-        },       
+
+    	"patches": {
+        	"drupal/markdown": {
+            	"Issue 2024-01-04": "https://www.drupal.org/files/issues/2024-01-04/subformstate-incorrect-interface-error-3409277-4.patch"
+        	}
+    	},
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
