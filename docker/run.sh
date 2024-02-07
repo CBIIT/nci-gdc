@@ -5,12 +5,14 @@ if [ -f "$FILE" ]; then
 else
     touch installed.txt
     cp $code_path/docker/composer.lock ./ 
+    cp $code_path/docker/composer.json ./
     cp -r $code_path/docker/web ./
     composer config --no-plugins allow-plugins.cweagans/composer-patches true
     composer install
     composer update -y
     cp web/sites/default/default.settings.php web/sites/default/settings.php
     cat $code_path/docker/settings.php.patch >> web/sites/default/settings.php
+    cat $code_path/docker/htaccess.patch >> web/.htaccess
     mv content_sync web/modules/contrib
     chown -R www-data:www-data web
     echo "changing ownership of web to www-data"

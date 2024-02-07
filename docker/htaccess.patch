@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>   
+  RewriteCond %{REQUEST_FILENAME} !-f                                           
+  RewriteRule ^files/(.*)$ https://gdc-public-files.s3.amazonaws.com/prod/$1 [L,R=301]
+</IfModule>
