@@ -6,7 +6,7 @@ dependencies:
     - markdown
 name: Markdown
 format: markdown
-weight: -6
+weight: -7
 filters:
   markdown:
     id: markdown

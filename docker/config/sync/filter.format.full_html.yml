@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 name: 'Full Html'
 format: full_html
-weight: 0
+weight: -10
 filters:
   filter_autop:
     id: filter_autop

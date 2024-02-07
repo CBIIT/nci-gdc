@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 name: 'Filtered HTML'
 format: filtered_html
-weight: -10
+weight: -9
 filters:
   filter_autop:
     id: filter_autop
