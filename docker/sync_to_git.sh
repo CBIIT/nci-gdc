@@ -22,7 +22,7 @@ rm -r /tmp/gdc/docker/web/modules/custom/*
 cp -pr /var/www/drupal/web/modules/custom /tmp/gdc/docker/web/modules/
 
 echo "Save other files"
-cp -p /var/www/drupal/web/sites/default/files/GDC_LOGO.svg /tmp/gdc/docker/web/sites/default/files/.
+#cp -p /var/www/drupal/web/sites/default/files/GDC_LOGO.svg /tmp/gdc/docker/web/sites/default/files/.
 
 echo "*** Git Sync Completed"
 

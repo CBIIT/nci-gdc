@@ -21,7 +21,7 @@
         "drupal/asset_injector": "^2.19",
         "drupal/backup_migrate": "^5.0",
         "drupal/better_exposed_filters": "^6.0",
-        "drupal/core": "^10.1",
+        "drupal/core": "^10.2",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.1",
