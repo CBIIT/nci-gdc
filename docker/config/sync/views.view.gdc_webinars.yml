@@ -825,22 +825,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_date2_value:
+          id: field_date2_value
+          table: node__field_date2
+          field: field_date2_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          plugin_id: standard
           order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
       arguments: {  }
       filters:
         status:
@@ -889,7 +886,7 @@ display:
           group_type: group
           admin_label: 'field_youtube_video: Content'
           plugin_id: standard
-          required: true
+          required: false
       header:
         area:
           id: area

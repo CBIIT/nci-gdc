@@ -1,11 +1,19 @@
 uuid: c8bf7b37-76d9-4e9a-8c41-aa5e17c4c911
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_embed
 name: 'Full Html'
 format: full_html
 weight: -10
 filters:
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: 100
+    settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
@@ -21,16 +29,10 @@ filters:
       allowed_html: '<h5 class="blockTitle">'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: true
-    weight: 10
-    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: true
     weight: 0
     settings:
-      filter_url_length: 72
+      filter_url_length: 200

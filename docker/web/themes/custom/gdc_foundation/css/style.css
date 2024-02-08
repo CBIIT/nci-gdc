@@ -462,3 +462,6 @@ h5.redTitle {
   padding:15px;
 }
 
+.embedded-entity .node-title {
+display:none;
+}

@@ -15,11 +15,14 @@ module:
   book: 0
   breakpoint: 0
   captcha: 0
+  ckeditor: 0
   ckeditor5: 0
   comment: 0
   config: 0
   contact: 0
+  content_sync: 0
   contextual: 0
+  crop: 0
   ctools: 0
   custom_view_filters: 0
   datetime: 0
@@ -31,6 +34,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   embed: 0
+  entity_autocomplete_plus: 0
   entity_embed: 0
   entity_reference_revisions: 0
   field: 0
@@ -53,7 +57,6 @@ module:
   layout_discovery: 0
   libraries: 0
   link: 0
-  linkchecker: 0
   mailsystem: 0
   markdown: 0
   menu_block: 0
@@ -74,6 +77,7 @@ module:
   path_alias: 0
   phpass: 0
   recaptcha: 0
+  redirect: 0
   s3fs: 0
   search: 0
   security_review: 0
@@ -100,6 +104,7 @@ module:
   webform: 0
   webform_ui: 0
   weight: 0
+  ds: 1
   extlink: 1
   pathauto: 1
   views: 10

@@ -70,42 +70,41 @@
 
 <article{{ attributes }}>
     <div>
-        <div><B>Date: </B>{{ node.field_date2.value|date('l, F j, Y') }}</div>
-        <div><B>Time: </B>{{ node.field_date2.value|date('g:i A') }} - {{ node.field_end_date.value|date('g:i A') }}</div>
-        <div><B>Location: </B>{{ node.field_location.value }}</div>
+        <div><b>Date: </b>{{ node.field_date2.value|date('l, F j, Y') }}</div>
+        <div><b>Time: </b>{{ node.field_date2.value|date('g:i A') }} - {{ node.field_end_date.value|date('g:i A') }}</div>
+        <div><b>Location: </b>{{ node.field_location.value }}</div>
         <div>
-            <B>Speakers: </B>
+            <b>Speakers: </b>
             {% for speaker_item in node.field_speaker_ref %}
                 <div style="padding-left: 20px;">
                     {% set speaker_entity = speaker_item.entity %}
                     {% set person_entity = speaker_entity.field_person_ref.entity %}
                     {% set ins_entity = speaker_entity.field_ins_ref.entity %}
-                    <B>
+                    <b>
                         {% if person_entity.field_person_title.value %}
                             {{ person_entity.field_person_title.value|capitalize }}.
                         {% endif %}
-                        {{ person_entity.title.value }},
-                    </B> {{ speaker_entity.field_position.value }}, {{ ins_entity.title.value }}
+                        {{ person_entity.title.value }}, {{ speaker_entity.field_position.value }}, {{ ins_entity.title.value }}
+                    </b>
                 </div>
             {% endfor %}
         </div>
     </div>
-   <br /> 
-   <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
-        {% for youtube_item in node.field_youtube_video %}
+    {% for youtube_item in node.field_youtube_video %}
+        <br />
+        <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
             {% set video = youtube_item.entity %}
             <iframe style="position: absolute; width: 100%; height: 100%;" title="Video: {{ video.field_video_title.value }}" src="https://youtube.com/embed/{{ video.field_video_id.value }}" frameborder="0" allowfullscreen=""></iframe>
-     {% endfor %}
-    </div>
-  <div class="youtube_headline">
-{% for youtube_item in node.field_youtube_video %}                
+        </div>
+    {% endfor %}
+    {% for youtube_item in node.field_youtube_video %}
+        <div class="youtube_headline">
             {% set video = youtube_item.entity %}
-             {{ video.field_headline.value|raw }} 
-   {% endfor %}  
-  </div>
+            {{ video.field_headline.value|raw }}
+        </div>
     <br />
-     
-  <div>
+    {% endfor %}
+    <div>
         <h5 class="redTitle">Intended Audience</h5>
         {{ node.field_intended_audience.value|raw }}
     </div>

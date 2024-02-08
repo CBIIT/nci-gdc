@@ -6,12 +6,7 @@ dependencies:
     - field.storage.node.body
     - node.type.faq
   module:
-    - linkchecker
     - text
-third_party_settings:
-  linkchecker:
-    scan: true
-    extractor: html_link_extractor
 id: node.faq.body
 field_name: body
 entity_type: node

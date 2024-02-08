@@ -2,6 +2,34 @@ uuid: 9c134c23-7d08-46d6-b498-d8b30c52087c
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.article
+    - node.type.asset_dictionary
+    - node.type.biography
+    - node.type.blog
+    - node.type.book
+    - node.type.campaign
+    - node.type.community_tool
+    - node.type.crg
+    - node.type.dd
+    - node.type.faq
+    - node.type.group
+    - node.type.group_per_aff
+    - node.type.image
+    - node.type.ins_per_aff
+    - node.type.institution
+    - node.type.link
+    - node.type.page
+    - node.type.page_for_scientific_report
+    - node.type.page_news
+    - node.type.person
+    - node.type.person_asset
+    - node.type.private_file
+    - node.type.publication
+    - node.type.publications_group
+    - node.type.video
+    - node.type.webform
+    - node.type.webinar
   module:
     - entity_embed
     - node
@@ -12,7 +40,36 @@ id: node
 type_id: entity
 type_settings:
   entity_type: node
-  bundles: {  }
+  bundles:
+    - article
+    - asset_dictionary
+    - biography
+    - blog
+    - book
+    - campaign
+    - community_tool
+    - crg
+    - dd
+    - faq
+    - group
+    - group_per_aff
+    - image
+    - institution
+    - ins_per_aff
+    - page
+    - page_news
+    - page_for_scientific_report
+    - person
+    - person_asset
+    - private_file
+    - publication
+    - publications_group
+    - link
+    - webform
+    - webinar
+    - video
   display_plugins: {  }
+  entity_browser: ''
+  entity_browser_settings: {  }
 icon: {  }
 icon_uuid: null
