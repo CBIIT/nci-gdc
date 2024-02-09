@@ -31,14 +31,14 @@
 #block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content {
   margin-bottom:0px; 
 }
-.body.field.field--block-content-body p,
-.body.field.field--block-content-body ul,
-.body.field.field--block-content-body ol {
+#main #sidebar-first .body.field.field--block-content-body p,
+#main #sidebar-first .body.field.field--block-content-body ul,
+#main #sidebar-first .body.field.field--block-content-body ol {
     font-size: 1em;
     line-height: 1.5;
 }
 
-.body.field.field--block-content-body ul {
+#main #sidebar-first .body.field.field--block-content-body ul {
   margin-left: 0;
   padding: 0;
 }
