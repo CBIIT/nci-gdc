@@ -32,7 +32,7 @@ filters:
   filter_url:
     id: filter_url
     provider: filter
-    status: true
+    status: false
     weight: 0
     settings:
       filter_url_length: 200
