@@ -151,5 +151,10 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    }
+    },
+    "scripts": {                             
+        "post-drupal-scaffold-cmd": [
+            "cd web && patch < htaccess.patch .htaccess"
+         ]                                    
+}        
 }
