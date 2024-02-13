@@ -1,11 +1,10 @@
---- .htaccess	2024-02-13 22:15:33.805551864 +0000
-+++ htaccess	2024-02-13 22:30:01.977965666 +0000
-@@ -59,7 +59,9 @@
+--- .htaccess   2024-02-13 22:57:30.949254877 +0000
++++ htaccess    2024-02-13 23:05:22.943189387 +0000
+@@ -59,7 +59,8 @@
  # Various rewrite rules.
  <IfModule mod_rewrite.c>
    RewriteEngine on
 -
-+  RewriteEngine on
 +  RewriteCond %{REQUEST_FILENAME} !-f
 +  RewriteRule ^files/(.+)$ https://gdc-public-files.s3.amazonaws.com/prod/$1 [L,R=301]
    # Set "protossl" to "s" if we were accessed via https://.  This is used later
