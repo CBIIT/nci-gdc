@@ -17,10 +17,8 @@ else
     drush cr
 fi
 cat web/sites/default/settings.php
-cp $code_path/docker/htaccess.patch web
 echo $s3_access_key
 echo $s3_secret_key
 echo "starting apache"
 drush cr
-patch web/.htaccess < web/htaccess.patch
 apache2-foreground
