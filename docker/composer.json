@@ -39,6 +39,7 @@
         "drupal/foundation_sites": "^2.0",
         "drupal/imce": "^3.0",
         "drupal/jquery_ui": "^1.6",
+        "drupal/layout_builder_styles": "^2.0",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "^2.0@alpha",
         "drupal/mailsystem": "^4.4",
@@ -152,9 +153,10 @@
             ]
         }
     },
-    "scripts": {                             
+    "scripts": {
         "post-drupal-scaffold-cmd": [
             "cd web && patch < htaccess.patch .htaccess"
-         ]                                    
-}        
+         ]
+}
+
 }
