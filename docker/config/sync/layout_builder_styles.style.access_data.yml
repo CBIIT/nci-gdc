@@ -1,0 +1,12 @@
+uuid: 5d3051c9-fa64-4857-b3ef-68cb8b8207f0
+langcode: en
+status: true
+dependencies: {  }
+id: access_data
+label: 'Access data'
+classes: layout-gray-background
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

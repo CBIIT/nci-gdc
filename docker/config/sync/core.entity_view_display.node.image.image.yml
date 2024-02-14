@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.image.field_content_tag
     - field.field.node.image.field_image
     - field.field.node.image.field_subject_tag
+    - image.style.medium
     - node.type.image
   module:
     - image
@@ -27,7 +28,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }

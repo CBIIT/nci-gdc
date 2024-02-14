@@ -472,3 +472,19 @@ display:none;
 	overflow: hidden;
 	height: 1px;
 }
+
+#date-created-updated {
+  font-size:85%;
+}
+
+.layout__region.layout__region--second {
+	padding-left:25px;
+}
+
+
+.layout-gray-background
+{
+  background-color:#E8E6E7;
+  padding:10px;
+}
+
