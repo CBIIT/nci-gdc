@@ -7,6 +7,7 @@ else
     cp $code_path/docker/composer.lock ./ 
     cp $code_path/docker/composer.json ./
     cp -r $code_path/docker/web ./
+    cp $code_path/docker/htaccess.patch ./web 
     composer config --no-plugins allow-plugins.cweagans/composer-patches true
     composer install
     cp web/sites/default/default.settings.php web/sites/default/settings.php
