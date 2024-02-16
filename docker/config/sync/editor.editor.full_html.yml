@@ -122,6 +122,9 @@ settings:
         -
           label: 'Block Title3'
           element: '<h5 class="blockTitle">'
+        -
+          label: 'Table Blue Background'
+          element: '<table class="bluebackground">'
 image_upload:
   status: true
   scheme: public

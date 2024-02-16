@@ -1,4 +1,4 @@
-uuid: 69614213-96b8-417b-adfe-112510b64ce8
+uuid: af437b6d-a293-42d7-9566-ebaafbaac5b0
 langcode: en
 status: true
 dependencies:
@@ -6,17 +6,17 @@ dependencies:
     - field.storage.node.body
     - node.type.faq
     - taxonomy.vocabulary.subject_tag
+  content:
+    - 'taxonomy_term:subject_tag:ca28e1c1-41a4-4b6e-8a08-97b37ce924f0'
   module:
-    - better_exposed_filters
     - node
     - taxonomy
     - text
     - user
-    - views_accordion_foundation
-id: faqs
-label: FAQs
+id: faqs_submit_data
+label: 'FAQs Submit Data'
 module: views
-description: 'Displays FAQs for the GDC Website'
+description: ''
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'GDC FAQs'
+      title: 'FAQ - Submit Data'
       fields:
         title:
           id: title
@@ -36,14 +36,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<h3>{{ title }}</h3>'
             make_link: false
             path: ''
             absolute: false
@@ -59,8 +57,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -138,7 +136,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -157,67 +155,42 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: none
+        type: some
         options:
           offset: 0
-          items_per_page: 0
+          items_per_page: 1
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Apply
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: 'Select any filter and click on Apply to see results'
-          text_input_required_format: filtered_html
-          bef:
-            general:
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: false
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              secondary_open: false
-              reset_button_always_show: true
-            filter:
-              field_subject_tag_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
       access:
         type: perm
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        random:
+          id: random
+          table: views
+          field: random
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          plugin_id: random
           order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
       arguments: {  }
       filters:
         status:
@@ -240,6 +213,7 @@ display:
           plugin_id: bundle
           value:
             faq: faq
+          group: 1
         field_subject_tag_target_id:
           id: field_subject_tag_target_id
           table: node__field_subject_tag
@@ -249,27 +223,24 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            - 48
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_subject_tag_target_id_op
-            label: Category
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_subject_tag_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_subject_tag_target_id
+            identifier: ''
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              security_scans: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -285,37 +256,18 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: subject_tag
-          type: select
-          hierarchy: true
+          type: textfield
+          hierarchy: false
           limit: true
           error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
-        type: views_accordion_foundation
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          row-start-open: none
-          multi-expand: 1
-          allow-all-closed: 1
-          tabs-small: 0
-          tabs-medium: 0
-          tabs-large: 0
-          disabled: 0
-          deep-link: 0
-          deep-link-smudge: 0
-          deep-link-smudge-delay: 300
-          deep-link-update-history: 0
-          slide-speed: 250
-          wrapper_class: ''
-          class: ''
+        type: default
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       query:
         type: views_query
         options:
@@ -326,14 +278,42 @@ display:
           query_tags: {  }
       relationships: {  }
       header: {  }
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<a href="/about-gdc/gdc-faqs?field_subject_tag_target_id[]=48">See all Data Submission FAQs</a>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -342,16 +322,15 @@ display:
     id: page_1
     display_title: Page
     display_plugin: page
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
-      path: about-gdc/gdc-faqs
+      path: faq-access-data
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:

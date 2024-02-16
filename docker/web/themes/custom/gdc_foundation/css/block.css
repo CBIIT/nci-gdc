@@ -3,7 +3,7 @@
 #main #sidebar-first .block.block-block-content,
 #main #sidebar-first nav {
    background-color: white;
-   padding:0px; /* Reset padding.  Set it later based on type */
+   padding:10px; /* Reset padding.  Set it later based on type */
    border: 1px solid grey;
    border-radius: 8px;
    margin-bottom: 20px;

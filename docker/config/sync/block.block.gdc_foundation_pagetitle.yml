@@ -9,7 +9,7 @@ dependencies:
 id: gdc_foundation_pagetitle
 theme: gdc_foundation
 region: content
-weight: -32
+weight: -37
 provider: null
 plugin: page_title_block
 settings:

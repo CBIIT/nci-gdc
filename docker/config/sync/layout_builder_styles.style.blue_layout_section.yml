@@ -1,10 +1,10 @@
-uuid: 5d3051c9-fa64-4857-b3ef-68cb8b8207f0
+uuid: 2bbb333e-c4c9-46e8-99e5-843cf3cf9fd2
 langcode: en
 status: true
 dependencies: {  }
-id: access_data
-label: 'Gray Layout Section'
-classes: layout-gray-background
+id: blue_layout_section
+label: 'Blue Layout Section'
+classes: layout-blue-background
 type: section
 group: default
 block_restrictions: {  }

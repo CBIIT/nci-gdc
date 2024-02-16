@@ -32,7 +32,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<h5 class="blockTitle">'
+      allowed_html: '<h5 class="blockTitle"> <table class="bluebackground">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_url:
