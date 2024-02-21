@@ -609,41 +609,37 @@ table.dataTypesFileFormats tr.odd td {
 }
 /* Adding font awesome icons to both tb_menu and sub menus */
 /* Twitter and Linkin icon*/
-/*
+
 nav#tbm-main:not(.tbm--mobile) ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(7) .tbm-row .tbm-column:nth-child(4) ul.tbm-subnav.level-2.items-2 li.tbm-item.level-3:first-child div.tbm-link-container:nth-child(1) a:before {
   font-family: FontAwesome;
   content: "\e61b";
   margin-left: 5px;
 }
-*/
+
 /* Linked In */
-/*
 nav#tbm-main:not(.tbm--mobile) ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(8) .tbm-row .tbm-column:nth-child(2) ul.tbm-subnav.level-2.items-2 li.tbm-item.level-3:nth-child(2) div.tbm-link-container:nth-child(1) a:before {
   font-family: FontAwesome;
-  content: "\f0e1";
+  content: "\f0e1"; /* FontAwesome Unicode */
   margin-left: 5px;
 }
 nav#tbm-main:not(.tbm--mobile) ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(8) .tbm-row .tbm-column:nth-child(2) ul.tbm-subnav.level-2.items-2 li.tbm-item.level-3:first-child div.tbm-link-container:nth-child(1) a:before {
   font-family: FontAwesome;
-  content: "\e61b";
+  content: "\e61b"; /* FontAwesome Unicode */
   margin-left: 5px;
 }
-*/
 /* Twitter */
-a[href="https://twitter.com/NCIGDC_Updates"].tbm-link:before,
-a[href="https://twitter.com/NCIGDC_Updates"].menu__link:before {
+a[href="https://twitter.com/NCIGDC_Updates"].tbm-link:before {
   font-family: FontAwesome;
-  content: "\e61b"; /* Github */
+  content: "\f09b"; /* Github */
+  margin-left: 5px;
 }
-/* Linkedin */
-a[href="https://www.linkedin.com/showcase/nci-precision-oncology/"].tbm-link:before,
 a[href="https://www.linkedin.com/showcase/nci-precision-oncology/"].menu__link:before {
   font-family: FontAwesome;
   content: "\f0e1";
 }
 /* Github */
-a[href="https://github.com/NCI-GDC"].tbm-link:before,
-a[href="https://github.com/NCI-GDC"].menu__link:before {
+a[href="https://github.com/NCI-GDC"].tbm-link.level-3:before,
+a[href="https://github.com/NCI-GDC"].menu__link.menu__link--link:before {
   font-family: FontAwesome;
   content: "\f09b"; /* Github */
 }

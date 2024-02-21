@@ -1,10 +1,12 @@
-uuid: eea10df6-5ac7-4bd8-aeb9-b2e7488bc212
+uuid: 07af8977-8a69-423d-9830-400c1ec3388c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_intended_audience
     - node.type.webinar
+  module:
+    - text
 id: node.webinar.field_intended_audience
 field_name: field_intended_audience
 entity_type: node
@@ -15,5 +17,6 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string_long
+settings:
+  allowed_formats: {  }
+field_type: text_long

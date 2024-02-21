@@ -1,10 +1,12 @@
-uuid: 7ef8f0ba-cc32-4414-81af-9971a7277c64
+uuid: c5a12906-7967-461b-b306-5f0c5a754cb4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_abstract
     - node.type.webinar
+  module:
+    - text
 id: node.webinar.field_abstract
 field_name: field_abstract
 entity_type: node
@@ -15,5 +17,6 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string_long
+settings:
+  allowed_formats: {  }
+field_type: text_long

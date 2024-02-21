@@ -40,7 +40,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_abstract:
-    type: string_textarea
+    type: text_textarea
     weight: 9
     region: content
     settings:
@@ -86,7 +86,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_intended_audience:
-    type: string_textarea
+    type: text_textarea
     weight: 8
     region: content
     settings:
@@ -173,5 +173,10 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 19
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }
