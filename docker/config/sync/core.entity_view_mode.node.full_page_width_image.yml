@@ -1,0 +1,11 @@
+uuid: 24bdd08f-9749-4277-bdf6-1d533917f85e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_page_width_image
+label: 'Full Page Width Image'
+description: ''
+targetEntityType: node
+cache: true

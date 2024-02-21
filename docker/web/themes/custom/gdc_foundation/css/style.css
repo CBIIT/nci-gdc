@@ -588,3 +588,22 @@ h5.redTitle {
         padding: 5px;
         background-color: #EDF8FB;
     }
+
+table.dataTypesFileFormats {
+border:1px solid #ccc !important;
+}
+table.dataTypesFileFormats th {
+border:1px solid #ccc !important;
+}
+
+table.dataTypesFileFormats td{
+	background-color:#fff;
+}
+
+table.dataTypesFileFormats tr.odd td {
+	background-color:#E8E8E8;
+}
+.sectionborder {
+	border:1px solid grey;
+	padding:20px;
+}

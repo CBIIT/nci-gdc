@@ -259,3 +259,11 @@ nav#tbm-main:not(.tbm--mobile) ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(
   content: "\e61b"; /* FontAwesome Unicode */
   margin-left: 5px;
 }
+/* Github */
+a[href="https://github.com/NCI-GDC"].tbm-link.level-3:before,
+a[href="https://github.com/NCI-GDC"].menu__link.menu__link--link:before {
+  font-family: FontAwesome;
+  content: "\f09b"; /* Github */
+  margin-left: 5px;
+}
+

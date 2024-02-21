@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - filter.format.markdown
-    - filter.format.php_code
-    - filter.format.restricted_html
   module:
     - comment
     - contact
@@ -26,6 +24,4 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'use text format markdown'
-  - 'use text format php_code'
-  - 'use text format restricted_html'
   - 'view message banner'

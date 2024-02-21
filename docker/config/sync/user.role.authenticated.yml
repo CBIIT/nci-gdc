@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
     - filter.format.markdown
-    - filter.format.php_code
     - filter.format.webform_default
   module:
     - comment
@@ -33,8 +31,6 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
-  - 'use text format basic_html'
   - 'use text format markdown'
-  - 'use text format php_code'
   - 'use text format webform_default'
   - 'view message banner'

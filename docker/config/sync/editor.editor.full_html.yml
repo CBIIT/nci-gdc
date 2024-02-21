@@ -125,6 +125,21 @@ settings:
         -
           label: 'Table Blue Background'
           element: '<table class="bluebackground">'
+        -
+          label: 'Table Row Gray Background'
+          element: '<tr class="odd">'
+        -
+          label: 'Table Data Types and File Formats'
+          element: '<table class="dataTypesFileFormats">'
+        -
+          label: 'Table Gray Cell'
+          element: '<td class="graycell">'
+        -
+          label: 'Table Blue Cell'
+          element: '<td class="bluecell">'
+        -
+          label: 'Table White Cell'
+          element: '<td class="whitecell">'
 image_upload:
   status: true
   scheme: public

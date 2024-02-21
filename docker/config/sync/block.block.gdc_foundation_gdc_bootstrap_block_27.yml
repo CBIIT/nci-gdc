@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/about-gdc\r\n/about-gdc/*"
+    pages: "/about-gdc\r\n/about-gdc/*\r\n/gdc-resources"

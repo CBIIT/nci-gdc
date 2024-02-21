@@ -1,0 +1,12 @@
+uuid: 3aa16695-c7f2-4881-b7da-86f4d2adc56e
+langcode: en
+status: true
+dependencies: {  }
+id: section_border
+label: 'Section Border'
+classes: sectionborder
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

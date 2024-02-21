@@ -5,9 +5,9 @@ dependencies:
   config:
     - block_content.type.basic
     - core.entity_view_display.node.page.default
+    - filter.format.filtered_html
     - filter.format.full_html
     - filter.format.markdown
-    - filter.format.php_code
     - node.type.article
     - node.type.asset_dictionary
     - node.type.biography
@@ -73,6 +73,7 @@ weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access draggableviews'
@@ -81,6 +82,9 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access tour'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer nodes'
   - 'administer taxonomy'
   - 'administer url aliases'
   - 'configure all page node layout overrides'
@@ -88,6 +92,7 @@ permissions:
   - 'create and edit custom blocks'
   - 'create article content'
   - 'create asset_dictionary content'
+  - 'create basic block content'
   - 'create biography content'
   - 'create blog content'
   - 'create book content'
@@ -131,6 +136,8 @@ permissions:
   - 'create webinar content'
   - 'delete any article content'
   - 'delete any asset_dictionary content'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
   - 'delete any biography content'
   - 'delete any blog content'
   - 'delete any book content'
@@ -301,6 +308,7 @@ permissions:
   - 'edit terms in topic_tag'
   - 'edit terms in usage_stats_tags'
   - 'revert all revisions'
+  - 'revert any basic block content revisions'
   - 'revert article revisions'
   - 'revert asset_dictionary revisions'
   - 'revert biography revisions'
@@ -329,10 +337,11 @@ permissions:
   - 'revert video revisions'
   - 'revert webform revisions'
   - 'revert webinar revisions'
+  - 'use text format filtered_html'
   - 'use text format full_html'
   - 'use text format markdown'
-  - 'use text format php_code'
   - 'view all revisions'
+  - 'view any basic block content history'
   - 'view article revisions'
   - 'view asset_dictionary revisions'
   - 'view biography revisions'
