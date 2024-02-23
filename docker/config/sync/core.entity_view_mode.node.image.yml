@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 id: node.image
-label: Image
+label: 'Image Small (220px)'
 description: ''
 targetEntityType: node
 cache: true

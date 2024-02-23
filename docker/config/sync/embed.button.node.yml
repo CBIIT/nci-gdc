@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.body_only
+    - core.entity_view_mode.node.full_page_width_image
+    - core.entity_view_mode.node.image
     - node.type.article
     - node.type.asset_dictionary
     - node.type.biography
@@ -68,7 +71,10 @@ type_settings:
     - webform
     - webinar
     - video
-  display_plugins: {  }
+  display_plugins:
+    - 'view_mode:node.body_only'
+    - 'view_mode:node.full_page_width_image'
+    - 'view_mode:node.image'
   entity_browser: ''
   entity_browser_settings: {  }
 icon: {  }

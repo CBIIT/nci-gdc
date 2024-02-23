@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 id: node.full_page_width_image
-label: 'Full Page Width Image'
+label: 'Image Large (825px)'
 description: ''
 targetEntityType: node
 cache: true
