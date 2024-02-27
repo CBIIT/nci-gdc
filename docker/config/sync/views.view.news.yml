@@ -622,7 +622,18 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<h1>News and Announcements</h1>'
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -769,7 +780,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: news-and-announcements
+      path: news-and-announcements-view
     cache_metadata:
       max-age: -1
       contexts:

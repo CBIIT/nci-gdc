@@ -23,6 +23,7 @@
   position: relative;
   display: inline-block;
   height: 50px;
+  width:auto;
   float: right;
   margin-top: -55px;
   vertical-align: middle;
