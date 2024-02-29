@@ -1,6 +1,9 @@
 $settings['s3fs.access_key'] = getenv('s3_access_key');
 $settings['s3fs.secret_key'] = getenv('s3_secret_key');
-$settings['s3fs.use_s3_for_public'] = TRUE;
+$settings['s3fs.use_s3_for_public'] = FALSE;
+$settings['s3fs.upload_as_public'] = FALSE;        
+$settings['s3fs.upload_as_private'] = TRUE;
+$settings['s3fs.use_s3_for_private'] = TRUE;
 
 $databases['default']['default'] = array(
   'database' => getenv('db_name'),
@@ -14,6 +17,7 @@ $databases['default']['default'] = array(
 $settings['config_sync_directory'] = $app_root.'/../config/sync';
 $settings['hash_salt'] =  getenv('hash_salt');
 global $content_directories;
+$settings['file_private_path'] = $app_root . '/' . $site_path . '/files';
 $content_directories['sync'] = $app_root.'/../content/sync';
 $config_directories['sync'] = $app_root.'/../config/sync';
 $settings['sync']="";
