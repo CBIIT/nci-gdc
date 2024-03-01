@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: xGaDFlyXTmhzluhiRhEx58v_3Fu-nMhCzEBF8K4eqHU
+drupalAcctProvisionServer: ncildap
+ldapEntryProvisionServer: null
+drupalAcctProvisionTriggers:
+  - drupal_on_login
+ldapEntryProvisionTriggers: {  }
+orphanedDrupalAcctBehavior: ldap_user_orphan_do_not_check
+orphanedDrupalAcctReportingInbox: ''
+orphanedCheckQty: 100
+orphanedAccountCheckInterval: weekly
+userConflictResolve: log
+manualAccountConflict: conflict_reject
+acctCreation: ldap_behaviour
+disableAdminPasswordField: false
+userUpdateCronQuery: none
+userUpdateCronInterval: monthly
+ldapUserSyncMappings: {  }

@@ -1,0 +1,25 @@
+uuid: c96ffb47-6c65-45f7-8839-4ac6968a554c
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous
+label: Anonymous
+description: 'Allows anonymous to view files'
+conf:
+  usertab: false
+  extensions: '*'
+  maxsize: null
+  quota: null
+  maxwidth: null
+  maxheight: null
+  replace: 1
+  thumbnail_style: ''
+  thumbnail_grid_style: false
+  ignore_usage: false
+  url_alter: false
+  folders:
+    -
+      path: .
+      permissions:
+        browse_files: true
+        browse_subfolders: true

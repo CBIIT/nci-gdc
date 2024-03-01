@@ -145,7 +145,7 @@ settings:
           element: '<p class="media-caption">'
 image_upload:
   status: true
-  scheme: public
+  scheme: private
   directory: inline-images
   max_size: ''
   max_dimensions:

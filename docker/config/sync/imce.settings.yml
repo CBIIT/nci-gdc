@@ -3,6 +3,15 @@ _core:
 abs_urls: false
 admin_theme: false
 roles_profiles:
+  anonymous:
+    private: anonymous
+  authenticated:
+    private: anonymous
+  content_editor:
+    private: admin
   administrator:
     public: admin
     s3: admin
+    private: admin
+  security_scans:
+    private: anonymous

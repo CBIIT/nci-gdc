@@ -1,0 +1,39 @@
+uuid: 9a079d7d-5452-4785-9a74-6484803e9836
+langcode: en
+status: true
+dependencies: {  }
+id: ncildap
+label: ldap
+type: ad
+address: nihdcadhub3.nih.gov
+port: 636
+timeout: 10
+encryption: ssl
+weight: null
+bind_method: user
+binddn: null
+bindpw: null
+basedn:
+  - 'OU=Users,OU=NCI,OU=NIH,OU=AD,DC=nih,DC=gov'
+  - 'OU=Users,OU=NCI-Frederick,OU=NIH,OU=AD,DC=nih,DC=gov'
+user_attr: samaccountname
+account_name_attr: ''
+mail_attr: mail
+mail_template: ''
+picture_attr: ''
+unique_persistent_attr: ''
+unique_persistent_attr_binary: false
+user_dn_expression: 'cn=%username,%basedn'
+testing_drupal_username: ''
+testing_drupal_user_dn: ''
+grp_unused: false
+grp_object_cat: ''
+grp_nested: false
+grp_user_memb_attr_exists: true
+grp_user_memb_attr: memberof
+grp_memb_attr: ''
+grp_memb_attr_match_user_attr: ''
+grp_derive_from_dn: true
+grp_derive_from_dn_attr: ou
+grp_test_grp_dn: ''
+grp_test_grp_dn_writeable: ''

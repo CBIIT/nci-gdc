@@ -67,8 +67,8 @@ settings:
         - '<ul type>'
         - '<ol type>'
 image_upload:
-  status: false
-  scheme: public
+  status: true
+  scheme: private
   directory: inline-images
   max_size: ''
   max_dimensions:
