@@ -60,11 +60,17 @@ dependencies:
     - help
     - layout_builder
     - node
+    - paragraphs
     - path
+    - recaptcha
+    - search
     - system
     - taxonomy
+    - tb_megamenu
     - toolbar
     - tour
+    - views_ui
+    - webform
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
@@ -73,21 +79,36 @@ weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access any webform configuration'
   - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access draggableviews'
   - 'access files overview'
   - 'access help pages'
+  - 'access own webform configuration'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access tour'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
   - 'administer block content'
   - 'administer block types'
+  - 'administer menu'
   - 'administer nodes'
+  - 'administer recaptcha'
+  - 'administer search'
   - 'administer taxonomy'
+  - 'administer tb_megamenu'
   - 'administer url aliases'
+  - 'administer views'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'bypass node access'
   - 'configure all page node layout overrides'
+  - 'configure any layout'
   - 'configure editable page node layout overrides'
   - 'create and edit custom blocks'
   - 'create article content'
@@ -132,6 +153,7 @@ permissions:
   - 'create terms in usage_stats_tags'
   - 'create url aliases'
   - 'create video content'
+  - 'create webform'
   - 'create webform content'
   - 'create webinar content'
   - 'delete any article content'
@@ -162,7 +184,9 @@ permissions:
   - 'delete any publication content'
   - 'delete any publications_group content'
   - 'delete any video content'
+  - 'delete any webform'
   - 'delete any webform content'
+  - 'delete any webform submission'
   - 'delete any webinar content'
   - 'delete article revisions'
   - 'delete asset_dictionary revisions'
@@ -208,7 +232,9 @@ permissions:
   - 'delete own publication content'
   - 'delete own publications_group content'
   - 'delete own video content'
+  - 'delete own webform'
   - 'delete own webform content'
+  - 'delete own webform submission'
   - 'delete own webinar content'
   - 'delete page revisions'
   - 'delete page_for_scientific_report revisions'
@@ -262,7 +288,9 @@ permissions:
   - 'edit any publication content'
   - 'edit any publications_group content'
   - 'edit any video content'
+  - 'edit any webform'
   - 'edit any webform content'
+  - 'edit any webform submission'
   - 'edit any webinar content'
   - 'edit own article content'
   - 'edit own asset_dictionary content'
@@ -291,7 +319,9 @@ permissions:
   - 'edit own publication content'
   - 'edit own publications_group content'
   - 'edit own video content'
+  - 'edit own webform'
   - 'edit own webform content'
+  - 'edit own webform submission'
   - 'edit own webinar content'
   - 'edit terms in attachment_tag'
   - 'edit terms in biography_tags'
@@ -307,6 +337,10 @@ permissions:
   - 'edit terms in tags'
   - 'edit terms in topic_tag'
   - 'edit terms in usage_stats_tags'
+  - 'edit webform assets'
+  - 'edit webform source'
+  - 'edit webform twig'
+  - 'edit webform variants'
   - 'revert all revisions'
   - 'revert any basic block content revisions'
   - 'revert article revisions'
@@ -337,11 +371,13 @@ permissions:
   - 'revert video revisions'
   - 'revert webform revisions'
   - 'revert webinar revisions'
+  - 'use advanced search'
   - 'use text format filtered_html'
   - 'use text format full_html'
   - 'use text format markdown'
   - 'view all revisions'
   - 'view any basic block content history'
+  - 'view any webform submission'
   - 'view article revisions'
   - 'view asset_dictionary revisions'
   - 'view biography revisions'
@@ -360,6 +396,7 @@ permissions:
   - 'view institution revisions'
   - 'view link revisions'
   - 'view own unpublished content'
+  - 'view own webform submission'
   - 'view page revisions'
   - 'view page_for_scientific_report revisions'
   - 'view page_news revisions'
@@ -369,6 +406,7 @@ permissions:
   - 'view publication revisions'
   - 'view publications_group revisions'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'
   - 'view video revisions'
   - 'view webform revisions'
   - 'view webinar revisions'

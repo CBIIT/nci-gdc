@@ -140,6 +140,9 @@ settings:
         -
           label: 'Table White Cell'
           element: '<td class="whitecell">'
+        -
+          label: 'Media Caption'
+          element: '<p class="media-caption">'
 image_upload:
   status: true
   scheme: public
