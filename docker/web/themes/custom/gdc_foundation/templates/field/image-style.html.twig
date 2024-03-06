@@ -15,5 +15,15 @@
  * @see template_preprocess_image_style()
  */
 #}
-<!-- /** Display popup **/ -->
-{{ image }}
+{% if style_name=='medium' or style_name=='full_width' %}
+  {% set fulluri = uri|replace({"private://":"/system/files/"}) %}
+     <div class="imagezoomcontainer">
+     <a href="{{ fulluri }}" class="imagezoom" data-lightbox="{{ title }}" data-title="{{ title }}">
+      {{ image }}
+      <i class="fa-solid fa-magnifying-glass-plus">
+      </i>
+     </a>
+     </div>
+{% else %}
+ {{ image }}
+{% endif %}

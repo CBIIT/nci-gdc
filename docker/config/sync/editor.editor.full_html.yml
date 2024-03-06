@@ -143,6 +143,9 @@ settings:
         -
           label: 'Media Caption'
           element: '<p class="media-caption">'
+        -
+          label: 'Image Style with border and padding'
+          element: '<table class="imgspacing">'
 image_upload:
   status: true
   scheme: private

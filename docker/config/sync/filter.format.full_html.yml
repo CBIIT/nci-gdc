@@ -32,7 +32,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<h5 class="blockTitle"> <table class="bluebackground dataTypesFileFormats"> <tr class="odd"> <td class="graycell bluecell whitecell"> <p class="media-caption">'
+      allowed_html: '<h5 class="blockTitle"> <table class="bluebackground dataTypesFileFormats imgspacing"> <tr class="odd"> <td class="graycell bluecell whitecell"> <p class="media-caption">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_url:

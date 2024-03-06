@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_headline
     - field.storage.node.field_image
-    - image.style.medium
+    - image.style.large
     - node.type.dd
   module:
     - image
@@ -81,7 +81,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: medium
+            image_style: large
             image_loading:
               attribute: lazy
           group_column: ''
