@@ -1,27 +1,8 @@
 uuid: f3d5e411-c8ed-4cdb-aa9b-df1f1803a99b
 langcode: en
-status: true
-dependencies:
-  module:
-    - markdown
+status: false
+dependencies: {  }
 name: Markdown
 format: markdown
 weight: -7
-filters:
-  markdown:
-    id: markdown
-    provider: markdown
-    status: true
-    weight: -15
-    settings:
-      id: parsedown
-      enabled: true
-      render_strategy:
-        type: filter_output
-        custom_allowed_html: ''
-        plugins:
-          filter_align: false
-          filter_caption: false
-          parsedown: true
-      override: false
-    filterFormat: markdown
+filters: {  }

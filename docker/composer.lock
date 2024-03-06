@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7860e4af9257bc7205bf83259f3f5d3",
+    "content-hash": "ac17b677e6cd0dd6af8a82a4f49af16e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4239,75 +4239,6 @@
             "homepage": "https://www.drupal.org/project/mailsystem",
             "support": {
                 "source": "https://git.drupalcode.org/project/mailsystem"
-            }
-        },
-        {
-            "name": "drupal/markdown",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/markdown.git",
-                "reference": "3.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/markdown-3.0.1.zip",
-                "reference": "3.0.1",
-                "shasum": "ae33f2819c0f2591484ae02921781fb3ea783330"
-            },
-            "require": {
-                "composer/semver": "^1.0 || ^2.0 || ^3.0",
-                "drupal/core": "^9.1 || ^10",
-                "php": ">=5.5.9"
-            },
-            "suggest": {
-                "league/commonmark": "The PHP CommonMark parser is a robust, highly-extensible Markdown parser for PHP based on the CommonMark and Github-Flavored Markdown specifications."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.1",
-                    "datestamp": "1704727858",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Halliwell (markhalliwell)",
-                    "homepage": "https://www.drupal.org/u/markhalliwell",
-                    "role": "D8+ Maintainer"
-                },
-                {
-                    "name": "Gisle Hannemyr (gisle)",
-                    "homepage": "https://www.drupal.org/u/gisle",
-                    "role": "D7 Maintainer"
-                },
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
-                    "name": "markdorison",
-                    "homepage": "https://www.drupal.org/user/346106"
-                }
-            ],
-            "description": "Provides Markdown integration for Drupal and allows content to be formatted in a simple plain-text syntax that is transformed into valid HTML.",
-            "homepage": "https://www.drupal.org/project/markdown",
-            "support": {
-                "source": "https://git.drupalcode.org/project/markdown",
-                "issues": "https://www.drupal.org/project/markdown"
             }
         },
         {

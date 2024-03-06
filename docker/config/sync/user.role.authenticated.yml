@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.markdown
     - filter.format.webform_default
   module:
     - comment
@@ -31,6 +30,5 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
-  - 'use text format markdown'
   - 'use text format webform_default'
   - 'view message banner'
