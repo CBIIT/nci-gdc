@@ -356,7 +356,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ field_links__uri|replace({'internal:': '/about-data'}) }}\">{{ field_links__title }}</a>\r\n"
+            text: "{% set fulluri = field_links__uri|replace({'internal:': '/about-data'}) %}\r\n<a href=\"{{ fulluri|replace({'/about-data/about-data':'/about-data'}) }}\">{{ field_links__title }}</a>\r\n"
             make_link: false
             path: ''
             absolute: false
