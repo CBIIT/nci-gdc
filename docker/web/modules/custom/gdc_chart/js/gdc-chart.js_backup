@@ -1,0 +1,216 @@
+/**               
+ * @file          
+ * gdc_chart behaviors.                           
+ */               
+                  
+(function ($, Drupal) {                           
+  Drupal.behaviors.gdcChartGdcChart = {           
+    attach: function (context, settings) {        
+      once('gdcChartGdcChart', 'html').forEach(function (element) {               
+       $(document).ready(function() {             
+        getHumanBodyData();                       
+        $('.chartContainer').css("display","block");                              
+       });        
+      });         
+    },            
+  };      
+    function getHumanBodyData() {
+        const humanbody_url = 'http://nciws-d1066-c.nci.nih.gov:8098/system/files/public/file/humanbody.json';
+        fetch(humanbody_url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Call getCaseData() and handle its response
+                getCaseData().then(caseData => {
+                    let cases = {};
+                    for (let key in data) {
+                        cases[key] = [0, 0];
+                        const siteArray = data[key]['byPrimarySite'];
+                        siteArray.forEach(siteItem => {
+                            caseData.forEach(caseItem => {
+                                if (caseItem['key'].toLowerCase() === siteItem.toLowerCase()) {
+                                    cases[key][0] += parseInt(caseItem['doc_count']);
+                                    cases[key][1] += parseInt(caseItem['files']);
+                                }
+                            });
+                        });
+                    }
+                    displayChart(cases);
+            }).catch(error => {
+                    console.error('There was a problem fetching the case data:', error);
+                });
+    
+            })
+            .catch(error => {
+                console.error('There was a problem fetching the human body data:', error);
+            });
+    }
+
+    function getCaseData() {
+        const url = 'https://api.gdc.cancer.gov/v0/graphql/HumanBody?hash=f17e72f7b92417006e341859e334b4fc';
+        const body = {
+            query: "query HumanBody_relayQuery {\nviewer {\nrepository {\nfiles {\naggregations {\ncases__primary_site {\nbuckets {\ndoc_count\nkey\n}\n}\n}\n}\ncases {\naggregations {\nprimary_site {\nbuckets {\ndoc_count\nkey\n}\n}\n}\n}\n}\n}\n}",
+            variables: {}
+        };
+  
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+              const buckets = data.data.viewer.repository.cases.aggregations.primary_site.buckets;
+                const files = data.data.viewer.repository.files.aggregations.cases__primary_site.buckets;
+                // Create a map to store file counts by key
+                const fileCountsByKey = {};
+                files.forEach(file => {
+                    fileCountsByKey[file.key] = file.doc_count;
+                });
+                // Map the buckets array and add file counts for each key
+                const result = buckets.map(bucket => ({
+                    key: bucket.key,
+                    doc_count: bucket.doc_count,
+                    files: fileCountsByKey[bucket.key] || 0 // If no matching file count found, default to 0
+                }));
+                return result;
+            });
+    }
+
+    function displayChart(cases) {
+        const ctx = document.getElementById("chart").getContext("2d");
+        colors = [];
+        //Chart.Tooltip.positioners.customPosition = function (elements, position) {
+        //    let currentChartHeight = chart.height;
+        //    let currentChartWidth = chart.width;
+        //    let x = position["x"];
+        //    let y = position["y"];
+        //    let halfHeight = currentChartHeight / y;
+        //    let halfWidth = currentChartWidth / x;
+        //    x = halfWidth > 2 ? x + 15 : x - 140;
+        //    y = halfHeight > 2 ? y + 45 : y - 45;
+        //    return {
+        //        x: x,
+        //        y: y
+        //    };
+        //};
+        let data = [];
+        let categories = {
+            "Adrenal Gland": "#BE2F2C",
+            "Bile Duct": "#FFFFFF",
+            "Bladder": "#82B9FF",
+            "Bone": "#B5B5B5",
+            "Bone Marrow and Blood": "#FFFF4F",
+            "Brain": "#1599E3",
+            "Breast": "#DF2EBD",
+            "Cervix": "#D7205D",
+            "Colorectal": "#FF9053",
+            "Esophagus": "#4D9E3B",
+            "Eye": "#FFFFFF",
+            "Head and Neck": "#FEA734",
+            "Kidney": "#28C156",
+            "Liver": "#5BF6E8",
+            "Lung": "#9E08DB",
+            "Lymph Nodes": "#F755EB",
+            "Nervous System": "#348BFF",
+            "Not Reported": "#3890CD",
+            "Other and Ill-defined Sites": "#FF0000",
+            "Ovary": "#5DEE46",
+            "Pancreas": "#DF4FE8",
+            "Pleura": "#F0D570",
+            "Prostate": "#55BFE6",
+            "Skin": "#FF42CF",
+            "Soft Tissue": "#FDF757",
+            "Stomach": "#DEAF35",
+            "Testis": "#F39553",
+            "Thymus": "#55F8E5",
+            "Thyroid": "#E04B7B",
+            "Uterus": "#FF79B2"
+        };
+        for (var key in categories) {
+            var value = categories[key];
+            data.push({ 'id': key, 'cases': parseInt(cases[key][0]), files: cases[key][1] });
+            colors.push(value);
+        }
+        console.log(data);
+        console.log(colors);
+        const chart = new Chart(ctx, {
+            type: "pie",
+            data: {
+                datasets: [
+                    {
+                        data: data,
+                        backgroundColor: colors
+                    }
+                ]
+            },
+            options: {
+                parsing: {
+                    key: "cases"
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        usePointStyle: true,
+                        backgroundColor: "rgba(255, 255, 255, 1)",
+                        titleColor: "#000",
+                        footerColor: "#000",
+                        displayColors: true,
+                        bodyColor: "#000",
+                        borderColor: "#000",
+                        footerColor: "#000",
+                        borderWidth: 2,
+                        titleFont: { color: "red" },
+                        xAlign: "left",
+                        yAlign: "middle",
+                        footerFont: {
+                            weight: "normal",
+                            size: 16
+                        },
+                        bodyFont: {
+                            weight: "bold",
+                            size: 16
+                        },
+                        callbacks: {
+                            labelPointStyle: function (context) {
+                                return {
+                                    pointStyle: "triangle",
+                                    rotation: 90
+                                };
+                            },
+                            label: function (context) {
+                                const dataItem = context.dataset.data[context.dataIndex];
+                                let label = dataItem.id;
+                                return label;
+                            },
+                            footer: function (context) {
+                                const dataItem = context[0].dataset.data[context[0].dataIndex];
+                                let footer = `${dataItem["cases"]} Cases (${dataItem["files"]} Files)`;
+                                return footer;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    };
+})(jQuery, Drupal);
+

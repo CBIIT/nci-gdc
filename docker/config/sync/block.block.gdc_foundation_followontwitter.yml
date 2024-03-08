@@ -1,0 +1,30 @@
+uuid: a8e39f28-a0c0-4858-b175-8596338f4ca8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:31207cfb-d0ec-4b6d-8487-514524df9f93'
+  module:
+    - block_content
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_followontwitter
+theme: gdc_foundation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:31207cfb-d0ec-4b6d-8487-514524df9f93'
+settings:
+  id: 'block_content:31207cfb-d0ec-4b6d-8487-514524df9f93'
+  label: 'Follow Us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/about-gdc/*'

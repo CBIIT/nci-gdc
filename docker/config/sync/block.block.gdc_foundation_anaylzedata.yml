@@ -17,7 +17,7 @@ provider: null
 plugin: 'menu_block:anaylze-data'
 settings:
   id: 'menu_block:anaylze-data'
-  label: 'Anaylze Data'
+  label: 'Analyze Data'
   label_display: visible
   provider: menu_block
   follow: false

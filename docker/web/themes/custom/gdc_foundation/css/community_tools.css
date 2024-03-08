@@ -84,3 +84,7 @@
  padding-bottom:10px !important; 
  border-bottom:1px solid #C6C2C4;
 }
+
+.views-field-field-authors, .views-field-field-date{
+	font-weight:bold;
+}

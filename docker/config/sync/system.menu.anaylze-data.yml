@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: anaylze-data
-label: 'Anaylze Data'
+label: 'Analyze Data'
 description: ''
 locked: false

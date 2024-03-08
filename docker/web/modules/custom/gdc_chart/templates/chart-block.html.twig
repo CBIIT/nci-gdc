@@ -1,6 +1,34 @@
 {{ attach_library('gdc_chart/chartjs') }}
 <div class="chartContainer" style="width:95%">
-  <h5>Cases by Major Primary Site</h5> 
-  <canvas id="chart"></canvas>
-  <div id="table-container"><table><caption><h5>Data Availability Summary</h5></caption><tbody><tr class="row-prgrams"><th scope="row">Programs</th><td>23</td></tr><tr class="row-projects"><th scope="row">Projects</th><td>82</td></tr><tr class="row-primary-sites"><th scope="row">Primary Sites</th><td>68</td></tr><tr class="row-disease-type"><th scope="row">Disease Types</th><td>60</td></tr><tr class="row-cases"><th scope="row">Cases</th><td>88,991</td></tr></tbody></table></div><br /><button class="temp">Launch Data Portal</button>
+  <h5>Cases by Major Primary Site</h5>
+  <canvas id="gdcChart"></canvas>
+  <div id="table-container">
+    <table>
+      <caption><h5>Data Availability Summary</h5></caption>
+      <tbody>
+        <tr class="row-prgrams">
+          <th scope="row">Programs</th>
+          <td id="programs"></td>
+        </tr>
+        <tr class="row-projects">
+          <th scope="row">Projects</th>
+          <td id="projects"></td>
+        </tr>
+        <tr class="row-primary-sites">
+          <th scope="row">Primary Sites</th>
+          <td id="primarySites"></td>
+        </tr>
+        <tr class="row-disease-type">
+          <th scope="row">Disease Types</th>
+          <td id="diseaseTypes"></td>
+        </tr>
+        <tr class="row-cases">
+          <th scope="row">Cases</th>
+          <td id="cases"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+<a href="https://portal.gdc.cancer.gov" class="button portal">Launch Data Portal</a>
 </div>

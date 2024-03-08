@@ -10,11 +10,13 @@
 .chartContainer h5 {
 color:#6B6262;
 }
+
 #chart { 
   margin-bottom:30px !important;
   margin-top:30px !important;
 	width:300px !important;
 	height:300px !important;
+  cursor:pointer;
 }
 
 .chartContainer button {
@@ -35,4 +37,8 @@ color:#6B6262;
 
 #table-container caption {
 	text-align:left;
+}
+
+.button.portal {
+	width:100%;
 }

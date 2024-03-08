@@ -8,12 +8,10 @@ global:
       css/gdc_foundation.css: {}
       css/gdc_app.css: {}
       css/style.css: {}
-      #css/sumoselect.min.css: {}
       css/lightbox.css: {}
   js:
     js/gdc_foundation.js: {}
     js/foundation_init.js: {}
-    #js/jquery.sumoselect.min.js: {}
     js/lightbox.min.js: {}
   dependencies:
     - core/drupal
