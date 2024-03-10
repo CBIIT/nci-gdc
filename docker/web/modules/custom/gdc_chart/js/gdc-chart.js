@@ -196,7 +196,7 @@ var chart;
     }
 
     function getHumanBodyData() {
-        const humanbody_url = 'http://nciws-d1066-c.nci.nih.gov:8098/system/files/public/file/humanbody.json';
+        const humanbody_url = '/system/files/public/file/humanbody.json';
         fetch(humanbody_url, {
                 method: 'GET',
                 headers: {
