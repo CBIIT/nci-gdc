@@ -1,0 +1,6 @@
+gdc_chart.settings:
+  title: GDC Chart Settings
+  description: Settings to configure json for GDC Chart
+  parent: system.admin_config_system
+  route_name: gdc_chart.settings
+  weight: 10

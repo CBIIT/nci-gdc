@@ -5,3 +5,19 @@ gdc_chart.chart:
     _controller: '\Drupal\gdc_chart\Controller\GdcChartController'
   requirements:
     _permission: 'access content'
+
+gdc_chart.diseasedata:
+  path: '/chart/diseasedata.json'
+  defaults:
+    _title: 'Chart'
+    _controller: '\Drupal\gdc_chart\Controller\GdcChartDataController::getDiseaseData'
+  requirements:
+    _permission: 'access content'
+
+gdc_chart.settings:
+  path: '/admin/config/system/settings'
+  defaults:
+    _title: 'GDC Chart Settings'
+    _form: 'Drupal\gdc_chart\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
