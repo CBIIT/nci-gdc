@@ -46,7 +46,7 @@
 #main #sidebar-first .body.field.field--block-content-body li {
   margin-left: 0px;
   list-style: none;
-  background: url('https://gdc.cancer.gov/sites/all/themes/gdc_bootstrap/images/bullet-more-fa.png') left 0.0813em no-repeat;
+  background: url('/themes/custom/gdc_foundation/images/bullet-more-fa.png') left 0.0813em no-repeat;
   margin: 0 0 0.1625em;
   padding: 0 0 0 22px;
 }
