@@ -1,4 +1,4 @@
-FROM drupal:10.1.5-php8.1-apache-bullseye
+FROM drupal:latest
 RUN apt-get update -y
 RUN apt-get install -y libldap2-dev patch vim git mariadb-client sendmail && rm -rf /var/lib/apt/lists/*
 RUN docker-php-source extract && \
