@@ -1,0 +1,12 @@
+uuid: 4a6d0ff3-6c54-453b-a360-808142773c9d
+langcode: en
+status: true
+dependencies: {  }
+id: hello_css
+label: 'Hello CSS'
+code: 'h1 {color: red;}'
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true
