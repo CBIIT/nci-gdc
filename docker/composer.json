@@ -22,9 +22,9 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/core": "^10.2",
-        "drupal/core-composer-scaffold": "10.2.3",
-        "drupal/core-project-message": "10.2.3",
-        "drupal/core-recommended": "10.2.3",
+        "drupal/core-composer-scaffold": "10.2.4",
+        "drupal/core-project-message": "10.2.4",
+        "drupal/core-recommended": "10.2.4",
         "drupal/custom_view_filters": "^2.0",
         "drupal/delete_all": "^3.0",
         "drupal/devel": "^5.1",
@@ -72,7 +72,8 @@
         "drupal/zurb_foundation": "^9.0@beta",
         "drush/drush": "^12.2",
         "erusev/parsedown": "^1.7",
-        "kint-php/kint": "^5.0"
+        "kint-php/kint": "^5.0",
+        "nikic/php-parser": "^4"
     },
     "conflict": {
         "drupal/drupal": "*"
