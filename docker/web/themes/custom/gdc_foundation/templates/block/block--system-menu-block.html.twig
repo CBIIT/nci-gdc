@@ -31,24 +31,35 @@
  * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
  */
 #}
-{#
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 {% set title_url = '' %}
-{% set label = configuration.label|raw %}
-{% switch label %}
-    {% case 'News and Announcements' %}
-        {% set title_url = '/news-and-announcements' %}
-    {% case 'About the Data' %}
-        {% set title_url = '/about-the-gdc' %}
-{% endswitch %}
-#}
+{% if configuration.label == 'About the GDC' %}
+    {% set title_url = '/about-gdc' %}
+{% elseif configuration.label == 'About the Data' %}
+    {% set title_url = '/about-data' %}
+{% elseif configuration.label == 'Analyze Data' %}
+    {% set title_url = '/analyze-data' %}
+{% elseif configuration.label == 'Access Data' %}
+    {% set title_url = '/access-data' %}
+{% elseif configuration.label == 'Submit Data' %}
+    {% set title_url = '/submit-data' %}
+{% elseif configuration.label == 'For Developers' %}
+    {% set title_url = '/developers' %}
+{% elseif configuration.label == 'Support' %}
+    {% set title_url = '/support' %}
+{% elseif configuration.label == 'News and Announcements' %}
+    {% set title_url = '/news-and-announcements' %}
+{% else %}
+    {% set title_url = '#' %}
+{% endif %}
+
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
   {% endif %}
   {{ title_prefix }}
-  <a href="{{ title_url }}>
+  <a href="{{ title_url }}">
     <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
   </a>
   {{ title_suffix }}

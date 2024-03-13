@@ -37,6 +37,7 @@
         "drupal/focal_point": "^2.0",
         "drupal/fontawesome": "^2.26",
         "drupal/foundation_sites": "^2.0",
+        "drupal/google_analytics": "^4.0",
         "drupal/imce": "^3.0",
         "drupal/jquery_ui": "^1.6",
         "drupal/layout_builder_styles": "^2.0",
