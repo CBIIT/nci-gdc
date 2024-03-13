@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 FILE=installed.txt
 if [ -f "$FILE" ]; then
     echo "Drupal Site Already Installed"
@@ -12,14 +12,13 @@ else
     composer install
     cp web/sites/default/default.settings.php web/sites/default/settings.php
     cat $code_path/docker/settings.php.patch >> web/sites/default/settings.php
-    mv content_sync web/modules/contrib
+    git clone https://git.drupalcode.org/issue/content_sync-3330173.git $drupal_root/web/modules/contrib/content_sync
+    git -C $drupal_root/web/modules/contrib/content_sync checkout 3330173-D10-compatibility-beta    
     chown -R www-data:www-data web
     echo "changing ownership of web to www-data"
     drush cr
 fi
-cat web/sites/default/settings.php
-echo $s3_access_key
-echo $s3_secret_key
+cat web/sites/default/settings.php  
 echo "starting apache"
 drush cr
-apache2-foreground
+httpd -D FOREGROUND
