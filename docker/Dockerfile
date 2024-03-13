@@ -1,17 +1,20 @@
-FROM drupal:latest
-RUN apt-get update -y
-RUN apt-get install -y libldap2-dev patch vim git mariadb-client sendmail && rm -rf /var/lib/apt/lists/*
-RUN docker-php-source extract && \
-    docker-php-ext-configure ldap --with-ldap && \
-    docker-php-ext-install ldap && \
-    docker-php-source delete
-RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y slapd ldap-utils
+FROM alpine:3.19
+ARG code_path=/tmp/github
+ARG drupal_root=/var/www/drupal
+ENV code_path=$code_path
+ENV drupal_root=$drupal_root
+RUN apk update
+RUN apk add git openldap openldap-clients composer \
+    patch vim mariadb-client postfix php82-ldap \
+    php82-apache2 php82-opcache php82-mysqli php82-pdo_mysql php82-tokenizer \
+    php82-dom php82-gd php82-pdo php82-session php82-simplexml php82-xml
 RUN git clone https://github.com/cbiit/nci-gdc /tmp/github --branch gdc_2.0 --single-branch
-ENV code_path=/tmp/github
-ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN mkdir -p /var/www/drupal
+RUN git clone https://git.drupalcode.org/issue/content_sync-3330173.git /tmp/content_sync
+RUN git -C /tmp/content_sync checkout 3330173-D10-compatibility-beta
+RUN ln -s $drupal_root/vendor/drush/drush/drush /usr/bin/drush
 COPY run.sh /usr/bin
-COPY memory.ini /usr/local/etc/php/conf.d
-COPY ldap.conf /etc/ldap
-RUN git clone https://git.drupalcode.org/issue/content_sync-3330173.git content_sync
-RUN git -C content_sync checkout 3330173-D10-compatibility-beta
+COPY 000-default.conf /etc/apache2/conf.d
+COPY ldap.conf /etc/openldap
+WORKDIR $drupal_root
 ENTRYPOINT run.sh
