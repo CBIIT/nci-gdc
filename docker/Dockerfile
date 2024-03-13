@@ -10,8 +10,6 @@ RUN apk add git openldap openldap-clients composer \
     php82-dom php82-gd php82-pdo php82-session php82-simplexml php82-xml
 RUN git clone https://github.com/cbiit/nci-gdc /tmp/github --branch gdc_2.0 --single-branch
 RUN mkdir -p /var/www/drupal
-RUN git clone https://git.drupalcode.org/issue/content_sync-3330173.git /tmp/content_sync
-RUN git -C /tmp/content_sync checkout 3330173-D10-compatibility-beta
 RUN ln -s $drupal_root/vendor/drush/drush/drush /usr/bin/drush
 COPY run.sh /usr/bin
 COPY 000-default.conf /etc/apache2/conf.d
