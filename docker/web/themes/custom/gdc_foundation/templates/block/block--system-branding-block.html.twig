@@ -19,7 +19,7 @@
   <div class="grid-x grid-margin-x">
     <div class="cell auto algin-self-middle">
       {% if site_logo %}                                                       
-         <a href="{{ path('<front>') }}" rel="home">                            
+         <a href="{{ path('<front>') }}" rel="home" aria-label="Genomic Data Commons Homepage">                            
            <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />                   
          </a>                                                                   
       {% endif %}
@@ -49,13 +49,13 @@
     <tr>
       <td>
 	<a href='https://portal.gdc.cancer.gov' title="Data Portal" target="_blank">
-          <span class="icon"><img src='/themes/custom/gdc_foundation/images/gdc-apps-data-portal-blue.svg'></span>
+          <span class="icon"><img src='/themes/custom/gdc_foundation/images/gdc-apps-data-portal-blue.svg' alt="Data Portal"></span>
           <p>Data Portal</p>
       	</a>
       </td>
       <td>
         <a href='/' title="Website" target="_blank">
-          <span class="icon"><img src='/themes/custom/gdc_foundation/images/gdc-app-website-blue.svg'></span><p>Website</p></a></td>
+          <span class="icon"><img src='/themes/custom/gdc_foundation/images/gdc-app-website-blue.svg' alt="Website"></span><p>Website</p></a></td>
     </tr>
     <tr>
       <td>

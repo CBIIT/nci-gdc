@@ -49,6 +49,8 @@
     {% set title_url = '/support' %}
 {% elseif configuration.label == 'News and Announcements' %}
     {% set title_url = '/news-and-announcements' %}
+{% elseif configuration.label == 'Resources for TCGA Users' %}
+    {% set title_url = '/resources-tcga-users' %}    
 {% else %}
     {% set title_url = '#' %}
 {% endif %}
@@ -59,9 +61,9 @@
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
   {% endif %}
   {{ title_prefix }}
-  <a href="{{ title_url }}">
-    <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-  </a>
+    <a href="{{ title_url }}">
+      <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
+    </a>
   {{ title_suffix }}
 
   {# Menu. #}

@@ -204,3 +204,19 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+.lb-next {
+	font-size:0px;
+}
+
+.lb-prev {
+	font-size:0px;
+}
+
+.lb-cancel {
+	font-size:0px;
+}
+
+.lb-close {
+	font-size:0px;
+}

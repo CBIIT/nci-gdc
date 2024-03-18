@@ -1,0 +1,12 @@
+uuid: b673a619-7423-4b18-ae86-2443eccb640b
+langcode: en
+status: true
+dependencies: {  }
+id: resources_for_tcga_users_menu
+label: 'Resources for TCGA Users Menu'
+classes: tcga-users-menu
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

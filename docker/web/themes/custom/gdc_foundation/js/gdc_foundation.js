@@ -18,14 +18,10 @@
   }
 
 $.setActiveTabOnMainMenu = function(e) {
-  console.log("Read Breadcrumb and search titles on main menu");
   var activeMenu = $("#breadcrumbs").data("active-menu");
-  console.dir(activeMenu);
-  console.log("active-menu: ".activeMenu);
 }
 
 $.addGDCAppListener = function() {
-  console.log("Adding GDC App listener");
   $(document).ready(function () {
   $(".pullout").click(function () {
     $(".panel.callout").toggle();

@@ -46,7 +46,7 @@
 #main #sidebar-first .body.field.field--block-content-body li {
   margin-left: 0px;
   list-style: none;
-  background: url('/themes/custom/gdc_foundation/images/bullet-more-fa.png') left 0.0813em no-repeat;
+  /*background: url('/themes/custom/gdc_foundation/images/bullet-more-fa.png') left 0.0813em no-repeat; */
   margin: 0 0 0.1625em;
   padding: 0 0 0 22px;
 }
@@ -72,3 +72,24 @@
   border-bottom-right-radius: 0rem;
 
 }
+#main #sidebar-first .body.field.field--block-content-body li:before {
+  font-family: FontAwesome;
+  content: "\f061";
+  font-weight: "bold";
+  font-size: 20px;
+  color: #c5c3c4;
+  width: 20px;
+  display: inline-block;
+
+
+}
+
+#main #sidebar-first .body.field.field--block-content-body li {
+  padding-left:0px;
+  margin-left:10px;
+  position: relative;
+
+}
+/* Remove this eventually */
+#search-block-form input {display:none;}
+

@@ -28,7 +28,7 @@ li.menu__item--has-children:not(.menu__item--active-trail) ul {
     left: 0;
     position: absolute;
     top: .25rem;
-    width: .15rem;
+    width: .20rem;
 }
 #sidebar-first nav li a.is-active {
   font-weight:bold;

@@ -17,7 +17,7 @@
         try {
             await getProjects();
             await getHumanBodyData();
-            displayChart();
+            //displayChart();
         } catch (error) {
             console.error('Initialization error:', error);
         }
@@ -100,9 +100,10 @@
             cases,
             files
         }));
-        let newData = dataResponse.map(item => item.cases);
-        chart.data.datasets[0].data = newData;
-        chart.update();
+        displayChart();
+        //let newData = dataResponse.map(item => item.cases);
+        //chart.data.datasets[0].data = newData;
+        //chart.update();
     }
 
     async function getCaseData() {
@@ -157,8 +158,7 @@
             }
             const data = await response.json();
             let aggregations = data.data.aggregations;
-            $('#diseaseTypes')[0].innerHTML = aggregations.disease_type.buckets.length.toLocaleString();
-            $('#primarySites')[0].innerHTML = aggregations.primary_site.buckets.length.toLocaleString();
+            $('#primarySites')[0].innerHTML = aggregations.primary_site.buckets.filter(item => item.key !== '_missing').length.toLocaleString();
             $('#projects')[0].innerHTML = aggregations.project_id.buckets.length.toLocaleString();
             $('#cases')[0].innerHTML = aggregations['summary.case_count']['stats']['sum'].toLocaleString();
             $('#programs')[0].innerHTML = aggregations['program.name']['buckets'].length.toLocaleString();

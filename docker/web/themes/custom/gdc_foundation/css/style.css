@@ -366,6 +366,10 @@ footer#footer {
 	padding: 25px;
 }
 
+#footer a{
+  color:#fff !important;                      
+}  
+
 .usa-footer--nci-big
 	.usa-footer__primary-section
 	.usa-footer__primary-content
@@ -702,3 +706,47 @@ table.imgspacing tbody {
   background-color:#fff;
   font-size:18px;
 }
+
+a.show-on-focus {
+	color:blue;
+}
+
+button.tbm-button {
+    background: #004971;
+    margin-right: 1.5rem;
+    width: auto;
+    color:#fff;
+    border-radius: 0.25rem;
+    padding:10px;
+    font-weight:bold;
+}
+
+#main-content {
+	font-size:0px;
+	
+}
+
+#block-gdc-foundation-gdcfooterapplications {
+  color:#fff;
+}
+#block-gdc-foundation-gdcfooterapplications:hover {
+  color:#fff;                      
+}  
+#block-gdc-foundation-gdcfooterapplications:visited {
+  color:#fff;                      
+} 
+
+a {
+    color: #006297;
+ }
+ /* TCGA Users Menu */
+ .tcga-users-menu {
+  border-top: 1px solid grey;
+}
+.tcga-users-menu ul {
+  display: block;
+  list-style: inherit;
+  padding-left: 30px;
+  margin-top: 15px;
+}
+

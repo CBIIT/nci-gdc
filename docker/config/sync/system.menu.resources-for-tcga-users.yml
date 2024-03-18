@@ -1,0 +1,8 @@
+uuid: 2e047f12-ae94-4bbc-a000-9051f440399f
+langcode: en
+status: true
+dependencies: {  }
+id: resources-for-tcga-users
+label: 'Resources for TCGA Users'
+description: ''
+locked: false

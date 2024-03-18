@@ -1,0 +1,36 @@
+uuid: 86ffc6e3-2d58-430b-b5e9-a468658b6e15
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.resources-for-tcga-users
+  module:
+    - menu_block
+    - system
+  theme:
+    - gdc_foundation
+id: gdc_foundation_resourcesfortcgausers
+theme: gdc_foundation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:resources-for-tcga-users'
+settings:
+  id: 'menu_block:resources-for-tcga-users'
+  label: 'Resources for TCGA Users'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'resources-for-tcga-users:'
+  suggestion: resources_for_tcga_users
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/resources-tcga-users/tcga-code-tables\r\n/resources-tcga-users/*\r\n/resources-tcga-users\r\n"
