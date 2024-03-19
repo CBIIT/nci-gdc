@@ -15,7 +15,7 @@ else
     cat $code_path/docker/settings.php.patch >> web/sites/default/settings.php
     git clone https://git.drupalcode.org/issue/content_sync-3330173.git $drupal_root/web/modules/contrib/content_sync
     git -C $drupal_root/web/modules/contrib/content_sync checkout 3330173-D10-compatibility-beta    
-    chown -R www-data:www-data web
+    chown -R apache:apache web
     echo "changing ownership of web to www-data"
     drush cr
 fi
