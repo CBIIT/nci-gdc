@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_newsandannouncements
 theme: gdc_foundation
 region: sidebar_first
-weight: -28
+weight: -29
 provider: null
 plugin: 'menu_block:news-and-announcements'
 settings:

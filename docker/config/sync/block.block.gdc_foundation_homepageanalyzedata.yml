@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_homepageanalyzedata
 theme: gdc_foundation
 region: sidebar_first
-weight: -38
+weight: -39
 provider: null
 plugin: 'block_content:d99db9a4-73f8-4b40-ba46-f7a10eb19c6f'
 settings:

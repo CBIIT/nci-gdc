@@ -1,6 +1,6 @@
 uuid: 23bdacb2-954a-4513-ae47-40171768722b
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:61990f47-89a3-45e4-89ba-6b8b06aac18d'
@@ -11,8 +11,8 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_gdc_bootstrap_block_46
 theme: gdc_foundation
-region: content
-weight: -11
+region: sidebar_first
+weight: -20
 provider: null
 plugin: 'block_content:61990f47-89a3-45e4-89ba-6b8b06aac18d'
 settings:

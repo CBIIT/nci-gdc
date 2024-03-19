@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_support
 theme: gdc_foundation
 region: sidebar_first
-weight: 0
+weight: -22
 provider: null
 plugin: 'menu_block:support'
 settings:

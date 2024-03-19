@@ -3,13 +3,13 @@
 #main #sidebar-first .block.block-block-content,
 #main #sidebar-first nav {
    background-color: white;
-   padding:10px; /* Reset padding.  Set it later based on type */
+   padding:8px; /* Reset padding.  Set it later based on type */
    border: 1px solid grey;
    border-radius: 8px;
    margin-bottom: 20px;
 }
 #main #sidebar-first .block.block-block-content div {
-  padding: 10px;
+/*  padding: 10px;*/
 }
 #main .block.block-block-content .h4,
 #sidebar-first nav h2 {
@@ -46,9 +46,9 @@
 #main #sidebar-first .body.field.field--block-content-body li {
   margin-left: 0px;
   list-style: none;
-  /*background: url('/themes/custom/gdc_foundation/images/bullet-more-fa.png') left 0.0813em no-repeat; */
+  /*background: url('/themes/custom/gdc_foundation/images/bullet-more-fa.png') left 0.0813em no-repeat;
   margin: 0 0 0.1625em;
-  padding: 0 0 0 22px;
+  padding: 0 0 0 22px;*/
 }
 
 /* This is one block.  We want to do this to all blocks in the sidebar */
@@ -76,7 +76,6 @@
   font-family: FontAwesome;
   content: "\f061";
   font-weight: "bold";
-  font-size: 20px;
   color: #c5c3c4;
   width: 20px;
   display: inline-block;
@@ -90,6 +89,48 @@
   position: relative;
 
 }
-/* Remove this eventually */
-#search-block-form input {display:none;}
+/* Font Awesome on some list items */
+#main #sidebar-first .body.field.field--block-content-body li.more-site:before {
+  font-family: FontAwesome;
+  content: "\f390";
+  color: #c5c3c4;
+  font-size: 14px;
+}
+#main #sidebar-first .body.field.field--block-content-body li.more-chat:before {
+  font-family: FontAwesome;
+  content: "\f086";
+  color: #c5c3c4;
+  font-size: 14px;
+}
+#main #sidebar-first .body.field.field--block-content-body li.more-phone:before {
+  font-family: FontAwesome;
+  content: "\f095";
+  color: #c5c3c4;
+  font-size: 14px;
+}
+#main #sidebar-first .body.field.field--block-content-body li.more-news:before {
+  font-family: FontAwesome;
+  content: "\f09e";
+  color: #c5c3c4;
+  font-size: 14px;
+}
+
+#main #sidebar-first .body.field.field--block-content-body li.more-fax:before {
+  font-family: FontAwesome;
+  content: "\f1ac";
+  color: #c5c3c4;
+  font-size: 14px;
+}
+#main #sidebar-first .body.field.field--block-content-body li.more-email:before {
+  font-family: FontAwesome;
+  content: "\f0e0";
+  color: #c5c3c4;
+  font-size: 14px;
+}
+#main #sidebar-first .body.field.field--block-content-body li.more-email {
+  font-size: 14px;
+}
+
+ #main #sidebar-first .body.field.field--block-content-body li {
+}
 

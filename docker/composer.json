@@ -12,6 +12,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -62,7 +66,6 @@
         "drupal/symfony_mailer": "^1.4",
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/twig_tweak": "^3.2",
-        "drupal/twig_ui": "^2.0",
         "drupal/url_redirect": "^3.0",
         "drupal/views_accordion_foundation": "^2.0",
         "drupal/views_aggregator": "^2.0",
@@ -74,7 +77,9 @@
         "drush/drush": "^12.2",
         "erusev/parsedown": "^1.7",
         "kint-php/kint": "^5.0",
-        "nikic/php-parser": "^4"
+        "nikic/php-parser": "^4",
+        "npm-asset/foundation-sites": "^6.8",
+        "npm-asset/motion-ui": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"

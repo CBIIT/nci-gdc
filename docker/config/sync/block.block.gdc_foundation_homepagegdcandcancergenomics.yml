@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_homepagegdcandcancergenomics
 theme: gdc_foundation
 region: sidebar_first
-weight: -34
+weight: -35
 provider: null
 plugin: 'block_content:e837c8bf-1640-4ace-9ab8-4d115c6daf80'
 settings:

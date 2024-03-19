@@ -1,6 +1,6 @@
 uuid: 35e4f79f-daa5-4d59-ad84-67d44917533a
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:f3ee8cf5-1b19-4bff-a4b0-465ca2fadf4d'
@@ -11,8 +11,8 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_gdc_bootstrap_block_29
 theme: gdc_foundation
-region: content
-weight: -15
+region: sidebar_first
+weight: -19
 provider: null
 plugin: 'block_content:f3ee8cf5-1b19-4bff-a4b0-465ca2fadf4d'
 settings:

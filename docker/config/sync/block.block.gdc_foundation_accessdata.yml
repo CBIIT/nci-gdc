@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_accessdata
 theme: gdc_foundation
 region: sidebar_first
-weight: -31
+weight: -32
 provider: null
 plugin: 'menu_block:access-data'
 settings:

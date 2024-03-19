@@ -1,6 +1,6 @@
 uuid: f0887cab-1a73-4a3a-b0e1-67c6731c8eb4
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:32992324-b0ad-43b9-a4a8-96674b69ee2c'
@@ -12,7 +12,7 @@ dependencies:
 id: gdc_foundation_gdc_bootstrap_block_49
 theme: gdc_foundation
 region: sidebar_first
-weight: -23
+weight: -21
 provider: null
 plugin: 'block_content:32992324-b0ad-43b9-a4a8-96674b69ee2c'
 settings:
@@ -27,6 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: |-
-      /node/766
-      /node/838
+    pages: "/about-data/publications\r\n/analyze-data/gdc-dave-tools"

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_intended_audience
+    - filter.format.full_html
     - node.type.webinar
   module:
     - text
@@ -18,5 +19,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - full_html
 field_type: text_long
