@@ -16,6 +16,7 @@ else
     git clone https://git.drupalcode.org/issue/content_sync-3330173.git $drupal_root/web/modules/contrib/content_sync
     git -C $drupal_root/web/modules/contrib/content_sync checkout 3330173-D10-compatibility-beta    
     mkdir -p config/sync
+    drush webform-libraries-download
     chown -R apache:apache web
     echo "changing ownership of web to www-data"
     drush cr
