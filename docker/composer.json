@@ -79,7 +79,8 @@
         "kint-php/kint": "^5.0",
         "nikic/php-parser": "^4",
         "npm-asset/foundation-sites": "^6.8",
-        "npm-asset/motion-ui": "^2.0"
+        "npm-asset/motion-ui": "^2.0",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -93,12 +94,16 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true
         },
         "sort-packages": true
     },
     "extra": {
-
+    "installer-types": [
+        "npm-asset",
+        "bower-asset"
+    ],
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -109,7 +114,9 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
