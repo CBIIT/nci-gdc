@@ -26,6 +26,6 @@ $settings['trusted_host_patterns'] = array(
   '^nci\.nih\.gov$',
   '^.+\.nci\.nih\.gov$',                        
   '^cancer\.gov$',
-  '^.+\.cancer\.gov$'
+  '^.+\.cancer\.gov$',
   '^localhost$'
 );
