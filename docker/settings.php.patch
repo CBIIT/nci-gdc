@@ -22,3 +22,8 @@ $content_directories['sync'] = $app_root.'/../content/sync';
 $config_directories['sync'] = $app_root.'/../config/sync';
 $settings['sync']="";
 $config_directories['sync'] = '../config';
+$settings['trusted_host_patterns'] = array(
+  '^nci\.nih\.gov$',     
+  '^.+\.nci\.nih\.gov$',                        
+  '^localhost$'
+);
