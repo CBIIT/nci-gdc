@@ -24,7 +24,8 @@ $settings['sync']="";
 $config_directories['sync'] = '../config';
 $settings['trusted_host_patterns'] = array(
   '^nci\.nih\.gov$',
-  '^cancer\.gov$',     
   '^.+\.nci\.nih\.gov$',                        
+  '^cancer\.gov$',
+  '^.+\.cancer\.gov$'
   '^localhost$'
 );
