@@ -1,3 +1,12 @@
 <article{{ attributes }}>
-  <iframe class="youtube-player" title="youtube tutorial" type="text/html" width="400" height="250" src="https://www.youtube.com/embed/{{ node.field_video_id.value }}?wmode=opaque&autoplay=&rel=0" frameborder="0"></iframe>
+  {% if view_mode=='embedded_youtube_video' %}
+  {% set field_overview_description = elements.field_overview_description['#items'].0.value %}
+
+    <div class="embedded_youtube_video">
+      <iframe class="youtube-player" title="youtube tutorial" type="text/html" width="600" height="375" src="https://www.youtube.com/embed/{{ node.field_video_id.value|replace({' ':''}) }}?wmode=opaque&autoplay=&rel=0" frameborder="0"></iframe>
+      <div class="youtube_headline">{{ field_overview_description|raw }}</div> 
+    </div>
+  {% else %}
+     <iframe class="youtube-player" title="youtube tutorial" type="text/html" width="400" height="250" src="https://www.youtube.com/embed/{{ node.field_video_id.value|replace({' ':''}) }}?wmode=opaque&autoplay=&rel=0" frameborder="0"></iframe>
+  {% endif %}
 </article>

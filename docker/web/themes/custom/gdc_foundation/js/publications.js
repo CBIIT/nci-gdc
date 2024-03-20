@@ -31,6 +31,7 @@
 
   // Function to add record count to form //
   function addRecordCountToForm() {
+    console.log('test');
     $('#publicationRecordCount')[0].innerHTML=$('.publicationRecordCount').text();
   }
 

@@ -1,6 +1,6 @@
 uuid: 20fd6c9c-ff7a-4cd4-ac68-e60cde90468a
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:cdedc3f2-4616-4f8d-9849-fc86604eba06'
@@ -11,8 +11,8 @@ dependencies:
     - gdc_foundation
 id: gdc_foundation_gdc_bootstrap_block_31
 theme: gdc_foundation
-region: content
-weight: -13
+region: sidebar_first
+weight: -18
 provider: null
 plugin: 'block_content:cdedc3f2-4616-4f8d-9849-fc86604eba06'
 settings:
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /node/736
+    pages: /support/gdc-webinars

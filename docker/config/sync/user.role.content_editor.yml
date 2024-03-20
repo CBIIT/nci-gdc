@@ -55,6 +55,7 @@ dependencies:
     - comment
     - contextual
     - draggableviews
+    - embed
     - file
     - filter
     - help
@@ -96,6 +97,7 @@ permissions:
   - 'administer block content'
   - 'administer block types'
   - 'administer css assets injector'
+  - 'administer embed buttons'
   - 'administer menu'
   - 'administer nodes'
   - 'administer recaptcha'

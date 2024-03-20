@@ -42,6 +42,9 @@ function gdc_foundation_preprocess_html(&$variables) {
  * Add template suggestions and classes.
  */
 function gdc_foundation_preprocess_node(&$variables) {
+  if ($variables['node']->getType()=='publications_group') {
+    $variables['#attached']['library'][] = 'gdc_foundation/publications_group';
+  };
 }
 
 /**

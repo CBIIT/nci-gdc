@@ -1,0 +1,11 @@
+uuid: 96b0c2f0-2572-4bee-a418-eaf369e89a5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.embedded_youtube_video
+label: 'Embedded Youtube Video'
+description: 'Embed a youtube video on a page'
+targetEntityType: node
+cache: true

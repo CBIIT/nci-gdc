@@ -37,6 +37,14 @@ publications:
   css:
     base:
       css/publications.css: {}
+publications_group:
+  version: VERSION
+  js:
+    js/publications_group.js: { }
+  css:
+    base:
+      css/publications_group.css: {}
+
 news:
   version: VERSION
   js:

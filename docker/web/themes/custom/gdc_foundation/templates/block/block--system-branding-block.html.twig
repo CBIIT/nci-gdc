@@ -41,7 +41,7 @@
             </li>
             <li>
 
-<a id="gdc-apps" data-toggle="gdc-apps-table-container" type="button" title="GDC Apps">GDC Apps</a>
+<a id="gdc-apps" data-toggle="gdc-apps-table-container" type="button" title="GDC Apps" alt="GDC Applications">GDC Apps</a>
 <div id="gdc-apps-table-container" class="dropdown-pane" data-dropdown data-auto-focus="false" data-close-on-click="true" data-position="bottom" data-alignment="right">
 
 <table>
@@ -105,7 +105,22 @@
         </ul>
     </nav>
 </div>
-<div>{{ drupal_entity("block", "gdc_foundation_searchform") }}
+<div>
+{# drupal_entity("block", "gdc_foundation_searchform") #}
+    <!-- Hard coded Search form because it produced the same -->
+    <!--
+    <form action="/search/node" method="get" id="search-block-form-2" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+    <label for="edit-keys-2" class="show-for-sr">Search</label>
+    <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys-2" type="search" id="edit-keys-2" name="keys" value="" size="15" maxlength="128" class="form-search">
+  </div>
+  <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions-2">
+    <input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit-2" value="Search">
+  </div>
+</form>
+-->
+
+
     </div>
 
 

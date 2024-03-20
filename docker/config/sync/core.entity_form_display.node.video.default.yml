@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.video.comment_node_video
     - field.field.node.video.field_content_tag
     - field.field.node.video.field_headline
+    - field.field.node.video.field_overview_description
     - field.field.node.video.field_subject_tag
     - field.field.node.video.field_video_id
     - field.field.node.video.field_video_length
@@ -45,6 +46,14 @@ content:
   field_headline:
     type: text_textarea
     weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_overview_description:
+    type: text_textarea
+    weight: 51
     region: content
     settings:
       rows: 5
@@ -128,5 +137,10 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

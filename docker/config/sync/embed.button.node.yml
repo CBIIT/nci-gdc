@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.body_only
+    - core.entity_view_mode.node.embedded_youtube_video
     - core.entity_view_mode.node.full_page_width_image
     - core.entity_view_mode.node.image
     - node.type.article
@@ -73,6 +74,7 @@ type_settings:
     - video
   display_plugins:
     - 'view_mode:node.body_only'
+    - 'view_mode:node.embedded_youtube_video'
     - 'view_mode:node.full_page_width_image'
     - 'view_mode:node.image'
   entity_browser: ''

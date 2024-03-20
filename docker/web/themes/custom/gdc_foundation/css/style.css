@@ -20,6 +20,9 @@ main h3 {
 a.ext[href*='.gov'] svg {
 	display: none;
 }
+a {
+  color: #006297;
+}
 #main div.cell:nth-child(3) {
 	box-shadow: 5px 5px 8px 3px lightgrey;
 	background-color: white;
@@ -394,10 +397,15 @@ footer#footer {
 	padding: 25px;
 }
 
-#footer a{
-  color:#fff !important;                      
-}  
-
+footer li a {
+  color:#fff;
+}
+footer ul.contextual-links li a {
+  color: black;
+}
+footer h2 {
+  color: #fff;
+}
 .usa-footer--nci-big
 	.usa-footer__primary-section
 	.usa-footer__primary-content
@@ -764,9 +772,6 @@ button.tbm-button {
   color:#fff;                      
 } 
 
-a {
-    color: #006297;
- }
  /* TCGA Users Menu */
  .tcga-users-menu {
   border-top: 1px solid grey;
@@ -778,3 +783,7 @@ a {
   margin-top: 15px;
 }
 
+
+.embedded_youtube_video {
+	max-width:600px;
+}
