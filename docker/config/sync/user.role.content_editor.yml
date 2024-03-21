@@ -50,7 +50,6 @@ dependencies:
     - taxonomy.vocabulary.topic_tag
     - taxonomy.vocabulary.usage_stats_tags
   module:
-    - asset_injector
     - block_content
     - comment
     - contextual
@@ -96,7 +95,6 @@ permissions:
   - 'access webform submission user'
   - 'administer block content'
   - 'administer block types'
-  - 'administer css assets injector'
   - 'administer embed buttons'
   - 'administer menu'
   - 'administer nodes'

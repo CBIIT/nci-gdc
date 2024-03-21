@@ -28,6 +28,18 @@
   margin-top: -55px;
   vertical-align: middle;
 }
+@media screen and (min-width: 731px) {
+  #main .block.block-block-content img {
+    display:inline-block;
+  }
+}
+@media screen and (max-width: 730px) {
+  #main .block.block-block-content img {
+    display:none;
+  }
+}
+
+
 /* Front Page blocks with image */
 #block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content {
   margin-bottom:0px; 

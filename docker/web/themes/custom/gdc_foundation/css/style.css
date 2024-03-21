@@ -75,10 +75,21 @@ h2:after {
 
 /* Header Logo */
 header a img[alt='Home'] {
-	padding-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 1001px) {
+  header a img[alt='Home'] {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header a img[alt='home'] {
+    width: 100%;
+  }
 }
 /* Breadcrumbs */
-.breadcrumbs {
+ul.breadcrumbs {
 	font-family:
 		Open Sans,
 		-apple-system,
@@ -91,7 +102,8 @@ header a img[alt='Home'] {
 		Apple Color Emoji,
 		Segoe UI Emoji,
 		Segoe UI Symbol;
-	margin-top: 1rem;
+	margin: 20 20 0px;
+	height: 30px;
 }
 .breadcrumbs li {
 	text-transform: none;
@@ -313,7 +325,7 @@ footer .menu a {
 /* Search Block */
 /* There are two block with the same class.  The first one is .#block-gdc-foundation-branding .grid-container .search-block-form.  The second one is #block-gdc-foundation-branding > .search-block-form  */
 .search-block-form form {
-	display: inline-flex;
+  display: inline-flex;
 }
 @media screen and (max-width: 1200px) {
   #block-gdc-foundation-branding > .search-block-form {
@@ -348,7 +360,8 @@ header input[type=search] {
   flex-grow: 1;
   height: 2rem;
   margin: 0;
-  padding: 0 .5rem;
+  padding: 0 8px;
+  width: 175px;
 }
 header form#search-block-form input.button {
   background-color: #007bbd;
