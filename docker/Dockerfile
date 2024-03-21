@@ -17,6 +17,5 @@ COPY ldap.conf /etc/openldap
 COPY memory.ini /etc/php82/conf.d
 WORKDIR $drupal_root
 EXPOSE 80
-HEALTHCHECK --interval=5m --start-period=3m --start-interval=10s \
-  CMD curl -f http://localhost:80 || exit 1
+HEALTHCHECK --interval=5m --start-period=3m --start-interval=10s CMD curl -f http://localhost:80 || exit 1
 ENTRYPOINT run.sh
