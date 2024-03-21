@@ -4,7 +4,7 @@ ARG drupal_root=/var/www/drupal
 ENV code_path=$code_path
 ENV drupal_root=$drupal_root
 RUN apk update
-RUN apk add git openldap openldap-clients composer \
+RUN apk add git curl openldap openldap-clients composer \
     patch vim mariadb-client postfix php82-ldap \
     php82-apache2 php82-opcache php82-mysqli php82-pdo_mysql php82-tokenizer \
     php82-dom php82-gd php82-pdo php82-session php82-simplexml php82-xml
