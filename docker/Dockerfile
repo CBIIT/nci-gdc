@@ -16,4 +16,5 @@ COPY 000-default.conf /etc/apache2/conf.d
 COPY ldap.conf /etc/openldap
 COPY memory.ini /etc/php82/conf.d
 WORKDIR $drupal_root
+EXPOSE 80
 ENTRYPOINT run.sh
