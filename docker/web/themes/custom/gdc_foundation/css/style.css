@@ -89,7 +89,7 @@ header a img[alt='Home'] {
   }
 }
 /* Breadcrumbs */
-ul.breadcrumbs {
+nav[role="navigation"] ul.breadcrumbs {
 	font-family:
 		Open Sans,
 		-apple-system,
@@ -268,7 +268,9 @@ footer nav ul.menu li a {
 	padding: 0px;
 	margin-top: 8px;
 }
-
+footer nav h2 {
+  cursor: default;
+}
 #block-gdc-foundation-gdc-footer-info a {
 	color: white;
 	text-decoration: underline;
@@ -323,8 +325,9 @@ footer .menu a {
 	left: 100px;
 }
 /* Search Block */
-/* There are two block with the same class.  The first one is .#block-gdc-foundation-branding .grid-container .search-block-form.  The second one is #block-gdc-foundation-branding > .search-block-form  */
-.search-block-form form {
+/* There are two block with the same id.  The first one is .#block-gdc-foundation-branding .grid-container .search-block-form.  The second one is #block-gdc-foundation-branding > .search-block-form  */
+.search-block-form form#search-block-form,
+#block-gdc-foundation-site-branding .grid-container form#search-block-form {
   display: inline-flex;
 }
 @media screen and (max-width: 1200px) {
