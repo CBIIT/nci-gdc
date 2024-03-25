@@ -62,7 +62,6 @@ dependencies:
     - node
     - paragraphs
     - path
-    - recaptcha
     - search
     - system
     - taxonomy
@@ -98,7 +97,6 @@ permissions:
   - 'administer embed buttons'
   - 'administer menu'
   - 'administer nodes'
-  - 'administer recaptcha'
   - 'administer search'
   - 'administer taxonomy'
   - 'administer tb_megamenu'

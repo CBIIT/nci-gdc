@@ -3,7 +3,7 @@
 #main #sidebar-first .block.block-block-content,
 #main #sidebar-first nav {
    background-color: white;
-   padding:15x; /* Reset padding.  Set it later based on type */
+   padding: 15px; /* Reset padding.  Set it later based on type */
    border: 1px solid grey;
    border-radius: 8px;
    margin-bottom: 20px;
@@ -27,6 +27,9 @@
   float: right;
   margin-top: -55px;
   vertical-align: middle;
+}
+#block-gdc-foundation-homepagegdcandcancergenomics {
+  padding: 0px !important;
 }
 @media screen and (min-width: 731px) {
   #main .block.block-block-content img {
