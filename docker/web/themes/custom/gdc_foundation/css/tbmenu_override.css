@@ -227,6 +227,12 @@ nav#tbm-main:not(.tbm--mobile) ul.level-0 li.level-1.active-trail > div.tbm-link
     position: relative;
     width: 80%;
 }
+/* External Link - turn them white on the menu */
+nav#tbm-main:not(.tbm--mobile) li.tbm-item.level-3 svg.ext path, 
+nav#tbm-main:not(.tbm--mobile) li.tbm-item.level-3 svg.mailto path {
+    stroke: white;
+    fill: white;
+}
 /* Hide 1st Menu 2nd & 3rd Column Group Title */
 /*
 ul.tbm-nav.level-0 li.tbm-item.level-1:nth-child(1) .tbm-row .tbm-column.span3:nth-child(2) a.tbm-link.level-2.tbm-group-title,
