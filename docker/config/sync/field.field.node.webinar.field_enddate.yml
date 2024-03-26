@@ -1,0 +1,21 @@
+uuid: 174bd7e6-0e5d-41e8-b0cf-765469f26e93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enddate
+    - node.type.webinar
+  module:
+    - datetime
+id: node.webinar.field_enddate
+field_name: field_enddate
+entity_type: node
+bundle: webinar
+label: 'End Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

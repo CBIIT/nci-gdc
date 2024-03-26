@@ -9,16 +9,19 @@ dependencies:
     - field.field.node.webinar.field_attachment_nid
     - field.field.node.webinar.field_date2
     - field.field.node.webinar.field_end_date
+    - field.field.node.webinar.field_enddate
     - field.field.node.webinar.field_image
     - field.field.node.webinar.field_included_topics
     - field.field.node.webinar.field_intended_audience
     - field.field.node.webinar.field_location
     - field.field.node.webinar.field_speaker_ref
+    - field.field.node.webinar.field_start_date
     - field.field.node.webinar.field_webex_information
     - field.field.node.webinar.field_youtube_video
     - node.type.webinar
   module:
     - comment
+    - datetime
     - image
     - text
     - user
@@ -49,7 +52,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_date2:
     type: timestamp
@@ -68,7 +71,7 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_end_date:
     type: timestamp
@@ -88,6 +91,15 @@ content:
         refresh: 60
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_enddate:
+    type: datetime_custom
+    label: above
+    settings:
+      timezone_override: America/New_York
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_image:
     type: image
@@ -120,7 +132,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_speaker_ref:
     type: entity_reference_label
@@ -129,6 +141,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_start_date:
+    type: datetime_custom
+    label: above
+    settings:
+      timezone_override: America/New_York
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_webex_information:
     type: text_default

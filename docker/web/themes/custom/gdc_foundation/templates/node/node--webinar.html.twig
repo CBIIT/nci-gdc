@@ -70,8 +70,11 @@
 
 <article{{ attributes }}>
     <div>
-        <div><b>Date: </b>{{ node.field_date2.value|date('l, F j, Y') }}</div>
-        <div><b>Time: </b>{{ node.field_date2.value|date('g:i A') }} - {{ node.field_end_date.value|date('g:i A') }}</div>
+    {% set start_date = content['field_start_date'][0]['#markup'] %}
+    {% set end_date = content['field_enddate'][0]['#markup'] %}
+
+    <div><b>Date: </b>{{ start_date|date('l, F j, Y') }}</div>
+        <div><b>Time: </b>{{ start_date|date('g:i A') }} - {{ end_date|date('g:i A') }}</div>
         <div><b>Location: </b>{{ node.field_location.value }}</div>
         <div>
             <b>Speakers: </b>

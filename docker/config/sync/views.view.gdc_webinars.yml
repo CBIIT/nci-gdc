@@ -3,15 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date2
-    - field.storage.node.field_end_date
+    - field.storage.node.field_abstract
+    - field.storage.node.field_enddate
     - field.storage.node.field_location
+    - field.storage.node.field_start_date
     - field.storage.node.field_video_id
     - field.storage.node.field_video_length
     - field.storage.node.field_video_title
     - node.type.webinar
   module:
+    - datetime
     - node
+    - text
     - user
 id: gdc_webinars
 label: gdc-webinars
@@ -94,19 +97,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_date2:
-          id: field_date2
-          table: node__field_date2
-          field: field_date2
+        field_start_date:
+          id: field_start_date
+          table: node__field_start_date
+          field: field_start_date
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Start Date'
+          label: 'New Start Date'
           exclude: false
           alter:
             alter_text: true
-            text: '<B>Date:</B> {{ field_date2 }}'
+            text: '<B>Date:</B> {{ field_start_date }}'
             make_link: false
             path: ''
             absolute: false
@@ -144,21 +147,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_custom
           settings:
-            date_format: custom
-            custom_date_format: 'l, F d, Y'
-            timezone: ''
-            tooltip:
-              date_format: html_date
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
+            timezone_override: America/New_York
+            date_format: 'l, F d, Y'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -169,15 +161,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_end_date:
-          id: field_end_date
-          table: node__field_end_date
-          field: field_end_date
+        field_enddate:
+          id: field_enddate
+          table: node__field_enddate
+          field: field_enddate
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'End Date'
+          label: 'New End Date'
           exclude: false
           alter:
             alter_text: false
@@ -210,7 +202,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -219,21 +211,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_custom
           settings:
-            date_format: custom
-            custom_date_format: 'g:i A'
-            timezone: ''
-            tooltip:
-              date_format: long
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
+            timezone_override: America/New_York
+            date_format: 'g:i A'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -244,19 +225,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_date2_1:
-          id: field_date2_1
-          table: node__field_date2
-          field: field_date2
+        field_start_date_1:
+          id: field_start_date_1
+          table: node__field_start_date
+          field: field_start_date
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Time
+          label: 'New Time'
           exclude: false
           alter:
             alter_text: true
-            text: '<B>Time:</B> {{ field_date2_1 }} - {{ field_end_date }}'
+            text: '<B>Time:</B> {{ field_start_date_1 }} - {{ field_enddate }}'
             make_link: false
             path: ''
             absolute: false
@@ -285,7 +266,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -294,21 +275,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_custom
           settings:
-            date_format: custom
-            custom_date_format: 'g:i A'
-            timezone: ''
-            tooltip:
-              date_format: long
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
+            timezone_override: ''
+            date_format: 'g:i A'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -648,7 +618,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col1\">\r\n   <div>{{ title }}</div>\r\n   <div>{{ field_date2 }}</div>\r\n   <div>{{ field_date2_1 }}</div>\r\n   <div>{{ field_location }}</div> \r\n</div>\r\n<div class=\"col2\">\r\n   <div>video</div>\r\n</div>"
+            text: "<div class=\"col1\">\r\n   <div>{{ title }}</div>\r\n   <div>{{ field_start_date }}</div>\r\n   <div>{{ field_start_date_1 }}</div>\r\n   <div>{{ field_location }}</div> \r\n</div>\r\n<div class=\"col2\">\r\n   <div>video</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -738,6 +708,69 @@ display:
           text: 'Read More'
           output_url_as_text: true
           absolute: false
+        field_abstract:
+          id: field_abstract
+          table: node__field_abstract
+          field: field_abstract
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_trimmed
+          settings:
+            trim_length: 300
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: none
         options:
@@ -824,6 +857,126 @@ display:
           admin_label: 'field_youtube_video: Content'
           plugin_id: standard
           required: false
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_abstract'
+        - 'config:field.storage.node.field_enddate'
+        - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_start_date'
+        - 'config:field.storage.node.field_video_id'
+        - 'config:field.storage.node.field_video_length'
+        - 'config:field.storage.node.field_video_title'
+  attachment_1:
+    id: attachment_1
+    display_title: 'Upcoming Webinars'
+    display_plugin: attachment
+    position: 3
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 0
+      sorts:
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            webinar: webinar
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+      display_description: ''
       header:
         area:
           id: area
@@ -835,11 +988,12 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: 'Past Webinars'
+            value: '<h3>Upcoming Webinars</h3><hr />'
             format: filtered_html
           tokenize: false
-      footer: {  }
       display_extenders: {  }
+      displays:
+        page_1: page_1
     cache_metadata:
       max-age: -1
       contexts:
@@ -848,9 +1002,144 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_date2'
-        - 'config:field.storage.node.field_end_date'
+        - 'config:field.storage.node.field_abstract'
+        - 'config:field.storage.node.field_enddate'
         - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_start_date'
+        - 'config:field.storage.node.field_video_id'
+        - 'config:field.storage.node.field_video_length'
+        - 'config:field.storage.node.field_video_title'
+  attachment_2:
+    id: attachment_2
+    display_title: 'Past Webinars'
+    display_plugin: attachment
+    position: 4
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 0
+      sorts:
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            webinar: webinar
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h3>Past Webinars</h3><hr />'
+            format: full_html
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        page_1: page_1
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_abstract'
+        - 'config:field.storage.node.field_enddate'
+        - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_start_date'
         - 'config:field.storage.node.field_video_id'
         - 'config:field.storage.node.field_video_length'
         - 'config:field.storage.node.field_video_title'
@@ -860,6 +1149,86 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
+      empty: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            webinar: webinar
+        field_start_date_value:
+          id: field_start_date_value
+          table: node__field_start_date
+          field: field_start_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '0101'
+            type: date_year
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        empty: false
+        pager: false
+        filters: false
+        filter_groups: false
       display_extenders: {  }
       path: support/gdc-webinars
     cache_metadata:
@@ -870,9 +1239,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_date2'
-        - 'config:field.storage.node.field_end_date'
+        - 'config:field.storage.node.field_abstract'
+        - 'config:field.storage.node.field_enddate'
         - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_start_date'
         - 'config:field.storage.node.field_video_id'
         - 'config:field.storage.node.field_video_length'
         - 'config:field.storage.node.field_video_title'
