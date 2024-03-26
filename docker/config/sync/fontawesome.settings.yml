@@ -3,11 +3,11 @@ _core:
 tag: i
 method: webfonts
 load_assets: true
-use_cdn: false
-external_svg_location: ../vendor/components/font-awesome/css/all.css
+use_cdn: true
+external_svg_location: /libraries/fontawesome/css/all.css
 use_shim: false
 external_shim_location: 'https://use.fontawesome.com/releases/v6.4.0/js/v4-shims.js'
-allow_pseudo_elements: false
+allow_pseudo_elements: true
 use_solid_file: true
 use_regular_file: true
 use_light_file: true
