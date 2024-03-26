@@ -166,7 +166,7 @@
     "scripts": {                    
         "post-drupal-scaffold-cmd": [
             "cd web && patch < htaccess.patch .htaccess",
-	    "rm -r web/libraries/fontawesome",
+	    "rm -rf web/libraries/fontawesome",
             "wget https://use.fontawesome.com/releases/v6.5.1/fontawesome-free-6.5.1-web.zip -O fontawesome.zip",
             "unzip -o fontawesome.zip -d web/libraries",
 	    "mv web/libraries/fontawesome-free-6.5.1-web web/libraries/fontawesome",
