@@ -12,7 +12,6 @@ RUN git clone https://github.com/cbiit/nci-gdc /tmp/github --branch gdc_2.0 --si
 RUN mkdir -p /var/www/drupal
 RUN ln -s $drupal_root/vendor/drush/drush/drush /usr/bin/drush
 COPY installdrupal.sh /usr/bin
-COPY start.sh /usr/bin
 COPY 000-default.conf /etc/apache2/conf.d
 COPY ldap.conf /etc/openldap
 COPY memory.ini /etc/php82/conf.d
