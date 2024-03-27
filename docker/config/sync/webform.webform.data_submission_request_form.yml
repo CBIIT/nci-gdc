@@ -550,13 +550,13 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: einolfs@nih.gov
+      to_mail: support@nci-gdc.datacommons.io
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: seinolf@gmail.com
+      from_mail: '[webform_submission:values:principal_investigator_e_mail:raw]'
       from_options: {  }
       from_name: _default
       reply_to: ''

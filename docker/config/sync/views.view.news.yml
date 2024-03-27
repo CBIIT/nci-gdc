@@ -1321,7 +1321,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: news-and-announcements-view
+      path: news-and-announcements
     cache_metadata:
       max-age: -1
       contexts:

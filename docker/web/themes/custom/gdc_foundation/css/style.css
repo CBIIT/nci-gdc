@@ -69,9 +69,6 @@ header nav[role='navigation'] {
 	}
 }
 
-h2:after {
-	content: <hr/>;
-}
 
 /* Header Logo */
 header a img[alt='Home'] {
@@ -803,3 +800,10 @@ button.tbm-button {
 .embedded_youtube_video {
 	max-width:600px;
 }
+
+
+.pagination .current a{                
+    background: #1779ba;                                       
+    color: #fff;                     
+    font-weight:bold;                                        
+} 
