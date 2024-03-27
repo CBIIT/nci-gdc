@@ -19,5 +19,6 @@ COPY memory.ini /etc/php82/conf.d
 WORKDIR $drupal_root
 EXPOSE 80
 RUN /usr/bin/installdrupal.sh
+RUN postfix start
 HEALTHCHECK --interval=5m --start-period=3m --start-interval=10s CMD curl -f http://localhost:80 || exit 1
-ENTRYPOINT start.sh
+CMD ["httpd","-D","FOREGROUND"]
