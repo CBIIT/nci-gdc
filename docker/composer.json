@@ -170,10 +170,7 @@
             "wget https://use.fontawesome.com/releases/v6.5.1/fontawesome-free-6.5.1-web.zip -O fontawesome.zip",
             "unzip -o fontawesome.zip -d web/libraries",
 	    "mv web/libraries/fontawesome-free-6.5.1-web web/libraries/fontawesome",
-	    "rm fontawesome.zip",
-	    "echo 'Checking for Update DB Status'",
-	    "drush updatedb-status",
-	    "drush updatedb -y"
+	    "rm fontawesome.zip"
         ]
     }     
 
