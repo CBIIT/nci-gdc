@@ -323,7 +323,7 @@ footer .menu a {
 }
 /* Search Block */
 /* There are two block with the same id.  The first one is .#block-gdc-foundation-branding .grid-container .search-block-form.  The second one is #block-gdc-foundation-branding > .search-block-form  */
-.search-block-form form#search-block-form,
+.search-block-form form#search-block-form--2,
 #block-gdc-foundation-site-branding .grid-container form#search-block-form {
   display: inline-flex;
 }
@@ -363,7 +363,8 @@ header input[type=search] {
   padding: 0 8px;
   width: 175px;
 }
-header form#search-block-form input.button {
+header form#search-block-form input.button,
+header form#search-block-form--2 input.button{
   background-color: #007bbd;
   color: white;
   font-weight: bold;
@@ -769,9 +770,11 @@ button.tbm-button {
     padding:10px;
     font-weight:bold;
 }
+
 nav.tbm--mobile button.tbm-button {
-  background: blue;
+  background-color: #007bbd;
 }
+
 
 #main-content {
 	font-size:0px;
