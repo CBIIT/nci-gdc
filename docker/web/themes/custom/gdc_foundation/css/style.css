@@ -760,7 +760,7 @@ a.show-on-focus {
 	color:blue;
 }
 
-nav:not(.tbm--mobile) button.tbm-button {
+button.tbm-button {
     background: #004971;
     margin-right: 1.5rem;
     width: auto;
@@ -768,6 +768,9 @@ nav:not(.tbm--mobile) button.tbm-button {
     border-radius: 0.25rem;
     padding:10px;
     font-weight:bold;
+}
+nav.tbm--mobile button.tbm-button {
+  background: blue;
 }
 
 #main-content {
