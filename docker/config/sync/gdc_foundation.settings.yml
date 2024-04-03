@@ -4,7 +4,7 @@ features:
   favicon: 1
 favicon:
   use_default: 0
-  path: 'private://favicon.ico'
+  path: themes/custom/gdc_foundation/images/favicon.ico
   mimetype: image/vnd.microsoft.icon
 zurb_foundation_status_in_reveal: 0
 zurb_foundation_meta_header_grid: 0

@@ -46,7 +46,7 @@
         "drupal/imce": "^3.0",
         "drupal/jquery_ui": "^1.6",
         "drupal/layout_builder_styles": "^2.0",
-        "drupal/ldap": "^4.6",
+        "drupal/ldap": "^4.3",
         "drupal/libraries": "^4.0",
         "drupal/linkchecker": "^2.0@alpha",
         "drupal/mailsystem": "^4.4",

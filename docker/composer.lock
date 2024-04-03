@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "065d40f6692a9632a7059ceb99e7947f",
+    "content-hash": "7621c9c6bac34ea8778f6b292f2c56ce",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3982,17 +3982,17 @@
         },
         {
             "name": "drupal/ldap",
-            "version": "4.7.0",
+            "version": "4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ldap.git",
-                "reference": "8.x-4.7"
+                "reference": "8.x-4.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ldap-8.x-4.7.zip",
-                "reference": "8.x-4.7",
-                "shasum": "dba26f1030ff4ba33b15578feb7ed626b6f026f1"
+                "url": "https://ftp.drupal.org/files/projects/ldap-8.x-4.8.zip",
+                "reference": "8.x-4.8",
+                "shasum": "771e70e245ce10d596c9498b543884b3fe83ea4b"
             },
             "require": {
                 "drupal/authorization": "^1.0",
@@ -4014,8 +4014,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.7",
-                    "datestamp": "1710430335",
+                    "version": "8.x-4.8",
+                    "datestamp": "1711575745",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5383,26 +5383,26 @@
         },
         {
             "name": "drupal/tb_megamenu",
-            "version": "3.0.0-alpha2",
+            "version": "3.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tb_megamenu.git",
-                "reference": "3.0.0-alpha2"
+                "reference": "3.0.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tb_megamenu-3.0.0-alpha2.zip",
-                "reference": "3.0.0-alpha2",
-                "shasum": "fb5f23cc423a86271b766724c1dc8351c862f650"
+                "url": "https://ftp.drupal.org/files/projects/tb_megamenu-3.0.0-alpha3.zip",
+                "reference": "3.0.0-alpha3",
+                "shasum": "f048716a9404a998800bdaf0c3a6c3e8b79f3750"
             },
             "require": {
-                "drupal/core": "^10"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-alpha2",
-                    "datestamp": "1686707489",
+                    "version": "3.0.0-alpha3",
+                    "datestamp": "1711742804",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
