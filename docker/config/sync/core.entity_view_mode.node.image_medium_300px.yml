@@ -1,0 +1,11 @@
+uuid: b4ff32bc-e1b6-477a-9037-7fc8d6146f4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.image_medium_300px
+label: 'Image Medium (300px)'
+description: ''
+targetEntityType: node
+cache: true

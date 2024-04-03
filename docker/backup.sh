@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Clear Cache, move old db to previous.sql then backup the database.sql
-echo "*** Save old DB: cp database.sql previous.sql"
-cp database.sql previous.sql
+#echo "*** Save old DB: cp database.sql previous.sql"
+#cp database.sql previous.sql
 
 echo "*** Set maintenance mode ON"
 #drush state:set system.maintenance_mode 1 --input-format=integer

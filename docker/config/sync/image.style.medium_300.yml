@@ -1,0 +1,15 @@
+uuid: 130926b4-d363-4098-a35c-bcc7a0ab5794
+langcode: en
+status: true
+dependencies: {  }
+name: medium_300
+label: 'Medium 300'
+effects:
+  c5dc4da5-fcd7-48b0-ae9f-d098b3dad568:
+    uuid: c5dc4da5-fcd7-48b0-ae9f-d098b3dad568
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

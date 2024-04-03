@@ -1,0 +1,41 @@
+uuid: 5b9fd351-6fd8-4bb9-8688-21e215777927
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image_medium_300px
+    - field.field.node.image.comment_node_image
+    - field.field.node.image.field_content_tag
+    - field.field.node.image.field_image
+    - field.field.node.image.field_subject_tag
+    - image.style.medium_300
+    - node.type.image
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.image.image_medium_300px
+targetEntityType: node
+bundle: image
+mode: image_medium_300px
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium_300
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  comment_node_image: true
+  field_content_tag: true
+  field_subject_tag: true
+  links: true
