@@ -22,3 +22,7 @@ $content_directories['sync'] = $app_root.'/../content/sync';
 $config_directories['sync'] = $app_root.'/../config/sync';
 $settings['sync']="";
 $config_directories['sync'] = '../config';
+
+$settings['cookie_lifetime'] = 0;
+$settings['cookie_domain'] = '';
+$settings['cookie_httponly'] = TRUE;
