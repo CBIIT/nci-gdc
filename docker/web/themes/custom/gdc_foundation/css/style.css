@@ -812,4 +812,14 @@ nav.tbm--mobile button.tbm-button {
     background: #1779ba;                                       
     color: #fff;                     
     font-weight:bold;                                        
+}
+
+
+.help-text {
+    margin-top: -.5rem;
+    font-size: .9rem;
+    font-style: italic;
+    color: #0a0a0a;
+    background-color:#ddd;
+    padding:10px;
 } 
