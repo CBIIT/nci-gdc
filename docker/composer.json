@@ -24,6 +24,7 @@
         "defuse/php-encryption": "^2.4",
         "drupal/admin_toolbar": "^3.4",
         "drupal/asset_injector": "^2.19",
+        "drupal/autologout": "^1.4",
         "drupal/backup_migrate": "^5.0",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/core": "^10.2",
