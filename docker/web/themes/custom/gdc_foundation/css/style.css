@@ -627,21 +627,21 @@ h5.redTitle {
 	border:none !important;
 }
 
-    table.bluebackground {
-        background-color: #EDF8FB;
-        border: 1px solid #EDF8FB !important;
-        border-radius: 10px !important;
-        padding: 0px !important;
-        width: 100%;
-        border-collapse: separate !important;
-        border-spacing:5px !important;
-        padding:1px;
-    }
+table.bluebackground {
+	background-color: #EDF8FB;
+	border: 1px solid #EDF8FB !important;
+	border-radius: 10px !important;
+	padding: 0px !important;
+	width: 100%;
+	border-collapse: separate !important;
+	border-spacing:5px !important;
+	padding:1px;
+}
 
-    table.bluebackground td {
-        padding: 5px;
-        background-color: #EDF8FB;
-    }
+table.bluebackground td {
+	padding: 5px;
+	background-color: #EDF8FB;
+}
 
 table.dataTypesFileFormats {
 border:1px solid #ccc !important;
@@ -702,7 +702,6 @@ a[href="https://github.com/NCI-GDC"].menu__link:before {
   content: "\f09b"; /* Github */
 }
 
-
 table td.bluecell {
   background-color:#D2DFEE;
 }
@@ -714,7 +713,6 @@ table td.graycell {
 table td.whitecell {
   background-color:#fff;
 }
-
 
 p.media-caption {
     background-color: #e5e3e4;
@@ -756,11 +754,9 @@ table.imgspacing tbody {
   background-color:#fff;
   font-size:18px;
 }
-
 a.show-on-focus {
 	color:blue;
 }
-
 button.tbm-button {
     background: #004971;
     margin-right: 1.5rem;
@@ -770,12 +766,9 @@ button.tbm-button {
     padding:10px;
     font-weight:bold;
 }
-
 nav.tbm--mobile button.tbm-button {
   background-color: #007bbd;
 }
-
-
 #main-content {
 	font-size:0px;
 	
@@ -791,8 +784,8 @@ nav.tbm--mobile button.tbm-button {
   color:#fff;                      
 } 
 
- /* TCGA Users Menu */
- .tcga-users-menu {
+/* TCGA Users Menu */
+.tcga-users-menu {
   border-top: 1px solid grey;
 }
 .tcga-users-menu ul {
@@ -801,20 +794,14 @@ nav.tbm--mobile button.tbm-button {
   padding-left: 30px;
   margin-top: 15px;
 }
-
-
 .embedded_youtube_video {
 	max-width:600px;
 }
-
-
 .pagination .current a{                
     background: #1779ba;                                       
     color: #fff;                     
     font-weight:bold;                                        
 }
-
-
 .help-text {
     margin-top: -.5rem;
     font-size: .9rem;
@@ -823,3 +810,32 @@ nav.tbm--mobile button.tbm-button {
     background-color:#ddd;
     padding:10px;
 } 
+
+/* USA Banner */
+.usa-banner__container {
+  background-color: #f0f0f0;
+}
+.usa-banner__header {
+  margin-bottom: 0px;
+  background-color: #f0f0f0;
+}
+.usa-banner__header-text {
+  display: flex;
+  font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 15px;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  line-height: 1.0;
+}
+.usa-banner__header-text::before {
+  background-image: url(/themes/custom/gdc_foundation/images/usa-flag-logo.png);
+  background-size: 16px 11px;
+  content: "";
+  display: block;
+  height: 11px;
+  margin-right: 0.75rem;
+  max-width: 16px;
+  width: 100%;
+}
