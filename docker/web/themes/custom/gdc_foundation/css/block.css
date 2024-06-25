@@ -4,8 +4,8 @@
 #main #sidebar-first nav {
    background-color: white;
    padding: 15px; /* Reset padding.  Set it later based on type */
-   border: 1px solid grey;
-   border-radius: 8px;
+   box-shadow: 5px 5px 8px 3px lightgrey;
+   /* border: 1px solid grey; */
    margin-bottom: 20px;
 }
 #main #sidebar-first .block.block-block-content div {
@@ -74,18 +74,11 @@
 #block-gdc-foundation-homepagegdcandcancergenomics div {
   padding:10px;
   background-color: white;
-  border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
 }
 #main #block-gdc-foundation-homepagegdcandcancergenomics.block.block-block-content .h4 {
   color: white;
   width:100%;
   background-color:#004971;
-  border-top-left-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
-  border-bottom-left-radius: 0rem;
-  border-bottom-right-radius: 0rem;
-
 }
 #main #sidebar-first .body.field.field--block-content-body li:before {
   font-family: FontAwesome;
@@ -148,4 +141,3 @@
 
  #main #sidebar-first .body.field.field--block-content-body li {
 }
-
