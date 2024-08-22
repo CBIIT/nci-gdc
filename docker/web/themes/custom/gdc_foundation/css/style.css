@@ -831,5 +831,18 @@ nav.tbm--mobile button.tbm-button {
   max-width: 16px;
   width: 100%;
 }
-
-
+/* Featured Item on Page for News */
+.field--node-field-great-scientist .field--paragraph-field-photo img {                                      
+  float:left;            
+  padding: 0px 10px 0px 0px !important;                                                                                            
+}                                                                                                           
+.field--node-field-great-scientist .paragraph.paragraph--type--featured-item.paragraph--view-mode--default {
+  box-shadow:0px 0px 10px 1px  darkgrey !important; 
+  padding: 10px;                                                  
+  display: inline-block;                                                                                                                              
+}                                                                 
+                                                                  
+.field--node-field-great-scientist .field--paragraph-field-title {
+   font-size:1.5em;                                     
+   padding-left:0px;                         
+}  
