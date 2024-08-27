@@ -1,13 +1,13 @@
-FROM alpine:3.19
+FROM alpine:3.20
 ARG code_path=/tmp/github
 ARG drupal_root=/var/www/drupal
 ENV code_path=$code_path
 ENV drupal_root=$drupal_root
 RUN apk update
 RUN apk add git curl openldap openldap-clients composer \
-    patch vim mariadb-client postfix php82-ldap \
-    php82-apache2 php82-opcache php82-mysqli php82-pdo_mysql php82-tokenizer \
-    php82-dom php82-gd php82-pdo php82-session php82-simplexml php82-xml
+    patch vim mariadb-client postfix php83-ldap \
+    php83-apache2 php83-opcache php83-mysqli php83-pdo_mysql php83-tokenizer \
+    php83-dom php83-gd php83-pdo php83-session php83-simplexml php83-xml
 RUN git clone https://github.com/cbiit/nci-gdc /tmp/github --branch gdc_2.0 --single-branch
 RUN mkdir -p /var/www/drupal
 RUN ln -s $drupal_root/vendor/drush/drush/drush /usr/bin/drush
