@@ -16,5 +16,4 @@ else
     cat $code_path/docker/settings.php.patch >> web/sites/default/settings.php
     mkdir -p config/sync
     chown -R apache:apache web
-    drush cr
 fi
