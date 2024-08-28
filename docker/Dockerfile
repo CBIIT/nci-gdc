@@ -17,7 +17,7 @@ COPY ldap.conf /etc/openldap
 COPY memory.ini /etc/php82/conf.d
 COPY 00_filesize.ini /etc/php82/conf.d
 COPY entrypoint.sh /usr/bin
-chmod +x /usr/bin/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh
 WORKDIR $drupal_root
 EXPOSE 80
 RUN /usr/bin/installdrupal.sh
