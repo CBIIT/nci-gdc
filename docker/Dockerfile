@@ -16,9 +16,11 @@ COPY 000-default.conf /etc/apache2/conf.d
 COPY ldap.conf /etc/openldap
 COPY memory.ini /etc/php82/conf.d
 COPY 00_filesize.ini /etc/php82/conf.d
+COPY entrypoint.sh /usr/bin
+chmod +x /usr/bin/entrypoint.sh
 WORKDIR $drupal_root
 EXPOSE 80
 RUN /usr/bin/installdrupal.sh
 RUN postfix start
 HEALTHCHECK --interval=5m --start-period=3m --start-interval=10s CMD curl -f http://localhost:80 || exit 1
-CMD ["httpd","-D","FOREGROUND"]
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
