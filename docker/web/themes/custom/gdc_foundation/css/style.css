@@ -192,10 +192,10 @@ a#gdc-apps:before {
 }
 
 /* Search page overrides */
-#main ol li::marker {
+#main .search-results ol li::marker {
 	content: '' !important;
 }
-#main ol li h3 {
+#main .search-results ol li h3 {
 	font-size: 1.1em;
 	margin-bottom: 0px;
 }
