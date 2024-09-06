@@ -14,8 +14,8 @@ RUN ln -s $drupal_root/vendor/drush/drush/drush /usr/bin/drush
 COPY installdrupal.sh /usr/bin
 COPY 000-default.conf /etc/apache2/conf.d
 COPY ldap.conf /etc/openldap
-COPY memory.ini /etc/php82/conf.d
-COPY 00_filesize.ini /etc/php82/conf.d
+COPY memory.ini /etc/php83/conf.d
+COPY 00_filesize.ini /etc/php83/conf.d
 COPY entrypoint.sh /usr/bin
 RUN chmod +x /usr/bin/entrypoint.sh
 WORKDIR $drupal_root
