@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c6a30e1f976fc718c6d686286b76100",
+    "content-hash": "c1e01e9ec7301aee9389f47142cecc26",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1683,6 +1683,54 @@
                 }
             ],
             "time": "2024-06-20T10:14:30+00:00"
+        },
+        {
+            "name": "drupal/add_to_head",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/add_to_head.git",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/add_to_head-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "409fe9bca25ce22a3bcb7e0a947b8bc193b49c1b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1672935098",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "baikho",
+                    "homepage": "https://www.drupal.org/user/2727459"
+                },
+                {
+                    "name": "nicholasThompson",
+                    "homepage": "https://www.drupal.org/user/59351"
+                }
+            ],
+            "description": "Allows arbitrary insertion of code into the head of specific pages",
+            "homepage": "https://www.drupal.org/project/add_to_head",
+            "support": {
+                "source": "https://git.drupalcode.org/project/add_to_head"
+            }
         },
         {
             "name": "drupal/admin_toolbar",
@@ -11583,6 +11631,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/add_to_head": 10,
         "drupal/dynamic_entity_reference": 15,
         "drupal/linkchecker": 15,
         "drupal/sitemap": 10,

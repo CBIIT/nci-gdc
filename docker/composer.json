@@ -22,6 +22,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "defuse/php-encryption": "^2.4",
+        "drupal/add_to_head": "^1.0@beta",
         "drupal/admin_toolbar": "^3.4",
         "drupal/asset_injector": "^2.19",
         "drupal/backup_migrate": "^5.0",
