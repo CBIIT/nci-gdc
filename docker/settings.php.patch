@@ -26,7 +26,3 @@ $config_directories['sync'] = '../config';
 $settings['cookie_lifetime'] = 0;
 $settings['cookie_domain'] = '';
 $settings['cookie_httponly'] = TRUE;
-
-$config['system.logging']['error_level'] = 'verbose'; // Optional, for detailed logging.
-$config['system.logging']['watchdog']['type'] = 'file';
-$config['system.logging']['watchdog']['file'] = $app_root.'/../log/watchdog.log';
