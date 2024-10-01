@@ -14,3 +14,6 @@ $content_directories['sync'] = $app_root.'/../content/sync';
 $config_directories['sync'] = $app_root.'/../config/sync';
 $settings['sync']="";
 $config_directories['sync'] = '../config';
+$config['system.logging']['error_level'] = 'verbose'; // Optional, for detailed logging.
+$config['system.logging']['watchdog']['type'] = 'file';
+$config['system.logging']['watchdog']['file'] = $app_root.'/../log/watchdog.log';
