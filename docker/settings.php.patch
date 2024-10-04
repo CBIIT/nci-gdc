@@ -10,7 +10,7 @@ $client = new SecretsManagerClient([
 try {
     // Retrieve the secret value
     $result = $client->getSecretValue([
-        'SecretId' => 'arn:aws:secretsmanager:us-east-1:992382484947:secret:rds!db-94663b50-2c39-4579-b714-4d89aad90f90-W4SFrf',
+        'SecretId' => getenv('s3_secret_key'),
     ]);
     
     // The secret is stored as a JSON string, decode it
