@@ -1,3 +1,31 @@
+use Aws\SecretsManager\SecretsManagerClient; 
+use Aws\Exception\AwsException;
+
+// Create a Secrets Manager client
+$client = new SecretsManagerClient([
+    'version' => 'latest',
+    'region'  => 'us-east-1',  // Replace with your region
+]);
+
+try {
+    // Retrieve the secret value
+    $result = $client->getSecretValue([
+        'SecretId' => 'arn:aws:secretsmanager:us-east-1:992382484947:secret:rds!db-94663b50-2c39-4579-b714-4d89aad90f90-W4SFrf',
+    ]);
+    
+    // The secret is stored as a JSON string, decode it
+    if (isset($result['SecretString'])) {
+        $secret = json_decode($result['SecretString'], true);
+        $db_username = $secret['username'];
+        $db_password = $secret['password'];
+    }
+
+} catch (AwsException $e) {
+    // Handle errors (e.g., log them)
+    error_log($e->getMessage());
+}
+
+
 $settings['s3fs.access_key'] = getenv('s3_access_key');
 $settings['s3fs.secret_key'] = getenv('s3_secret_key');
 $settings['s3fs.use_s3_for_public'] = FALSE;
@@ -7,8 +35,8 @@ $settings['s3fs.use_s3_for_private'] = TRUE;
 
 $databases['default']['default'] = array(
   'database' => getenv('db_name'),
-  'username' => getenv('db_user'),
-  'password' => getenv('db_password'),
+  'username' => $db_username,
+  'password' => $db_password,
   'host' => getenv('db_host'),
   'port' => getenv('db_port'),
   'driver' => 'mysql',
