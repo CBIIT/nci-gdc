@@ -1,4 +1,4 @@
-use Aws\SecretsManager\SecretsManagerClient; 
+use Aws\SecretsManager\SecretsManagerClient;
 use Aws\Exception\AwsException;
 
 // Create a Secrets Manager client
@@ -7,23 +7,36 @@ $client = new SecretsManagerClient([
     'region'  => 'us-east-1',  // Replace with your region
 ]);
 
-try {
-    // Retrieve the secret value
-    $result = $client->getSecretValue([
-        'SecretId' => getenv('rds_secret'),
-    ]);
-    
-    // The secret is stored as a JSON string, decode it
-    if (isset($result['SecretString'])) {
-        $secret = json_decode($result['SecretString'], true);
-        $db_username = $secret['username'];
-        $db_password = $secret['password'];
-    }
+// Retrieve the secret name from environment variables
+$secretId = getenv('rds_secret'); // This should contain the ARN or name of your secret
 
-} catch (AwsException $e) {
-    // Handle errors (e.g., log them)
-    error_log($e->getMessage());
+if (!$secretId) {
+    error_log('Error: rds_secret environment variable not set.');
+} else {
+    try {
+        // Retrieve the secret value from AWS Secrets Manager
+        $result = $client->getSecretValue([
+            'SecretId' => $secretId, // Use the secret ID directly
+        ]);
+
+        // The secret is stored as a JSON string, decode it
+        if (isset($result['SecretString'])) {
+            $secret = json_decode($result['SecretString'], true); // Decode the actual secret
+            $db_username = $secret['username'];
+            $db_password = $secret['password'];
+
+            // Log for testing
+            error_log('Database Username: ' . $db_username);
+            error_log('Database Password: ' . $db_password);
+        }
+
+    } catch (AwsException $e) {
+        // Handle errors (e.g., log them)
+        error_log('AWS SDK Error: ' . $e->getMessage());
+    }
 }
+
+
 error_log('Secret ID: ' . getenv('rds_secret'));
 
 
@@ -43,6 +56,7 @@ $databases['default']['default'] = array(
   'driver' => 'mysql',
   'prefix' => '',
 );
+
 $settings['config_sync_directory'] = $app_root.'/../config/sync';
 $settings['hash_salt'] =  getenv('hash_salt');
 global $content_directories;
