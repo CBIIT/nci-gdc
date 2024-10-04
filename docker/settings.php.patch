@@ -10,7 +10,7 @@ $client = new SecretsManagerClient([
 try {
     // Retrieve the secret value
     $result = $client->getSecretValue([
-        'SecretId' => getenv('s3_secret_key'),
+        'SecretId' => getenv('rds_secret'),
     ]);
     
     // The secret is stored as a JSON string, decode it
@@ -24,6 +24,7 @@ try {
     // Handle errors (e.g., log them)
     error_log($e->getMessage());
 }
+error_log('Secret ID: ' . getenv('rds_secret'));
 
 
 $settings['s3fs.access_key'] = getenv('s3_access_key');
