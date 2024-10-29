@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - gdc_2.0
+      - shaun
 permissions:
   id-token: write
   contents: read
