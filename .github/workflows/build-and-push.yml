@@ -4,18 +4,52 @@ on:
   push:
     branches:
       - gdc_2.0
-
 permissions:
   id-token: write
   contents: read
   packages: read
 
 jobs:
+  build-base-image:
+    name: Build Base Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code from the other repository
+        uses: actions/checkout@v3
+        with:
+          repository: cbiit/drupal-docker
+          ref: base
+          path: ./drupal-docker
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build the base image
+        id: build-image
+        run: |
+          docker build --no-cache -t base ./drupal-docker
+          docker save base > base-image.tar
+
+      - name: Upload base image
+        uses: actions/upload-artifact@v3
+        with:
+          name: base-image
+          path: base-image.tar
 
   build-final-image:
+    needs: build-base-image
     name: Build Final Image
     runs-on: ubuntu-latest
     steps:
+      - name: Download base image
+        uses: actions/download-artifact@v3
+        with:
+          name: base-image
+
+      - name: Load base image
+        run: |
+          docker load < base-image.tar
+
       - name: Checkout code from this repository
         uses: actions/checkout@v3
 
@@ -71,7 +105,7 @@ jobs:
           CLUSTER_NAME: Dev  # Replace with your cluster name
           SERVICE_NAME: ${{ steps.get-service-name.outputs.service_name }}    # Replace with your service name
           CONTAINER_NAME: drupal  # Replace with your container name
-          IMAGE_URI: 543036708785.dkr.ecr.us-east-1.amazonaws.com/drupal:dev
+          IMAGE_URI: 543036708785.dkr.ecr.us-east-1.amazonaws.com/test:dev
         run: |
           # Update the ECS service to use the new image
           aws ecs update-service \
