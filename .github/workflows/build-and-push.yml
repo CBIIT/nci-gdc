@@ -13,7 +13,6 @@ permissions:
 jobs:
 
   build-final-image:
-    needs: build-base-image
     name: Build Final Image
     runs-on: ubuntu-latest
     steps:
