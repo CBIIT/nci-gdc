@@ -12,80 +12,59 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
         "composer/installers": "^2.0",
-        "cweagans/composer-patches": "^1.7",
-        "defuse/php-encryption": "^2.4",
-        "drupal/add_to_head": "^1.0@beta",
-        "drupal/admin_toolbar": "^3.4",
+        "drupal/admin_toolbar": "^3.5",
         "drupal/asset_injector": "^2.19",
+        "drupal/authorization": "^1.5",
         "drupal/backup_migrate": "^5.0",
         "drupal/better_exposed_filters": "^6.0",
-        "drupal/core": "^10.2",
-        "drupal/core-composer-scaffold": "10.3.2",
-        "drupal/core-project-message": "10.3.2",
-        "drupal/core-recommended": "10.3.2",
-        "drupal/custom_view_filters": "^2.0",
+        "drupal/core": "^10.1",
+        "drupal/core-composer-scaffold": "10.3.7",
+        "drupal/core-project-message": "10.3.7",
+        "drupal/core-recommended": "10.3.7",
+        "drupal/custom_view_filters": "^2.1",
         "drupal/delete_all": "^3.0",
-        "drupal/devel": "^5.3",
-        "drupal/devel_entity_updates": "^4.1",
+        "drupal/devel": "^5.1",
         "drupal/draggableviews": "^2.1",
-        "drupal/dynamic_entity_reference": "^4.0@alpha",
-        "drupal/embed": "^1.9",
-        "drupal/entity_autocomplete_plus": "^4.0",
-        "drupal/entity_embed": "^1.6",
-        "drupal/extlink": "^1.7",
-        "drupal/focal_point": "^2.0",
+        "drupal/entity_embed": "^1.4",
+        "drupal/extlink": "^2.0",
         "drupal/fontawesome": "^2.26",
         "drupal/foundation_sites": "^2.0",
-        "drupal/google_analytics": "^4.0",
-        "drupal/honeypot": "^2.2",
         "drupal/imce": "^3.0",
         "drupal/jquery_ui": "^1.6",
-        "drupal/layout_builder_styles": "^2.0",
-        "drupal/ldap": "^4.9",
+        "drupal/jquery_ui_datepicker": "^2.1",
+        "drupal/layout_builder_styles": "^2.1",
+        "drupal/ldap": "^4.12",
         "drupal/libraries": "^4.0",
-        "drupal/linkchecker": "^2.0@alpha",
-        "drupal/mailsystem": "^4.5",
-        "drupal/menu_block": "^1.10",
+        "drupal/markdown": "^3.0",
         "drupal/message_banner": "^2.0",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
-        "drupal/modal_page": "^5.0",
-        "drupal/openid_connect": "^1.4",
-        "drupal/paragraphs": "^1.18",
+        "drupal/modal_page": "^5.1",
+        "drupal/paragraphs": "^1.16",
         "drupal/pathauto": "^1.11",
         "drupal/purge_queues": "^2.0",
-        "drupal/recaptcha": "^3.4",
-        "drupal/redirect": "^1.10",
+        "drupal/recaptcha": "^3.2",
         "drupal/routes_list": "^6.2",
-        "drupal/s3fs": "^3.6",
-        "drupal/security_review": "^3.0",
+        "drupal/security_review": "^2.0",
         "drupal/sitemap": "^2.0@beta",
-        "drupal/symfony_mailer": "^1.5",
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/twig_tweak": "^3.2",
+        "drupal/twig_ui": "^2.0",
         "drupal/url_redirect": "^3.0",
         "drupal/views_accordion_foundation": "^2.0",
-        "drupal/views_aggregator": "^2.0",
+        "drupal/views_aggregator": "^2.1",
         "drupal/views_conditional": "^1.5",
         "drupal/views_year_filter": "^2.1",
         "drupal/webform": "^6.2@RC",
-        "drupal/weight": "^3.4",
+        "drupal/weight": "^3.6",
         "drupal/zurb_foundation": "^9.0@beta",
         "drush/drush": "^12.2",
         "erusev/parsedown": "^1.7",
-        "kint-php/kint": "^5.0",
-        "nikic/php-parser": "^4",
-        "npm-asset/foundation-sites": "^6.8",
-        "npm-asset/motion-ui": "^2.0",
-        "oomphinc/composer-installers-extender": "^2.0"
+        "kint-php/kint": "^5.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -98,17 +77,11 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true,
-            "oomphinc/composer-installers-extender": true
+            "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "sort-packages": true
     },
     "extra": {
-    "installer-types": [
-        "npm-asset",
-        "bower-asset"
-    ],
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -119,9 +92,7 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:npm-asset",
-                "type:bower-asset"
+                "type:drupal-library"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -166,16 +137,5 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    },
-    "scripts": {                    
-        "post-drupal-scaffold-cmd": [
-            "cd web && patch < htaccess.patch .htaccess",
-	    "rm -rf web/libraries/fontawesome",
-            "wget https://use.fontawesome.com/releases/v6.5.1/fontawesome-free-6.5.1-web.zip -O fontawesome.zip",
-            "unzip -o fontawesome.zip -d web/libraries",
-	    "mv web/libraries/fontawesome-free-6.5.1-web web/libraries/fontawesome",
-	    "rm fontawesome.zip"
-        ]
-    }     
-
+    }
 }
