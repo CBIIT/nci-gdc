@@ -105,7 +105,7 @@ jobs:
           CLUSTER_NAME: Dev  # Replace with your cluster name
           SERVICE_NAME: ${{ steps.get-service-name.outputs.service_name }}    # Replace with your service name
           CONTAINER_NAME: drupal  # Replace with your container name
-          IMAGE_URI: 543036708785.dkr.ecr.us-east-1.amazonaws.com/test:dev
+          IMAGE_URI: 543036708785.dkr.ecr.us-east-1.amazonaws.com/drupal:dev
         run: |
           # Update the ECS service to use the new image
           aws ecs update-service \
