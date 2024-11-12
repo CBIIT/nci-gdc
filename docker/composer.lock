@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "215aa052501b414a66ade702bbaba513",
+    "content-hash": "26a87f3d610dddad7fa00edf51bf9f07",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1843,12 +1843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "5b11ec4e38e71748c51287cbd64cfcc43faeb624"
+                "reference": "4006024a8dd7c9976fad0a2af7c9034d120c8e44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/5b11ec4e38e71748c51287cbd64cfcc43faeb624",
-                "reference": "5b11ec4e38e71748c51287cbd64cfcc43faeb624",
+                "url": "https://api.github.com/repos/drupal/core/zipball/4006024a8dd7c9976fad0a2af7c9034d120c8e44",
+                "reference": "4006024a8dd7c9976fad0a2af7c9034d120c8e44",
                 "shasum": ""
             },
             "require": {
@@ -1894,7 +1894,7 @@
                 "symfony/serializer": "^6.4",
                 "symfony/validator": "^6.4",
                 "symfony/yaml": "^6.4",
-                "twig/twig": "^3.14.0"
+                "twig/twig": "^3.14.2"
             },
             "conflict": {
                 "drush/drush": "<12.4.3"
@@ -1999,7 +1999,7 @@
             "support": {
                 "source": "https://github.com/drupal/core/tree/10.3.8"
             },
-            "time": "2024-11-07T08:22:50+00:00"
+            "time": "2024-11-12T09:52:10+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -2088,7 +2088,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/11.0.5"
+                "source": "https://github.com/drupal/core-project-message/tree/11.0.6"
             },
             "time": "2023-07-24T07:55:25+00:00"
         },
@@ -2098,12 +2098,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "4d0e3bcfaf847cb50433728116fe247f6847686e"
+                "reference": "d43bb57a01bfdd624c423ec4ba3e1c45b90be1fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/4d0e3bcfaf847cb50433728116fe247f6847686e",
-                "reference": "4d0e3bcfaf847cb50433728116fe247f6847686e",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/d43bb57a01bfdd624c423ec4ba3e1c45b90be1fa",
+                "reference": "d43bb57a01bfdd624c423ec4ba3e1c45b90be1fa",
                 "shasum": ""
             },
             "require": {
@@ -2161,7 +2161,7 @@
                 "symfony/var-dumper": "~v6.4.7",
                 "symfony/var-exporter": "~v6.4.7",
                 "symfony/yaml": "~v6.4.7",
-                "twig/twig": "~v3.14.0"
+                "twig/twig": "~v3.14.2"
             },
             "conflict": {
                 "webflo/drupal-core-strict": "*"
@@ -2175,7 +2175,7 @@
             "support": {
                 "source": "https://github.com/drupal/core-recommended/tree/10.3.8"
             },
-            "time": "2024-11-07T08:22:50+00:00"
+            "time": "2024-11-12T09:52:10+00:00"
         },
         {
             "name": "drupal/ctools",
