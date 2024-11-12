@@ -4,5 +4,6 @@ COPY 000-default.conf /etc/apache2/conf.d
 COPY entrypoint.sh /usr/bin
 COPY ./ /tmp/github/docker
 RUN /usr/bin/installdrupal.sh
+RUN composer require aws/aws-sdk-php
 HEALTHCHECK --interval=5m --start-period=3m --start-interval=10s CMD curl -f http://localhost:80 || exit 1
 ENTRYPOINT ["entrypoint.sh"]
