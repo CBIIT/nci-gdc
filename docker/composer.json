@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+        "aws/aws-sdk-php": "^3.326",
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.5",
         "drupal/asset_injector": "^2.19",
@@ -77,7 +78,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
