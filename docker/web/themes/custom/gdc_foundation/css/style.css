@@ -848,17 +848,16 @@ nav.tbm--mobile button.tbm-button {
 }
 
 
-
 .testimonial {
     background-color: #fff !important; /* Light background color */
-    padding: 20px 25px 30px 35px !important;             /* Spacing inside the box */
+    padding: 20px 35px 30px 35px !important;             /* Spacing inside the box */
     border-radius: 8px;        /* Rounded corners */
     box-shadow: 0 10px 10px #ccc; /* Soft shadow */
     font-style: italic;        /* Italicize text for a quote style */
     position: relative;        /* Position for the quote mark */
     // margin: 20px auto;         /* Center align with top/bottom margin */
     border:1px solid #ccc;
-    max-width: 650px !important;
+    max-width: fit-content !important;
     text-align:left !important;
 }
 /* Optional: Style for quotation mark */
