@@ -19,6 +19,7 @@ libraries:
 regions:
   meta_header: 'Meta header'
   header: Header
+  search: 'Search'
   help: Help
   page_top: 'Page top'
   page_bottom: 'Page bottom'

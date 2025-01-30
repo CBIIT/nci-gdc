@@ -338,6 +338,9 @@ footer .menu a {
     display: block;
   }
 }
+header form#search-block-form--2 {
+  float:right;
+}
 header form#search-block-form {
   float: right;
 }
