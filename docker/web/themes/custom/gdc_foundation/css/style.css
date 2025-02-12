@@ -324,31 +324,30 @@ footer .menu a {
 }
 @media screen and (max-width: 1200px) {
   #block-gdc-foundation-branding > .search-block-form {
-    display: block;      
-  }
+    display: block;
+  }     
   #block-gdc-foundation-site-branding .grid-container .search-block-form {
-    display: none;                
+    display: none;
   }
   #block-gdc-foundation-obtainingaccesstocontrolleddata {
     text-align:right;
-    padding-top:50px !important;
-  }                                         
-}           
+    padding-top:50px !important;            
+  } 
+}
 @media screen and (min-width: 1201px) {
   #block-gdc-foundation-site-branding > .search-block-form {
     display: none;
   }
   #block-gdc-foundation-site-branding .grid-container .search-block-form {
     display: block;
-  }                                
-         
+  }
+
   #block-gdc-foundation-obtainingaccesstocontrolleddata {
     display:block;
     padding-right:15px;
-    text-align:right;             
-  }      
+    text-align:right;
+  }
 }
-
 header form#search-block-form--2 {
   float:right;
 }
