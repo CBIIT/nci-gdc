@@ -24,10 +24,6 @@ if (!$secretId) {
             $secret = json_decode($result['SecretString'], true); // Decode the actual secret
             $db_username = $secret['username'];
             $db_password = $secret['password'];
-
-            // Log for testing
-            error_log('Database Username: ' . $db_username);
-            error_log('Database Password: ' . $db_password);
         }
 
     } catch (AwsException $e) {
