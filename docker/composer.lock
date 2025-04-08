@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5cbfe12ca4c7b3daad1b6d4447612b0",
+    "content-hash": "6ff36defe38966c7f549ab51213aadd7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6107,27 +6107,27 @@
         },
         {
             "name": "drupal/zurb_foundation",
-            "version": "9.0.0-beta2",
+            "version": "9.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/zurb-foundation.git",
-                "reference": "9.0.0-beta2"
+                "reference": "9.0.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/zurb_foundation-9.0.0-beta2.zip",
-                "reference": "9.0.0-beta2",
-                "shasum": "a6e83e17d552512fda4c6850b5d2e09139b9a183"
+                "url": "https://ftp.drupal.org/files/projects/zurb_foundation-9.0.0-beta1.zip",
+                "reference": "9.0.0-beta1",
+                "shasum": "2de533f492c3347e86b5ab915740e16aa1a3b12c"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/core": "^9.3 || ^10",
                 "drupal/stable": "^2.0"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "9.0.0-beta2",
-                    "datestamp": "1739318293",
+                    "version": "9.0.0-beta1",
+                    "datestamp": "1683750794",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
