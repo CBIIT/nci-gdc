@@ -33,7 +33,6 @@ if (!$secretId) {
 }
 
 
-error_log('Secret ID: ' . getenv('rds_secret'));
 
 
 $settings['s3fs.access_key'] = getenv('s3_access_key');
