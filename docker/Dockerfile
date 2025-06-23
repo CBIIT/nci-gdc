@@ -16,8 +16,7 @@ RUN composer require aws/aws-sdk-php
 RUN chmod +x /usr/bin/entrypoint.sh
 
 # Ensure remoteip_module is loaded before log_config_module
-RUN grep -q 'remoteip_module' /etc/apache2/httpd.conf || \
-    sed -i '/LoadModule log_config_module/i LoadModule remoteip_module modules/mod_remoteip.so' /etc/apache2/httpd.conf
+RUN sed -i '/LoadModule log_config_module/i LoadModule remoteip_module modules/mod_remoteip.so' /etc/apache2/httpd.conf
 
 # Insert RemoteIP configuration after the module is loaded
 RUN sed -i '/LoadModule remoteip_module/a RemoteIPHeader X-Forwarded-For\nRemoteIPTrustedProxy 0.0.0.0/0' /etc/apache2/httpd.conf
