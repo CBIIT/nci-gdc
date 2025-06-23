@@ -19,7 +19,7 @@ RUN chmod +x /usr/bin/entrypoint.sh
 RUN sed -i '/LoadModule log_config_module/i LoadModule remoteip_module modules/mod_remoteip.so' /etc/apache2/httpd.conf
 
 # Insert RemoteIP configuration after the module is loaded
-RUN sed -i '/LoadModule remoteip_module/a RemoteIPHeader X-Forwarded-For\nRemoteIPTrustedProxy 0.0.0.0/0' /etc/apache2/httpd.conf
+RUN sed -i '/LoadModule remoteip_module/a RemoteIPHeader X-Forwarded-For\nRemoteIPTrustedProxy 10.0.0.0/8' /etc/apache2/httpd.conf
 
 # Drupal setup
 WORKDIR $drupal_root
