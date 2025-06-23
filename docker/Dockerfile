@@ -5,6 +5,7 @@ RUN apk add apache2-utils libbz2 php83-ctype php83-exif php83-fileinfo php83-pos
 
 # Copy configs and scripts
 COPY 000-default.conf /etc/apache2/conf.d
+COPY httpd.conf /etc/apache2
 COPY entrypoint.sh /usr/bin
 COPY ./ /tmp/github/docker
 COPY installdrupal.sh /usr/bin
@@ -14,18 +15,6 @@ RUN composer require aws/aws-sdk-php
 
 # Make entrypoint executable
 RUN chmod +x /usr/bin/entrypoint.sh
-
-# Ensure remoteip_module is loaded before log_config_module
-RUN sed -i '/LoadModule log_config_module/i LoadModule remoteip_module modules/mod_remoteip.so' /etc/apache2/httpd.conf
-
-# Insert RemoteIP configuration after the module is loaded
-RUN sed -i '/LoadModule remoteip_module/a RemoteIPHeader X-Forwarded-For\nRemoteIPTrustedProxy 10.0.0.0/8' /etc/apache2/httpd.conf
-
-# Kill the default combined logger
-RUN sed -i 's|^CustomLog logs/access.log combined|#CustomLog logs/access.log combined|' /etc/apache2/httpd.conf
-
-# Add your realip format at the end just to be sure
-RUN echo 'LogFormat "%a %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" realip' >> /etc/apache2/httpd.conf
 
 # Drupal setup
 WORKDIR $drupal_root
