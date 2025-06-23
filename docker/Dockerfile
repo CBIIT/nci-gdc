@@ -6,6 +6,9 @@ COPY ./ /tmp/github/docker
 COPY installdrupal.sh /usr/bin
 RUN composer require aws/aws-sdk-php
 RUN chmod +x /usr/bin/entrypoint.sh
+# Ensure remoteip_module is loaded BEFORE log_config_module
+RUN sed -i '/LoadModule log_config_module/i LoadModule remoteip_module modules/mod_remoteip.so' /etc/apache2/httpd.conf
+
 WORKDIR $drupal_root
 EXPOSE 80
 RUN /usr/bin/installdrupal.sh
