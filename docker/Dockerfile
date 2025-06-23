@@ -21,6 +21,12 @@ RUN sed -i '/LoadModule log_config_module/i LoadModule remoteip_module modules/m
 # Insert RemoteIP configuration after the module is loaded
 RUN sed -i '/LoadModule remoteip_module/a RemoteIPHeader X-Forwarded-For\nRemoteIPTrustedProxy 10.0.0.0/8' /etc/apache2/httpd.conf
 
+# Kill the default combined logger
+RUN sed -i 's|^CustomLog logs/access.log combined|#CustomLog logs/access.log combined|' /etc/apache2/httpd.conf
+
+# Add your realip format at the end just to be sure
+RUN echo 'LogFormat "%a %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" realip' >> /etc/apache2/httpd.conf
+
 # Drupal setup
 WORKDIR $drupal_root
 EXPOSE 80
