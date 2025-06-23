@@ -1,0 +1,11 @@
+logs:
+  - type: file
+    path: /var/log/apache2/access.log
+    service: apache
+    source: apache
+
+  - type: file
+    path: /var/log/apache2/error.log
+    service: apache
+    source: apache
+
