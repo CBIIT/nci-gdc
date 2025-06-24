@@ -9,3 +9,8 @@ logs:
     service: apache
     source: apache
 
+  - type: file
+    path: /var/log/apache2/watchdog.log
+    service: watchdog
+    source: watchdog    
+
