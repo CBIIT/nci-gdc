@@ -1,9 +1,11 @@
 name: Build and Push Docker Image
+
 on:
   workflow_dispatch:
   push:
     branches:
       - gdc_2.0
+
 permissions:
   id-token: write
   contents: read
@@ -40,6 +42,8 @@ jobs:
     needs: build-base-image
     name: Build Final Image
     runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.build-image.outputs.image }}
     steps:
       - name: Download base image
         uses: actions/download-artifact@v4
@@ -73,13 +77,13 @@ jobs:
           ECR_REGISTRY: 543036708785.dkr.ecr.us-east-1.amazonaws.com
           ECR_REPOSITORY: drupal
           IMAGE_TAG: dev
-          docker_username: ${{ steps.login-ecr.outputs.docker_username_543036708785.dkr.ecr.us-east-1.amazonaws.com }}          
         run: |
-          # Build, tag, and push image to Amazon ECR
+          IMAGE="$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          echo "Building and pushing $IMAGE"
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
-          docker build --no-cache -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./docker
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          docker build --no-cache -t $IMAGE ./docker
+          docker push $IMAGE
+          echo "image=$IMAGE" >> $GITHUB_OUTPUT
 
   start-new-container:
     needs: build-final-image
@@ -92,28 +96,25 @@ jobs:
           aws-region: us-east-1
           role-to-assume: arn:aws:iam::543036708785:role/power-user-cicd-role
           role-session-name: GitHubActions        
+
       - name: Get ECS Service Name
         id: get-service-name
         run: |
           SERVICE_ARN=$(aws ecs list-services --cluster Dev --query "serviceArns[0]" --output text)
           SERVICE_NAME=$(basename $SERVICE_ARN)
           echo "Service name: $SERVICE_NAME"
-          echo "::set-output name=service_name::$SERVICE_NAME"          
+          echo "service_name=$SERVICE_NAME" >> $GITHUB_OUTPUT
+
       - name: Deploy to ECS
         env:
           AWS_REGION: us-east-1
-          CLUSTER_NAME: Dev  # Replace with your cluster name
-          SERVICE_NAME: ${{ steps.get-service-name.outputs.service_name }}    # Replace with your service name
-          CONTAINER_NAME: drupal  # Replace with your container name
-          IMAGE_URI: 543036708785.dkr.ecr.us-east-1.amazonaws.com/drupal:dev
+          CLUSTER_NAME: Dev
+          SERVICE_NAME: ${{ steps.get-service-name.outputs.service_name }}
+          CONTAINER_NAME: drupal
+          IMAGE_URI: ${{ needs.build-final-image.outputs.image }}
         run: |
-          # Update the ECS service to use the new image
+          echo "Deploying $IMAGE_URI to ECS service $SERVICE_NAME"
           aws ecs update-service \
             --cluster $CLUSTER_NAME \
             --service $SERVICE_NAME \
-            --force-new-deployment 
-
-          # Optionally, you can register a new task definition if needed
-          # aws ecs register-task-definition --cli-input-json file://task-definition.json
-
-          
+            --force-new-deployment
