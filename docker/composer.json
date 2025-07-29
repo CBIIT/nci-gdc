@@ -58,6 +58,7 @@
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
         "drupal/modal_page": "^5.1",
+        "drupal/openai": "^1.0@beta",
         "drupal/openid_connect": "^1.4",
         "drupal/paragraphs": "^1.19",
         "drupal/pathauto": "^1.11",
@@ -93,11 +94,12 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
