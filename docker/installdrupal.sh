@@ -14,7 +14,7 @@ else
     cp web/sites/default/default.settings.php web/sites/default/settings.php
     echo "relayhost = [mailfwd.nih.gov]" > /etc/postfix/main.cf
     cat $code_path/docker/settings.php.patch >> web/sites/default/settings.php
+    drush theme:enable stable9
     mkdir -p config/sync
     chown -R apache:apache web
-    drush theme:enable stable9
 fi
