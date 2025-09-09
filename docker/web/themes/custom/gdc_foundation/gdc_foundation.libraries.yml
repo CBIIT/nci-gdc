@@ -1,7 +1,7 @@
 global:
   version: VERSION
   css:
-    base:
+    theme:                       # <-- load late in cascade
       css/tbmenu_override.css: {}
       css/menu.css: {}
       css/block.css: {}
@@ -17,61 +17,78 @@ global:
     - core/drupal
     - core/jquery
     - core/once
+    - zurb_foundation/global        # <-- Zurb first
+    # Uncomment if your overrides depend on these:
+    # - tb_megamenu/base
+    # - extlink/drupal.extlink
 
 gdc_font:
   version: VERSION
   css:
-    base:
+    theme:
       css/gdc_font.css: {}
 
 testfont:
   version: VERSION
   css:
-    base:
+    theme:
       css/test.css: {}
 
 publications:
   version: VERSION
   js:
-    js/publications.js: { }
+    js/publications.js: {}
   css:
-    base:
+    theme:
       css/publications.css: {}
+  dependencies:
+    - gdc_foundation/global
+
 publications_group:
   version: VERSION
   js:
-    js/publications_group.js: { }
+    js/publications_group.js: {}
   css:
-    base:
+    theme:
       css/publications_group.css: {}
+  dependencies:
+    - gdc_foundation/global
 
 news:
   version: VERSION
   js:
-    js/news.js: { }
+    js/news.js: {}
   css:
-    base:
+    theme:
       css/news.css: {}
+  dependencies:
+    - gdc_foundation/global
 
 faqs:
   version: VERSION
   js:
-    js/faqs.js: { }
+    js/faqs.js: {}
   css:
-    base:
+    theme:
       css/faqs.css: {}
+  dependencies:
+    - gdc_foundation/global
 
 community_tools:
   version: VERSION
   js:
-    js/community_tools.js: { }
+    js/community_tools.js: {}
   css:
-    base:
+    theme:
       css/community_tools.css: {}
+  dependencies:
+    - gdc_foundation/global
 
 biography:
   version: VERSION
   css:
-    base:
+    theme:
       css/biography.css: {}
+  dependencies:
+    - gdc_foundation/global
 

@@ -1,20 +1,27 @@
 name: GDC Foundation Sub-theme
-description: "Custom sub-theme, inherits from the Foundation base theme read <a href=\"http://foundation.zurb.com/docs/index.php\">framework documentation</a>"
-core: 8.x
-core_version_requirement: ^8 || ^9 || ^10
+description: "Custom sub-theme, inherits from the Foundation base theme."
 type: theme
+package: Custom
 base theme: zurb_foundation
+core_version_requirement: ^10 || ^9 || ^8
 
-# Image appears on admin/appearance
-# screenshot: images/screenshot.jpg
-
-# Uncomment these lines and change "STARTER" to your theme name if you
-# need to add custom CSS or JS
+# Only attach your own libraries here.
 libraries:
- - gdc_foundation/global
- - gdc_foundation/gdc_font
- - gdc_foundation/testfont
-# Regions are output in the page.html.twig
+  - gdc_foundation/global
+  - gdc_foundation/gdc_font
+  - gdc_foundation/testfont
+
+# Ensure your global library is appended right after Zurb’s global, everywhere it’s used.
+libraries-extend:
+  zurb_foundation/global:
+    - gdc_foundation/global
+
+# Optional: if some contrib libs inject styles you don't want, uncomment and tweak:
+# libraries-override:
+#   tb_megamenu/base:
+#     css:
+#       theme:
+#         dist/styles.css: false
 
 regions:
   meta_header: 'Meta header'
@@ -33,16 +40,14 @@ regions:
   footer_bottom: 'Footer bottom (full width)'
   left_off_canvas: 'Left off canvas'
   right_off_canvas: 'Right off canvas'
+
 regions_hidden:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-
-# Hidden regions
-# regions_hidden[]: Page top
-# regions_hidden[]: Page bottom
 
 features:
   - slogan
   - favicon
   - comment_user_picture
   - node_user_picture
+
