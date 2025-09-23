@@ -25,7 +25,8 @@ RUN /usr/bin/installdrupal.sh
 RUN postfix start
 
 # Healthcheck
-HEALTHCHECK --interval=5m --start-period=3m --start-interval=10s CMD curl -f http://localhost:80 || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=4 \
+  CMD curl -sS -o /dev/null http://127.0.0.1:80/ || exit 1
 
 # Entrypoint
 ENTRYPOINT ["entrypoint.sh"]
