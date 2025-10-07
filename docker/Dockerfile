@@ -19,8 +19,8 @@ RUN chmod +x /usr/bin/entrypoint.sh
 # Drupal setup
 WORKDIR $drupal_root
 EXPOSE 80
+RUN chmod +x /usr/bin/installdrupal.sh
 RUN /usr/bin/installdrupal.sh
-
 # Start postfix (if required by your app, otherwise this line can be removed)
 RUN postfix start
 
@@ -30,4 +30,3 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=4 \
 
 # Entrypoint
 ENTRYPOINT ["entrypoint.sh"]
-
