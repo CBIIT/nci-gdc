@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "aws/aws-sdk-php": "^3.326",
+        "aws/aws-sdk-php": "^3",
         "composer/installers": "^2.0",
         "drupal/add_to_head": "^1.0@beta",
         "drupal/admin_toolbar": "^3.6",
@@ -93,6 +93,9 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
+        "audit": {
+          "block-insecure": false
+        },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
