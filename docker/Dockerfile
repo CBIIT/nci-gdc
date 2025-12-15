@@ -1,7 +1,7 @@
 FROM base:latest
 
 # Add required PHP modules and Apache utils
-RUN apk add apache2-utils libbz2 php83-ctype php83-exif php83-fileinfo php83-posix php83-xmlreader php83-xmlwriter
+RUN apk add apache2-utils php84-simplexml php84-dom php84-gd php84-pdo php84-xml php84-tokenizer php84-session libbz2 php83-ctype php83-exif php83-fileinfo php83-posix php83-xmlreader php83-xmlwriter
 
 # Copy configs and scripts
 COPY 000-default.conf /etc/apache2/conf.d
