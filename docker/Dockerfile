@@ -1,7 +1,7 @@
 FROM base:latest
 
 # Add required PHP modules and Apache utils
-RUN apk add apache2-utils php84-simplexml php84-dom php84-gd php84-pdo php84-xml php84-tokenizer php84-session libbz2 php84-ctype php84-exif php84-fileinfo php84-posix php84-xmlreader php84-xmlwriter
+RUN apk add apache2-utils libbz2 php84-ctype php84-exif php84-fileinfo php84-posix php84-xmlreader php84-xmlwriter
 
 # Copy configs and scripts
 COPY 000-default.conf /etc/apache2/conf.d
@@ -19,8 +19,8 @@ RUN chmod +x /usr/bin/entrypoint.sh
 # Drupal setup
 WORKDIR $drupal_root
 EXPOSE 80
-RUN chmod +x /usr/bin/installdrupal.sh
 RUN /usr/bin/installdrupal.sh
+
 # Start postfix (if required by your app, otherwise this line can be removed)
 RUN postfix start
 
