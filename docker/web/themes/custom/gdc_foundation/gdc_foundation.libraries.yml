@@ -17,7 +17,6 @@ global:
     - core/drupal
     - core/jquery
     - core/once
-    - zurb_foundation/global        # <-- Zurb first
     # Uncomment if your overrides depend on these:
     # - tb_megamenu/base
     # - extlink/drupal.extlink
