@@ -89,7 +89,20 @@ function gdc_views_data_alter(array &$data) {
       'help' => t('A field to display publication year'), 
       'id' => 'publication_year_field',
       ],  
-  ]; 
+  ];
+
+/** Custom AI Marketplace Year Filter **/
+$data['node__field_year']['ai_marketplace_year_filter'] = [
+  'group' => 'Custom',
+  'title' => t('AI Marketplace Year Filter'),
+  'filter' => [
+    'title' => t('AI Marketplace Year Filter'),
+    'help' => t('Filters AI Marketplace items by year'),
+    'id' => 'ai_marketplace_year_filter',
+    'field' => 'field_year_value',
+  ],
+];
+ 
   /** Custom Publication Year Filter **/
   $data['node_field_data']['publication_year_filter'] = [ 
     'group' => 'Custom', 
