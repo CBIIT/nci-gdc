@@ -889,4 +889,141 @@ nav.tbm--mobile button.tbm-button {
     color: #ccc;               /* Light color for the quote mark */
     position: absolute;
     bottom: -10px;
+}
+
+/* Title + Type alignment */
+
+.ai-marketplace-view.views-row {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 28px;
+  background: #ffffff;
+}
+
+.ai-title-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.ai-title-type .type {
+  all: unset;
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 1rem;
+  background: #ede9fe;        /* light purple */
+  color: #6c63ff;             /* purple text */
+  padding: 6px 12px;
+  border-radius: 999px;
+  line-height: 1;
+  white-space: nowrap;  
+  font-weight:bold;
+}
+
+.ai-marketplace-view .views-label-field-specifications {
+	font-weight:bold;	
+}
+
+.ai-marketplace-view .views-field-field-specifications ul {
+	padding-top:10px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ai-marketplace-view .views-field-field-specifications li {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 6px;
+}
+.ai-marketplace-view .views-field-field-specifications {
+	background: #f9f9f9;        /* light gray */
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 14px;
+}
+.ai-marketplace-view .views-field-field-specifications 
+.layout--twocol-section--50-50 {
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 12px;
+  row-gap: 8px;
+  align-items: start;
+}
+
+.ai-marketplace-view .views-field-field-specifications  .layout__region--first .field__item {
+  font-weight: 600;
+}
+
+.ai-marketplace-view .views-field-field-specifications  .layout__region--first .field__item::after {
+  content:':';
+}
+
+.ai-marketplace-view .views-field-field-specifications  .layout__region--second .field__item {
+  color: #000;
+}
+
+/* AI tags container */
+.views-field-field-ai-tags ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Each tag */
+.views-field-field-ai-tags li {
+  background: #ede9fe;        /* light purple */
+  color: #6c63ff;             /* purple text */
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ai-api-doc-demo {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.ai-api-doc-demo a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-api-doc-demo span a {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid #8a84ff;
+  color: #6c63ff;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+
+.ai-api-doc-demo span a:hover {
+  background: #f2f1ff;
+}
+
+
+
+.ai-api-doc-demo svg.ext {
+  display: none;
+}
+
+
+.ai-version-year-org {
+  display: flex;
+  gap: 18px;   /* ← adjust spacing here */
+  flex-wrap: wrap;
 }  
