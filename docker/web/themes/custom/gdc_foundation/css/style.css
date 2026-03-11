@@ -693,11 +693,11 @@ a[href="https://twitter.com/NCIGDC_Updates"].menu__link:before {
   content: "\e61b"; /* Github */
 }
 /* Linkedin */
-a[href="https://www.linkedin.com/showcase/nci-precision-oncology/"].tbm-link:before,
-a[href="https://www.linkedin.com/showcase/nci-precision-oncology/"].menu__link:before {
+a[href*="linkedin.com"]:before {
   font-family: FontAwesome;
   content: "\f0e1";
 }
+
 /* Github */
 a[href="https://github.com/NCI-GDC"].tbm-link:before,
 a[href="https://github.com/NCI-GDC"].menu__link:before {
@@ -889,7 +889,7 @@ nav.tbm--mobile button.tbm-button {
     color: #ccc;               /* Light color for the quote mark */
     position: absolute;
     bottom: -10px;
-}
+}  
 
 /* Title + Type alignment */
 
@@ -917,12 +917,12 @@ nav.tbm--mobile button.tbm-button {
   padding: 6px 12px;
   border-radius: 999px;
   line-height: 1;
-  white-space: nowrap;  
+  white-space: nowrap;
   font-weight:bold;
 }
 
 .ai-marketplace-view .views-label-field-specifications {
-	font-weight:bold;	
+	font-weight:bold;
 }
 
 .ai-marketplace-view .views-field-field-specifications ul {
@@ -943,7 +943,7 @@ nav.tbm--mobile button.tbm-button {
   padding: 18px 20px;
   margin-top: 14px;
 }
-.ai-marketplace-view .views-field-field-specifications 
+.ai-marketplace-view .views-field-field-specifications
 .layout--twocol-section--50-50 {
   display: grid;
   grid-template-columns: max-content auto;
@@ -1026,4 +1026,17 @@ nav.tbm--mobile button.tbm-button {
   display: flex;
   gap: 18px;   /* ← adjust spacing here */
   flex-wrap: wrap;
-}  
+}
+
+/* Layout for exposed form */
+#views-exposed-form-ai-marketplace-page-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "search search"
+    "type year"
+    "category application"
+    "actions actions";
+  gap: 16px 20px;
+}
+
