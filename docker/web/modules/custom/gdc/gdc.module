@@ -89,7 +89,18 @@ function gdc_views_data_alter(array &$data) {
       'help' => t('A field to display publication year'), 
       'id' => 'publication_year_field',
       ],  
-  ];
+  ]; 
+  /** Custom Publication Year Filter **/
+  $data['node_field_data']['publication_year_filter'] = [ 
+    'group' => 'Custom', 
+    'title' => t('Publication Year Filter'), 
+    'filter' => [ 
+      'title' => t('Publication Year Filter'),  
+      'help' => t('Filters Publications on Year'),  
+      'field' => 'title', 
+      'id' => 'publication_year_filter',  
+    ],  
+  ]; 
 
 /** Custom AI Marketplace Year Filter **/
 $data['node__field_year']['ai_marketplace_year_filter'] = [
@@ -102,20 +113,7 @@ $data['node__field_year']['ai_marketplace_year_filter'] = [
     'field' => 'field_year_value',
   ],
 ];
- 
-  /** Custom Publication Year Filter **/
-  $data['node_field_data']['publication_year_filter'] = [ 
-    'group' => 'Custom', 
-    'title' => t('Publication Year Filter'), 
-    'filter' => [ 
-      'title' => t('Publication Year Filter'),  
-      'help' => t('Filters Publications on Year'),  
-      'field' => 'title', 
-      'id' => 'publication_year_filter',  
-    ],  
-  ]; 
-  
-  /** Custom Publication Program Tag Field **/
+/** Custom Publication Program Tag Field **/
   $data['node_field_data']['publication_program_tag'] = [ 
     'title' => t('Publication Program Tag'), 
     'field' => [  
