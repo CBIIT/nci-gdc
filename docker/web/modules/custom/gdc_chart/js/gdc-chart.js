@@ -106,43 +106,82 @@
         //chart.update();
     }
 
-    async function getCaseData() {
-        const url = 'https://api.gdc.cancer.gov/v0/graphql/HumanBody?hash=f17e72f7b92417006e341859e334b4fc';
-        const body = {
-            "query": "query HumanBody_relayQuery {\nviewer {\nrepository {\nfiles {\naggregations {\ncases__primary_site {\nbuckets {\ndoc_count\nkey\n}\n}\n}\n}\ncases {\naggregations {\nprimary_site {\nbuckets {\ndoc_count\nkey\n}\n}\n}\n}\n}\n}\n}",
-            "variables": {}
-        };
+async function getCaseData() {
+    const url = 'https://api.gdc.cancer.gov/v0/graphql/HumanBody?hash=f17e72f7b92417006e341859e334b4fc';
 
-        try {
-            const response = await $.post(url, body);
-            const cases = {};
-            const primarySites = response.data.viewer.repository.cases.aggregations.primary_site.buckets;
-            const files = response.data.viewer.repository.files.aggregations.cases__primary_site.buckets;
+    const body = {
+        query: `query HumanBody_relayQuery {
+            viewer {
+                repository {
+                    files {
+                        aggregations {
+                            cases__primary_site {
+                                buckets {
+                                    doc_count
+                                    key
+                                }
+                            }
+                        }
+                    }
+                    cases {
+                        aggregations {
+                            primary_site {
+                                buckets {
+                                    doc_count
+                                    key
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }`,
+        variables: {}
+    };
 
-            const fileCountsByKey = {};
-            files.forEach(file => {
-                fileCountsByKey[file.key] = file.doc_count;
-            });
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
 
-            primarySites.forEach(primarySite => {
-                const key = primarySite.key;
-                const docCount = primarySite.doc_count;
-                const filesCount = fileCountsByKey[key] || 0;
-
-                cases[key] = [docCount, filesCount];
-            });
-
-            const result = Object.entries(cases).map(([id, [doc_count, files]]) => ({
-                key: id,
-                doc_count: doc_count,
-                files: files
-            }));
-
-            return result;
-        } catch (error) {
-            throw new Error('There was a problem fetching the case data');
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
         }
+
+        const json = await response.json();
+
+        const cases = {};
+        const primarySites = json.data.viewer.repository.cases.aggregations.primary_site.buckets;
+        const files = json.data.viewer.repository.files.aggregations.cases__primary_site.buckets;
+
+        const fileCountsByKey = {};
+        files.forEach(file => {
+            fileCountsByKey[file.key] = file.doc_count;
+        });
+
+        primarySites.forEach(primarySite => {
+            const key = primarySite.key;
+            const docCount = primarySite.doc_count;
+            const filesCount = fileCountsByKey[key] || 0;
+            cases[key] = [docCount, filesCount];
+        });
+
+        return Object.entries(cases).map(([id, [doc_count, files]]) => ({
+            key: id,
+            doc_count,
+            files
+        }));
+
+    } catch (error) {
+        console.error('GraphQL fetch failed:', error);
+        throw new Error('There was a problem fetching the case data');
     }
+}
 
     async function getProjects() {
         const humanbody_url = 'https://api.gdc.cancer.gov/projects?facets=project_id,primary_site,disease_type,program.name,summary.case_count,summary.file_count';
