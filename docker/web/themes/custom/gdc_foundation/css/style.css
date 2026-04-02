@@ -1040,3 +1040,62 @@ nav.tbm--mobile button.tbm-button {
   gap: 16px 20px;
 }
 
+#views-exposed-form-ai-marketplace-page-1 {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "search search"
+    "type category"
+    "application sort"
+    "buttons buttons";
+  grid-template-columns: 50% 50%;
+  gap: 12px 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#views-exposed-form-ai-marketplace-page-1 div.filters-title {
+	font-size:16px !important;
+	font-weight:bold;
+}
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(1) {
+  grid-area: header;
+}
+
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(2) {
+  grid-area: search;
+
+}
+
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(3) {
+  grid-area: type;
+
+}
+
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(4) {
+  grid-area: category;
+
+}
+
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(5) {
+  grid-area: application;
+
+}
+
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(6) {
+  grid-area: sort;
+
+}
+
+#views-exposed-form-ai-marketplace-page-1 > *:nth-child(7) {
+  grid-area: buttons;
+
+}
+
+#views-exposed-form-ai-marketplace-page-1 select,
+#views-exposed-form-ai-marketplace-page-1 input.form-text {
+  width: 100%;
+  box-sizing: border-box;
+}
+
