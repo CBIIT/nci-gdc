@@ -64,3 +64,4 @@ $config_directories['sync'] = '../config';
 $settings['cookie_lifetime'] = 0;
 $settings['cookie_domain'] = '';
 $settings['cookie_httponly'] = TRUE;
+$config['system.logging']['error_level'] = 'hide';
