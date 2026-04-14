@@ -55,7 +55,7 @@
         "drupal/mailsystem": "^4.5",
         "drupal/markdown": "^3.0",
         "drupal/menu_block": "^1.14",
-        "drupal/message_banner": "^2.0",
+        "drupal/message_banner": "^3.0",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
         "drupal/modal_page": "^5.1",
