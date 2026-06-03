@@ -3,7 +3,7 @@ description: "Custom sub-theme, inherits from the Foundation base theme."
 type: theme
 package: Custom
 base theme: zurb_foundation
-core_version_requirement: ^10 || ^9 || ^8
+core_version_requirement: ^11 | ^10 || ^9 || ^8
 
 # Only attach your own libraries here.
 libraries:
