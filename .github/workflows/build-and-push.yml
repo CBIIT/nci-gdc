@@ -76,7 +76,7 @@ jobs:
         env:
           ECR_REGISTRY: 543036708785.dkr.ecr.us-east-1.amazonaws.com
           ECR_REPOSITORY: drupal
-          IMAGE_TAG: dev
+          IMAGE_TAG: latest
         run: |
           IMAGE="$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           echo "Building and pushing $IMAGE"
