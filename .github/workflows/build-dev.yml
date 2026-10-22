@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - gdc_11
+      - dev
 
 permissions:
   id-token: write
